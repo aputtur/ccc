@@ -1,0 +1,20 @@
+# Cybersource properties
+# Property values in this file may be sent to cybersource with the payment request
+
+serialNumber=@cybersource.serialNumber@
+merchantID=rightslink
+hopURL=@cybersource.hopURL@
+subscriptionTxResponseEmail=@cybersource.subscriptionTxResponseEmail@
+publicKey=@cybersource.publicKey@
+
+environment=@cybersource.environment@
+ignoreErrors=false
+
+# NOTE: This key decides where the request is sent: to Test System or to Production
+sendToProduction=@cybersource.sendToProduction@
+
+targetAPIVersion=1.21
+useHttpClient=false
+
+keysDirectory.EXT=@cybersource.keysDirectory.EXT@
+keysDirectory.INT=@cybersource.keysDirectory.INT@

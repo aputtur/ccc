@@ -1,0 +1,1805 @@
+body
+{
+	font-family: Tahoma,sans-serif,"Arial Unicode MS", Arial;
+	font-size: 10px;
+	padding: 0px;
+	background-color: #999999;
+	margin: auto;
+}
+
+#wrapper {
+	width: 992px;
+	height: auto;
+	margin: auto;
+	background-color: #FFFFFF;
+}
+h1
+{
+	font-size: 18px; 
+	font-weight: bold; 
+	color: #333333;
+	margin-top: 5px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+}
+
+.headerTitleTop
+{
+	font-size: 18px; 
+	font-weight: normal; 
+	color: #333333;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	padding: 0px;
+	padding-left: 35px;
+}
+.headerTitleTopCCCLogo
+{
+    border: 0; 
+    float: left; 
+    margin-left: 20px; 
+    margin-right: 0px;
+    margin-top: 4px; 
+    margin-bottom: 4px;
+}
+form
+{
+	margin: 0px;
+}
+
+input, textarea, select
+{
+	font-size: 11px;
+	font-family: Tahoma,sans-serif,"Arial Unicode MS", Arial;
+	/*font-family: "Arial Unicode MS", Arial;*/
+}
+input.view-even, textarea.view-even, select.view-even {
+	border: none;
+	background-color: #F3F6F9;
+}
+input.view-odd, textarea.view-odd, select.view-odd {
+	border: none;
+	background-color: #F3F6F9;
+}
+td.view-odd-bold
+{
+	text-align: right;
+	background-color: #F3F6F9;
+	
+}
+td.view-even-bold
+{
+	text-align: right;
+	background-color: #F3F6F9;
+	
+}
+td.tdLabel-bold
+{
+	text-align: right;
+	background-color: #EAE8E8;
+}
+
+table
+{
+	border-collapse: collapse;
+}
+
+td, th
+{
+	font-size: 11px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+hr
+{
+	background-color: silver;
+	color: silver;
+	width: 95%;
+	height: 1px;
+	text-align: center;
+	border: none;
+}
+
+a
+{
+  text-decoration: underline;
+  font-size: 10px;
+  color: #003471;
+  font-weight: bold;
+}
+
+#aSelected 
+{
+  font-size: 10px;
+  color: #003471;
+  font-weight: bold;
+}
+
+a:hover{
+  text-decoration: underline;
+  color: #003471;
+}
+
+td.fieldLabel{text-align: right; padding-right: 7px; }
+
+input.medium{width: 300px;}
+input.small{width: 150px;}
+
+.clearer
+{
+	overflow: hidden;
+	clear:both;
+	height:0;
+	margin:0;
+	font-size: 1px;
+	line-height: 0;
+}
+
+.button
+{
+	background: #5C9CCC; 
+	color: white; 
+	border: 0px; 
+	font-weight: bold; 
+	overflow: visible; /* this is so IE doesn't add extra button padding */
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+	.thHeader th{
+	background:url("../images/ui-bg_gloss-wave_55_5c9ccc_500x100.png") repeat-x scroll 50% 50% #5C9CCC;
+border:1px solid #4297D7;
+color:#FFFFFF;
+font-weight:bold;
+	}
+.glassButton
+{
+cursor:pointer;
+float:right;
+line-height:1.4em;
+margin:0.5em 0.4em 0.5em 0;
+overflow:visible;
+padding:0.2em 0.6em 0.3em;
+width:auto;
+white-space: normal;
+	background:url("../images/ui-bg_glass_85_dfeffc_1x400.png") repeat-x scroll 50% 50% #DFEFFC;
+border:1px solid #C5DBEC;
+color:#2E6E9E;
+font-weight:bold;
+outline:medium none;
+padding:0.2em 0.6em 0.3em;
+}	
+.errors
+{
+	color: red;
+	font-weight: bold;
+	position: relative;
+	min-width: 0;
+}
+
+.errors h4
+{
+	font-weight: bold;
+	padding-left: 10px;
+	padding-bottom: 5px;
+}
+/*
+.errors ul
+{	
+	font-size: 14px;
+}
+.errors li
+{
+	font-size: 14px;
+}
+*/
+.errors span.errorMessage
+{
+	font-weight: normal;
+}
+		
+	
+#header
+{
+	background: #CCCCCC;
+	text-align: left; 
+	position: relative; 
+	padding: 0px; 
+	color: 333333;	
+	float: left;
+	width: 100%;
+}
+
+#header #headerLogo
+{
+	padding: 3px 0px 1px 2px; 
+	width: 215px;
+}
+
+#header #headerTitle
+{
+	position: absolute; 
+	left: 220px; 
+	top: 5px; 
+	width: 300px; 
+	font-size: 22px; 
+	font-weight: bold;
+}
+
+#header #headerLinks
+{
+	position: absolute; 
+	top: 12px; 
+	right: 20px; 
+	width: 300px; 
+	text-align: right;
+}
+
+#header #headerLinks a
+{
+	color: #333333;
+	text-decoration: none;
+}
+
+#header #headerLinks a:hover
+{
+	text-decoration: underline;
+}
+
+#mainContent
+{
+	text-align: left;
+	padding: 0px;
+	background-color: #FFFFFF;
+}
+
+#mainFooter
+{
+	text-align: left;
+	padding: 0px;
+	width: 992px;
+}
+
+
+
+#contentHeader
+{
+	padding-left: 15px;
+	height: 65px; 
+	position: relative;
+	/*z-index: 200000;*/ 
+}
+
+#contentHeader #contentTitle
+{
+	position:absolute; 
+	bottom: 5px;
+	height: 1em;
+	font-size: 14px;
+	font-weight: bold;
+	color: #2E6E9E;
+}
+ #subTitle {
+color:red;
+font-size:14px;
+font-weight:normal;
+}
+
+#releasDisplayStatus{
+		font-size:11px;
+	
+}
+#releasDisplayStatus Label{
+color:red;
+}
+
+.releasDisplayStatus{
+	color:red;
+		font-size:11px;
+	
+}
+label.releasDisplayStatus{
+	color:red;
+		font-size:11px;
+}
+
+
+#contentHeader label{
+	font-size: 12px;
+	}
+#contentHeader a{
+	font-size: 11px;
+	text-decoration:underline;
+	}
+
+#headerLink a{
+padding:0 0 0 70px;
+}
+#contentHeader #headerLink
+{
+	position: absolute;
+	top: 10px;
+	height: 20px;
+	padding-left: 5px;
+}
+
+#contentHeader #headerLink a
+{
+	font-weight: bold;
+}
+
+#contentHeader #headerRight
+{
+	position: absolute;
+	bottom: 0px;
+	right: 20px;
+	height: 1.5em;
+}
+
+#contentHeader #headerRight a.actionLink
+{
+	font-size: 11px;
+}
+
+#contentSubheader
+{
+	margin: 5px 0px 5px 0px;
+	border: 1px solid #2E6E9E;
+	background-color: #C5DBEC;
+	border-width: 1px 0px 1px 0px;
+	padding: 10px 20px 10px 70px;
+}
+
+#contentSubheader table td
+{
+	text-align: left;
+	padding-right: 20px;
+}
+
+#contentSubheader table td.fieldLabel
+{
+	text-align: left;
+	padding-right: 5px;
+}
+
+#contentBoxWrapper
+{
+	padding: 0px 20px 0px 20px; 
+}
+
+#contentBoxWrapper.noLinks
+{
+	padding-top: 12px;
+}
+
+#contentBoxWrapper #contentBoxTopRight
+{
+	float:right;
+	text-align:right;
+	padding: 17px 0px 0px 0px;
+}
+
+#contentBoxWrapper #contentBoxTabs
+{
+	font-size: 11px;
+	color: #7A9B52;
+	float:left;
+	padding: 15px 0px 5px 0px;
+}
+
+#contentBoxWrapper #contentBoxTabs .selected
+{
+	font-weight: bolder;
+	color: #598527;
+}
+
+#contentBoxWrapper #contentBoxTabs a
+{
+	color: #7A9B52;
+	text-decoration: underline;
+}
+
+#contentBoxWrapper #contentBoxTabs a:hover
+{
+	font-weight: bolder;
+	color: #598527;
+}
+
+#contentBoxWrapper #contentBoxLinks
+{
+	float:right; 
+	text-align: right;
+	padding-bottom: 5px;
+}
+
+#contentBoxWrapper #contentBoxLinks a
+{
+	font-weight: bold;
+	font-size: 11px;
+}
+
+#contentBoxWrapper #contentBox #contentBoxHeader
+{
+	border: 1px solid #74A83B;
+	border-width: 0px 0px 1px 0px;
+	background-color: #C7DCB1;
+	margin: -10px -20px 10px -20px;
+	padding: 10px;
+}
+
+#contentBoxWrapper #contentBox
+{
+	border: 1px solid #5C9CCC;
+	padding: 10px 20px 10px 20px;
+	background-color: white; /* keep this background-color (but may change value if needed), as a workaround to IE float broken border bug*/
+}
+
+.legendLabel
+{
+	color: #5C9CCC;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.legendBox
+{
+	border: 1px dotted #C0C0C0;
+	padding: 10px;
+	margin-top: 3px;
+}
+
+.section
+{
+	margin-bottom: 20px;
+}
+
+.untitledSection
+{
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.sectionTitle
+{
+	font-weight: bold;
+	font-size: 11px;
+	color: #5C9CCC ;
+	padding-bottom: 10px;
+	position: relative;
+	min-width: 0;
+}
+
+.sectionTitleLeft
+{
+	font-weight: bold;
+	font-size: 11px;
+	color: #5C9CCC ;
+	padding-bottom: 10px;
+	float:left;
+}
+
+.sectionRightAlignRight
+{
+	float: right;
+	text-align: right;
+}
+
+.sectionLeft
+{
+	float: left;
+	width: 45%;
+}
+
+.sectionRight
+{
+	float: right;
+	width: 40%;
+}
+
+.highlightedSection
+{
+	padding: 20px;
+	border: 1px solid #598527;
+	background-color: #E3EED8;
+	margin-bottom: 20px;
+}
+
+table.subheaderTable td
+{
+	vertical-align: top;
+	
+}
+
+table.fieldsTable
+{
+	margin-left: 50px;
+}
+
+.requiredStar
+{
+	font-style: normal;
+	color:red;
+}
+
+.requiredLabel
+{
+	font-style: italic;
+	color: black;
+}
+
+.readonlyField
+{
+	background-color: #EBEBE4;
+}
+
+.instructions
+{
+	font-size: 11px;
+}
+
+.smallLink
+{
+	font-size: 10px; 
+}
+
+.disabledText
+{
+	color: black;
+}
+
+.smallText
+{
+	width: 7em;
+}
+
+.textWithIcon
+{
+	height: 18px;
+	padding-top: 3px;
+	padding-left: 21px;
+	/* need to set background-image when using this style */ 
+}
+
+/* tabs */
+
+#mainTabs 
+{
+	float:left;
+	width:100%;
+	background: #CCCCCC repeat-x bottom right;
+	margin-top: 1px;
+	padding-bottom: 1px;
+	position: relative;
+}
+		      
+#mainTabs ul 
+{
+	margin:0;
+	padding:0px;
+	list-style:none;
+}
+		    
+#mainTabs li 
+{
+	float:left;
+	margin:0;
+	padding:0;
+	border-right: 1px solid #1c3e06;
+	border-left: 1px solid #1c3e06;
+}
+
+#mainTabs li.first
+{
+	border-left-width: 0px;
+}
+
+#mainTabs li.empty
+{
+	border-left-width: 0px;
+	border-right-width: 0px;
+	display:block;
+	padding-top:8px;
+	padding-bottom:8px;
+	padding-right: 8px;
+	padding-left: 8px;
+	text-decoration: none;
+	color: 333333;
+	font-size: 11px;
+	font-weight: bold;
+}
+#mainTabs a 
+{
+	display:block;
+	padding-top:8px;
+	padding-bottom:8px;
+	padding-right: 8px;
+	padding-left: 8px;
+	text-decoration: none;
+	color: 333333;
+	font-size:  11px;
+	font-weight: bold;
+}
+
+#mainTabs a:hover
+{
+	background: #999999;
+	color: white;
+}
+
+#mainTabs li.selected a 
+{
+	background: #999999;
+	font-weight: bold;
+	color: white;
+}
+
+#mainTabs #welcome
+{
+	position: absolute;
+	top: 9px;
+	right: 10px;
+	width: 300px;
+	text-align: right;
+	color: white;
+}
+
+/* end tabs */
+
+/* summary table */
+
+table.summaryTable
+{
+	border-collapse: collapse;
+	border-style: solid;
+	border-color: #C6C6C6;
+	border-width: 0px 0px 1px 1px;
+	margin: 10px 0px 10px 0px;
+}
+
+table.summaryTable tr td, table.summaryTable tr th
+{
+	border-style: solid;
+	border-color: #C6C6C6;
+	border-width: 1px 1px 0px 0px;
+	background-color: #EAE8E8;
+	font-size: 11px;
+	padding: 3px;
+	vertical-align: middle;
+}
+
+table.summaryTable tr th
+{
+	background-color: #EAE8E8 ;
+	color: white;
+	font-weight: bold;
+	font-size: 11px;
+	text-align: left;
+}
+
+table.summaryTable tr td.indent1
+{
+	padding-left: 20px;
+}
+
+table.summaryTable tr td.indent2
+{
+	padding-left: 40px;
+}
+
+table.summaryTable tr th a
+{
+	color: white;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+table.summaryTable td.even
+{
+	background-color: #F3F6F9;
+}
+table.summaryTable td.odd
+{
+	background-color: #E2E9F0;
+}
+table.summaryTable label.even
+{
+	background-color: #F3F6F9;
+}
+table.summaryTable label.odd
+{
+	background-color: #E2E9F0;
+}
+table.summaryTable td.even-bold
+{
+	background-color: #EAE8E8;
+	text-align: right;
+}
+table.summaryTable td.odd-bold
+{
+	background-color: #EAE8E8;
+	text-align: right;
+}
+/* end summary table */
+
+/* summary table with colors*/
+
+tr.summaryTableColors th
+{
+	background-color: #EAE8E8 ;
+}
+tr.summaryTableColors td.even
+{
+	background-color: #F3F6F9;
+}
+tr.summaryTableColors td.odd
+{
+	background-color: #F3F6F9;
+}
+tr.summaryTableColors label.even
+{
+	background-color: #F3F6F9;
+}
+tr.summaryTableColors label.odd
+{
+	background-color: #F3F6F9;
+}
+tr.summaryTableColors td.even-bold
+{
+	background-color: #EAE8E8;
+}
+tr.summaryTableColors td.odd-bold
+{
+	background-color: #EAE8E8;
+}
+/* end summary table with colors*/
+
+/* short detail table */
+
+table.shortDetailTable td
+{
+	border-right: solid #C6C6C6 2px;
+	border-left: solid #C6C6C6 2px;
+	padding: 3px;
+	vertical-align: middle;
+}
+
+table.shortDetailTable td.even-bold
+{
+	text-align: right;
+}
+table.shortDetailTable td.odd-bold
+{
+	text-align: right;
+}
+/* end of short detail table */
+
+/* summary table no colors*/
+
+table.summaryTableNoColors
+{
+	border-collapse: collapse;
+	border-style: solid;
+	border-color: #C6C6C6;
+	border-width: 0px 0px 1px 1px;
+	margin: 10px 0px 10px 0px;
+}
+
+table.summaryTableNoColors tr td, table.summaryTableNoColors tr th
+{
+	border-style: solid;
+	border-color: #C6C6C6;
+	border-width: 1px 1px 0px 0px;
+	font-size: 11px;
+	padding: 3px;
+	vertical-align: middle;
+}
+
+table.summaryTableNoColors tr th
+{
+	color: white;
+	font-weight: bold;
+	font-size: 11px;
+	text-align: left;
+}
+
+table.summaryTableNoColors tr td.indent1
+{
+	padding-left: 20px;
+}
+
+table.summaryTableNoColors tr td.indent2
+{
+	padding-left: 40px;
+}
+
+table.summaryTableNoColors tr th a
+{
+	color: white;
+	font-weight: bold;
+	text-decoration: underline;
+}
+table.summaryTableNoColors td.even-bold
+{
+	text-align: right;
+}
+table.summaryTableNoColors td.odd-bold
+{
+	text-align: right;
+}
+/* end summary table no colors */
+
+
+
+
+/* dataTable */
+table.dataTableNoPadding{
+		border: 1px solid #000;
+	/*border-collapse: collapse;
+	border-style: solid;
+	border-color: #C6C6C6;
+	border-width: 0px 0px 1px 1px;
+	margin: 0px;*/
+}
+table.dataTable
+{
+	border: 1px solid #000;
+	/*border-collapse: collapse;
+	border-style: solid;
+	border-color: #C6C6C6;
+	border-width: 0px 0px 1px 1px;
+	margin: 0px;*/
+}
+
+table.dataTable tr td, table.dataTable tr th
+{
+	border-style: none;
+	border-color: #C6C6C6;
+	border-width: 1px 1px 0px 0px;
+	font-size: 11px;
+	padding: 3px;
+	vertical-align: middle;
+}
+
+table.dataTableNoPadding tr td, table.dataTableNoPadding tr th
+{
+	border-style: none;
+	border-color: #C6C6C6;
+	border-width: 1px 1px 0px 0px;
+	font-size: 11px;
+	vertical-align: middle;
+}
+table.dataTable tr.even td
+{
+	background-color: #F3F6F9;
+}
+table.dataTable tr.odd td
+{
+	background-color: #F3F6F9;
+}
+table.dataTableNoPadding tr th {
+background-color:#C5DBEC;
+color:black;
+font-size:11px;
+font-weight:bold;
+text-align:left;
+}
+table.dataTableNoPadding tr.even td
+{
+	background-color: #F0F0F6;
+}
+
+table.dataTable tr th {
+background-color:#C5DBEC;
+color:black;
+font-size:11px;
+font-weight:bold;
+text-align:left;
+}
+
+table.dataTable tr th.filter
+{
+	border-top-width: 0px;
+	padding-right: 10px;
+	vertical-align: top;
+}
+
+table.dataTable tr th.filter input, table.dataTable tr th.filter select
+{
+	width:94%;
+}
+table.dataTable td.even
+{
+	background-color: #F3F6F9;
+}
+table.dataTable td.odd
+{
+	background-color: #F3F6F9;
+}
+table.dataTable label.even
+{
+	font-weight: bold;
+	text-align: right;
+	background-color: #F3F6F9;
+}
+table.dataTable label.odd
+{
+	font-weight: bold;
+	text-align: right;
+	background-color: #F3F6F9;
+}
+table.dataTable td.even-bold
+{
+	font-weight: bold;
+	text-align: right;
+	background-color: #F3F6F9;
+}
+table.dataTable td.odd-bold
+{
+	font-weight: bold;
+	text-align: right;
+	background-color: #F3F6F9;
+}
+
+
+table.dataTable tr.highlighted td
+{
+	background-color: #E2E9F0;
+}
+
+table.dataTable tr td.centerAligned
+{
+	text-align: center;
+}
+
+table.dataTable tr th a
+{
+	color: white;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+table.dataTable tr th a:hover
+{
+	color: #C7DCB1;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+/* end dataTable */
+
+/* dataTable header */
+
+.dataTableHeader
+{
+	padding: 0px 1px 1px 1px;
+}
+
+.dataTableHeader .leftSide
+{
+	float: left;
+	width: 40%;
+}
+
+.dataTableHeader .rightSide
+{
+	float: right;
+	width: 40%;
+	text-align: right;
+}
+
+/* end dataTable header */
+
+
+/* subTable */
+
+table.subTable
+{
+	border-collapse: collapse;
+	border-style: none;
+	border-color: #C6C6C6;
+	border-width: 0px 0px 0px 0px;
+	margin: 0px;
+}
+
+table.subTable tr td, table.subTable tr th
+{
+	border-style: none;
+	border-color: #C6C6C6;
+	border-width: 0px 0px 0px 0px;
+	font-size: 11px;
+	padding: 3px;
+	vertical-align: middle;
+}
+
+table.subTable tr th
+{
+	font-weight: bold;
+	font-size: 11px;
+	text-align: left;
+}
+
+table.subTable tr th.filter
+{
+	border-top-width: 0px;
+	padding-right: 10px;
+	vertical-align: top;
+}
+
+table.subTable tr th.filter input, table.subTable tr th.filter select
+{
+	width:100%;
+}
+
+table.subTable tr.even td
+{
+	background-color: #F0F0F6;
+}
+
+table.subTable tr.highlighted td
+{
+	background-color: #C7DCB1;
+}
+
+table.subTable tr td.centerAligned
+{
+	text-align: center;
+}
+
+table.subTable tr th a
+{
+	color: white;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+table.subTable tr th a:hover
+{
+	color: #C7DCB1;
+	font-weight: bold;
+	text-decoration: underline;
+	
+}
+table.subTable td.even
+{
+	background-color: white;
+}
+table.subTable td.odd
+{
+	background-color: white;
+}
+table.subTable label.even
+{
+	font-weight: bold;
+	text-align: right;
+	background-color: white;
+}
+table.subTable label.odd
+{
+	font-weight: bold;
+	text-align: right;
+	background-color: white;
+}
+table.subTable td.even-bold
+{
+	font-weight: bold;
+	text-align: right;
+	background-color: white;
+}
+table.subTable td.odd-bold
+{
+	font-weight: bold;
+	text-align: right;
+	background-color: white;
+}
+
+
+table.subTable td.required-bold
+{
+	font-weight: bold;
+	text-align: right;
+	color: red;
+}
+table.subTable input.required
+{
+	background-color: FFFF9C;
+	color: blue;
+}
+table.subTable select.required
+{
+	background-color: FFFF9C;
+	color: blue;
+}
+
+table.dataTable td.subLabel 
+	{
+	background-color: white;
+	vertical-align:top;
+	font-size:11px;
+	}
+	div.subLabel {
+	font-weight: bold;
+	font-size:11px;
+	}
+	
+	div.subLabel a{
+	font-weight: normal;
+	font-size:11px;
+	}
+	
+	td.subHeader
+	{
+	background-color:#5C9CCC ;
+	font-weight: bold;
+	font-size:11px;
+	color:white;
+	}
+	table.dataTable	td.leftHeader
+	{
+
+	font-weight: bold;
+	font-size:11px;
+	}
+
+/* end subTable */
+
+
+
+
+/* scrollable table */
+
+div.scrollableTableWrapper
+{
+	overflow: auto;
+	height: 300px;
+	border-color: #C0C0C0;
+	border-width: 1px 0px 1px 0px;
+	border-style: solid;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	overflow-x: hidden;
+}
+
+div.scrollableTableWrapper thead tr
+{
+	position: relative;
+	top: expression(offsetParent.scrollTop); /*IE5+ only*/
+}
+
+
+/* end scrollable table */
+
+/* tooltip */
+
+.tooltip
+{
+	position:absolute; 
+	border: 1px solid #598527;
+	background-color: #F0F9E5; 
+	z-index: 1000000; 
+	width: 170px; 
+	color: black;
+	font-weight: normal;
+	padding: 2px 5px 2px 5px;
+}
+
+/* end tooltip */
+
+/* dynamic popup */
+
+.popupWrapper
+{
+	position:absolute; 
+	border: 1px solid black; 
+	z-index: 1000000; 
+	background-color: white;
+	width: 400px; 
+	height: auto;
+}
+
+.popupActionWrapper
+{
+	float: right;
+}
+
+.popupCloseLink
+{
+	border: 1px solid black; 
+	border-width: 0px 0px 1px 1px; 
+	display: block; 
+	padding: 0px 2px 0px 2px;
+}
+
+.popupContentWrapper
+{
+	padding-left: 5px; 
+	padding-right: 5px; 
+	padding-bottom: 5px;
+}
+
+.popupTitle
+{
+	float:left;
+	font-weight: bold;
+	font-size: 11px;
+	color: #598527;
+	padding: 3px 5px 3px 5px;
+}
+
+.popupHighlightedSection
+{
+	border: 1px solid #598527;
+	background-color: #F0F9E5;
+	padding: 10px;
+	margin: 2px 5px 5px 5px;
+}
+
+.popupSubheader
+{
+	margin: 5px 0px 5px 0px;
+	border: 1px solid #74A83B;
+	background-color: #C7DCB1;
+	border-width: 1px 0px 1px 0px;
+	padding: 5px;
+}
+
+.popupSubheader table td
+{
+	vertical-align: top;
+}
+
+.popupSectionTitle
+{
+	font-weight: bold;
+	font-size: 11px;
+	color: #598527;
+}
+
+/* end dynamic popup */
+/* tables */
+/* tables */
+table.tablesorter {
+	/*font-family:arial;*/
+	font-family: Tahoma,sans-serif,"Arial Unicode MS", Arial;
+	background-color: #CDCDCD;
+	margin:10px 0pt 15px;
+	font-size: 10px;
+	width: 100%;
+	text-align: left;
+	border-collapse: separate;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #8DBDD8;
+	border: 1px solid #FFF;
+	font-size: 10px;
+	padding: 4px;
+}
+table.tablesorter thead tr .header {
+	background-image: url('../images/bg.gif');
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+}
+table.tablesorter tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url('../images/asc.gif');
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url('../images/desc.gif');
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #8dbdd8;
+}
+
+
+.divider{
+border-bottom:1px solid #CDCDCD;
+float:left;
+margin-bottom:10px;
+margin-top:-5px;
+padding:0px;
+width:100%;
+}
+
+/* subTableNoColor */
+
+table.subTableNoColor
+{
+	border-collapse: collapse;
+	border-style: none;
+	border-color: #C6C6C6;
+	border-width: 0px 0px 0px 0px;
+	margin: 0px;
+}
+
+table.subTableNoColor tr td, table.subTableNoColor tr th
+{
+	border-style: none;
+	border-color: #C6C6C6;
+	border-width: 0px 0px 0px 0px;
+	font-size: 11px;
+	padding: 3px;
+	vertical-align: middle;
+}
+
+table.subTableNoColor tr th
+{
+	font-weight: bold;
+	font-size: 11px;
+	text-align: left;
+}
+
+table.subTableNoColor tr th.filter
+{
+	border-top-width: 0px;
+	padding-right: 10px;
+	vertical-align: top;
+}
+
+table.subTableNoColor tr th.filter input, table.subTableNoColor tr th.filter select
+{
+	width:100%;
+}
+
+
+table.subTableNoColor tr td.centerAligned
+{
+	text-align: center;
+}
+
+table.subTableNoColor label.even
+{
+	font-weight: bold;
+	text-align: right;
+}
+table.subTableNoColor label.odd
+{
+	text-align: right;
+}
+table.subTableNoColor td.even-bold
+{
+	font-weight: bold;
+	text-align: right;
+}
+
+table.subTableNoColor td.required-bold
+{
+	font-weight: bold;
+	text-align: right;
+	color: red;
+}
+table.subTableNoColor input.required
+{
+	background-color: FFFF9C;
+	color: blue;
+}
+table.subTableNoColor select.required
+{
+	background-color: FFFF9C;
+	color: blue;
+}
+
+table.subTableNoColor td.odd-bold
+{
+	font-weight: bold;
+	text-align: right;
+}
+
+table.dataTable3 td.subLabel 
+	{
+	vertical-align:top;
+	font-size:11px;
+	}
+	div.subLabel {
+	font-weight: bold;
+	font-size:11px;
+	}
+	
+	div.subLabel a{
+	font-weight: normal;
+	font-size:11px;
+	}
+	
+	td.subHeader
+	{
+	background-color:#5C9CCC ;
+	font-weight: bold;
+	font-size:11px;
+	color:white;
+	}
+	table.dataTable	td.leftHeader
+	{
+
+	font-weight: bold;
+	font-size:11px;
+	}
+
+/* end subTableNoColor */
+
+/* edit table */
+
+table.editTable
+{
+	border-collapse: collapse;
+	border-style: none;
+	border-color: #C6C6C6;
+	border-width: 0px 0px 0px 0px;
+	margin: 0px;
+	width: 100%;
+}
+
+table.editTable tr td, table.editTable tr th
+{
+	border-style: none;
+	border-color: #C6C6C6;
+	border-width: 0px 0px 0px 0px;
+	font-size: 11px;
+	padding: 3px;
+	vertical-align: middle;
+}
+
+table.editTable tr th
+{
+	font-weight: bold;
+	font-size: 11px;
+	text-align: left;
+}
+
+table.editTable tr th.filter
+{
+	border-top-width: 0px;
+	padding-right: 10px;
+	vertical-align: top;
+}
+
+table.editTable tr.even td
+{
+	background-color: #F0F0F6;
+}
+
+table.editTable tr.highlighted td
+{
+	background-color: #C7DCB1;
+}
+
+table.editTable tr td.centerAligned
+{
+	text-align: center;
+}
+
+table.editTable tr th a
+{
+	color: white;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+table.editTable tr th a:hover
+{
+	color: #C7DCB1;
+	font-weight: bold;
+	text-decoration: underline;
+	
+}
+table.editTable td.even
+{
+	background-color: white;
+}
+table.editTable td.odd
+{
+	#background-color: white;
+}
+table.editTable input.required
+{
+	background-color: FFFF9C;
+	color: blue;
+}
+
+table.editTable td.even-bold
+{
+	font-weight: bold;
+	text-align: right;
+}
+table.editTable td.odd-bold
+{
+	font-weight: bold;
+	text-align: right;
+}
+
+table.editTable td.required-bold
+{
+	font-weight: bold;
+	text-align: right;
+	color: red;
+}
+
+/* end edit table */
+#angleTabs 
+{
+    height: 26px;
+	background: white repeat-x bottom right;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	position: relative;
+}
+
+#angleTabs ul 
+{
+	margin:0;
+	padding:0px;
+	background: white repeat-x bottom right;
+	list-style:none;
+}
+#angleTabs li 
+{
+	float:right;
+	margin:0;
+	padding:0px;
+}
+/* FF Hack */
+html>body #angleTabs li 
+{
+	float:right;
+	margin:0;
+	padding-top:4px;
+}
+
+#angleTabs span {
+	margin: 0;
+	margin-top: -3px;
+	border: none;
+	background-image: url('../images/angle_6F97BB.gif'); 
+	background-repeat:no-repeat; 
+	background-position:left top;  
+	vertical-align:top;
+	float:right;
+	float:clear;
+}
+
+.angleTabs
+{
+    color: white; 
+	font-weight: bold;
+    height: 26px;
+ 	background-image: url('../images/1px_6F97BB.gif');
+ 	background-position:top; 
+	text-align: center;
+	text-decoration: none;
+	padding: 3px 0px 5px 8px;
+	font-size: 11px;
+}
+/* FF Hack */
+html>body .angleTabs
+{
+	padding: 3px 0px 10px 9px;
+}
+#angleTabs a:hover
+{
+	color: black;
+	text-decoration: none;
+}
+
+#detailAngleTabs 
+{
+    height: 26px;
+	background: #E2E9F0 repeat-x bottom right;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	position: relative;
+}
+
+#detailAngleTabs ul 
+{
+	margin:0;
+	padding:0px;
+	background: #E2E9F0 repeat-x bottom right;
+	list-style:none;
+}
+#detailAngleTabs li 
+{
+	float:right;
+	margin:0;
+	padding:0px;
+}
+/* FF Hack */
+html>body #detailAngleTabs li 
+{
+	float:right;
+	margin:0;
+	padding-top:4px;
+}
+
+#detailAngleTabs span {
+	margin: 0;
+	margin-top: -3px;
+	border: none;
+	height: 26px;
+	background-image: url('../images/angle_CCCCCC.gif'); 
+	background-repeat:no-repeat; 
+	background-position:left top;  
+	vertical-align:top;
+	float:right;
+	float:clear;
+}
+
+.detailAngleTabs
+{
+    color: black; 
+	font-weight: bold;
+    height: 26px;
+ 	background-image: url('../images/1px_CCCCCC.gif');
+ 	background-position:top; 
+	text-align: center;
+	text-decoration: none;
+	padding: 3px 0px 5px 8px;
+	font-size: 11px;
+}
+/* FF Hack */
+html>body .detailAngleTabs
+{
+	padding: 3px 0px 10px 9px;
+}
+#detailAngleTabs a:hover
+{
+	color: white;
+	text-decoration: none;
+}
+#editDetailAngleTabs 
+{
+    height: 26px;
+	background: #6F97BB repeat-x bottom right;
+	margin-top: 0px;
+	padding-bottom: 0px;
+	position: relative;
+}
+
+#editDetailAngleTabs ul 
+{
+	margin:0;
+	padding:0px;
+	background: #6F97BB repeat-x bottom right;
+	list-style:none;
+}
+#editDetailAngleTabs li 
+{
+	float:right;
+	margin:0;
+	padding:0px;
+}
+/* FF Hack */
+html>body #editDetailAngleTabs li 
+{
+	float:right;
+	margin:0;
+	padding-top:4px;
+}
+
+#editDetailAngleTabs span {
+	margin: 0;
+	margin-top: -3px;
+	border: none;
+	background-image: url('../images/angle_CCCCCC.gif'); 
+	background-repeat:no-repeat; 
+	background-position:left top;  
+	vertical-align:top;
+	float:right;
+	float:clear;
+	
+}
+.editDetailAngleTabs
+{
+    color: black; 
+	font-weight: bold;
+    height: 26px;
+ 	background-image: url('../images/1px_CCCCCC.gif');
+ 	background-position:top; 
+	text-align: center;
+	text-decoration: none;
+	padding: 3px 0px 5px 8px;
+	font-size: 11px;
+}
+/* FF Hack */
+html>body .editDetailAngleTabs
+{
+	padding: 3px 0px 10px 9px;
+}
+#editDetailAngleTabs a:hover
+{
+	color: white;
+	text-decoration: none;
+}
+
+#sectionHeader {
+	float: left; 
+	font-size: 11px;
+	font-weight: bold;
+	color: 6F97BB;
+}
+#sectionHeaderInline {
+	display: inline;
+	font-size: 11px;
+	font-weight: bold;
+	color: white;
+}
+#detailSectionHeader {
+	float: left; 
+	font-size: 11px;
+	font-weight: bold;
+	color: white;
+}
+#detailSectionHeaderInline {
+	display: inline;
+	font-size: 11px;
+	font-weight: bold;
+	color: #4A739A;
+}
+.editingDetailAngleTabs 
+{
+    color: white; 
+	font-weight: bold;
+    height: 26px;
+ 	background-image: url('../images/1px_CCCCCC.gif');
+ 	background-position:top; 
+	text-align: center;
+	text-decoration: none;
+	padding: 3px 0px 5px 8px;
+	font-size: 11px;
+}
+/* FF Hack */
+html>body .editingDetailAngleTabs
+{
+	padding: 3px 0px 10px 9px;
+}
+#editingDetailAngleTabs a:hover
+{
+	color: white;
+	text-decoration: none;
+}
+
+.DarkLabelCell
+{
+    width: 300px;
+	text-align: left; 
+	vertical-align: top;
+	font-weight:bold;
+}
+.DarkInfoCell
+{
+	text-align: left; 
+	vertical-align: top;
+}
+.LightLabelCell
+{
+	width: 300px;
+	text-align: left; 
+	vertical-align: top;
+	font-weight:bold;
+}
+.LightInfoCell
+{
+	text-align: left; 
+	vertical-align: top;
+}
+
+.BlueNote      
+{ 
+
+}
+
+.RegularNote   
+{
+
+}

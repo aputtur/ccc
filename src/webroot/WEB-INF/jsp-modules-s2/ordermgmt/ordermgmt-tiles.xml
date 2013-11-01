@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?> 
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd"> 
+
+<tiles-definitions>
+    
+    <!-- page layouts -->
+    
+    <!-- order management page layout - composes the header and footer and menu with the page content -->
+
+    <definition name=".omLandingLayout" template="/WEB-INF/jsp-modules-s2/ordermgmt/omLandingLayout.jsp">
+        <put-attribute name="pageTitle" value="REPLACE_THIS" type="string" />
+        <put-attribute name="topMenu" value="/WEB-INF/jsp-modules-s2/ordermgmt/omLandingTopMenu.jsp"/>
+        <put-attribute name="pageContent" value="REPLACE_THIS" />
+        <put-attribute name="footer" value="/WEB-INF/jsp-modules-s2/ordermgmt/omFooter.jsp"/>
+    </definition>
+
+
+	<definition name=".omLayoutNoLink" template="/WEB-INF/jsp-modules-s2/ordermgmt/omLayoutNoLink.jsp">
+        <put-attribute name="pageTitle" value="REPLACE_THIS" type="string" />
+        <put-attribute name="topMenu" value="/WEB-INF/jsp-modules-s2/ordermgmt/omTopMenu.jsp"/>
+        <put-attribute name="pageContent" value="REPLACE_THIS" />
+        <put-attribute name="footer" value="/WEB-INF/jsp-modules-s2/ordermgmt/omFooter.jsp"/>
+    </definition>
+
+    <definition name=".omLayout" template="/WEB-INF/jsp-modules-s2/ordermgmt/omLayout.jsp">
+        <put-attribute name="pageTitle" value="REPLACE_THIS" type="string" />
+        <put-attribute name="topMenu" value="/WEB-INF/jsp-modules-s2/ordermgmt/omTopMenu.jsp"/>
+        <put-attribute name="pageContent" value="REPLACE_THIS" />
+        <put-attribute name="footer" value="/WEB-INF/jsp-modules-s2/ordermgmt/omFooter.jsp"/>
+    </definition>
+    
+ 	<definition name=".ajaxWindowContent" template="/WEB-INF/jsp-modules-s2/ordermgmt/ajaxLayout.jsp">
+		<put-attribute name="pageContent" value="REPLACE_THIS"></put-attribute>
+	</definition>
+    
+	<definition name="uncaughtException" extends=".omLayout">
+		<put-attribute name="pageTitle" value="Error"></put-attribute>
+		<put-attribute name="pageContent" value="/WEB-INF/jsp-modules-s2/ordermgmt/error.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="sessionExpiredException" extends=".omLayout">
+		<put-attribute name="pageTitle" value="Order Management System"></put-attribute>
+		<put-attribute name="pageContent" value="/WEB-INF/jsp-modules-s2/ordermgmt/sessionExpired.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="notAuthorized" extends=".omLayout">
+		<put-attribute name="pageTitle" value="copyright.com"></put-attribute>
+		<put-attribute name="pageContent" value="/WEB-INF/jsp-modules-s2/ordermgmt/notAuthorized.jsp"></put-attribute>
+	</definition>
+	
+		<definition name="sessionExpiredExceptionOnPopUp" extends=".ajaxWindowContent">
+		<put-attribute name="pageContent" value="/WEB-INF/jsp-modules-s2/ordermgmt/sessionExpiredPopUp.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="error" extends=".omLayout">
+		<put-attribute name="pageTitle" value="Error"></put-attribute>
+		<put-attribute name="pageContent" value="/WEB-INF/jsp-modules-s2/ordermgmt/error.jsp"></put-attribute>
+	</definition>
+	
+	<definition name=".orderManagementContent" extends=".omLayout">
+	</definition>
+	
+	<definition name=".researchContent" extends=".omLayout">
+	</definition>
+
+	<definition name=".orderHistoryContent" extends=".omLayout">
+	</definition>
+
+	<definition name=".adjustmentContent" extends=".omLayout">
+	</definition>
+
+	<definition  name="orderManagementLanding"  extends=".omLandingLayout"  >
+		<put-attribute name="pageTitle" value="Order Support and Management"></put-attribute>
+        <put-attribute name="pageContent" value="/WEB-INF/jsp-modules-s2/ordermgmt/orderManagementLanding.jsp"/>
+	</definition>
+	
+	<definition  name="orderManagementHome"  extends=".orderManagementContent"  >
+		<put-attribute name="pageTitle" value="Order Manager System"></put-attribute>
+        <put-attribute name="pageContent" value="/WEB-INF/jsp-modules-s2/ordermgmt/orderManagementHome.jsp"/>
+	</definition>
+	
+
+</tiles-definitions>

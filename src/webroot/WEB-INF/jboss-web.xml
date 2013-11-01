@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<jboss-web>
+
+	<!--  This security domain is defined in login-config.xml,
+	      which is a JBoss server config file. -->
+	<security-domain>java:/jaas/ccc-jaas</security-domain>
+	
+	<!-- specify the root application context -->
+	<context-root>/</context-root>
+	
+</jboss-web>        

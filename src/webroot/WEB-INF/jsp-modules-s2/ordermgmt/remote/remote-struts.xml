@@ -1,0 +1,21 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+    
+<struts>
+ 	 	
+	<package name="remote" extends="copyrightcom-default" namespace="/om/remote">
+		    	
+    	<action name="searchWorks" class="com.copyright.ccc.web.actions.ordermgmt.SearchWorksAction">
+    		<result>searchWorks</result>
+    		<result name="input">searchWorks</result>
+    		<result name="error">searchWorks</result>
+    		<!--  <result name="success">searchOrder</result> -->
+    		<result name="redirect" type="redirectAction">
+    			<param name="actionName">searchWorks</param>
+    		</result>
+    	</action>
+				   		
+	</package>
+				
+</struts>

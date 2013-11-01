@@ -1,0 +1,1 @@
+alter table "CC"."CCC_USER" add(ENFORCE_PWD_CHG CHAR(1 CHAR) DEFAULT 'N');

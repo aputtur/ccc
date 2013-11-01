@@ -1,0 +1,300 @@
+.PageTitle	  
+{
+    font-family:verdana,sans-serif; 
+	color: #333399; 
+	font-weight:bold; 
+	font-size: 13px;
+}
+.PageTitle a:hover {text-decoration: none; color: #333399;}
+.PageTitle a:link {text-decoration: none; color: #333399;}
+.PageTitle a:visited {text-decoration: none; color: #333399;}
+.PageTitle a:visited:hover {text-decoration: none; color: #333399;}
+.SmallPageTitle	  
+{
+    font-family:verdana,sans-serif; 
+	color: #333399; 
+	font-weight:bold; 
+	font-size: 11px;
+}
+.SmallPageTitle a:hover {text-decoration: none; color: #333399;}
+.SmallPageTitle a:link {text-decoration: none; color: #333399;}
+.SmallPageTitle a:visited {text-decoration: none; color: #333399;}
+.SmallPageTitle a:visited:hover {text-decoration: none; color: #333399;}
+.RLTable{
+	width:100%;
+}
+table.RLTable p {
+	margin:0px 0;
+}
+
+
+	
+table.RLTable  td {
+padding:0px;
+vertical-align:middle !important;
+}
+ table.RLTable {
+ table-layout:auto;
+word-wrap:break-word;
+ }
+ 
+ 
+ 
+.RLTable p {
+float:left;
+margin-top:0;
+padding-top:0;
+width:150px;
+word-wrap:break-word;
+}
+
+
+.MetaDataTitle	  
+{
+    font-family:verdana,sans-serif; 
+	color: #333399; 
+	font-weight:bold; 
+	font-size: 12px;
+}
+.MainInstructions   
+{
+    font-family:verdana,sans-serif; 
+    color: #000000; 
+    font-weight:normal; 
+	font-size:12px;
+}
+.RegularText   
+{
+    font-family:verdana,sans-serif; 
+    color: #000000; 
+    font-weight:normal; 
+	font-size:12px;
+}
+.BlueText   
+{
+    font-family:verdana,sans-serif; 
+    color: #333399; 
+    font-weight:normal; 
+	font-size:12px;
+}
+.EmphasisText  
+{
+    font-family:verdana,sans-serif; 
+	color: #CC3333; 
+	font-weight:bold;
+	font-size:12px;
+}
+td.MainInstructionsCell p.EmphasisText  /*Temp hack to prevent cc3 overriding emphasisText*/
+{
+    font-family:verdana,sans-serif; 
+	color: #CC3333; 
+	font-weight:bold;
+	font-size:11px;
+}
+
+.RequiredField 
+{
+    font-family:verdana,sans-serif; 
+    color: #CC3333; 
+	font-size: 11px;
+}
+
+.RegularFieldDefDecoration
+{
+    font-family:verdana,sans-serif; 
+	color: #000000; 
+	font-size: 11px;
+}
+
+.RegularField 
+{
+    font-family:verdana,sans-serif; 
+	color: #000000; 
+	font-size: 11px;
+font-weight:bold;
+	vertical-align:middle;
+	
+}
+/* attempt to override rightslink style */
+p.RegularField  {
+margin:4px 0 !important;
+}
+.RegularField br{display:none;}
+.RegularField img{
+	margin-bottom:-2px;height:14px;width:14px
+	}
+.RegularField a:hover {text-decoration: none; color: blue;}
+.RegularField a:link {text-decoration: none; color: black;}
+.RegularField a:visited {text-decoration: none; color: black;}
+.RegularField a:visited:hover {text-decoration: none; color: purple;}
+
+.RegularNote   
+{
+    font-family:verdana,sans-serif; 
+	color: #000000; 
+	font-weight:normal; 
+	font-size: 11px;
+}
+.BoldNote   
+{
+    font-family:verdana,sans-serif; 
+	color: #000000; 
+	font-weight:bold; 
+	font-size: 11px;
+}
+.WhiteNote   
+{
+    font-family:verdana,sans-serif; 
+	color: #ffffff; 
+	font-weight:normal; 
+	font-size: 11px;
+}
+.BlueNote      
+{
+    font-family:verdana,sans-serif; 
+    color: #333399; 
+	font-weight: bold; 
+	font-size: 11px;
+}
+.EmphasisNote  
+{
+    font-family:verdana,sans-serif; 
+	color: #CC3333; 
+	font-weight:normal;
+	font-size:11px;
+}
+
+.EmphasisBoldNote  
+{
+    font-family:verdana,sans-serif; 
+	color: #CC3333; 
+	font-weight:bold; 
+	font-size:11px;
+}
+
+.LayerLink	
+{
+    font-family:verdana,sans-serif;
+	color: #D0D9DE;
+	font-weight:bold; 
+	font-size: 11px;	
+}
+.LayerLinkSmall	
+{
+    font-family:verdana,sans-serif;
+	color: #D0D9DE;
+	font-weight:bold; 
+	font-size: 11px;	
+}
+.LayerLinkSmall a:hover {text-decoration: none; color: white;}
+.LayerLinkSmall a:link {text-decoration: none; color: #D0D9DE;}
+.LayerLinkSmall a:visited {text-decoration: none; color: #D0D9DE;}
+.LayerLinkSmall a:visited:hover {text-decoration: none; color: white;}
+
+.RegularTextDarkCell
+{
+    font-family:verdana,sans-serif; 
+    color: #000000; 
+    font-weight:normal; 
+	font-size:12px;
+	background-color: #d0d9de;
+}
+.RegularTextDarkCellCentered
+{
+    font-family:verdana,sans-serif; 
+    color: #000000; 
+    font-weight:normal; 
+	font-size:12px;
+	background-color: #d0d9de;
+	text-align: center;
+}
+.RegularTextDarkCellRight
+{
+    font-family:verdana,sans-serif; 
+    color: #000000; 
+    font-weight:normal; 
+	font-size:12px;
+	background-color: #d0d9de;
+	text-align: right;
+}
+.RegularTextCentered
+{
+    font-family:verdana,sans-serif; 
+    color: #000000; 
+    font-weight:normal; 
+	font-size:12px;
+	text-align: center;
+}
+.RegularTextRight
+{
+    font-family:verdana,sans-serif; 
+    color: #000000; 
+    font-weight:normal; 
+	font-size:12px;
+	text-align: right;
+}
+
+.EmphasisHeader  
+{
+    font-family:verdana,sans-serif; 
+	color: #CC3333; 
+	font-weight:bold;
+	font-size:12px;
+}
+.EmphasisTextRight  
+{
+    font-family:verdana,sans-serif; 
+	color: #CC3333; 
+	font-weight:bold;
+	font-size:12px;
+	text-align: right;
+}
+.EmphasisRegularText  
+{
+    font-family:verdana,sans-serif; 
+	color: #CC3333; 
+	font-weight:normal;
+	font-size:12px;
+}
+
+.EmphasisBlueText	  
+{
+    font-family:verdana,sans-serif; 
+	color: #333399; 
+	font-weight:bold; 
+	font-size: 12px;
+}
+.EmphasisBlueTextSmall
+{
+    font-family:verdana,sans-serif; 
+	color: #333399; 
+	font-weight:bold; 
+	font-size: 11px;
+}
+
+.SpecialMargin
+{
+    padding-top: 2px;
+    padding-right: 2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+}
+
+
+.RegularTextSmall   
+{
+    font-family:verdana,sans-serif; 
+    color: #000000; 
+    font-weight:normal; 
+	font-size:11px;
+}
+
+
+.Invisible  
+{
+    font-family:verdana,sans-serif; 
+	color: #FFFFFF; 
+	font-weight:normal;
+	font-size:1px;
+}
+

@@ -1,0 +1,12 @@
+define sid=CCCD2
+
+--define ccctf_user=ccctf
+--define ccctf_user_pwd=/ccctf
+
+--define cccserv_user=cccservlatestbuild
+--define cccserv_user_pwd=/cccservlatestbuild
+
+define cc_user=cccompile
+define cc_user_pwd=/cccompile
+
+

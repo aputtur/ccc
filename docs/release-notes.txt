@@ -1,0 +1,882 @@
+CC2
+Release Notes
+
+Usage of this file:
+    * When an application or db developer commits changes to CVS, add notes to
+      the "Build <NEXT>" section at the top of this file.  If a "Known Issue"
+      was addressed, remove it from that section and note it under "Defects
+      Fixed".  With each entry, include the Windows login in square braces to
+      indicate who to contact for additional information Concurrent edits to
+      this file should be easily resolved through a CVS merge.
+
+    * When a release engineer performs a build, replace the "Build <NEXT>
+      (...)" with the actual build info, and create a new "Build <NEXT> (...)"
+      section at the top carrying forward the items in the "Known Issues"
+      subsection section.
+      
+====================Build <NEXT> ()====================
+
+Defects Fixed
+-------------
+#2502 - (ProdBugs) CopyOrderAction, CopyOrderCourseDetailsAction, CourseDetailsForm, and Cart.jsp
+        were updated to properly handle titles that can't be currently copied.  Cart.jsp updated
+        mainly to handle the event when a cart has no items, but contains a course pack.  Previously
+        there was no way to clear the course pack in this scenario. [pshomo]
+#2288 - (ProdBugs) Cascade CoursePack Header to cart items fix in EditCartCourseDetailsAction.java.
+
+====================Build 0049 (10.19.2007)====================
+
+Defects Fixed
+-------------
+#2224 - (ProdBugs) UserContextServices, CartServices.  Added login hook to reprice cart via GetPersistedCart()      
+#2286 - (ProdBugs) Remove Canadian Popup registration message
+#9369 - (QA_Test)  Contact Info for newer RHs not displaying address
+#9981 - (QA_Test)  Adjustment calculations relating to discount.  Updates to pricing services to use
+                   licensee specific pricing service call.
+                   
+New Features
+------------
+        Link and popup on cart page indicating availability of volume price tiers
+
+
+
+====================Build 0030 <NEXT> (05.22.2007)====================
+
+Defects Fixed
+-------------
+#???? - LinkManager, bad isbn number
+#8855 - Check-in simpleSearch.jsp and all other search forms.Ê Also searchResultSimple. 
+#8857 - changes to permissionDisplay. 
+#???? - Changes to searchLanding too. 
+#8858 - (public domain) 
+#8724 - changePassword.jsp 
+#8876 - both page footers. 
+#8859 - (academic search page) 
+#8860 - can't do first item, need css/html 
+#8563 - cursor change 
+#8456 - changed text (no results) 
+#???? - check in css. 
+#8027 - Reordered bullets, no results found
+#9168 - disable RLS in cccdirect. 
+#8616 - textual change in rls descr. 
+#9109 - special order button 
+#8959 - not you vs. logout 
+#8554 - Browser back button issues 
+#8183 - Login Screen missing header stuff 
+#8439 - Background of rollovers not transparent 
+#???? - OpenURL search [Women's Enews] fails by issn
+
+
+====================Build 0025 <NEXT> (04.25.2007)====================
+
+Defects Fixed
+-------------
+#8450 - Removed relevancy from sort list for order details [was]
+#???? - Manage Roles - list of available roles is the full set for CC2 (had been set of logged-in user!) [dstine]
+#8223 - Fixed 3 defects in activity reports [was]
+#9025 - Unable to log in after 'requesting coverage'  [gcuevas]
+#8735 - Problems adding item to order from Order History  [gcuevas]
+#8735 - Problems adding item to order from Order History  [GCUEVAS]
+#8909 - Fixed 3 defects in Purchase order details [was]
+#9044 - Fixed Perm Status tag to show ext comments always if they exist. Suppressed S.O. update message if denied and awaiting invoice or invoiced. [was]
+#8986 - Unmapped detail status codes now display "Checking Availability"
+#9010 - Workflow issue: Order item, checkout, register brings user to Advanced Search  [ppai]
+#7786 - Permission Type Description not consistent through the order process [ppai]
+#7913 - Add link to Credit & Pymt Policy on "Review your order" page [ppai]
+#7940 - Registration Page Privacy Link returns a 404 error [ppai]
+#7947 - Registration Page -  State dropdown is not abreviations as in CC1 [ppai]
+#7948 - Country dropdown list is NOT alphabetical on Registration Page [ppai]
+#7963 - Navigation DropDown is less transparent on the Create Account Screen [ppai]
+#7983 - Red text on Registration Page does not fit on the right side using Firefox [ppai]
+#8009 - Review Privacy Policy link on Add an Additional User gets a 404 error [ppai]
+#8010 - Add Additional User outer frame does not connect at the bottom with footer [ppai]
+#8015 - Add User screen tells user where Account Number is on-line but no info found [ppai]
+#8186 - Update Acct Page-Contact Us & Review our privacy policy link returns a 404 Error [ppai]
+#8202 - Promo code carries through to next orders [ppai]
+
+====================Build 0024 <NEXT> (04.25.2007)====================
+New Features
+------------
+Developer Home - added Servlet Engine and JSP Engine values [dstine]
+
+Defects Fixed
+-------------
+#8969 - Added course number to Purchase details page [was]
+#8974 - Implemented print links on Purchase details page [was]
+#8936 - Updating past limit doesn't successfully process change  [gcuevas]
+#8992 - Define tag cannot set a null value for bean with id: publicationYearOfUseString  [gcuevas]
+#8891 - Fixed display spec for purchase level Perm Status search [was]
+#8695 - Links on the Order Confirmation Page do not work [ppai]
+#8967 - Incorrect country is being displayed in Manage Account for Foreign Contacts [ppai]
+#8976 - Manage Account Update Account Does not show all fields [ppai]
+#9000 - Removed duplicate nav links in orderViewPage.jsp [was]
+#8993 - Application error on clicking add to cart button for special order from scratch  [gcuevas]
+#8354 - Review stage of cart report that there is an error but not what the error is  [gcuevas]
+#9007 - Special Order from scratch displays invalid ISSN error for Idno type LC for TRS  [gcuevas]
+#8996 - Cannot place SO from Scratch (TRS) if std number not in catalog  [gcuevas]
+
+
+
+
+
+Known Issues
+------------
+
+Notes to QA
+-----------
+ 
+====================Build 0023  (04.23.2007)====================
+New Features
+------------
+
+Defects Fixed
+-------------
+#8926 - Lucas fixed struts admin links to eliminate problem [WAS}
+#8919 - Uncancel of license now not possible for invoiced licenses [WAS}
+#8863 - Incorrect status returned when limit exceeded  [gcuevas]
+#8640 - Modifications to E002 data to match template specs [tmckinney]
+#8921 - Pre cart page throws application error for special orders from scratch.  [gcuevas]
+#8786 - E003 - Reports updates to account that may not really happen  [ppai]
+#8852 - SSL -Creating new registration gets 5 Security Information messages  [gcuevas]
+#8961 - Select different permission after deny on special order gives app error [gcuevas] 
+
+
+
+Known Issues
+------------
+
+Notes to QA
+-----------
+ 
+====================Build 0022 (04.19.2007)====================
+New Features
+------------
+
+Defects Fixed
+-------------
+#8638 - Return no results for invalid search/sort option on order view detail page [was]
+#8595 - Fixed the javascript portion of this bug.  The layout is dupe of 8088 [was]
+
+Known Issues
+------------
+
+Notes to QA
+-----------
+ 
+====================Build 0021 (04.18.2007)====================
+New Features
+------------
+
+Defects Fixed
+-------------
+#8798 - Copy academic license replaces header info - scr 8798 [was]
+#8692 - Create new Org rec-workbench.security.SecurityRuntimeException: UserContext Err [ppai]
+#8697 - Log In & Manage Account -Update Address Info-Submit NullPointerException error [ppai]
+#8115 - Manage Account - Add account # and Primary Contact [ppai]
+#8750 - Changes to display of user info during checkout [ppai]
+#8878 - Unable to add special order item to existing order  [gcuevas]
+#8209 - Anecdotal info on special orders should be better aligned  [gcuevas]
+#8205 - RLS default  [gcuevas]
+
+
+
+Known Issues
+------------
+
+Notes to QA
+-----------
+ 
+====================Build <0020> (04.12.2007)====================
+New Features
+------------
+Fixes to the forgot password flow [KMEYER]
+#8752  - Error re-pinning biactive right via edit from Order History  [gcuevas]
+#8094 - Fixed search result message for confirmation number [was]
+#8700 - Editing RLS special order ocassionally blanks out page range & Repub date fields  [gcuevas]
+#8772 - Fixed order detail search by repub org [was]
+#8768 - Your Reference search message was fixed before bug was opened [was]
+#8797 - Unable to add TRS item to cart even though the cart is empty.  [gcuevas]
+#8718 - The blue NAV bar is not fully available on the Manage Account Screen [lalberione]
+
+
+
+Defects Fixed
+-------------
+
+Known Issues
+------------
+
+Notes to QA
+-----------
+
+Miscellaneous Notes
+-------------------    
+====================Build 0019 (04.10.2007)====================
+New Features
+------------
+Fixes to the forgot password flow [KMEYER]
+
+Defects Fixed
+-------------
+# 8454 - Warn user when invalid parsable dates are entered.
+# 8661 - Switched search parm from standard number to work inst.
+# 8666 - Added Number of Copies to order detail view page
+# 8660 - Updated OH pricing per new wireframe spec from Charlie
+# 8693 - Cannot search in TF for non-capitalized info
+
+Known Issues
+------------
+
+Notes to QA
+-----------
+
+Miscellaneous Notes
+-------------------    
+ 
+====================Build <NEXT> (04.05.2007)====================
+New Features
+------------
+
+Defects Fixed
+-------------
+#8614 - Contact Rightsholder Directly  shows incorrect information [JRA]
+#8613 - Servlet exception after clicking 'contact rightsholder directly' [JRA]
+#8408 - Fixed permssion status tag and associated update and over ride comments.
+#8594 - Delete Order that has canceled license does not throw exception (SS fix) [WAS]
+#8458 - Your Reference magically started working in SS build (SS fix) [WAS]
+#8603 - Suppress search message for non search page loads [WAS]
+#8038 - Fixed search result <b> tag bug in OH [WAS]
+#8635 - Fixed. [MSJ]
+#8400 - Unable to get right on DPS or RLS biactive [gcuevas]
+#8022 - Article/Chapter explanation for APS product wraps incorrectly  [gcuevas]
+#8023 - Date of Issue explanation for APS product wraps incorrectly  [gcuevas]
+#8655 - Error message displayed for ISSN with hyphen on Special Orders from scratch page
+#8007 - App Error-Unable to login immediately after creating new org resistration [ppai]
+#8190 - After the PPU Successfully created page, the Org user is in limbo [ppai]
+#8016 - Add additional user existing acct not working [ppai]
+#8538 - Remove Promo Code for Launch [ppai]
+#8622 - Permission status issue for title with limits [ppai]  
+#8560 - Permission Summary page - rollover - Rightsholder Terms  [gcuevas]
+#8537 - Back link on "Can't find what you're looking for ?"page is not hooked up  [gcuevas]
+#???? - Fixed text on landing page for PD and OURL... just added line breaks. [msj]
+#8606 - Cannot enter more than 5 characters in Circulation/Distributio field - RLS  [gcuevas]
+#8688 - Unable to get permission after obtaining 'special order' right  [gcuevas]
+#7721 - Sort option re-enabled.  Added switch to map numeric sort code to char. [msj]
+#8236 - PD auto login. [msj]
+#8264 - I was assuming that the session initiator string would be null, not so. [msj]
+#8090 - Text formatting issue.  Line breaks inserted.  [msj]
+#8706 - Unable to Quick Price  [gcuevas]
+#8709 - "Find Out More" link.  [msj]
+#8710 - Duplicate of 7721 I should think, since sorting was disabled.  [msj]
+#8653 - RLS permission status message not refreshing properly  [gcuevas]
+#8627 - No need to display sort results...  [msj]
+#8727 - OpenURL Price and Order from Republication.  [msj]
+#8745 - Request coverage link is missing button.  [msj]
+#8774 - GPO - unable to access manage account [msj]
+#8140 - No link for 'Check our PPU...' [msj]
+#8840 - Links in popup (help id 17) fixed. [msj]
+#8628 - Rightsholder listed as "null".  [msj]
+#8090 - OpenURL page missing stuff...  missed the links last time, sorry.  [msj]
+#8872 - "More..." not displaying.  This was because usageDescriptor method on faux
+        was returning a bogus UD instead of the one stored in the fauxpermission. [msj]
+#8957 - Add to order history.  Made a couple minor changes, worked for me in dev.  [msj]
+#8673 - Form validation in place, textual changes in place.  Pushing back on the
+        requested type of use field as I am using the type of use selected by the
+        user him/herself. [msj]
+
+
+Known Issues
+------------
+
+Notes to QA
+-----------
+#8628 - This is a problem intrinsic to how I display items...  the item is really
+        a non-existant permission so there is no rightsholder to get.  Instead I
+        am stuffing the publisher in the rightsholder spot.  This should at least
+        enable our researchers to track down the rightsholder.
+
+Miscellaneous Notes
+-------------------   
+    
+====================Build <0017> (04.03.2007)====================
+New Features
+------------
+You now have the forgot password and reset password capability ready for test [kmeyer]
+You also have a simple UI in the admin app for managing role based access for users [kmeyer]
+
+
+Defects Fixed
+-------------
+#  #  8478  Open  GPO log in broken link 
+#  8444 Manage Account Right Links and Help button hooked up [WAS]
+#  8506 Suppressed Edit Course link for closed orders [WAS]
+#  8458 Fixed Activity Report by Invoice Number [WAS]
+#  8454 Closed invalid query scripting exposure [WAS]
+#  8223 Fixed remaining column questions for activity report [WAS]
+#  8501 Copy Order for APS item returns App Error  [gcuevas]
+#  8491 Edit order detail displays incorrect updated price  [gcuevas]
+
+#  7588 Terms and Conditions link on Review your order screen does not work [ppai]
+#  8188 Review Credit and Payment Policy link on Enter Payment info pg inactive [ppai]
+#  8195 Company Name missing on payment screen billing address [ppai]
+#  8016 Add additional user existing acct not working [ppai]
+#  8311 Payment options step skipped on first order in session [ppai]
+#  8337 Manage Account- Add Additional User not checking if require fields are populated [ppai]
+#  8256 Payment method screen being skipped during Order Check out process [ppai]
+#  8354 Review stage of cart report that there is an error but not what the error is [ppai]
+#  8508 Exception error on select CC payment option then Continue w/o entering data [ppai]
+
+# 7888 Turned off license caching so new added license shows up [WAS]
+#  7997 Updates to RLS dropdown value  [gcuevas]
+#  7996 APS/ECCS Character Limit for "Date of Issue" field  [gcuevas]
+#  8217 Start of Term Calendar displaying 2005 & 2006  [gcuevas]
+#  8543 Error message on entering mixed case web address  [gcuevas]
+#  7762 Max length value in Author/Editor field of DPS order gives app error  [gcuevas]
+
+
+
+
+
+Known Issues
+------------
+
+Notes to QA
+-----------
+
+Miscellaneous Notes
+-------------------   
+
+    
+====================Build <0016> (03.29.2007)====================
+New Features
+------------
+* Added View/Edit Roles UI [bobd]
+
+Defects Fixed
+-------------
+#7761 - Author/Editor, volume, edition values entered during APS/ECC order not displayed  [gcuevas]
+#8058 - RLS order always returning $3.00 price  [gcuevas]
+#8192 - Cannot update Start of Term  [gcuevas]
+#8077 - "Learn more about how special order works" link pointing to CCC Production  [gcuevas]
+#8291 - Copy order from OH throwing an error [gcuevas] 
+#7993 - updated text for pop-up. [mjessop]
+#7984 - same as 7993. [mjessop]
+#7749 - Links on no search results page. [mjessop]
+#8028 - Duplicate of 7749. [mjessop]
+#8051 - Textual change to link. [mjessop]
+#8173 - External Comments now shown in OH details page for special orders [was]
+#8055 - Link in order confirm email gives page cannot be displayed
+#8201 - Fixed Invoice date bug in OH [was]
+#8204 - Acctg Ref showing up in Your Ref [was]
+#8029 - HTMLId for the availability on permission summary page-Scripting requirement  
+#8196 - Volume & Edition entered info not appearing in shopping cart  [gcuevas]
+#7763 - Able to enter 0000 and 9999 in year fields  [gcuevas]
+#8174 - RLS information about the work you are requesting info from  [gcuevas]
+#8326 - Able to add Internet item to cart without entering URL of posting feild.  [gcuevas]
+#8161 - Date email will be sent (DPS)/For serials label next to calendar  [gcuevas]
+#8338 - DPS Author/Editor data lost during data entry  [gcuevas]
+#8207 - Search for synonym from last page of results gives app error  [gcuevas]
+#7712 - biactive works with multiple RHs not displaying all RHs  [gcuevas]
+#8081 - Rightsholder Contact Information link inactive on DPS order  [gcuevas]
+#8353 - Unable to place RLS order when under the limit  [gcuevas]
+#8430 - CC order with Special Order bill to page implemented [WAS]
+#8474 - Added missing links. [mjessop]
+#8505 - Button for price and order in annual license line item.  [mjessop]
+#8509 - Well, I was not setting the display parameters correctly from the
+        landing/detail page because it messed up the "last search page"
+        value (making it a simple search).  Unfortunately that broke the other
+        add to cart functions coming from the landing page.  From now on if a
+        user hits a landing page, his last search will registered as "simple"
+        and there isn't anything I can do about it now. [mjessop]
+
+Known Issues
+------------
+
+Notes to QA
+-----------
+
+Miscellaneous Notes
+-------------------   
+    
+    
+====================Build <0015> (03.27.2007)====================
+New Features
+------------
+
+Defects Fixed
+-------------
+#8156 - Fixed result text and error messages for choose one submit [was]
+#8211 - Removed titles case in search results
+#8251 - Suppress query with bad date field [was]
+#7964 - RLS is not defaulting to 'choose one' instead it is defaulting to powerpoint  [gcuevas]
+#7904 - Pub date displayed as 0001 when pub from date in TF blank  [gcuevas]
+#7956 - New search link from Special Order "Add Item" page does not function  [gcuevas]
+#8254 - Fee breakdown (APS/ECCS/TRS) not displaying properly  [gcuevas]
+#8084 - Link on annual academic page linking to rightsphere.
+#8140 - Fixed one part, requested that the tracker item be split.
+#8216 - Cannot place TRS Special Order with 10 digit ISBN  [gcuevas]
+#8003 - recieving  pricing of $-805 for a price when ordering max pages/copies  [gcuevas]
+
+
+
+Known Issues
+------------
+
+Notes to QA
+-----------
+
+Miscellaneous Notes
+-------------------   
+
+    
+====================Build <0014> (03.22.2007)====================
+New Features
+------------
+
+Defects Fixed
+-------------
+#8158 - Suppress order detail invoice # for CC orders [was]
+#8181 - Add to cart academic/non-academic cart compatibility
+ #8182  flag was accidentally overwritten by someone, fixed. [msj]
+
+Known Issues
+------------
+
+Notes to QA
+-----------
+
+Miscellaneous Notes
+-------------------      
+      
+      
+====================Build <0013> (03.21.2007)====================
+New Features
+------------
+* Added CC2 DB Schema Version to developer home [dstine]
+
+Defects Fixed
+-------------
+#8065	Credit card payment option removed after placing special order [ppai] 
+#7738	PO# not appearing on Order Confirm page [ppai] 
+#8016	Add additional user existing acct not working [ppai]  
+#8047	Order Details not displayed on Order Confirm when pay by credit card [ppai]
+#8053	Creating new account does not happen when clicking submit [ppai]  
+#8124      Billing Status search returns incorrect results
+#7894  	Order loop when limit exceeded  [gcuevas]
+#8079  	Start new search link from quick price page gives app error  [gcuevas]
+#8141  	RLS "I was the author of this content"  [gcuevas]
+#8031   Incorrect Order Detail ID displayed on Order Confirmation page [ppai]
+#7778    Add another item to this order link inactive on Review Your Order screen [ppai]
+#7913   Add link to Credit & Pymt Policy on "Review your order" page [ppai]
+#8069  	Special order with Research Further status shows as Grant  [gcuevas]
+#7735   PO number value not cleared after order completed [ppai]
+#7862  	Able to price & order RLS item where permission = deny or contact rightsholder  [gcuevas]
+#8002  	special order displaying incorrect message  [gcuevas]
+#7768	all checkbox not checked [mjessop]
+#7839   search result text displaying incorrectly [mjessop]
+#7837   non academic order process asking for course info [mjessop]
+#7843   RLS Type of use description missing [mjessop]
+#7589  	titles with publication year beginning of time (1000)  [gcuevas]
+#8060	Gateway null pointer exception [mjessop/rswitzer/mprovencal]
+
+
+
+
+
+
+* Rewrote permission display code using Chris's user persistence stuff.
+
+
+
+Known Issues
+------------
+
+Notes to QA
+-----------
+#8100  Open  SPECIAL ORDER FROM SCRATCH STATING INVALID ISSN/ISBN [gcuevas] - functions as designed
+
+
+Miscellaneous Notes
+-------------------
+
+      
+
+====================Build <0012> (03.20.2007)====================
+New Features
+------------
+* Added persistance code for [display] types of use.
+* Not Authorized page is displayed when a user fails an access control check [dstine]
+
+Defects Fixed
+-------------
+8080 - Fixed edit link and license service call for order history [was]
+7685 - Quick Price calculation incorrect  [gcuevas]
+7881 - Wrong price returned by RLS Quick Price  [gcuevas]
+7527 - Per page fee and per copy fee does not match CC1  [gcuevas]
+7885 - safari - update price button does not seem to work  [gcuevas]
+7855 - RLS - republish in other book listed as 'tradebook' in cart  [gcuevas]
+7759 - Decimal point in number of recipients - no error message  [gcuevas]
+8020 - PO # field wrap tag fixed [was]
+8076 - PO # field wrap tag fixed [was]
+7977 - Switched to correct User object for user name & email [was]
+7862 - Able to price & order RLS item where permission = deny or contact rightsholder [gcuevas] 
+7858 - special orders from scratch page  [gcuevas]
+8078 - "Cancel Changes" link on Edit Special Order page is inactive  [gcuevas]
+7859 - links need to be hooked up on special order from scratch page  [gcuevas]
+???? - Added code to stuff purchase id back to order process for add to order processing.
+
+
+
+Known Issues
+------------
+
+Notes to QA
+-----------
+
+
+Miscellaneous Notes
+-------------------
+
+
+
+====================Build 0011 (03.15.2007)====================
+New Features
+------------
+
+Defects Fixed
+-------------
+7991 - This is actually a GPO javascript issue.  Fixed.
+7954 - Special order from no results page - works in DEV2 and local.  Fixed.
+7902 - Reorder Order Capture Fields (APS/ECCS, RLS) and add messaging  [gcuevas]
+7907 - APS order details are not populating Num Copies field with value from CC2  [gcuevas]
+7757 - Editing non invoiced item in Order History  not saved when "Save Changes"clicked  [gcuevas]
+7901 - Permission Status display in Order History [was]
+8019 - Permission Status display in Order History [was]
+8036 - Permission Status display in Order History [was]
+8037 - Permission Status display in Order History [was]
+8039 - Permission Status display in Order History [was]
+7819 - The "More..." link for the Permission selected description does not work  [gcuevas]
+7887 - Clicking the "Select different permission" option not functioning  [gcuevas]
+7545 - order info (step 1)  
+
+
+
+Known Issues
+------------
+
+Notes to QA
+-----------
+7960 - Closed.  Functions as designed.
+
+Miscellaneous Notes
+-------------------
+
+
+====================Build 0008 (03.13.2007)====================
+New Features
+------------
+* added VIEW_ENTERPRISE_REPORTS privilege code [dstine]
+
+
+Defects Fixed 
+------------- 
+# 7776 - Edit course link missing from Step 2 Review Your Order 
+# 7919 - CCCDirect was not handling the lack of required parameters very well.
+# 7826 - Annual academic search - old bug, duplicate, fixed.
+# 7888 - Gen fixed this already.
+# 7863 - Was not display multiple strings in search text.
+# ???? - Hide "back to results" link on landing page from cart title view.
+# 8029 - Added ID's to permission summary page for QA automation [mtremblay]
+# 8013  Unable to add order to shopping cart  [gcuevas]
+# 7970  Special order option not returned when TRS limit exceeded  [gcuevas]
+# 7946  Saving edited item from Order History returns Application Error  [gcuevas]
+# 7943  Application error after encountering limits Permission status flipping bug [gcuevas] 
+# 7941  DPS rights with more than one limit incorrectly show as special order  [gcuevas]
+# 7880  Freeze on Quick Price of certain RLS repub types  [gcuevas]
+# 7872  Unable to save edits to RLS item in cart  [gcuevas]
+# 7949  Editing a item from Order history to a Special order and Saving returns App Err  [gcuevas]
+# 7982  Extra bullet on the e-reserves popup/rollover from the 'more' link  [gcuevas]
+# 7894  Order loop when limit exceeded  [gcuevas]
+# 7818  Editing a Non-invoiced item complains about app supplied publication year  [gcuevas]
+# 7842  Editing existing order (not billed) and saving returns error msg  [gcuevas]
+# 7815  Problem adding new item to cart after removing item from cart in Step 2 checkout  [gcuevas]
+# 7877  Wrong "republishing to" value displayed in cart - RLS  [gcuevas]
+# 7896  The title link in the shopping cart throws appication error  [gcuevas]
+# 8050  Editing Special order from Order details page in order history returns blank pg  [gcuevas]
+# 7931  Blank screen after saving changes to cart using Mozilla 2.  [gcuevas]
+# 7870  Number of Students not carried forward for subsequent detail items in an order  [gcuevas]
+
+
+Known Issues
+------------
+
+
+Notes to QA
+-----------
+
+
+Miscellaneous Notes
+-------------------
+
+====================Build 0007 (03.08.2007)====================
+New Features
+------------
+    * Added additional configuration information to developer home [dstine]
+    * Updated exception handling [dstine]
+        * Handle both uncaught exceptions from UserSessionFilter and exceptions raised in JSP pages
+        * Log the stack trace for exceptions raised in JSP pages
+        * Stack trace(s) will be conditionally available to the end user
+            * If running in LOCAL or DEV, the stack trace(s) will be visible in the browser. 
+            * If running in any other environment other than production, the stack trace(s) will be not visible, 
+              but will be hidden in an HTML comment.  Select View Source and scroll down to see this information.
+            * If running in production, no stack trace(s) will be visible or hidden in an HTML comment.
+
+
+Defects Fixed 
+------------- 
+
+    * #7758  Inconsistent start of term display for APS & ECC 
+    * #7764  Always invoice me option on checkout doesn't stick 
+    * #7775  Edit payment info link gives wrong payment option 
+    * #7780  Special Order text missing from Enter Payment Info screen 
+    * #7808  Change to or addition of  PO# on Step 2 of checkout doesn't stick
+    * #7846  Order details missing from confirm page 
+    * #7886  Incorrect payment method displayed on confirm page
+    * #7736  Edit Cart link on confirm page 
+    * #7807  Able to checkout without entering credit card data 
+    * #7573  Registration - remove 'service provider' from I am a/an dropdown 
+    * #7922  Credit card payments - 4 digits not being stored and Payment type = Invoice
+    * #7757  Editing non invoiced item in Order History  not saved when "Save Changes"clicked [gcuevas]
+    * #7770  Open  Edit item in cart gives partially blank screen [gcuevas]
+    * #7708  Editing a finished shopping cart APS order does not accept Author/Editor field [gcuevas]
+    * #7875  Max length values in text fields cause app error - RLS [gcuevas]
+    * #7902  Reorder Order Capture Fields (APS/ECCS, RLS) and add messaging  [gcuevas]
+    * #7909  Updates to Commerce Pop-up Copy  [gcuevas]
+    * #7731  Shopping cart missing text specifying number of items in cart  [gcuevas]
+    * #7760  Max length values causing hang  [gcuevas]
+    * #7891 Fix to paging [was]
+    * #7697 Fixed display spec handling. [was]
+    * #7700 Changed Perm Type drop down to reflect spec even though they are too  long and will probably have to be changed again. [was]
+    * #7790 Previous fix in SS resolves status problem [was]
+    * #7882 Fixed handling of DisplaySpec [was]
+    * #7682 Previous fix in SS resolves pub title search problem [was]
+    * #7901 Permission status now displayed with icons [was]
+    * #7592 Fixed by osmosis or bogus bug [was]
+    * #7710 Changed search drop down label [was]
+    * #7705 Added 'Request has been canceled' option [was]
+    * #7812 Added forced wrap for po number [was] 
+    * #7759  Decimal point in number of recipients - no error message  [gcuevas]
+    * #7840  TYPO - RLS order process screen - inteded should be intended  [gcuevas]
+    * #7707  Edit item in cart gives blank screen after Save Changes - Mozilla  [gcuevas]
+    * #7718  DPS Extranet  and Internet TOU - author/editor value gives app error  [gcuevas]
+    * #7756 Added copy & edit links to order detail page in OH [was]
+
+Known Issues
+------------
+
+
+Notes to QA
+-----------
+
+
+Miscellaneous Notes
+-------------------
+
+====================Build 0005 (03.05.2007)====================
+New Features
+------------
+    * added new items to drop down navigations (from Mtkg) [mtremblay]
+    * removed author/editor field from basic results per request from Mktg (SCR 7874)[mtremblay]
+    * added Academic Rep license types, and booleans for DPS/RLS all deny or grant [mtremblay]
+    * added GUI aspects of the aforementioned AACL type.  [mjessop]
+    * added link to special order page from "Can't find what you're looking for?" on search pages
+Defects Fixed 
+------------- 
+    * added PPU servicename parameter items for openurl search [mjessop]
+    * #7838  Incorrect publication year displayed on Permissions Summary page  [mtremblay]
+    * #7630  Unable to search by ISSN - Advanced Search
+    * #7743  Number of page and Percent page limits not enforced [gcuevas]
+    * #7689  Order Confirmation page not calculating multi item shopping cart correctly [gcuevas]
+    * #7769  Update price doesn't when limit exceeded. [gcuevas]
+    * #7742  Update Price inactive after second attempt [gcuevas]
+    * #7860  Special order from scratch not acknowledging # students field being populated [gcuevas]
+    * #7605  Cart is not checked to determine if item can be added from search results. [mjessop]
+    * #7890  Can search now after search error.
+    * #7918  Servicename parameter recognized and honored in OpenURL.  [mjessop]
+
+
+
+
+====================Build 003 (02.09.2007)====================
+
+New Features
+------------
+
+Search
+    * added index numbers to availability HREFs on serach results for QA
+      automation [mtremblay]
+    * fixed spacing on availablility
+    * completed PD and OpenURL flow changes [mjessop]
+    * added frequently ordered flagging [mjessop]
+    * fixed single item search by wrkInst rather than mainIDNo
+    * public domain and frequently requested items added
+ 
+Security/User Management
+    * Configured J2EE/JAAS authentication for the app and developed related
+      code to handle user authentication coming in through J2EE auth session
+      parameters
+        * Deprecated LoginAction and moved login code to
+          handleAuthentication() and handleNewAuthentication() methods.  
+        * Configured J2EE/JAAS authentication to redirect to login page, and
+          to have shopping cart URLs protected behind authentication.  
+        * Set up jazn-data file for local dev environments and LDAP for
+          deployed environments to control authentication credentials (tried
+          to get LDAP working for dev environments, but no go, seems to be an
+          ongoing JDeveloper bug)
+Order History
+        * Auto submit form on sort selection change. Update sort direction to default for new sort option.
+        * Added Your Accounting Reference to the Order History sort list per spec              creep.
+        * Consolidated order history javascript in orderHistory.js
+        * Added "Relevance" sort option per omission in UI spec
+        * Added sort selection and direction change submit of OH-ID1
+        
+General
+    * Updated banner image on commerce header with new image from mktg, linked to homepage 
+    * Fixes from UI usability doc to search & results
+    * Don't display author/editor labels on search results if fields empty      
+
+Defects Fixed ------------- 
+Search
+    * fixed permissions display text for annual license results [mtremblay]
+    * addressed issues regarding permission text and images [mjessop]
+    * fixed null pointer exception in search wrapper [mjessop]
+Order History
+    * fixed Order Detail ID integer Strings with blanks from failing in the service 
+      layer by trimming blanks
+    * fixed line item price per student to only show for non-special orders as per 
+      OH-ID3 annot. 10
+    * Trimmed the order history search input string to prevent invalid integer 
+   * Fixed sort order for Order Detial View page and made sort radios behave per spec.
+   * Init current page to 1 for each new search
+   * Fixed item count to include non-visible results
+   * Add js radio button disable for relevance sort selection
+parsing
+    * Made Permission Type text match order detail page
+    * Fixed ID reference on order view page for cancel js
+    * Added purchase ID to order detail view license cancel to prevent page refresh problem.
+    * Updated order detail and order view pages to use new APS and ECCS text
+    * Replaced order view action service calls with getOrderLicenses() instead of 
+      getOderLicenseByConfNum().
+    * updated order history and details validation messages to match field validation spec
+    * Fixed DisplaySpec problem and updated OrderViewActionForm to output a proper license DisplaySpec
+
+Known Issues
+------------
+
+
+Notes to QA
+-----------
+
+
+Miscellaneous Notes
+-------------------
+
+
+
+
+
+====================Build 0001 (2007.01.19)====================
+
+New Features
+------------
+Search 
+
+   * Advanced search permission type criteria checkboxes will filter permission
+     types displayed in advanced results.  Biactive permission are shown in one
+     table row, date ranges are not yet displayed.  Academic products (APS / 
+     ECC) are able to be added to cart Advanced Search Pay-per-use tabs and 
+     Annual License - Business tabs are functioning. Annual License - Academic 
+     is not yet functioning.  Publication details page breaks out pay-per-use 
+     and annual business license sections 
+
+Cart / Checkout 
+
+   * Academic products can be added to cart and ordered Course information will 
+     be collected for academic products when first item is added to cart Edit 
+     cart includes Edit Course Info when applicable 
+
+Order History
+
+   * Academic orders and course details are now displayed Course information can 
+     be searched and sorted 
+
+
+
+====================Build m24 (2007.01.10)====================
+
+New Features
+------------
+
+   * Added advanced search results page. Biactive rights are showing as 
+     duplicated types of use rows, with applicable permissions and buttons. 
+
+   * Grouping of biactive rights and date ranges will be added in the next 
+     build. 
+
+   * Reworked Permissions Summary page, which handles biactive rights as 
+     described above. 
+
+   * Permissions for all pay per user types are now displayed, but only TRS
+     and DPS types can be carried through the order process to checkout. 
+
+
+====================Build m12 (2006.12.18)====================
+
+This release provides basic "positive path" functionality for the eCommerce 
+section of the new copyright.com site. This release includes only TRS and DPS 
+products; academic products will be included in the next phase due to QA on Jan 
+15 2007. 
+
+Home page 
+    * Rollovers for segments and associated image changes 
+    * Rollovers for navigation bar (links in submenus not yet active) 
+    * Links in body and footer not yet active 
+    * Header Links 
+        * Login -- navigates to mock login page; accepts users created in cccdev1 instance of copyright.com 
+        * Cart -- navigates to cart maintenance page 
+        * Manage Account & Help links not yet active 
+    * Search box is functional; More Search Options navigates to advanced search 
+
+Search Results
+    * Both basic and advanced search options display basic search results Sort
+      options not yet functional Results per page and page navigation are
+      functioning Permission Options button navigates to Publication Details
+      page Note that a known problem is that some publications are displaying
+      on search results page without standard numbers; these will not navigate
+      to the Publication Details page properly Frequently Requested works are
+      not yet displaying separately 
+
+Permission Details page
+    * TRS & DPS types of use are displaying permissions Price & Order button
+      will add item to cart Special orders are not yet hooked up 
+
+Cart Maintenance
+    * Pricing works, limits message will appear if applicable Add to Cart
+      enters priced item to shopping cart Edit|Remove options work, Empty Cart
+      works Search for another publication gives error 
+
+Checkout 
+    * Step 1 : Pay by Invoice is working, credit card not yet functioning
+    * Step 2 : Accept terms & conditions required to place order Cancel link
+      returns you to cart maintenance Place Order places order to TF (must be
+      logged in as organizational user) and brings you to confirmation page
+      View your orders link navigates to order history page 
+
+Order history 
+    * Open, Closed, All links active 
+    * Search and Sort options functioning 
+    * View Order and Edit Order links functioning, Copy order not working 
+    * View Orders , View Order Details tabs functioning 
+
+
+

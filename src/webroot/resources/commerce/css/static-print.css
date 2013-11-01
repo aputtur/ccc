@@ -1,0 +1,74 @@
+@media print {
+
+ul#learnmore {
+	margin: -5px 0px 0px 0px;
+	list-style: inside url(/media/images/arrow_red_padded.GIF);
+}
+
+ul#learnmore li {
+	list-style-image: inside url(/media/images/arrow_red_padded.GIF);
+        text-indent:  -3ex;
+        padding-left:  3ex;
+        padding-top: 1px;
+	color: #000;
+}
+
+ul.redsquare {
+	list-style: inside url(/media/images/bullet_red_padded.GIF);
+	margin: -5px 0px 0px 2ex;
+}
+
+ul.redsquare li {
+	list-style: inside url(/media/images/bullet_red_padded.GIF);
+        text-indent:  -3ex;
+        padding-left:  3ex;
+        padding-top: 1px;
+	color: #000;
+}
+
+ul.redsquare li ul {
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: disc;
+}
+
+ul.redsquare li ul li {
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: disc;
+    text-indent: 0ex;
+    padding-left: 0ex;
+}
+
+#two-column-main {
+    voice-family: "\"}\""; 
+    voice-family:inherit;
+    width: 450px;
+    margin-right: 10px;
+    margin-left: -5px;
+}
+
+#three-column-main {
+    voice-family: "\"}\""; 
+    voice-family:inherit;
+    width: 275px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.contained-drop-shadow-wrapper {
+    width: auto;
+    background: none;
+}
+.contained-drop-shadow-wrapper-bottom {
+    width: auto;
+    background: none;
+}
+.contained-drop-shadow {
+    width: auto;
+    background: none;
+    border: 1px solid black;
+}
+
+}
+

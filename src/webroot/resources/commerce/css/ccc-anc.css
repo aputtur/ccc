@@ -1,0 +1,53 @@
+         
+A
+{
+    COLOR: #0033cc;
+    TEXT-DECORATION: none
+}
+.ATEXT
+{
+    COLOR: #000000;
+    TEXT-DECORATION: none
+    
+}
+BODY
+{
+    MARGIN-TOP: 5px;
+    MARGIN-LEFT: 5px;
+    FONT-FAMILY: arial,helvetica;
+    BACKGROUND-COLOR: white
+}
+TD
+{
+    FONT-SIZE: 12px;
+    FONT-FAMILY: arial,helvetica
+}
+A:hover
+{
+    TEXT-DECORATION: underline
+}
+A:active
+{
+    TEXT-DECORATION: underline
+}
+SELECT
+{
+    FONT-SIZE: 12px
+}
+.misuButton
+{
+    COLOR: white;
+    BACKGROUND-COLOR: #4477aa
+}
+.misuButton2
+{
+    COLOR: black;
+    BACKGROUND-COLOR: #B2D0EC;
+    HEIGHT: 20px;
+}
+.notes
+{
+    height:100;
+    width:300;
+}
+

@@ -1,0 +1,617 @@
+<?xml version = '1.0' encoding = 'utf-8'?>
+<!DOCTYPE project>
+
+<!--
+
+	Copyright 2008, Copyright Clearance Center.  All rights reserved.
+
+	This build script is administered by the SCM Group at CCC.
+	It should be considered the reference build script for
+	the containing project, and consequently should not be
+	modified outside of the SCM group without prior approval.
+
+	http://wiki.copyright.com/twiki/bin/view/Depts/ITG/SCMHomePage
+
+-->
+
+<project name="www" basedir=".." xmlns:ivy="antlib:org.apache.ivy.ant" >
+
+	<echo message="*************************************" />
+	<echo message="* Project Name: ${ant.project.name}" />
+	<echo message="*************************************" />
+	<property name="project.name" value="cc3" />
+
+	<!-- defines the distro of CCC Ant this script is designed for -->
+	<property name="ccc.ant.dist.key" value="0092" />
+
+	<property name="build.number" value="undefined" />
+	<property file="${ant.home}/master.properties" />
+	<property file="build/build.properties" />
+
+	<tstamp/>
+
+	<!-- imported macros -->
+	<import file="${ccc.build.framework.dir}/base-build.xml" />
+	<import file="${ccc.build.framework.dir}/template.xml" />
+	<import file="${ccc.build.framework.dir}/wget.xml" />
+	<import file="${ccc.build.framework.dir}/depend.xml" />
+	<import file="${ccc.build.framework.dir}/analysis.xml" /> 
+	<import file="${ccc.build.framework.dir}/javac.xml" />
+	<import file="${ccc.build.framework.dir}/javadoc.xml" />
+	<import file="${ccc.build.framework.dir}/jsp-compile.xml" />
+	<!--<import file="ccc-analysis.xml" />-->
+
+	<!-- Retrieve dependencies that are in Artifactory as specified in the file build/ivy.xml -->
+	<target name="ivy-retrieve" >
+		<!-- Read the ivysettings.xml file which defines the Artifactory repo -->
+		<ivy:settings />
+
+		<!-- Resolve the dependencies defined in the ivy.xml file -->
+		<ivy:resolve file="build/ivy.xml" />
+
+		<!-- Retrieve the files from the repository  -->
+		<ivy:retrieve pattern="lib/artifactory/[artifact]-[revision].[ext]" /> 
+	</target>
+
+
+	<target name="classpath.init" >
+<!--
+		<macro.svcPath
+			property="svc.adjustment.path"
+			svc.name="adjustment"
+			svc.version="${svc.adjustment.version}"
+			/>
+		<echo message="svc-adjustment path = ${svc.adjustment.path}" />
+-->
+		<macro.svcPath
+			property="svc.arTransaction.path"
+			svc.name="artransaction"
+			svc.version="${svc.arTransaction.version}"
+			/>
+		<echo message="svc-arTransaction path = ${svc.arTransaction.path}" />
+
+		<macro.svcPath
+			property="svc.centralQueue.path"
+			svc.name="centralQueue"
+			svc.version="${svc.centralQueue.version}"
+			/>
+		<echo message="svc-centralQueue path = ${svc.centralQueue.path}" />
+
+		<macro.svcPath
+			property="svc.extEmail.path"
+			svc.name="extEmail"
+			svc.version="${svc.extEmail.version}"
+			/> 
+		<echo message="svc-extEmail path = ${svc.extEmail.path}" />
+
+		<macro.svcPath
+			property="svc.ldapuser.path"
+			svc.name="ldapuser"
+			svc.version="${svc.ldapuser.version}"
+			/>
+		<echo message="svc-ldapuser path = ${svc.ldapuser.path}" />
+
+		<macro.svcPath
+			property="svc.order.path"
+			svc.name="order"
+			svc.version="${svc.order.version}"
+			/>
+		<echo message="svc-order path = ${svc.order.path}" />
+
+		<macro.svcPath
+			property="svc.rights.path"
+			svc.name="rights"
+			svc.version="${svc.rights.version}"
+			/>
+		<echo message="svc-rights path = ${svc.rights.path}" />
+
+		<macro.svcPath
+			property="svc.rightsResolver.path"
+			svc.name="rightsResolver"
+			svc.version="${svc.rightsResolver.version}"
+			/>
+		<echo message="svc-rightsResolver path = ${svc.rightsResolver.path}" />
+
+		<macro.svcPath
+			property="svc.searchRetrieval.path"
+			svc.name="searchRetrieval"
+			svc.version="${svc.searchRetrieval.version}"
+			/>
+		<echo message="svc-searchRetrieval path = ${svc.searchRetrieval.path}" />
+
+		<macro.svcPath
+			property="svc.telesales.path"
+			svc.name="telesales"
+			svc.version="${svc.telesales.version}"
+			/>
+		<echo message="svc-telesales path = ${svc.telesales.path}" />
+
+		<macro.svcPath
+			property="svc.tf.path"
+			svc.name="tf"
+			svc.version="${svc.tf.version}"
+			/>
+		<echo message="svc-tf path = ${svc.tf.path}" />
+
+		<macro.svcPath
+			property="svc.userInfo.path"
+			svc.name="userInfo"
+			svc.version="${svc.userInfo.version}"
+			/>
+		<echo message="svc-userInfo path = ${svc.userInfo.path}" />
+
+		<macro.svcPath
+			property="svc.worksremote.path"
+			svc.name="worksremote"
+			svc.version="${svc.worksremote.version}"
+			/>
+		<echo message="svc-worksremote path = ${svc.worksremote.path}" />
+
+		<echo message="CRS path = ${crs.path}" />
+
+		<echo message="ccc-opi path = ${ccc.opi.path}" />
+
+		<echo message="ccc-mail path = ${ccc.mail.path}" />
+
+		<macro.svcPath
+			property="svc.rlOrder.path"
+			svc.name="rlOrder"
+			svc.version="${svc.rlOrder.version}"
+			/>
+		<echo message="svc-rlOrder path = ${svc.rlOrder.path}" />
+
+		<macro.svcPath
+			property="svc.rlUser.path"
+			svc.name="rlUser"
+			svc.version="${svc.rlUser.version}"
+			/>
+		<echo message="svc-rlUser path = ${svc.rlUser.path}" />
+
+		<echo message="RightslinkUiBase path = ${rl.uiBase.path}" />
+
+		<echo message="HTML Generator path = ${rl.htmlGenerator.path}" />
+
+		<path id="build.classpath" >
+			<path refid="ccc.depend.pool.classpath" />
+			<path refid="ccc.depend.framework.classpath" />
+			<path refid="ccc.depend.cccbase.classpath" />
+			<path refid="ccc.depend.cccshared.classpath" />
+			<path refid="ccc.depend.cccsvccommon.classpath" />
+			<path refid="ccc.depend.cccappintegrity.classpath" />
+
+			<!-- Artifactory downloads -->
+			<!-- <fileset dir="lib/artifactory" includes="*.jar" /> -->
+
+			<fileset file="${ccc.opi.path}/bin/jars/PROD/ccc-opi.jar" />
+			<fileset file="${ccc.mail.path}/bin/jars/PROD/ccc-mail.jar" />
+                        <!--
+			<fileset file="${svc.adjustment.path}/PROD/svc-adjustment-client-${svc.adjustment.version}.jar" />
+                        -->
+			<fileset file="${svc.arTransaction.path}/PROD/svc-artransaction-client-${svc.arTransaction.version}.jar" />
+			<fileset file="${svc.centralQueue.path}/PROD/svc-centralQueue-client-${svc.centralQueue.version}.jar" />
+			<fileset file="${svc.extEmail.path}/PROD/svc-extEmail-client-${svc.extEmail.version}.jar" />
+			<fileset file="${svc.ldapuser.path}/PROD/svc-ldapuser-client-${svc.ldapuser.version}.jar" />
+			<fileset file="${svc.order.path}/PROD/svc-order-client-${svc.order.version}.jar" />
+			<fileset file="${svc.rights.path}/PROD/svc-rights-client-${svc.rights.version}.jar" />
+			<fileset file="${svc.rightsResolver.path}/PROD/svc-rightsResolver-client-${svc.rightsResolver.version}.jar" />
+			<fileset file="${svc.searchRetrieval.path}/PROD/svc-searchRetrieval-client-${svc.searchRetrieval.version}.jar" />
+			<fileset file="${svc.telesales.path}/PROD/svc-telesales-client-${svc.telesales.version}.jar" />
+			<fileset file="${svc.tf.path}/PROD/svc-tf-client-${svc.tf.version}.jar" />
+			<fileset file="${svc.userInfo.path}/PROD/svc-userInfo-client-${svc.userInfo.version}.jar" />
+			<fileset file="${svc.worksremote.path}/PROD/svc-worksremote-client-${svc.worksremote.version}.jar" />
+			<fileset file="${crs.path}/bin/jars/PROD/configuration-resource-system.jar" />
+
+			<fileset file="${svc.rlOrder.path}/PROD/svc-rlOrder-client-${svc.rlOrder.version}.jar" />
+			<fileset file="${svc.rlUser.path}/PROD/svc-rlUser-client-${svc.rlUser.version}.jar" />
+			<fileset file="${rl.uiBase.path}/bin/jars/PROD/RightslinkUiBase.jar" />
+			<fileset file="${rl.htmlGenerator.path}/bin/jars/PROD/HtmlGenerator.jar" />
+
+			<fileset dir="lib" />
+			<!-- Put container libraries last, since libraries in WEB-INF/lib take precedence -->
+			<path refid="ccc.depend.container.classpath" />
+		</path>
+
+		<path id="api.classpath" refid="build.classpath" />
+		<!-- <path id="findbugs.auxClasspath" refid="build.classpath" /> -->
+
+	</target>
+
+
+	<!-- BUILD -->
+	<target name="jsp-compile" unless="suppress.jspcompile" depends="jspc.execute"/>
+
+	<target name="build-impl" depends="before-build,war,after-build" />
+
+	<target name="before-build" depends="depend.init,classpath.init,make-output-dirs,templateSubstitutions,db-schema-version" />
+
+	<target name="after-build" depends="api" />
+
+	<target name="api-impl">
+
+		<fail message="Property ccc.jdk6.home must be set." >
+			<condition>
+				<not><isset property="ccc.jdk6.home" /></not>
+			</condition>
+		</fail>
+
+		<ccc.macro.javadoc.with.executable
+			executable="${ccc.jdk6.home}/bin/javadoc.exe"
+			destdir="${ccc.build.api.dir}"
+			classpath.refid="api.classpath" 
+			/>
+
+	</target>
+
+
+	<target name="make-output-dirs">
+		<mkdir dir="${build.classes}/PROD" />
+		<mkdir dir="${build.classes}/DEBUG" />
+		<mkdir dir="${build.wars}" />
+		<mkdir dir="${build.db}" />
+		<mkdir dir="${build.api}" />
+	</target>
+
+	<target name="templateSubstitutions" description="Handles environment-based text substitutions">
+
+		<template.copy.one.all
+			file="config/app/CC2Configuration.properties.template">
+			<globmapper from="*.template" to="*" />
+		</template.copy.one.all>
+
+		<template.copy.one.all
+			file="config/app/cybersource.properties.template">
+			<globmapper from="*.template" to="*" />
+		</template.copy.one.all>
+
+		<template.copy.one.all
+			file="config/web/ccc-httpd.conf" 
+			/>
+
+		<template.copy.one.all
+			file="config/web/int-ccc-httpd.conf" 
+			/>
+
+	</target>
+
+
+	<target name="db-schema-version" >
+		<replace file="${src.sql}/FUNCTION/what_schema_version.sql"
+			token="@schema.version@" value="${build.number}" 
+			/>
+	</target>
+
+
+	<target name="compile" depends="before-build">
+
+		<fail message="Property ccc.jdk6.home must be set." >
+			<condition>
+				<not><isset property="ccc.jdk6.home" /></not>
+			</condition>
+		</fail>
+
+		<ccc.macro.2.compile.with.executable
+			executable="${ccc.jdk6.home}/bin/javac.exe"
+			destdir="${ccc.build.classes.dir}"
+			classpath.refid="build.classpath" 
+			/>
+
+	</target>
+
+
+	<target name="pre-war" />
+
+	<target name="war" depends="compile,jsp-compile,pre-war" >
+		<macro.war.flavor
+			flavor="PROD"
+			/>
+		<macro.war.flavor
+			flavor="DEBUG"
+			/>
+	</target>
+
+	<macrodef name="macro.war.flavor">
+		<attribute name="flavor" />
+		<sequential>
+			<mkdir dir="${build.wars}/@{flavor}"/>
+
+			<!-- create builddata.txt -->
+			<delete file="${build.classes}/@{flavor}/com/copyright/ccc/config/www-builddata.txt" />
+			<echo file="${build.classes}/@{flavor}/com/copyright/ccc/config/www-builddata.txt">
+				build.number=${build.number}
+				build.engine=${build.engine}
+				build.flavor=@{flavor}
+				build.date=${TODAY} ${TSTAMP}
+			</echo>
+
+			<macro.war
+				war.name="${build.basename}.war"
+				webxml.name="web.xml"
+				excludes.file="${ant.dir}/web-internal${excludes.filename.suffix}"
+				flavor="@{flavor}"
+				/>
+
+<!--	The below tasks were from the time that we built both an internal 
+	(ccc-internal.war) and external (ccc.war) version of the war file.
+	We now build just one war (ccc.war) which is identical to the old 
+	ccc-internal.war file.
+
+			<macro.war
+				war.name="${build.basename}.war"
+				webxml.name="web.xml"
+				excludes.file="${ant.dir}/web-external${excludes.filename.suffix}"
+				flavor="@{flavor}"
+				/>
+			<macro.war
+				war.name="${build.basename}-internal.war"
+				webxml.name="web.xml"
+				excludes.file="${ant.dir}/web-internal${excludes.filename.suffix}"
+				flavor="@{flavor}"
+				/>
+  -->
+
+		</sequential>
+	</macrodef>
+
+	<macrodef name="macro.war">
+		<attribute name="war.name" />
+		<attribute name="webxml.name" />
+		<attribute name="excludes.file" />
+		<attribute name="flavor" />
+
+		<sequential>
+
+			<!-- prepare web.xml -->
+			<copy file="src/webroot/WEB-INF/@{webxml.name}"
+				toFile="out/webxml/web.xml" overwrite="true" 
+				/>
+
+			<war destfile="${build.wars}/@{flavor}/@{war.name}" webxml="out/webxml/web.xml" >
+
+				<fileset dir="${src.web}" 
+					excludes="WEB-INF/web.xml,test*.*"
+					excludesfile="@{excludes.file}" 
+					/>
+
+				<classes dir="${build.classes}/@{flavor}" />
+
+				<classes dir="${ccc.build.src.java.dir}" 
+					includes="**/*.properties,**/*.xsl,**/*.xml"
+					excludesfile="@{excludes.file}" 
+					/>
+
+				<lib dir="${ccc.pool.lib.path}" includesfile="build/war-includes.txt" />
+
+				<lib file="${cccbase.path}/bin/jars/${ccc.depend.cccbase.compilertype}/@{flavor}/ccc-base.jar" />
+				<lib dir="${cccshared.path}/bin/jars/@{flavor}" excludes="ccc-shared-testing.jar" />
+				<lib file="${ccc.opi.path}/bin/jars/@{flavor}/ccc-opi.jar" />
+				<lib file="${ccc.mail.path}/bin/jars/@{flavor}/ccc-mail.jar" />
+				<lib file="${cccsvccommon.path}/bin/jars/@{flavor}/ccc-svc-common.jar" />
+				<lib file="${cccappintegrity.path}/bin/jars/@{flavor}/ccc-app-integrity.jar" />            	
+				<lib file="${ccc.framework.lib.root}/spring-2.5.5/hessian*.jar" />
+				<lib file="${svc.arTransaction.path}/@{flavor}/svc-artransaction-client-${svc.arTransaction.version}.jar" />
+				<lib file="${svc.centralQueue.path}/@{flavor}/svc-centralQueue-client-${svc.centralQueue.version}.jar" />
+				<lib file="${svc.extEmail.path}/@{flavor}/svc-extEmail-client-${svc.extEmail.version}.jar" /> 
+				<lib file="${svc.ldapuser.path}/@{flavor}/svc-ldapuser-client-${svc.ldapuser.version}.jar" />
+				<lib file="${svc.order.path}/@{flavor}/svc-order-client-${svc.order.version}.jar" />
+				<lib file="${svc.rights.path}/@{flavor}/svc-rights-client-${svc.rights.version}.jar" />
+				<lib file="${svc.rightsResolver.path}/@{flavor}/svc-rightsResolver-client-${svc.rightsResolver.version}.jar" />
+				<lib file="${svc.searchRetrieval.path}/@{flavor}/svc-searchRetrieval-client-${svc.searchRetrieval.version}.jar" />
+				<lib file="${svc.telesales.path}/@{flavor}/svc-telesales-client-${svc.telesales.version}.jar" />
+				<lib file="${svc.tf.path}/@{flavor}/svc-tf-client-${svc.tf.version}.jar" />
+				<lib file="${svc.userInfo.path}/@{flavor}/svc-userInfo-client-${svc.userInfo.version}.jar" />
+				<lib file="${svc.worksremote.path}/@{flavor}/svc-worksremote-client-${svc.worksremote.version}.jar" />
+				<lib file="${crs.path}/bin/jars/@{flavor}/configuration-resource-system.jar" />
+				<!-- <lib file="${svc.adjustment.path}/@{flavor}/svc-adjustment-client-${svc.adjustment.version}.jar" /> -->
+
+				<lib file="${svc.rlOrder.path}/@{flavor}/svc-rlOrder-client-${svc.rlOrder.version}.jar" />
+				<lib file="${svc.rlUser.path}/@{flavor}/svc-rlUser-client-${svc.rlUser.version}.jar" />
+				<lib file="${rl.uiBase.path}/bin/jars/@{flavor}/RightslinkUiBase.jar" />
+				<lib file="${rl.htmlGenerator.path}/bin/jars/@{flavor}/HtmlGenerator.jar" />
+				<lib dir="lib" />
+
+				<!-- From Artifactory -->
+<!-- 
+				<lib file="lib/artifactory/svc-rlOrder-${svc.rlOrder.version}.jar" />
+				<lib file="lib/artifactory/svc-rlUser-${svc.rlUser.version}.jar" />
+				<lib file="lib/artifactory/HtmlGenerator-${rl.htmlGenerator.version}.jar" />
+				<lib file="lib/artifactory/RightslinkUiBase-${rl.uiBase.version}.jar" />
+  -->
+
+				<manifest>
+					<section name="Build-Data">
+						<attribute name="Build-Number" value="${build.number}" />
+						<attribute name="Build-Flavor" value="@{flavor}" />
+						<attribute name="Build-Date" value="${TODAY}" />
+						<attribute name="Build-Time" value="${TSTAMP}" />
+						<attribute name="Built-By" value="${user.name}" />
+					</section>
+				</manifest>
+			</war>
+		</sequential>
+	</macrodef>
+
+
+	<!-- ANALYSIS -->
+
+	<!-- NOTE: The following was re-enabled with findbugs in the new Luntbuild -->
+	<!-- <target name="analysis-impl" /> -->
+	<!-- <target name="findbugs" /> -->
+	<!-- <target name="sonar" /> -->
+	<!-- <target name="analysis-impl" depends="findbugs,sonar"/> -->
+
+	<!-- add depends so that classpath is configured properly if invoking target "analysis" directly -->
+	<target name="findbugs-custom-init" unless="suppress.findbugs" depends="depend.init,classpath.init"/>
+
+	<!-- override task from analysis.xml -->
+	<!-- provide custom CCC detectors -->
+	<target name="findbugs-execute" unless="suppress.findbugs" >
+
+<!--
+				jvmargs="-Xmx256M -Xrunjdwp:transport=dt_socket,address=8787,server=y,suspend=y"
+				omitVisitors="FindReturnRef" 
+				visitors="ExceptionHandling,Logging"
+				reportLevel="low"
+-->
+		<findBugs 
+			pluginList="${analysis.jars.dir}/ccc-findbugs.jar"
+			jvmargs="-Xmx256M"
+			omitVisitors="FindReturnRef" 
+			output="xml:withMessages" 
+			outputFile="${findbugs.output}/findbugs-report.xml" 
+			reportLevel="medium" 
+			failOnError="true" 
+			effort="default" >
+			<class location="${findbugs.classes}" />
+			<sourcePath path="${findbugs.sourcePath}" />
+			<auxClasspath refid="${findbugs.auxClasspath}" />
+			<classpath refid="findbugs.classpath" />
+		</findBugs>
+
+	</target>
+
+	<!-- NOTE: The following is being re-enabled with findbugs in the new Luntbuild -->
+	<!-- <target name="findbugs-evaluate" /> -->
+	<target name="findbugs-evaluate">
+		<fail if="findbugs.highPriority" message="FindBugs found one or more high priority bugs.  For details, see FindBugs report." />
+		<fail if="findbugs.correctness" message="FindBugs found one or more correctness bugs.  For details, see FindBugs report." />
+		<fail if="findbugs.multithreadedCorrectness" message="FindBugs found one or more multithreaded correctness bugs.  For details, see FindBugs report." />
+		<fail if="findbugs.maliciousCode" message="FindBugs found one or more malicious code bugs.  For details, see FindBugs report." />
+		<echo message="FindBugs found no bugs of the following types: high priority, correctness, multithreaded correctness, malicious code"/>
+	</target>
+
+	<!-- <target name="sonar-custom-init" depends="depend.init,classpath.init" unless="suppress.sonar"/> -->
+        <target name="analysis-impl" depends="findbugs,sonar" />  
+        <target name="sonar-custom-init" depends="classpath.init" unless="suppress.sonar"/> 
+
+	<!-- PUBLISH -->
+
+	<!-- Create uDeploy specific files -->
+	<target name="udeploy-setup" >
+
+		<mkdir dir="out/urbandeploy/deploy" />
+
+		<!-- Create file that defines the artifact set to be retrieved by uDeploy -->
+		<echo file="out/urbandeploy/${project.name}-all.txt" append="false" >
+{ component: "${project.name}-luntbuild", properties: { version: "${build.number}", schedule: "release" } }
+		</echo>
+
+		<!-- Create deploy script to be used by uDeploy -->
+
+		<echo file="out/urbandeploy/deploy/initiator.sh" append="false" >#!bash
+
+# Project Info
+export PROJECT_NAME="${project.name}"
+export PROJECT_VERSION="${build.number}"
+
+# Binary artifact file
+export BINARY_DIR="bin/wars"	# Contains PROD or DEBUG in uDeploy by setting BINARY_TYPE
+export BINARY_NAME="ccc"
+export BINARY_FILE="${BINARY_NAME}.war"
+
+# Properties file
+export PROPERTIES_DIR="config"
+export PROPERTIES_FILES="CC2Configuration.properties,cybersource.properties"
+
+# JBoss Container 
+export CONTAINER="EXTCC"
+
+# Environment Script for the JBoss Container 
+export ENVSCRIPT="${CONTAINER}${ENV_NAME}ENV"
+
+# Properties files ARE NOT stored in an $ENV sub-directory 
+export NOENV="FALSE"
+
+/bin/bash -x ./deploy-scripts/bin/deployment-controller.sh
+
+		</echo>
+
+	</target>
+
+  
+	<!-- Luntbuild will always publish so as to ease diagnosis of build failures.  Therefore, copy failures must be tolerated. -->
+	<target name="publish-artifacts" depends="create-crs-files,wget-scripts,udeploy-setup,build-zip" if="luntbuild">
+
+		<copy todir="${artifacts.dir}" failonerror="false">
+			<fileset file="out/${zip.name}" />
+			<!-- <fileset file="out/db/*.log" /> -->
+		</copy>
+
+		<copy todir="${artifacts.dir}/bin/wars" failonerror="false">
+			<fileset dir="${build.wars}" includes="**/*.war" />
+		</copy>
+
+		<copy todir="${artifacts.dir}/crs-files" failonerror="false">
+			<fileset dir="out/crs-files" />
+		</copy>
+
+		<copy todir="${artifacts.dir}/deploy" failonerror="false">
+			<fileset dir="out/urbandeploy/deploy" />
+		</copy>
+
+		<copy todir="${artifacts.dir}/config" failonerror="false">
+			<fileset dir="out/template" includes="**/CC2Configuration.properties,**/cybersource.properties,**/ccc-httpd.conf,**/int-ccc-httpd.conf" />
+		</copy>
+
+		<copy todir="${artifacts.dir}/config" failonerror="false">
+			<fileset dir="config/web" includes="ccc-rewrite.conf,ccc-uriworkermap.properties" />
+		</copy>
+
+		<copy todir="${artifacts.dir}/config" failonerror="false">
+			<fileset dir="config/app" includes="ccc-log4j.properties,ccc-urlrewrite.xml,rightslink.p12" />
+		</copy>
+
+		<copy todir="${artifacts.dir}/template" failonerror="false">
+			<fileset dir="config/app/template" includes="**/*.ftl" />
+		</copy>
+
+		<copy 
+			file="${findbugs.output}/findbugs-report.html" 
+			tofile="${findbugs.report.dir}/index.html" 
+			failonerror="false"
+	    		/>
+
+		<copy todir="${artifacts.dir}/scripts" failonerror="false">
+			<fileset dir="${wget.scripts.out.dir}" />
+		</copy>
+
+		<copy todir="${artifacts.dir}" failonerror="false">
+			<fileset file="out/cloc.csv" />
+		</copy>
+
+	</target>
+
+	<!-- Trigger UrbanDeploy to pull the following artifact sets into its repository -->
+	<target name="upload-deployment-artifacts" >
+
+	    <!-- Upload "luntbuild" artifact set -->
+	    <exec executable="cmd.exe" >
+		    <arg line="/c" />  
+		    <arg line="D:\udclient\udclient.cmd" />  
+		    <arg line="out/urbandeploy/${project.name}-all.txt" />  
+	    </exec>
+
+	</target>
+
+	<target name="build-zip">
+	    <delete file="out/${zip.name}" />
+	    <zip destfile="out/${zip.name}">
+		    <zipfileset dir="${build.wars}" includes="**/*.war" prefix="bin/wars" />
+		    <zipfileset dir="${ccc.build.src.java.dir}" includes="**/*.java" prefix="src/java" />
+		    <zipfileset dir="out/template" includes="**/*.properties,**/*.conf" prefix="config" />
+		    <zipfileset dir="${src.sql}" includes="**/*.*" prefix="src/sql" />
+		    <zipfileset dir="config/web" includes="ccc-rewrite.conf,ccc-uriworkermap.properties" prefix="config" />
+		    <zipfileset dir="config/app" includes="ccc-log4j.properties,ccc-urlrewrite.xml" prefix="config" />
+		    <zipfileset dir="out/crs-files" includes="**/*.*" prefix="crs-files" />
+		    <zipfileset dir="out/urbandeploy/deploy" prefix="deploy" />
+	    </zip>
+	</target>
+
+	<target name="wget-scripts" depends="wget.init" >
+	    <wget.gen.3.script
+		    env.list="${ccc.ext.env.name.list}"
+		    bin.artifact.list="bin/wars/${wget.bin.prod.debug}/${war.name}"
+		    config.artifact.list="config/@{env}/CC2Configuration.properties,config/ccc-rewrite.conf"
+		    />
+	</target>
+
+</project>

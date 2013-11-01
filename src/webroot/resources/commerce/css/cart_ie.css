@@ -1,0 +1,24 @@
+.tab-block .btn-price{
+	background: url(../images/transparent.gif);
+	filter: progid:dximagetransform.microsoft.alphaimageloader(src='images/btn-prise.png', sizingmethod='crop');
+}
+.btn-go{
+	background: url(../images/transparent.gif);
+	filter: progid:dximagetransform.microsoft.alphaimageloader(src='images/btn-go.png', sizingmethod='crop');
+}
+.btn-checkout a,
+.footing .btn-checkout{
+	background: url(../images/transparent.gif);
+	filter: progid:dximagetransform.microsoft.alphaimageloader(src='images/btn-checkout.png', sizingmethod='crop');
+}
+.align-left{
+	position:relative;
+	behavior: expression((this.runtimeStyle.behavior="none")&&(this.pngSet?this.pngSet=true:(this.nodeName == "IMG" &&
+	this.src.toLowerCase().indexOf('.png')>-1?(this.runtimeStyle.backgroundImage = "none",
+	this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.src + "', sizingMethod='image')",
+	this.src = "images/transparent.gif"):(this.origBg = this.origBg? this.origBg
+	:this.currentStyle.backgroundImage.toString().replace('url("','').replace('")',''),
+	this.runtimeStyle.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='" + this.origBg + "', sizingMethod='crop')",
+	this.runtimeStyle.backgroundImage = "none")),this.pngSet=true)
+	);
+}

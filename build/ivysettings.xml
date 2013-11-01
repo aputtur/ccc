@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-settings>
+  <settings defaultResolver="artifactory" />
+
+  <!--Authentication required for publishing (deployment). 'Artifactory Realm' is the realm used by Artifactory so don't change it.-->
+<!--
+  <credentials host="artifacts.copyright.com" realm="Artifactory Realm" username="" passwd="" />
+ -->
+
+  <resolvers>
+    <url name="artifactory">
+      <artifact pattern="http://artifacts.copyright.com/artifactory/ccc-release-local/[organisation]/[module]/[revision]/[artifact]-[revision].[ext]" />
+    </url>
+  </resolvers>
+
+</ivy-settings>
+

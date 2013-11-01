@@ -1,0 +1,11 @@
+alter table CC.CCC_USER_REQUEST_CLIENT add (
+    SP_SHARE_ILL CHAR(1 BYTE) DEFAULT 'N' NOT NULL
+);
+
+update ccc_user_request_client 
+   set SP_PHOTOCOPY_ACADEMIC='N', SP_PHOTOCOPY_GENERAL='N', 
+       SP_COURSEPACK='N', SP_DIGITAL='N', SP_REPUBLISH='N'
+   where SP_PHOTOCOPY_ACADEMIC='Y' AND SP_PHOTOCOPY_GENERAL='Y' AND 
+         SP_COURSEPACK='Y' AND SP_DIGITAL='Y' AND SP_REPUBLISH='Y';
+         
+update ccc_user_request_client set SP_SHARE_ILL='Y' where SP_PHOTOCOPY_GENERAL='Y';

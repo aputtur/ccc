@@ -1,0 +1,25 @@
+<qualifiedServices>
+  <context module="CCC" server="*" jvm="*"/>
+  <services>
+    <serviceResourceDescriptor name="svc-rest-openUrlExtensions" version="1.0" build="006"/>
+    <serviceResourceDescriptor name="svcArTransaction.transaction" version="1.10" build="002"/>
+    <serviceResourceDescriptor name="svcCentralQueue.cq" version="2.4" build="001"/>
+    <serviceResourceDescriptor name="svcExtEmail.send" version="1.5" build="002"/>
+    <serviceResourceDescriptor name="svcLdapUser.ldap" version="3.0" build="002"/>
+    <serviceResourceDescriptor name="svcOrder.cart" version="2.4" build="006"/>
+    <serviceResourceDescriptor name="svcOrder.order" version="2.4" build="006"/>
+    <serviceResourceDescriptor name="svcRLOrders.order" version="1.6" build="006"/>
+    <serviceResourceDescriptor name="svcRights.rights" version="1.4" build="003"/>
+    <serviceResourceDescriptor name="svcRightsResolver.rp" version="1.8" build="009"/>
+    <serviceResourceDescriptor name="svcRightsResolver.rr" version="1.8" build="009"/>
+    <serviceResourceDescriptor name="svcRlUser.user" version="1.11" build="003"/>
+    <serviceResourceDescriptor name="svcSearchRetrieval.searchRetrieve" version="1.4" build="009"/>
+    <serviceResourceDescriptor name="svcTelesales.telesales" version="2.6" build="001"/>
+    <serviceResourceDescriptor name="svcTelesales.telesalesComposite" version="2.6" build="001"/>
+    <serviceResourceDescriptor name="svcTelesales.telesalesRightsholder" version="2.6" build="001"/>
+    <serviceResourceDescriptor name="svcTf.tf" version="2.5" build="005"/>
+    <serviceResourceDescriptor name="svcUserInfo.accessControl" version="1.4" build="002"/>
+    <serviceResourceDescriptor name="svcUserInfo.cyberSource" version="1.4" build="002"/>
+    <serviceResourceDescriptor name="svcWorksRemote.search" version="1.5" build="004"/>
+  </services>
+</qualifiedServices>

@@ -1,0 +1,160 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+    
+<struts>
+ 	 	
+	<package name="orderhistory" extends="copyrightcom-default" namespace="/om/history">
+		
+		<action name="orderHistoryHome" class="com.copyright.ccc.web.actions.ordermgmt.OrderHistoryHomeAction">
+    		<result>orderHistoryHome</result>
+    		<result name="input">orderHistoryHome</result>
+    		<result name="redirect" type="redirectAction">
+    			<param name="actionName">orderHistoryHome</param>
+    		</result>
+    	</action>
+    	
+		<action name="viewOrderHistory!*" method="{1}" class="com.copyright.ccc.web.actions.ordermgmt.ViewOrderHistoryAction">
+    		<result>viewOrderHistory</result>
+    		<result name="input">viewOrderHistory</result>
+    		<result name="error">searchOrder</result>
+    		<result name="redirect" type="redirectAction">
+    			<param name="actionName">viewOrderHistory</param>
+    		</result>
+    		<result name="savecomplete" type="redirectAction">
+    			<param name="actionName">viewOrderHistory</param>
+				<param name="selectedConfirmNumber">%{selectedConfirmNumber}</param>
+    			<param name="selectedBundleNumber">%{selectedBundleNumber}</param>
+    			<param name="selectedDetailNumber">%{selectedDetailNumber}</param>
+    			<param name="selectedInvoiceNumber">%{selectedInvoiceNumber}</param>
+    			<param name="includeCancelledOrders">%{includeCancelledOrders}</param>
+    			<param name="selectedItem">%{selectedItem}</param>
+    		</result>
+    		<result name="saveallcomplete" type="redirectAction">
+    			<param name="actionName">viewOrderHistory</param>
+				<param name="selectedConfirmNumber">%{selectedConfirmNumber}</param>
+    			<param name="selectedBundleNumber">%{selectedBundleNumber}</param>
+    			<param name="selectedDetailNumber">%{selectedDetailNumber}</param>
+    			<param name="selectedInvoiceNumber">%{selectedInvoiceNumber}</param>
+    			<param name="includeCancelledOrders">%{includeCancelledOrders}</param>
+    			<param name="selectedItem">%{selectedItem}</param>
+    			<param name="showAllProcessMesssages">true</param>
+    		</result>
+    		<result name="saveconfirmcomplete" type="redirectAction">
+    			<param name="actionName">viewOrderHistory</param>
+				<param name="selectedConfirmNumber">%{selectedConfirmNumber}</param>
+    			<param name="selectedBundleNumber">%{selectedBundleNumber}</param>
+    			<param name="selectedDetailNumber">%{selectedDetailNumber}</param>
+    			<param name="selectedInvoiceNumber">%{selectedInvoiceNumber}</param>
+    			<param name="includeCancelledOrders">%{includeCancelledOrders}</param>
+    			<param name="selectedItem">%{selectedItem}</param>
+    			<param name="savingConfirmation">%{savingConfirmation}</param>
+    		</result>
+    		<result name="saveinvoicecomplete" type="redirectAction">
+    			<param name="actionName">viewInvoicedOrderHistory</param>
+				<param name="selectedConfirmNumber">%{selectedConfirmNumber}</param>
+    			<param name="selectedBundleNumber">%{selectedBundleNumber}</param>
+    			<param name="selectedDetailNumber">%{selectedDetailNumber}</param>
+    			<param name="selectedInvoiceNumber">%{selectedInvoiceNumber}</param>
+    			<param name="includeCancelledOrders">%{includeCancelledOrders}</param>
+    			<param name="selectedItem">%{selectedItem}</param>
+    			<param name="savingInvoice">%{savingInvoice}</param>
+    		</result>
+    		<result name="saveinvoiceheadercomplete" type="redirectAction">
+    			<param name="actionName">viewInvoicedOrderHistory</param>
+				<param name="selectedConfirmNumber">%{selectedConfirmNumber}</param>
+    			<param name="selectedBundleNumber">%{selectedBundleNumber}</param>
+    			<param name="selectedDetailNumber">%{selectedDetailNumber}</param>
+    			<param name="selectedInvoiceNumber">%{selectedInvoiceNumber}</param>
+    			<param name="includeCancelledOrders">%{includeCancelledOrders}</param>
+    			<param name="selectedItem">%{selectedItem}</param>
+    			<param name="savingInvoice">%{savingInvoice}</param>
+    		</result>
+    		<result name="savebundleomplete" type="redirectAction">
+    			<param name="actionName">viewOrderHistory</param>
+				<param name="selectedConfirmNumber">%{selectedConfirmNumber}</param>
+    			<param name="selectedBundleNumber">%{selectedBundleNumber}</param>
+    			<param name="selectedDetailNumber">%{selectedDetailNumber}</param>
+    			<param name="selectedInvoiceNumber">%{selectedInvoiceNumber}</param>
+    			<param name="includeCancelledOrders">%{includeCancelledOrders}</param>
+    			<param name="selectedItem">%{selectedItem}</param>
+    			<param name="savingBundle">%{savingBundle}</param>
+    		</result>
+    	</action>
+		<action name="viewInvoicedOrderHistory!*" method="{1}" class="com.copyright.ccc.web.actions.ordermgmt.ViewInvoicedOrderHistoryAction">
+    		<result>viewInvoicedOrderHistory</result>
+    		<result name="input">viewInvoicedOrderHistory</result>
+    		<result name="error">searchOrder</result>
+    		<result name="redirect" type="redirectAction">
+    			<param name="actionName">viewInvoicedOrderHistory</param>
+    		</result>
+    		<result name="savecomplete" type="redirectAction">
+    			<param name="actionName">viewInvoicedOrderHistory</param>
+				<param name="selectedConfirmNumber">%{selectedConfirmNumber}</param>
+    			<param name="selectedBundleNumber">%{selectedBundleNumber}</param>
+    			<param name="selectedDetailNumber">%{selectedDetailNumber}</param>
+    			<param name="selectedInvoiceNumber">%{selectedInvoiceNumber}</param>
+    			<param name="includeCancelledOrders">%{includeCancelledOrders}</param>
+    			<param name="selectedItem">%{selectedItem}</param>
+    		</result>
+    		<result name="saveallcomplete" type="redirectAction">
+    			<param name="actionName">viewInvoicedOrderHistory</param>
+				<param name="selectedConfirmNumber">%{selectedConfirmNumber}</param>
+    			<param name="selectedBundleNumber">%{selectedBundleNumber}</param>
+    			<param name="selectedDetailNumber">%{selectedDetailNumber}</param>
+    			<param name="selectedInvoiceNumber">%{selectedInvoiceNumber}</param>
+    			<param name="includeCancelledOrders">%{includeCancelledOrders}</param>
+    			<param name="selectedItem">%{selectedItem}</param>
+    			<param name="showAllProcessMesssages">true</param>
+    		</result>
+    		<result name="saveinvoiceomplete" type="redirectAction">
+    			<param name="actionName">viewInvoicedOrderHistory</param>
+				<param name="selectedConfirmNumber">%{selectedConfirmNumber}</param>
+    			<param name="selectedBundleNumber">%{selectedBundleNumber}</param>
+    			<param name="selectedDetailNumber">%{selectedDetailNumber}</param>
+    			<param name="selectedInvoiceNumber">%{selectedInvoiceNumber}</param>
+    			<param name="includeCancelledOrders">%{includeCancelledOrders}</param>
+    			<param name="selectedItem">%{selectedItem}</param>
+    			<param name="savingInvoice">%{savingInvoice}</param>
+    		</result>
+     	</action>
+
+		<action name="viewDetailAuditHistory" class="com.copyright.ccc.web.actions.ordermgmt.ViewDetailAuditHistoryAction">
+			<result name="success">viewDetailAuditHistory</result>
+    	</action>
+					  
+		<action name="viewBundleAuditHistory" class="com.copyright.ccc.web.actions.ordermgmt.ViewBundleAuditHistoryAction">
+			<result name="success">viewBundleAuditHistory</result>
+    	</action>
+
+		<action name="viewExpandedDetail" class="com.copyright.ccc.web.actions.ordermgmt.ViewExpandedDetailAction">
+    		<result>viewExpandedDetail</result>
+    		<result name="input">viewExpandedDetail</result>
+    		<result name="redirect" type="redirectAction">
+    			<param name="actionName">viewExpandedDetail</param>
+    		</result>
+    	</action>
+    	
+    	<action name="searchOrder" class="com.copyright.ccc.web.actions.ordermgmt.SearchOrdersAction">
+    		<result>searchOrder</result>
+    		<result name="input">searchOrder</result>
+    		<result name="error">searchOrder</result>
+    		<result name="success">searchOrder</result>
+    		<result name="redirect" type="redirectAction">
+    			<param name="actionName">searchOrder</param>
+    		</result>
+    	</action>
+    	
+    	<action name="searchOrdersForAdjustments" class="com.copyright.ccc.web.actions.ordermgmt.SearchOrdersForAdjustmentsAction">
+    		<result>searchOrdersForAdjustments</result>
+    		<result name="input">searchOrdersForAdjustments</result>
+    		<result name="error">searchOrdersForAdjustments</result>
+    		<result name="success">searchOrdersForAdjustments</result>
+    		<result name="redirect" type="redirectAction">
+    			<param name="actionName">searchOrdersForAdjustments</param>
+    		</result>
+    	</action>
+				   		
+	</package>
+				
+</struts>

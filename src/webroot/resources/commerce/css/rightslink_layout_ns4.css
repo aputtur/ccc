@@ -1,0 +1,612 @@
+.DefaultTextBox    
+{
+	font-family: verdana,arial,helvetica; 
+	color: #000000; 
+	font-weight: normal;
+	font-size: 12px;
+} 
+.DefaultWorkflowTextBox    
+{
+	font-family: verdana,arial,helvetica; 
+	color: #000000; 
+	font-weight: normal;
+	font-size: 10px;
+} 
+.TinyTextBox    
+{
+	width: 40;
+	font-family: verdana,arial,helvetica; 
+	color: #000000; 
+	font-weight: normal;
+	font-size: 12px;
+} 
+.DefaultRadioButton    
+{
+	width: 10;
+	font-family: verdana,arial,helvetica; 
+	color: #000000; 
+	font-weight: normal;
+	font-size: 12px;
+} 
+.SmallNoteTextBox    
+{
+	width: 60;
+	font-family: verdana,arial,helvetica; 
+	color: #000000; 
+	font-weight: normal;
+	font-size: 10px;
+} 
+.MediumTextBox    
+{
+	width: 85;
+	font-family: verdana,arial,helvetica; 
+	color: #000000; 
+	font-weight: normal;
+	font-size: 12px;
+} 
+.MediumPlusTextBox    
+{
+	width: 170;
+	font-family: verdana,arial,helvetica; 
+	color: #000000; 
+	font-weight: normal;
+	font-size: 11px;
+} 
+.LargeTextBox    
+{
+	width: 290;
+	font-family: verdana,arial,helvetica; 
+	color: #000000; 
+	font-weight: normal;
+	font-size: 12px;
+} 
+.LargeWorkflowTextBox    
+{
+	width: 250;
+	font-family: verdana,arial,helvetica; 
+	color: #000000; 
+	font-weight: normal;
+	font-size: 10px;
+} 
+.VeryLargeTextBox    
+{
+	width: 400;
+	font-family: verdana,arial,helvetica; 
+	color: #000000; 
+	font-weight: normal;
+	font-size: 12px;
+} 
+.DefaultTextArea    
+{
+    width: 250px; 
+    height: 100px; 
+	font-family: verdana,arial,helvetica; 
+	color: #000000; 
+	font-weight: normal;
+	font-size: 12px;
+}
+.DefaultWorkflowTextArea    
+{
+    width: 250px; 
+    height: 100px; 
+	font-family: verdana,arial,helvetica; 
+	color: #000000; 
+	font-weight: normal;
+	font-size: 10px;
+}
+.SpecialTermsTextArea    
+{
+    width: 640px; 
+    height: 120px; 
+	font-family: verdana,arial,helvetica; 
+	color: #000000; 
+	font-weight: normal;
+	font-size: 12px;
+}
+.LargeWorkflowTextArea    
+{
+    width: 600px; 
+    height: 65px; 
+	font-family: verdana,arial,helvetica; 
+	color: #000000; 
+	font-weight: normal;
+	font-size: 10px;
+}
+.DefaultDropDown    
+{
+	font-family: verdana,arial,helvetica; 
+	color: #000000; 
+	font-weight: normal;
+	font-size: 12px;
+}
+.DefaultWorkflowDropDown    
+{
+	font-family: verdana,arial,helvetica; 
+	color: #000000; 
+	font-weight: normal;
+	font-size: 10px;
+}
+.WebReprintTextBox    
+{
+    width: 290px; 
+	font-family: verdana,arial,helvetica; 
+	color: #000000; 
+	font-weight: normal;
+	font-size: 12px;
+} 
+.WebReprintTextArea    
+{
+    width: 290px; 
+    height: 100px; 
+	font-family: verdana,arial,helvetica; 
+	color: #000000; 
+	font-weight: normal;
+	font-size: 12px;
+}
+.DekkerTextArea    
+{
+    width: 290px; 
+    height: 50px; 
+	font-family: verdana,arial,helvetica; 
+	color: #000000; 
+	font-weight: normal;
+	font-size: 12px;
+}
+.WebReprintDropDown    
+{
+    width: 290px; 
+	font-family: verdana,arial,helvetica; 
+	color: #000000; 
+	font-weight: normal;
+	font-size: 12px;
+}
+.PageTitleCell
+{
+	width: 100%;
+	text-align: left; 
+	vertical-align: top;
+}
+.PageTitleCellNoSize
+{
+	text-align: left; 
+	vertical-align: top;
+}
+.PageTitleCellRight
+{
+	text-align: right; 
+	vertical-align: top;
+}
+.MainInstructionsCell
+{
+    height: 100;
+	width: 100%;
+	text-align: left; 
+	vertical-align: top;
+}
+.FullCellLeftTop
+{
+    width: 100%;
+	text-align: left; 
+	vertical-align: top;
+}
+.FullCellRightTop
+{
+    width: 100%;
+	text-align: right; 
+	vertical-align: top;
+}
+.FullCellCenterTop
+{
+    width: 100%;
+	text-align: center; 
+	vertical-align: top;
+}
+ 
+.WebReprintLabel
+{
+	width: 18%;
+	text-align: left; 
+	vertical-align: top;
+	padding-bottom: 7px;
+}
+.DefaultLabel
+{
+	text-align: left; 
+	vertical-align: top;
+}
+
+.DefaultLabelNoPad
+{
+	text-align: left; 
+	vertical-align: top;
+}
+.DefaultLabelNoWrap
+{
+	text-align: left; 
+	vertical-align: top;
+	white-space: nowrap;
+}
+.DefaultLabelCenter
+{
+	text-align: center; 
+	vertical-align: top;
+}
+.DefaultLabelRight
+{
+	text-align: right; 
+	vertical-align: top;
+}
+.DefaultLabel35
+{
+	width: 50%;
+	text-align: left; 
+	vertical-align: top;
+}
+.DefaultLabel30
+{
+	width: 50%;
+	text-align: left; 
+	vertical-align: top;
+}
+.DefaultField
+{
+	text-align: left; 
+	vertical-align: top;
+}
+.DefaultFieldNoPad
+{
+	text-align: left; 
+	vertical-align: top;
+}
+.DefaultField10
+{
+	width: 50%;
+	text-align: left; 
+	vertical-align: top;
+}
+.DefaultField15
+{
+	width: 50%;
+	text-align: left; 
+	vertical-align: top;
+}
+.DefaultField20
+{
+	width: 50%;
+	text-align: left; 
+	vertical-align: top;
+}
+.DefaultField25
+{
+	width: 50%;
+	text-align: left; 
+	vertical-align: top;
+}
+.DefaultField90
+{
+	width: 90%;
+	text-align: left; 
+	vertical-align: top;
+}
+.DefaultField1
+{
+	width: 1%;
+	text-align: left; 
+	vertical-align: top;
+}
+.DefaultFieldRight
+{
+	text-align: right; 
+	vertical-align: top;
+}
+.PrintableLabel
+{
+    width:50%;
+	text-align: left; 
+	vertical-align: top;
+	padding-bottom: 7px;
+}
+.PrintableField
+{
+    width:70%;
+	text-align: left; 
+	vertical-align: top;
+	padding-bottom: 7px;
+}
+.DefaultImage
+{
+	text-align: center; 
+	vertical-align: middle;
+	padding-bottom: 7px;
+}
+.DefaultHidden
+{
+	height: 0px;
+}
+.DefaultButtons
+{
+	height: 50px;
+	text-align: center; 
+	vertical-align: center;
+}
+.DefaultButtons
+{
+	height: 50px;
+	text-align: center; 
+	vertical-align: center;
+}
+.DefaultSpace
+{
+    width: 1%;
+	text-align: left; 
+	vertical-align: top;
+}
+.DefaultNotice
+{
+    width: 50%;
+	text-align: left; 
+	vertical-align: top;
+}
+.OfferLabelSplash
+{
+    width: 50%;
+	text-align: left; 
+	vertical-align: top;
+}
+.OfferSplash
+{
+	text-align: left; 
+	vertical-align: top;
+}
+.DarkLabelCell
+{
+    width: 50%;
+	text-align: left; 
+	vertical-align: top;
+	background-color: #d0d9de;
+}
+.DarkInfoCell
+{
+	text-align: left; 
+	vertical-align: top;
+	background-color: #d0d9de;
+}
+.LightLabelCell
+{
+    width: 50%;
+	text-align: left; 
+	vertical-align: top;
+	background-color: #ffffff;
+}
+.LightInfoCell
+{
+	text-align: left; 
+	vertical-align: top;
+	background-color: #ffffff;
+}
+.LinksCell
+{
+	height: 20;
+	width: 100%;
+	text-align: left; 
+	vertical-align: middle;
+	background-color: #333399;
+}
+.LicenseHeaderCell
+{
+	height: 20;
+	text-align: left; 
+	vertical-align: top;
+	background-color: #D0D9DE;
+}
+
+.PaymentHeaderCell
+{
+	height: 20;
+	text-align: left; 
+	background-color: #333399;
+}
+
+.LightLicenseCell
+{
+	text-align: left; 
+	vertical-align: top;
+	background-color: #ffffff;
+}
+.DarkLicenseCell
+{
+	text-align: left; 
+	vertical-align: top;
+	background-color: #d0d9de;
+}
+.LightLicenseCellRight
+{
+	text-align: right; 
+	vertical-align: top;
+	background-color: #ffffff;
+}
+.DarkLicenseCellRight
+{
+	text-align: right; 
+	vertical-align: top;
+	background-color: #d0d9de;
+}
+.BlackCellRight
+{
+	text-align: right; 
+	vertical-align: top;
+	background-color: #000000;
+}
+.BlackCell
+{
+	text-align: left; 
+	vertical-align: top;
+	background-color: #000000;
+}
+.EditPermissionsCell
+{
+	height: 50;
+	width: 100%;
+	text-align: left; 
+	vertical-align: middle;
+}
+.TermsCell
+{
+	width: 100%;
+	text-align: left; 
+	vertical-align: middle;
+}
+.TermsCheckBoxCell
+{
+	height: 20;
+	width: 1%;
+	text-align: left; 
+	vertical-align: middle;
+}
+.TermsCheckLabel
+{
+	height: 20;
+	text-align: left; 
+	vertical-align: middle;
+}
+.PdfCheckBoxCell
+{
+	height: 30;
+	text-align: left; 
+	vertical-align: middle;
+}
+.GetAcrobatCell
+{
+	height: 30;
+	width: 50%;
+	text-align: right; 
+	vertical-align: middle;
+}
+.MetaDataBox
+{
+	background-color: #efefef;
+}
+.DarkCell
+{
+	text-align: left; 
+	vertical-align: top;
+	background-color: #d0d9de;
+}
+.DarkCellCenter
+{
+	text-align: center; 
+	vertical-align: top;
+	background-color: #d0d9de;
+}
+.DarkCell5
+{
+    width: 50%;
+	text-align: left; 
+	vertical-align: top;
+	background-color: #d0d9de;
+}
+.DarkCell10
+{
+    width: 50%;
+	text-align: left; 
+	vertical-align: top;
+	background-color: #d0d9de;
+}
+.DarkCell15
+{
+    width: 50%;
+	text-align: left; 
+	vertical-align: top;
+	background-color: #d0d9de;
+}
+.DarkCell20
+{
+    width: 50%;
+	text-align: left; 
+	vertical-align: top;
+	background-color: #d0d9de;
+}
+.DarkCell25
+{
+    width: 50%;
+	text-align: left; 
+	vertical-align: top;
+	background-color: #d0d9de;
+}
+.DarkCell30
+{
+    width: 50%;
+	text-align: left; 
+	vertical-align: top;
+	background-color: #d0d9de;
+}
+.DarkCell35
+{
+    width: 50%;
+	text-align: left; 
+	vertical-align: top;
+	background-color: #d0d9de;
+}
+.LightCell
+{
+	text-align: left; 
+	vertical-align: top;
+	background-color: #ffffff;
+}
+.LightCellCenter
+{
+	text-align: center; 
+	vertical-align: top;
+	background-color: #ffffff;
+}
+.LightCell5
+{
+    width: 50%;
+	text-align: left; 
+	vertical-align: top;
+	background-color: #ffffff;
+}
+.LightCell10
+{
+    width: 50%;
+	text-align: left; 
+	vertical-align: top;
+	background-color: #ffffff;
+}
+.LightCell15
+{
+    width: 50%;
+	text-align: left; 
+	vertical-align: top;
+	background-color: #ffffff;
+}
+.LightCell20
+{
+    width: 50%;
+	text-align: left; 
+	vertical-align: top;
+	background-color: #ffffff;
+}
+.LightCell25
+{
+    width: 50%;
+	text-align: left; 
+	vertical-align: top;
+	background-color: #ffffff;
+}
+.LightCell30
+{
+    width: 50%;
+	text-align: left; 
+	vertical-align: top;
+	background-color: #ffffff;
+}
+.LightCell35
+{
+    width: 50%;
+	text-align: left; 
+	vertical-align: top;
+	background-color: #ffffff;
+}
+ 
+

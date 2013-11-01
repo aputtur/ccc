@@ -1,0 +1,1296 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+   "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+   "../../dtd/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+    
+    <!-- page layouts -->
+    
+    <!-- main page layout - composes the header and footer and menu with the page content -->
+
+    <definition name=".mainLayout" page="/WEB-INF/jsp-modules/common/layouts/mainLayout.jsp">
+        <put name="header" value="/WEB-INF/jsp-modules/common/mainHeader.jsp" />
+        <put name="metaTags" value="/WEB-INF/jsp-modules/common/dynamicMetaTags.jsp" />
+        <put name="pageTitle" type="string" />
+        <put name="bodyStyle" type="string" value="cc2" />
+        <put name="includeUserAlert" type="string" value="false" />
+        <put name="includeContentWrapper" type="string" value="true" />
+        <put name="includeUserAlert" type="string" value="false" />
+        <put name="includeMetaTags" type="string" value="true" />
+        <put name="pageContent"/>
+        <put name="footer" value="/WEB-INF/jsp-modules/common/mainFooter.jsp"/>
+    </definition>
+
+    <definition name=".homeLayout" page="/WEB-INF/jsp-modules/common/layouts/homeLayout.jsp">
+        <put name="header" value="/WEB-INF/jsp-modules/common/mainHeader.jsp"/>
+        <put name="pageTitle" type="string" />
+        <put name="bodyStyle" type="string" value="cc2" />
+        <put name="includeUserAlert" type="string" value="false" />
+        <put name="includeContentWrapper" type="string" value="true" />
+        <put name="includeUserAlert" type="string" value="false" />
+        <put name="pageContent"/>
+        <put name="footer" value="/WEB-INF/jsp-modules/common/mainFooter.jsp"/>
+    </definition>
+
+	<!-- This is the NEW HOMEPAGE LAYOUT -->
+	<definition name=".wideHomeLayout" page="/WEB-INF/jsp-modules/homepage/mainLayout.jsp">
+		<put name="header" value="/WEB-INF/jsp-modules/homepage/mainHeader.jsp"/>
+        <put name="metaTags" value="/WEB-INF/jsp-modules/common/dynamicMetaTags.jsp" />
+		<put name="pageTitle" type="string" />
+		<put name="bodyStyle" type="string" value="cc2" />
+		<put name="pageContent"/>
+		<put name="footer" value="/WEB-INF/jsp-modules/homepage/mainFooter.jsp"/>
+	</definition>
+
+    <definition name=".staticLayout" page="/WEB-INF/jsp-modules/common/layouts/staticLayout.jsp">
+        <put name="header" value="/WEB-INF/jsp-modules/common/staticHeader.jsp"/>
+        <put name="bodyStyle" type="string" value="cc2" />
+        <put name="footer" value="/WEB-INF/jsp-modules/common/mainFooter.jsp"/>
+    </definition>
+    
+    <definition name=".errorLayout" page="/WEB-INF/jsp-modules/common/layouts/mainLayout.jsp">
+        <put name="header" value="/WEB-INF/jsp-modules/common/errorHeader.jsp"/>
+        <put name="metaTags" value="/WEB-INF/jsp-modules/common/dynamicMetaTags.jsp" />
+        <put name="pageTitle" type="string" />
+        <put name="bodyStyle" type="string" value="cc2" />
+        <put name="includeUserAlert" type="string" value="false" />
+        <put name="includeContentWrapper" type="string" value="false" />
+        <put name="includeMetaTags" type="string" value="false" />
+        <put name="pageContent"/>
+        <put name="footer" value="/WEB-INF/jsp-modules/common/mainFooter.jsp"/>
+    </definition>
+    
+    <definition name=".previewLayout" page="/WEB-INF/jsp-modules/common/layouts/previewLayout.jsp">
+        <put name="header" value="/WEB-INF/jsp-modules/common/previewHeader.jsp"/>
+        <put name="pageTitle" type="string" />
+        <put name="bodyStyle" type="string" value="cc2" />
+        <put name="includeUserAlert" type="string" value="false" />
+        <put name="includeContentWrapper" type="string" value="false" />
+        <put name="pageContent"/>
+    </definition>
+    
+    <definition name=".loginLayout" page="/WEB-INF/jsp-modules/common/layouts/mainLayout.jsp">
+        <put name="header" value="/WEB-INF/jsp-modules/common/loginHeader.jsp"/>
+        <put name="metaTags" value="/WEB-INF/jsp-modules/common/dynamicMetaTags.jsp" />
+        <put name="pageTitle" type="string" />
+        <put name="bodyStyle" type="string" value="cc2" />
+        <put name="includeUserAlert" type="string" value="false" />
+        <put name="includeContentWrapper" type="string" value="false" />
+        <put name="includeUserAlert" type="string" value="false" />
+        <put name="includeMetaTags" type="string" value="false" />
+        <put name="pageContent"/>
+        <put name="footer" value="/WEB-INF/jsp-modules/common/mainFooter.jsp"/>
+    </definition>
+    
+    <definition name=".adminLayout" extends=".mainLayout">
+        <put name="header" value="/WEB-INF/jsp-modules/common/mainHeader.jsp"/>
+    </definition>
+    
+    <definition name=".printLayout" page="/WEB-INF/jsp-modules/common/layouts/printLayout.jsp">
+        <put name="pageTitle" type="string" />
+        <put name="pageContent"/>
+        <put name="footer" value="/WEB-INF/jsp-modules/common/mainFooter.jsp"/>
+    </definition>
+
+    <!-- pages -->
+    
+    <definition name="adminHome" extends=".adminLayout">
+        <put name="pageTitle" value="Copyright.com Administration Home"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/admin/adminHomeLanding.jsp" />
+    </definition>
+
+    <definition name="startEmulationForm" extends=".adminLayout">
+        <put name="pageTitle" value="Start an Emulation Session"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/admin/startEmulationForm.jsp" />
+    </definition>
+
+    <definition name="userRolesForm" extends=".adminLayout">
+        <put name="pageTitle" value="Edit/View User Roles"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/admin/userRoles.jsp" />
+    </definition>
+
+    <definition name="developerHome" extends=".printLayout">
+        <put name="pageTitle" value="CC2 Developer Home"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/common/developerHome.jsp" />
+    </definition>
+
+    <definition name="login" extends=".loginLayout">
+        <put name="pageTitle" value="Login"/>
+        <put name="includeUserAlert" value="true" />
+        <put name="pageContent" value="/WEB-INF/jsp-modules/common/login.jsp" />
+    </definition>
+
+    <definition name="loginFailure" extends=".errorLayout">
+        <put name="pageTitle" value="copyright.com"/>
+        <put name="header" value="/WEB-INF/jsp-modules/common/mainHeader.jsp"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/common/loginFailure.jsp"/>
+    </definition>
+
+    
+    <definition name="errorCommon" extends=".errorLayout">
+        <put name="pageTitle" value="Application Error"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/common/error.jsp"/>
+    </definition>
+    
+    <definition name="errorInJSP" page="/WEB-INF/jsp-modules/common/error.jsp" />
+    
+    <definition name="error400" extends=".errorLayout">
+        <put name="pageTitle" value="copyright.com"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/common/error400.jsp"/>
+    </definition>
+    
+    <definition name="error401" extends=".errorLayout">
+        <put name="pageTitle" value="copyright.com"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/common/error401.jsp"/>
+    </definition>
+    
+    <definition name="error403" extends=".errorLayout">
+        <put name="pageTitle" value="copyright.com"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/common/error403.jsp"/>
+    </definition>
+    
+    <definition name="error404" extends=".errorLayout">
+        <put name="pageTitle" value="copyright.com"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/common/error404.jsp"/>
+    </definition>
+    
+    <definition name="error500" extends=".errorLayout">
+        <put name="pageTitle" value="copyright.com"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/common/error500.jsp"/>
+    </definition>
+    
+    <definition name="accessDeniedTile" extends=".errorLayout">
+        <put name="pageTitle" value="copyright.com"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/common/accessDenied.jsp"/>
+    </definition>
+
+    <definition name="notAuthorizedTile" extends=".errorLayout">
+        <put name="pageTitle" value="copyright.com"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/common/notAuthorized.jsp"/>
+    </definition>
+
+	<!-- This is the NEW HOMEPAGE LAYOUT -->
+    <definition name="mainWideHome" extends=".wideHomeLayout">
+        <put name="pageTitle" value="CCC" />
+        <put name="header" value="/WEB-INF/jsp-modules/homepage/mainHeader.jsp" />
+        <put name="bodyStyle" type="string" value="cc2 home" />
+        <put name="pageContent" value="/WEB-INF/jsp-modules/homepage/mainContent.jsp" />
+    </definition>
+
+    <definition name="mainHome" extends=".homeLayout">
+        <put name="pageTitle" value="CCC" />
+        <put name="header" value="/WEB-INF/jsp-modules/common/homeHeader.jsp" />
+        <put name="bodyStyle" type="string" value="cc2 home" />
+        <put name="includeContentWrapper" value="false" />
+        <put name="includeUserAlert" value="false" />
+        <put name="pageContent" value="/WEB-INF/jsp-modules/common/homeContent.jsp" />
+    </definition>
+
+    <definition name="viewPageMain" extends=".staticLayout">
+        <put name="pageLayout" type="string" value="two-column" />
+    </definition>
+
+    <definition name="viewPagePopup" extends=".staticLayout" page="/WEB-INF/jsp-modules/common/layouts/popupLayout.jsp">
+    </definition>
+
+    <definition name=".modalLayout" page="/WEB-INF/jsp-modules/common/layouts/modalLayout.jsp">
+        <put name="pageContent"/>
+    </definition>
+    
+    <definition name=".innerLayout" page="/WEB-INF/jsp-modules/common/layouts/innerLayout.jsp">
+        <put name="innerContent"/>
+    </definition>
+
+
+    <definition name="blank" page="/WEB-INF/jsp-modules/common/layouts/blank.jsp">
+        <put name="page" type="string" />
+    </definition>
+    <definition name="one-column" page="/WEB-INF/jsp-modules/common/layouts/one-column.jsp">
+        <put name="page" type="string" />
+    </definition>
+    <definition name="two-column" page="/WEB-INF/jsp-modules/common/layouts/two-column.jsp">
+        <put name="page" type="string" />
+    </definition>
+    <definition name="three-column" page="/WEB-INF/jsp-modules/common/layouts/three-column.jsp">
+        <put name="page" type="string" />
+    </definition>
+
+
+    <definition name="notifiedRedirect" extends=".mainLayout">
+        <put name="pageTitle" value="Copyright.com"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/common/notifiedRedirect.jsp" />
+    </definition>    
+    
+    <!-- common transaction (special/basic) tiles -->
+    
+    <definition name="bibliographicInformation" page="/WEB-INF/jsp-modules/transaction/bibliographicInformation.jsp" />
+    
+    <definition name="permissionSelected" page="/WEB-INF/jsp-modules/transaction/permissionSelected.jsp" />
+    
+    <definition name="bibliographicInformationCOI" page="/WEB-INF/jsp-modules/transaction/coi/bibliographicInformation.jsp" />
+    
+    <definition name="permissionSelectedCOI" page="/WEB-INF/jsp-modules/transaction/coi/permissionSelected.jsp" />
+ 
+    <!-- end common transaction tiles -->
+        <!-- RL QUICK PRICE  -->
+    <definition name=".rlQuickPrice" page="/WEB-INF/jsp-modules/transaction/article-search/rlQuickPrice.jsp" >
+      
+    </definition>
+     <definition name="rlQuickPrice" extends=".mainLayout">
+        <put name="pageTitle" value="Add Item" />
+        <put name="pageContent" value=".rlQuickPrice" />
+    </definition>
+       
+    
+     <definition name="showLoginForRL" extends=".mainLayout">
+        <put name="pageTitle" value="Add Item" />
+        <put name="pageContent" value=".rlQuickPrice" />
+    </definition>
+    
+     <definition name="rightsLinkEditCoiCartItem" extends=".mainLayout">
+        <put name="pageTitle" value="Add Item" />
+        <put name="pageContent" value=".rlQuickPrice" />
+    </definition>
+    
+    <!-- basic transaction tiles COI -->
+    
+    <definition name=".basicTransactionCOI" page="/WEB-INF/jsp-modules/transaction/coi/basic/basicTransaction.jsp">
+        <put name="actionHeaderText" type="string" />
+        <put name="cancelText" type="string" />
+        <put name="allowPermissionChange" type="string" />
+        <put name="submitButtonImage" type="string" />
+        <put name="submitButtonAlt" type="string" />
+        <put name="showFooterCancel" type="string" />
+        <put name="showAddOrderFooterElements" type="string" />
+        <put name="addWebTrendsScenarios" type="string" value="false" />
+        <put name="addWebTrendsTypeOfUse" type="string" value="false" />
+        <put name="academicDetails" value="/WEB-INF/jsp-modules/transaction/coi/basic/academicDetails.jsp" />
+        <put name="photocopyDetails" value="/WEB-INF/jsp-modules/transaction/coi/basic/photocopyDetails.jsp" />
+        <put name="republicationDetails" value="/WEB-INF/jsp-modules/transaction/coi/basic/republicationDetails.jsp" />
+        <put name="digitalDetails" value="/WEB-INF/jsp-modules/transaction/coi/basic/digitalDetails.jsp" />
+    </definition>
+    
+    
+    <definition name=".basicAddCoiCartItem" extends=".basicTransactionCOI">
+    	<put name="actionHeaderText" value="Price and Order" />
+        <put name="cancelText" value="Start new search" />
+        <put name="allowPermissionChange" value="true" />
+        <put name="submitButtonImage" value="/media/images/btn_add-cart.gif" />
+        <put name="submitButtonAlt" value="Add to Cart" />
+        <put name="showFooterCancel" value="false" />
+        <put name="showAddOrderFooterElements" value="false" />
+        <put name="addWebTrendsScenarios" value="true" />
+        <put name="addWebTrendsTypeOfUse" value="true" />
+    </definition>
+    
+    <definition name="basicAddCoiCartItem" extends=".mainLayout">
+        <put name="pageTitle" value="Add Item" />
+        <put name="pageContent" value=".basicAddCoiCartItem" />
+    </definition>
+    
+    <definition name=".basicAddCoiOrderItem" extends=".basicTransactionCOI">
+        <put name="cancelText" value="Start new search" />
+        <put name="allowPermissionChange" value="true" />
+        <put name="submitButtonImage" value="/media/images/btn_add_existing.gif" />
+        <put name="submitButtonAlt" value="Add Item to Existing Order" />
+        <put name="showFooterCancel" value="false" />
+        <put name="showAddOrderFooterElements" value="true" />
+        <put name="addWebTrendsTypeOfUse" value="true" />
+    </definition>
+    
+    <definition name="basicAddCoiOrderItem" extends=".mainLayout">
+        <put name="pageTitle" value="Add Item" />
+        <put name="pageContent" value=".basicAddCoiOrderItem" />
+    </definition>
+    
+    <definition name=".basicEditCoiCartItem" extends=".basicTransactionCOI">
+        <put name="actionHeaderText" value="Edit Item" />
+        <put name="cancelText" value="Cancel changes" />
+        <put name="allowPermissionChange" value="false" />
+        <put name="submitButtonImage" value="/media/images/btn_save-changes.gif" />
+        <put name="submitButtonAlt" value="Save Changes" />
+        <put name="showFooterCancel" value="true" />
+        <put name="showAddOrderFooterElements" value="false" />
+        <put name="mode" value="edit" />
+    </definition>
+    
+    <definition name="basicEditCoiCartItem" extends=".mainLayout">
+        <put name="pageTitle" value="Edit Item" />
+        <put name="pageContent" value=".basicEditCoiCartItem" />
+    </definition>
+ 
+    
+    <definition name=".basicEditCoiOrderItem" extends=".basicTransactionCOI">
+        <put name="actionHeaderText" value="Edit Item" />
+        <put name="cancelText" value="Cancel changes" />
+        <put name="allowPermissionChange" value="false" />
+        <put name="submitButtonImage" value="/media/images/btn_save-changes.gif" />
+        <put name="submitButtonAlt" value="Save Changes" />
+        <put name="showFooterCancel" value="true" />
+        <put name="showAddOrderFooterElements" value="false" />
+    </definition>
+    
+    <definition name="basicEditCoiOrderItem" extends=".mainLayout">
+        <put name="pageTitle" value="Edit Item" />
+        <put name="pageContent" value=".basicEditCoiOrderItem" />
+    </definition>
+    
+  
+    
+    <!-- end basic transaction tiles COI -->
+    
+     <!-- special order tiles COI -->
+     
+     <definition name=".specialOrderCOI" page="/WEB-INF/jsp-modules/transaction/coi/specialorder/specialOrder.jsp">
+        <put name="headerType" type="string" />
+        <put name="allowPermissionChange" type="string" />
+        <put name="showFooterCancel" type="string" />
+        <put name="showAddOrderFooterElements" type="string" />
+        <put name="submitButtonImage" type="string" />
+        <put name="submitButtonAlt" type="string" />
+        <put name="addWebTrendsScenarios" type="string" value="false" />
+        <put name="addWebTrendsTypeOfUse" type="string" value="false" />
+        <put name="academicDetailsNoTitle" value="/WEB-INF/jsp-modules/transaction/coi/specialorder/academicDetailsNoTitle.jsp" />
+        <put name="photocopyDetailsNoTitle" value="/WEB-INF/jsp-modules/transaction/coi/specialorder/photocopyDetailsNoTitle.jsp" />
+        <put name="republicationDetailsNoTitle" value="/WEB-INF/jsp-modules/transaction/coi/specialorder/republicationDetailsNoTitle.jsp" />
+        <put name="digitalDetailsNoTitle" value="/WEB-INF/jsp-modules/transaction/coi/specialorder/digitalDetailsNoTitle.jsp" />
+        <put name="academicDetailsWithTitle" value="/WEB-INF/jsp-modules/transaction/coi/specialorder/academicDetailsWithTitle.jsp" />
+        <put name="photocopyDetailsWithTitle" value="/WEB-INF/jsp-modules/transaction/coi/specialorder/photocopyDetailsWithTitle.jsp" />
+        <put name="republicationDetailsWithTitle" value="/WEB-INF/jsp-modules/transaction/coi/specialorder/republicationDetailsWithTitle.jsp" />
+        <put name="digitalDetailsWithTitle" value="/WEB-INF/jsp-modules/transaction/coi/specialorder/digitalDetailsWithTitle.jsp" />
+    </definition>
+    
+    <definition name=".specialAddCoiCartItem" extends=".specialOrderCOI">
+        <put name="headerType" value="add" />
+        <put name="allowPermissionChange" value="true" />
+        <put name="showFooterCancel" value="false" />
+        <put name="showAddOrderFooterElements" value="false" />
+        <put name="submitButtonImage" value="/media/images/btn_add-so-cart.gif" />
+        <put name="submitButtonAlt" value="Add Special Order to Cart" />
+        <put name="addWebTrendsScenarios" value="true" />
+        <put name="addWebTrendsTypeOfUse" value="true" />
+    </definition>
+    
+    <definition name=".specialAddCoiOrderItem" extends=".specialOrderCOI">
+        <put name="headerType" value="add" />
+        <put name="allowPermissionChange" value="true" />
+        <put name="showFooterCancel" value="false" />
+        <put name="showAddOrderFooterElements" value="true" />
+        <put name="submitButtonImage" value="/media/images/btn_special_existing.gif" />
+        <put name="submitButtonAlt" value="Add Special Order to Existing Order" />
+        <put name="addWebTrendsTypeOfUse" value="true" />
+    </definition>
+    
+    <definition name=".specialEditCoiCartItem" extends=".specialOrderCOI">
+        <put name="headerType" value="edit" />
+        <put name="allowPermissionChange" value="false" />
+        <put name="showFooterCancel" value="true" />
+        <put name="showAddOrderFooterElements" value="false" />
+        <put name="submitButtonImage" value="/media/images/btn_save-changes.gif" />
+        <put name="submitButtonAlt" value="Save Changes" />
+        <put name="mode" value="edit" />
+    </definition>
+    
+    <definition name=".specialEditCoiOrderItem" extends=".specialOrderCOI">
+        <put name="headerType" value="edit" />
+        <put name="allowPermissionChange" value="false" />
+        <put name="showFooterCancel" value="true" />
+        <put name="showAddOrderFooterElements" value="false" />
+        <put name="submitButtonImage" value="/media/images/btn_save-changes.gif" />
+        <put name="submitButtonAlt" value="Save Changes" />
+    </definition>
+    
+    <definition name="specialAddCoiCartItem" extends=".mainLayout">
+        <put name="pageTitle" value="Add Item" />
+        <put name="pageContent" value=".specialAddCoiCartItem" />
+    </definition>
+    
+    <definition name="specialAddCoiOrderItem" extends=".mainLayout">
+        <put name="pageTitle" value="Add Item" />
+        <put name="pageContent" value=".specialAddCoiOrderItem" />
+    </definition>
+    
+    <definition name="specialEditCoiCartItem" extends=".mainLayout">
+        <put name="pageTitle" value="Edit Item" />
+        <put name="pageContent" value=".specialEditCoiCartItem" />
+    </definition>
+    
+    <definition name="specialEditCoiOrderItem" extends=".mainLayout">
+        <put name="pageTitle" value="Edit Item" />
+        <put name="pageContent" value=".specialEditCoiOrderItem" />
+    </definition>
+    
+    <definition name=".specialAddOrderRLink" page="/WEB-INF/jsp-modules/transaction/coi/specialorder/specialOrderRLink.jsp">
+        <put name="itemType" type="string" />
+    </definition>
+    
+    <definition name=".specialOrderRLink" extends=".specialAddOrderRLink">
+        <put name="itemType" value="cart" />
+    </definition>
+    
+    <definition name="specialOrderRLink" extends=".mainLayout">
+        <put name="pageTitle" value="Select Permission Type" />
+        <put name="pageContent" value=".specialOrderRLink" />
+    </definition>
+    
+    <definition name=".specialPermissionTypeCOI" page="/WEB-INF/jsp-modules/transaction/coi/specialorder/specialPermissionType.jsp">
+        <put name="itemType" type="string" />
+    </definition>
+    
+    <definition name=".specialPermissionTypeAddCoiCart" extends=".specialPermissionTypeCOI">
+        <put name="itemType" value="cart" />
+    </definition>
+    
+    <definition name=".specialPermissionTypeAddCoiOrder" extends=".specialPermissionTypeCOI">
+        <put name="itemType" value="order" />
+    </definition>
+    
+    <definition name=".specialPermissionTypeEditCoiCart" extends=".specialPermissionTypeCOI">
+        <put name="itemType" value="cart" />
+    </definition>
+    
+    <definition name="specialPermissionTypeAddCoiCart" extends=".mainLayout">
+        <put name="pageTitle" value="Select Permission Type" />
+        <put name="pageContent" value=".specialPermissionTypeAddCoiCart" />
+    </definition>
+    
+    <definition name="specialPermissionTypeAddCoiOrder" extends=".mainLayout">
+        <put name="pageTitle" value="Select Permission Type" />
+        <put name="pageContent" value=".specialPermissionTypeAddCoiOrder" />
+    </definition>
+    
+    <definition name="specialPermissionTypeEditCoiCart" extends=".mainLayout">
+        <put name="pageTitle" value="Select Permission Type" />
+        <put name="pageContent" value=".specialPermissionTypeEditCoiCart" />
+    </definition>
+     
+     
+     <!-- end special order tiles COI -->
+    
+    <!-- basic transaction tiles -->
+    
+    <definition name=".basicTransaction" page="/WEB-INF/jsp-modules/transaction/basic/basicTransaction.jsp">
+        <put name="actionHeaderText" type="string" />
+        <put name="cancelText" type="string" />
+        <put name="allowPermissionChange" type="string" />
+        <put name="submitButtonImage" type="string" />
+        <put name="submitButtonAlt" type="string" />
+        <put name="showFooterCancel" type="string" />
+        <put name="showAddOrderFooterElements" type="string" />
+        <put name="addWebTrendsScenarios" type="string" value="false" />
+        <put name="addWebTrendsTypeOfUse" type="string" value="false" />
+        <put name="academicDetails" value="/WEB-INF/jsp-modules/transaction/basic/academicDetails.jsp" />
+        <put name="photocopyDetails" value="/WEB-INF/jsp-modules/transaction/basic/photocopyDetails.jsp" />
+        <put name="republicationDetails" value="/WEB-INF/jsp-modules/transaction/basic/republicationDetails.jsp" />
+        <put name="digitalDetails" value="/WEB-INF/jsp-modules/transaction/basic/digitalDetails.jsp" />
+    </definition>
+    
+    <definition name=".basicAddCartItem" extends=".basicTransaction">
+        <put name="cancelText" value="Start new search" />
+        <put name="allowPermissionChange" value="true" />
+        <put name="submitButtonImage" value="/media/images/btn_add-cart.gif" />
+        <put name="submitButtonAlt" value="Add to Cart" />
+        <put name="showFooterCancel" value="false" />
+        <put name="showAddOrderFooterElements" value="false" />
+        <put name="addWebTrendsScenarios" value="true" />
+        <put name="addWebTrendsTypeOfUse" value="true" />
+    </definition>
+    
+    <definition name=".basicAddOrderItem" extends=".basicTransaction">
+        <put name="cancelText" value="Start new search" />
+        <put name="allowPermissionChange" value="true" />
+        <put name="submitButtonImage" value="/media/images/btn_add_existing.gif" />
+        <put name="submitButtonAlt" value="Add Item to Existing Order" />
+        <put name="showFooterCancel" value="false" />
+        <put name="showAddOrderFooterElements" value="true" />
+        <put name="addWebTrendsTypeOfUse" value="true" />
+    </definition>
+    
+    <definition name=".basicEditCartItem" extends=".basicTransaction">
+        <put name="actionHeaderText" value="Edit Item" />
+        <put name="cancelText" value="Cancel changes" />
+        <put name="allowPermissionChange" value="true" />
+        <put name="submitButtonImage" value="/media/images/btn_save-changes.gif" />
+        <put name="submitButtonAlt" value="Save Changes" />
+        <put name="showFooterCancel" value="true" />
+        <put name="showAddOrderFooterElements" value="false" />
+    </definition>
+    
+    <definition name=".basicEditOrderItem" extends=".basicTransaction">
+        <put name="actionHeaderText" value="Edit Item" />
+        <put name="cancelText" value="Cancel changes" />
+        <put name="allowPermissionChange" value="false" />
+        <put name="submitButtonImage" value="/media/images/btn_save-changes.gif" />
+        <put name="submitButtonAlt" value="Save Changes" />
+        <put name="showFooterCancel" value="true" />
+        <put name="showAddOrderFooterElements" value="false" />
+    </definition>
+    
+    <definition name="basicAddCartItem" extends=".mainLayout">
+        <put name="pageTitle" value="Add Item" />
+        <put name="pageContent" value=".basicAddCartItem" />
+    </definition>
+            
+    <definition name="basicAddOrderItem" extends=".mainLayout">
+        <put name="pageTitle" value="Add Item" />
+        <put name="pageContent" value=".basicAddOrderItem" />
+    </definition>
+    
+    <definition name="basicEditCartItem" extends=".mainLayout">
+        <put name="pageTitle" value="Edit Item" />
+        <put name="pageContent" value=".basicEditCartItem" />
+    </definition>
+    
+    <definition name="basicEditOrderItem" extends=".mainLayout">
+        <put name="pageTitle" value="Edit Item" />
+        <put name="pageContent" value=".basicEditOrderItem" />
+    </definition>
+    
+    <!-- end basic transaction tiles -->
+    
+    <!-- special order tiles -->
+    
+    <definition name=".specialOrder" page="/WEB-INF/jsp-modules/transaction/specialorder/specialOrder.jsp">
+        <put name="headerType" type="string" />
+        <put name="allowPermissionChange" type="string" />
+        <put name="showFooterCancel" type="string" />
+        <put name="showAddOrderFooterElements" type="string" />
+        <put name="submitButtonImage" type="string" />
+        <put name="submitButtonAlt" type="string" />
+        <put name="addWebTrendsScenarios" type="string" value="false" />
+        <put name="addWebTrendsTypeOfUse" type="string" value="false" />
+        <put name="academicDetailsNoTitle" value="/WEB-INF/jsp-modules/transaction/specialorder/academicDetailsNoTitle.jsp" />
+        <put name="photocopyDetailsNoTitle" value="/WEB-INF/jsp-modules/transaction/specialorder/photocopyDetailsNoTitle.jsp" />
+        <put name="republicationDetailsNoTitle" value="/WEB-INF/jsp-modules/transaction/specialorder/republicationDetailsNoTitle.jsp" />
+        <put name="digitalDetailsNoTitle" value="/WEB-INF/jsp-modules/transaction/specialorder/digitalDetailsNoTitle.jsp" />
+        <put name="academicDetailsWithTitle" value="/WEB-INF/jsp-modules/transaction/specialorder/academicDetailsWithTitle.jsp" />
+        <put name="photocopyDetailsWithTitle" value="/WEB-INF/jsp-modules/transaction/specialorder/photocopyDetailsWithTitle.jsp" />
+        <put name="republicationDetailsWithTitle" value="/WEB-INF/jsp-modules/transaction/specialorder/republicationDetailsWithTitle.jsp" />
+        <put name="digitalDetailsWithTitle" value="/WEB-INF/jsp-modules/transaction/specialorder/digitalDetailsWithTitle.jsp" />
+    </definition>
+    
+    <definition name=".specialAddCartItem" extends=".specialOrder">
+        <put name="headerType" value="add" />
+        <put name="allowPermissionChange" value="true" />
+        <put name="showFooterCancel" value="false" />
+        <put name="showAddOrderFooterElements" value="false" />
+        <put name="submitButtonImage" value="/media/images/btn_add-so-cart.gif" />
+        <put name="submitButtonAlt" value="Add Special Order to Cart" />
+        <put name="addWebTrendsScenarios" value="true" />
+        <put name="addWebTrendsTypeOfUse" value="true" />
+    </definition>
+    
+    <definition name=".specialAddOrderItem" extends=".specialOrder">
+        <put name="headerType" value="add" />
+        <put name="allowPermissionChange" value="true" />
+        <put name="showFooterCancel" value="false" />
+        <put name="showAddOrderFooterElements" value="true" />
+        <put name="submitButtonImage" value="/media/images/btn_special_existing.gif" />
+        <put name="submitButtonAlt" value="Add Special Order to Existing Order" />
+        <put name="addWebTrendsTypeOfUse" value="true" />
+    </definition>
+    
+    <definition name=".specialEditCartItem" extends=".specialOrder">
+        <put name="headerType" value="edit" />
+        <put name="allowPermissionChange" value="true" />
+        <put name="showFooterCancel" value="true" />
+        <put name="showAddOrderFooterElements" value="false" />
+        <put name="submitButtonImage" value="/media/images/btn_save-changes.gif" />
+        <put name="submitButtonAlt" value="Save Changes" />
+    </definition>
+    
+    <definition name=".specialEditOrderItem" extends=".specialOrder">
+        <put name="headerType" value="edit" />
+        <put name="allowPermissionChange" value="false" />
+        <put name="showFooterCancel" value="true" />
+        <put name="showAddOrderFooterElements" value="false" />
+        <put name="submitButtonImage" value="/media/images/btn_save-changes.gif" />
+        <put name="submitButtonAlt" value="Save Changes" />
+    </definition>
+    
+    <definition name="specialAddCartItem" extends=".mainLayout">
+        <put name="pageTitle" value="Add Item" />
+        <put name="pageContent" value=".specialAddCartItem" />
+    </definition>
+    
+    <definition name="specialAddOrderItem" extends=".mainLayout">
+        <put name="pageTitle" value="Add Item" />
+        <put name="pageContent" value=".specialAddOrderItem" />
+    </definition>
+    
+    <definition name="specialEditCartItem" extends=".mainLayout">
+        <put name="pageTitle" value="Edit Item" />
+        <put name="pageContent" value=".specialEditCartItem" />
+    </definition>
+    
+    <definition name="specialEditOrderItem" extends=".mainLayout">
+        <put name="pageTitle" value="Edit Item" />
+        <put name="pageContent" value=".specialEditOrderItem" />
+    </definition>
+    
+    <definition name=".specialPermissionType" page="/WEB-INF/jsp-modules/transaction/specialorder/specialPermissionType.jsp">
+        <put name="itemType" type="string" />
+    </definition>
+    
+    <definition name=".specialPermissionTypeAddCart" extends=".specialPermissionType">
+        <put name="itemType" value="cart" />
+    </definition>
+    
+    <definition name=".specialPermissionTypeAddOrder" extends=".specialPermissionType">
+        <put name="itemType" value="order" />
+    </definition>
+    
+    <definition name=".specialPermissionTypeEditCart" extends=".specialPermissionType">
+        <put name="itemType" value="cart" />
+    </definition>
+    
+    <definition name="specialPermissionTypeAddCart" extends=".mainLayout">
+        <put name="pageTitle" value="Select Permission Type" />
+        <put name="pageContent" value=".specialPermissionTypeAddCart" />
+    </definition>
+    
+    <definition name="specialPermissionTypeAddOrder" extends=".mainLayout">
+        <put name="pageTitle" value="Select Permission Type" />
+        <put name="pageContent" value=".specialPermissionTypeAddOrder" />
+    </definition>
+    
+    <definition name="specialPermissionTypeEditCart" extends=".mainLayout">
+        <put name="pageTitle" value="Select Permission Type" />
+        <put name="pageContent" value=".specialPermissionTypeEditCart" />
+    </definition>
+    
+    <!-- end special order tiles -->
+    
+    <!-- start course details tiles -->
+    
+    <definition name=".courseDetails" page="/WEB-INF/jsp-modules/transaction/coi/courseDetails.jsp">
+        <put name="mode" type="string" />
+        <put name="useAddButton" type="string" value="false" />
+        <put name="addWebTrendsScenarios" type="string" value="false" />
+    </definition>
+    
+    <definition name=".addCartCourseDetails" extends=".courseDetails">
+        <put name="mode" value="add" />
+        <put name="useAddButton" value="true" />
+        <put name="addWebTrendsScenarios" value="true" />
+    </definition>
+    
+    <definition name=".addOrderCourseDetails" extends=".courseDetails">
+        <put name="mode" value="add" />
+        <put name="addWebTrendsScenarios" value="true" />
+    </definition>
+    
+    <definition name=".editCartCourseDetails" extends=".courseDetails">
+        <put name="mode" value="edit" />
+    </definition>
+    
+    <definition name=".editOrderCourseDetails" extends=".courseDetails">
+        <put name="mode" value="edit" />
+    </definition>
+    
+    <definition name=".copyOrderCourseDetails" extends=".courseDetails">
+        <put name="mode" value="copy" />
+        <put name="useAddButton" value="true" />
+    </definition>
+    
+    <definition name="addCartCourseDetails" extends=".mainLayout">
+        <put name="pageTitle" value="Course Information" />
+        <put name="pageContent" value=".addCartCourseDetails" />
+    </definition>
+    
+    <definition name="addOrderCourseDetails" extends=".mainLayout">
+        <put name="pageTitle" value="Course Information" />
+        <put name="pageContent" value=".addOrderCourseDetails" />
+    </definition>
+    
+    <definition name="editCartCourseDetails" extends=".mainLayout">
+        <put name="pageTitle" value="Edit Course Information" />
+        <put name="pageContent" value=".editCartCourseDetails" />
+    </definition>
+    
+    <definition name="editOrderCourseDetails" extends=".mainLayout">
+        <put name="pageTitle" value="Edit Course Information" />
+        <put name="pageContent" value=".editOrderCourseDetails" />
+    </definition>
+    
+    <definition name="copyOrderCourseDetails" extends=".mainLayout">
+        <put name="pageTitle" value="Edit Course Information" />
+        <put name="pageContent" value=".copyOrderCourseDetails" />
+    </definition>
+            
+    <!-- end course details tiles -->
+    
+    <!-- start COI course details tiles -->
+    
+    <definition name=".courseDetailsCOI" page="/WEB-INF/jsp-modules/transaction/coi/courseDetails.jsp">
+        <put name="mode" type="string" />
+        <put name="useAddButton" type="string" value="false" />
+        <put name="addWebTrendsScenarios" type="string" value="false" />
+    </definition>
+    
+    <definition name=".addCartCoiCourseDetails" extends=".courseDetailsCOI">
+        <put name="mode" value="add" />
+        <put name="useAddButton" value="true" />
+        <put name="addWebTrendsScenarios" value="true" />
+    </definition>
+    
+    <definition name=".editCartCoiCourseDetails" extends=".courseDetailsCOI">
+        <put name="mode" value="edit" />
+    </definition>
+    
+    <definition name=".editOrderCoiCourseDetails" extends=".courseDetailsCOI">
+        <put name="mode" value="edit" />
+    </definition>
+    
+    <definition name=".copyOrderCoiCourseDetails" extends=".courseDetailsCOI">
+        <put name="mode" value="copy" />
+        <put name="useAddButton" value="true" />
+    </definition>
+    
+    <definition name="addCartCoiCourseDetails" extends=".mainLayout">
+        <put name="pageTitle" value="Course Information" />
+        <put name="pageContent" value=".addCartCoiCourseDetails" />
+    </definition>
+    
+    <definition name="editCartCoiCourseDetails" extends=".mainLayout">
+        <put name="pageTitle" value="Edit Course Information" />
+        <put name="pageContent" value=".editCartCoiCourseDetails" />
+    </definition>
+    
+    <definition name="editOrderCoiCourseDetails" extends=".mainLayout">
+        <put name="pageTitle" value="Edit Course Information" />
+        <put name="pageContent" value=".editOrderCoiCourseDetails" />
+    </definition>
+    
+    <definition name="copyOrderCoiCourseDetails" extends=".mainLayout">
+        <put name="pageTitle" value="Edit Course Information" />
+        <put name="pageContent" value=".copyOrderCoiCourseDetails" />
+    </definition>
+            
+    <!-- end COI course details tiles -->
+    
+    <definition name="editCopiedOrder" extends=".mainLayout">
+        <put name="pageTitle" value="Edit Copied Items" />
+        <put name="pageContent" value="/WEB-INF/jsp-modules/transaction/coi/editCopiedOrder.jsp" />
+    </definition>
+
+
+    
+    <definition name="cart" extends=".mainLayout">
+        <put name="pageTitle" value="Cart" />
+        <put name="pageContent" value="/WEB-INF/jsp-modules/cart/coi/cart.jsp" />
+    </definition>
+
+    <definition name="demoSearchMain" extends=".mainLayout">
+        <put name="pageContent" value="/WEB-INF/jsp-modules/search/demoSearch.jsp" />
+    </definition>
+    <definition name="demoSearchResults" extends=".mainLayout">
+        <put name="pageContent" value="/WEB-INF/jsp-modules/search/demoSearchResults.jsp" />
+    </definition>
+    
+    <!-- The NEWCOPYRIGHT.COM popup stuff. -->
+    
+    <definition name="newcccpop" page="/WEB-INF/jsp-modules/newccc/pop.jsp"/>
+    <definition name="newcccpopup" page="/WEB-INF/jsp-modules/newccc/popup.jsp"/>
+    
+    <!-- BEGIN SEARCH TILES -->
+    
+    <definition name=".searchResultNotFound" page="/WEB-INF/jsp-modules/search/tiles/searchResultNotFound.jsp"/>    
+    <definition name=".searchSimpleNotFound" page="/WEB-INF/jsp-modules/search/tiles/searchResultNotFound.jsp" />
+    <definition name=".searchSimple" page="/WEB-INF/jsp-modules/search/tiles/simpleSearch.jsp" />       
+    <definition name=".searchResultSimple" page="/WEB-INF/jsp-modules/search/tiles/searchResultSimple.jsp">
+        <put name="publicationInfo" value="/WEB-INF/jsp-modules/search/tiles/publication.jsp" />
+    </definition>
+    <definition name=".searchResult" page="/WEB-INF/jsp-modules/search/tiles/searchResult.jsp" />
+    <definition name=".searchLandingPage" page="/WEB-INF/jsp-modules/search/tiles/searchLandingPage.jsp">    
+        <put name="publicationInfo" value="/WEB-INF/jsp-modules/search/tiles/publication.jsp" />
+    </definition>
+    <definition name=".searchTouDetailPage" page="/WEB-INF/jsp-modules/search/tiles/searchTouDetailPage.jsp">    
+        <put name="publicationInfo" value="/WEB-INF/jsp-modules/search/tiles/publication.jsp" />
+    </definition>
+    <definition name=".searchTouDetailPageRedirect" page="/WEB-INF/jsp-modules/search/tiles/searchTouDetailPageRedirect.jsp">    
+        <put name="publicationInfo" value="/WEB-INF/jsp-modules/search/tiles/publication.jsp" />
+    </definition>
+    <definition name=".searchAdvanced" page="/WEB-INF/jsp-modules/search/tiles/advancedSearch.jsp" />
+    <definition name=".articleSearch" page="/WEB-INF/jsp-modules/transaction/article-search/articleSearch.jsp" />
+    <definition name=".chapterSearch" page="/WEB-INF/jsp-modules/transaction/article-search/chapterSearch.jsp" />
+   
+    <definition name="permOptionsPagePPUOnly" page="/WEB-INF/jsp-modules/search/tiles/permissionOptionsPPUOnly.jsp" />
+    
+    <definition name="permOptionsPage" page="/WEB-INF/jsp-modules/search/tiles/permissionOptionsPage.jsp" />
+
+    <!-- Should not require additional parameters as the search result  -->
+    <!-- object should contain all I need to determine the different    -->
+    <!-- possible layouts within the actual tiles handled by tag logic. -->
+    
+    <definition name="notAvailableRequest" page="/WEB-INF/jsp-modules/search/tiles/requestNotAvailable.jsp" />
+    <definition name="notAvailableRequestDone" page="/WEB-INF/jsp-modules/search/tiles/requestNotAvailableDone.jsp" />
+    <definition name="notAvailableRequestError" page="/WEB-INF/jsp-modules/search/tiles/requestNotAvailableError.jsp" />
+    
+    <definition name="searchSimple" extends=".mainLayout">
+        <put name="pageTitle" value="CCC - Simple Search"/>
+        <put name="includeUserAlert" value="true" />
+        <put name="pageContent" value=".searchSimple" />
+    </definition>
+
+    <definition name="searchSimpleNotFound" extends=".mainLayout">
+        <put name="pageTitle" value="CCC - Simple Search"/>
+        <put name="includeUserAlert" value="true" />
+        <put name="pageContent" value=".searchSimpleNotFound" />
+    </definition>
+
+    <definition name="searchAdvanced" extends=".mainLayout">
+        <put name="pageTitle" value="CCC - Advanced Search"/>
+        <put name="includeUserAlert" value="true" />
+        <put name="pageContent" value=".searchAdvanced" />
+    </definition>
+
+    <definition name="searchPayPerUse" extends=".mainLayout">
+        <put name="pageTitle" value="CCC - Advanced Search Pay-Per-Use"/>
+        <put name="includeUserAlert" value="true" />
+        <put name="pageContent" value=".searchPayPerUse" />
+    </definition>
+
+    <definition name="searchAnnual" extends=".mainLayout">
+        <put name="pageTitle" value="CCC - Advanced Search Annual"/>
+        <put name="includeUserAlert" value="true" />
+        <put name="pageContent" value=".searchAnnual" />
+    </definition>
+    
+    <definition name="searchAcademic" extends=".mainLayout">
+        <put name="pageTitle" value="CCC - Advanced Search Annual"/>
+        <put name="includeUserAlert" value="true" />
+        <put name="pageContent" value=".searchAcademic" />
+    </definition>
+
+    <definition name="searchResultSimple" extends=".mainLayout">
+    <put name="pageTitle" value="CCC - Search Results"/>
+    <put name="pageContent" value=".searchResultSimple"/>
+    </definition>
+
+    <definition name="searchResult" extends=".mainLayout">
+    <put name="pageTitle" value="CCC - Search Results"/>
+    <put name="pageContent" value=".searchResult"/>
+    </definition>
+    
+    <definition name="searchLandingPage" extends=".mainLayout">
+        <put name="pageTitle" value="CCC - Permissions"/>
+    <put name="pageContent" value=".searchLandingPage"/>
+    </definition>
+    
+    <definition name="searchTouDetailPage" extends=".mainLayout">
+        <put name="pageTitle" value="CCC - Permissions"/>
+        <put name="pageContent" value=".searchTouDetailPage"/>
+    </definition>
+    
+    <definition name="searchTouDetailPageRedirect" extends=".mainLayout">
+        <put name="pageTitle" value="CCC - Permissions"/>
+        <put name="pageContent" value=".searchTouDetailPageRedirect"/>
+    </definition>
+    
+    <definition name="articleSearch" extends=".mainLayout">
+        <put name="pageTitle" value="Article Search" />
+        <put name="pageContent" value=".articleSearch" />
+    </definition>
+    
+      <definition name="chapterSearch" extends=".mainLayout">
+        <put name="pageTitle" value="Chapter Search" />
+        <put name="pageContent" value=".chapterSearch" />
+    </definition>
+    <!-- END SEARCH TILES -->
+
+	<!-- BEGIN USER ADMINISTRATION TILES -->
+	
+	<definition name=".userLookup" page="/WEB-INF/jsp-modules/admin/userLookup.jsp"/> 
+	<definition name=".userAlert" page="/WEB-INF/jsp-modules/admin/userAlert.jsp"/>
+	<definition name=".publisherMaintenance" page="/WEB-INF/jsp-modules/admin/publisherMaintenance.jsp" />
+	<definition name=".editPublisher" page="/WEB-INF/jsp-modules/admin/editPublisher.jsp" />
+	
+	
+	<definition name="userLookupPage" extends=".adminLayout">
+        <put name="pageTitle" value="CCC User Admin - Lookup User"/>
+    	<put name="pageContent" value=".userLookup"/>
+    </definition>
+	
+	<definition name="userAlertPage" extends=".adminLayout">
+        <put name="pageTitle" value="CCC User Admin - Set User Alert"/>
+    	<put name="pageContent" value=".userAlert"/>
+    </definition>
+
+    <definition name="publisherMaintenancePage" extends=".adminLayout">
+            <put name="pageTitle" value="CCC User Admin - Publisher Maintenance"/>
+            <put name="pageContent" value=".publisherMaintenance"/>
+    </definition>
+    
+    <definition name="editPublisherPage" extends=".adminLayout">
+                <put name="pageTitle" value="CCC User Admin - Edit Publisher"/>
+                <put name="pageContent" value=".editPublisher"/>
+    </definition>
+
+	<!-- END USER ADMINISTRATION TILES -->
+
+    <!-- begin Order History Tiles -->
+
+    <definition name="orderHistoryTile" extends=".mainLayout">
+        <put name="pageTitle" value="Order History"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/orderhistory/orderHistoryPage.jsp" />
+    </definition>
+
+    <definition name="orderDetailTile" extends=".mainLayout">
+        <put name="pageTitle" value="Order History Detail"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/orderhistory/orderDetailPage.jsp" />
+    </definition>
+
+    <definition name="orderViewTile" extends=".mainLayout">
+        <put name="pageTitle" value="Order History Detail"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/orderhistory/orderViewPage.jsp" />
+    </definition>    
+
+    <definition name="rightsLinkOrderTile" extends=".mainLayout">
+        <put name="pageTitle" value="Order History"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/orderhistory/rlOrderHistoryPage.jsp" />
+    </definition> 
+    <!-- END Order History Tiles -->
+    
+    <!-- BEGIN Admin -->
+    
+    <definition name="manageAccountTile" extends=".mainLayout">
+        <put name="pageTitle" value="Manage Account" />
+        <put name="pageContent" value="/WEB-INF/jsp-modules/admin/manage.jsp" />
+    </definition>
+    
+    <definition name="viewReportTile" extends=".mainLayout">
+        <put name="pageTitle" value="Manage Account" />
+        <put name="pageContent" value="/WEB-INF/jsp-modules/admin/viewReports.jsp" />
+    </definition>
+    
+    <definition name="viewPaidInvoiceReport" extends=".mainLayout">
+        <put name="pageTitle" value="Manage Account" />
+        <put name="pageContent" value="/WEB-INF/jsp-modules/admin/ViewPaidInvoiceReport.jsp" />
+    </definition>
+    <!--  CreditCard list lasyout -->
+    
+      <definition name="viewCreditCardList" extends=".innerLayout">
+        <put name="innerContent" value="/WEB-INF/jsp-modules/payment/creditCardList.jsp" />
+    </definition>
+    
+        <!-- special order payments -->
+    <definition name="viewUISpecialOrderPaymentModalTile" extends=".modalLayout">
+        <put name="pageContent" value="/WEB-INF/jsp-modules/orderhistory/paySpecialOrder.jsp" />
+    </definition>
+    
+    <definition name="viewUIActionErrorModalTile" extends=".modalLayout">
+        <put name="pageContent" value="" />
+    </definition>
+
+
+
+    <!-- Invoice payments -->
+    
+    <definition name="viewUnpaidInvoicesTile" extends=".mainLayout">
+        <put name="pageTitle" value="View Unpaid Invoices" />
+        <put name="pageContent" value="/WEB-INF/jsp-modules/admin/viewUnpaidInvoices.jsp" />
+    </definition>
+    
+    <definition name="viewUIPaymentTile" extends=".mainLayout">
+        <put name="pageTitle" value="Invoice Payment Form" />
+        <put name="pageContent" value="/WEB-INF/jsp-modules/admin/applyCCPayment.jsp" />
+    </definition>
+    
+    <definition name="viewUIPaymentConfirmationTile" extends=".mainLayout">
+        <put name="pageTitle" value="Confirm Invoice Payment" />
+        <put name="pageContent" value="/WEB-INF/jsp-modules/admin/confirmCCPayment.jsp" />
+    </definition>
+    
+    <definition name="viewUIPaymentComplete" extends=".mainLayout">
+        <put name="pageTitle" value="Invoice Payment Done" />
+        <put name="pageContent" value="/WEB-INF/jsp-modules/admin/invoicePaymentDone.jsp" />
+    </definition>
+    
+    <definition name="viewAutoDunning" extends=".adminLayout">
+        <put name="pageTitle" value="Auto Dunning"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/admin/autoDunning.jsp" />
+    </definition>
+
+    <definition name="anonymousInvoicePaymentStepOneTile" extends=".mainLayout">
+        <put name="pageTitle" value="Pay Invoices Anonymously" />
+        <put name="pageContent" value="/WEB-INF/jsp-modules/anonymous/capturePayeeData.jsp" />
+    </definition>
+
+    <definition name="anonymousInvoicePaymentStepTwoTile" extends=".mainLayout">
+        <put name="pageTitle" value="Pay Invoices Anonymously" />
+        <put name="pageContent" value="/WEB-INF/jsp-modules/anonymous/selectUnpaidInvoices.jsp" />
+    </definition>
+
+    <definition name="anonymousInvoicePaymentStepThreeTile" extends=".mainLayout">
+        <put name="pageTitle" value="Pay Invoices Anonymously" />
+        <put name="pageContent" value="/WEB-INF/jsp-modules/anonymous/creditCard.jsp" />
+    </definition>
+
+    <definition name="anonymousInvoicePaymentStepFourTile" extends=".mainLayout">
+        <put name="pageTitle" value="Confirm Anonymous Payment" />
+        <put name="pageContent" value="/WEB-INF/jsp-modules/anonymous/confirmPayment.jsp" />
+    </definition>
+    
+    <definition name="anonymousInvoicePaymentStepFiveTile" extends=".mainLayout">
+        <put name="pageTitle" value="Anonymous Payment Complete" />
+        <put name="pageContent" value="/WEB-INF/jsp-modules/anonymous/paymentComplete.jsp" />
+    </definition>
+    
+    <!-- Credit Card Management -->
+    
+    <definition name="manageCreditCardsTile" extends=".mainLayout">
+        <put name="pageTitle" value="View Saved Credit Cards" />
+        <put name="pageContent" value="/WEB-INF/jsp-modules/admin/manageCreditCards.jsp" />
+    </definition>
+
+    <!-- END Admin -->
+    
+    <!-- Begin Registration -->
+    
+        <definition name="displayOrgRegistrationTilesView" extends=".mainLayout">
+            <put name="pageTitle" value="Register - Organization"/>
+            <put name="includeUserAlert" value="true" />
+            <put name="pageContent" value="/WEB-INF/jsp-modules/manage-account/RegistrationOrg.jsp" />
+        </definition>
+        
+        <definition name="displayIndRegistrationTilesView" extends=".mainLayout">
+            <put name="pageTitle" value="Register - Individual"/>
+            <put name="includeUserAlert" value="true" />
+            <put name="pageContent" value="/WEB-INF/jsp-modules/manage-account/RegistrationInd.jsp" />
+        </definition>
+        
+        <definition name="displayAddUserRegistrationTilesView" extends=".mainLayout">
+            <put name="pageTitle" value="Register - Additional User"/>
+            <put name="includeUserAlert" value="true" />
+            <put name="pageContent" value="/WEB-INF/jsp-modules/manage-account/RegistrationAddUser.jsp" />
+        </definition>
+        
+        <definition name="displayGPOUserRegistrationTilesView" extends=".mainLayout">
+            <put name="pageTitle" value="Register - GPO User"/>
+            <put name="includeUserAlert" value="true" />
+            <put name="pageContent" value="/WEB-INF/jsp-modules/manage-account/RegistrationGPOUser.jsp" />
+        </definition>
+        
+        <definition name="displaySubmitView" extends=".mainLayout">
+            <put name="pageTitle" value="Update Successful"/>  
+            <put name="pageContent" value="/WEB-INF/jsp-modules/manage-account/submit-confirm.jsp" />
+        </definition>
+
+        <definition name="displayResetView" extends=".mainLayout">
+            <put name="pageTitle" value="Update Successful"/>  
+            <put name="pageContent" value="/WEB-INF/jsp-modules/manage-account/reset-confirm.jsp" />
+        </definition>
+        
+        <definition name="displayRegisterView" extends=".mainLayout">
+            <put name="pageTitle" value="Your pay-per-use account has been successfully created - Copyright.com"/>  
+            <put name="pageContent" value="/WEB-INF/jsp-modules/manage-account/register-confirm.jsp" />
+        </definition>
+        
+        <definition name=".displayRegisterType" page="/WEB-INF/jsp-modules/manage-account/register-confirm.jsp">
+            <put name="registrationType" type="string" />
+        </definition>
+        
+        <definition name=".displayRegisterInd" extends=".displayRegisterType">
+            <put name="registrationType" value="I" />
+        </definition>
+        
+        <definition name=".displayRegisterOrg" extends=".displayRegisterType">
+            <put name="registrationType" value="O" />
+        </definition>
+        
+        <definition name="displayRegisterIndView" extends=".mainLayout">
+            <put name="pageTitle" value="Your pay-per-use account has been successfully created - Copyright.com"/>  
+            <put name="pageContent" value=".displayRegisterInd" />
+        </definition>
+        
+        <definition name="displayRegisterOrgView" extends=".mainLayout">
+            <put name="pageTitle" value="Your pay-per-use account has been successfully created - Copyright.com"/>  
+            <put name="pageContent" value=".displayRegisterOrg" />
+        </definition>
+        
+        <definition name="alreadyRegisteredView" extends=".mainLayout">
+            <put name="pageTitle" value="Registered already"/>  
+            <put name="pageContent" value="/WEB-INF/jsp-modules/manage-account/already-registered.jsp" />
+        </definition>
+
+        <definition name="changePassword" extends=".mainLayout">
+            <put name="pageTitle" value="Change Password"/>  
+            <put name="pageContent" value="/WEB-INF/jsp-modules/manage-account/changePassword.jsp" />
+        </definition>
+
+        <definition name="changedPassword" extends=".mainLayout">
+            <put name="pageTitle" value="Changed Password"/>  
+            <put name="pageContent" value="/WEB-INF/jsp-modules/common/changedPassword.jsp" />
+        </definition>
+
+        <definition name="changedEmail" extends=".mainLayout">
+            <put name="pageTitle" value="Changed Password"/>  
+            <put name="pageContent" value="/WEB-INF/jsp-modules/common/changedEmail.jsp" />
+        </definition>
+
+        <definition name="resetPasswordView" extends=".mainLayout">
+            <put name="pageTitle" value="Reset Password"/>  
+            <put name="pageContent" value="/WEB-INF/jsp-modules/common/resetPassword.jsp" />
+        </definition>
+
+        <definition name="resetPasswordCompleteView" extends=".mainLayout">
+            <put name="pageTitle" value="Reset Password Complete"/>  
+            <put name="pageContent" value="/WEB-INF/jsp-modules/common/resetPasswordComplete.jsp" />
+        </definition>
+
+        <definition name="timeoutView" extends=".mainLayout">
+            <put name="pageTitle" value="Session Timed Out"/>  
+            <put name="pageContent" value="/WEB-INF/jsp-modules/common/timedOut.jsp" />
+        </definition>
+
+        <definition name="resetPasswordInvalidView" extends=".mainLayout">
+            <put name="pageTitle" value="Reset Password Invalid"/>  
+            <put name="pageContent" value="/WEB-INF/jsp-modules/common/resetPasswordInvalid.jsp" />
+        </definition>
+
+        
+    <!-- End Registration -->
+    
+     <!-- Begin Select Payment Method -->
+    
+        <definition name="selectPaymentTilesView" extends=".mainLayout">
+            <put name="pageTitle" value="Checkout - Select Payment Method"/>  
+            <put name="pageContent" value="/WEB-INF/jsp-modules/cart/paymentMethod.jsp"/>
+        </definition>
+
+    <!-- End Select Payment Method -->
+
+    <definition name="reviewSubmitCartTilesView" extends=".mainLayout">
+            <put name="pageTitle" value="Checkout - Review Shopping Cart"/>  
+            <put name="pageContent" value="/WEB-INF/jsp-modules/cart/reviewOrder.jsp"/>
+        </definition>
+
+    <definition name="confirmCartPurchaseTilesView" extends=".mainLayout">
+        <put name="pageTitle" value="Checkout - Confirm Shopping Cart Purchase"/>  
+        <put name="pageContent" value="/WEB-INF/jsp-modules/cart/confirmPurchase.jsp"/>
+    </definition>
+    
+    <!-- Begin COI Checkout -->
+    
+        <definition name="selectCoiPaymentTilesView" extends=".mainLayout">
+            <put name="pageTitle" value="Checkout - Select Payment Method"/>  
+            <put name="pageContent" value="/WEB-INF/jsp-modules/cart/coi/paymentMethod.jsp"/>
+        </definition>
+  
+        <definition name="selectCartPaymentTilesView" extends=".mainLayout">
+            <put name="pageTitle" value="Checkout - Select Payment Method"/>  
+            <put name="pageContent" value="/WEB-INF/jsp-modules/cart/coi/cartPaymentMethod.jsp"/>
+        </definition>
+    
+    <definition name="reviewCoiSubmitCartTilesView" extends=".mainLayout">
+            <put name="pageTitle" value="Checkout - Review Shopping Cart"/>  
+            <put name="pageContent" value="/WEB-INF/jsp-modules/cart/coi/reviewOrder.jsp"/>
+        </definition>
+        
+     <definition name="confirmCoiCartPurchaseTilesView" extends=".mainLayout">
+        <put name="pageTitle" value="Checkout - Confirm Shopping Cart Purchase"/>  
+        <put name="pageContent" value="/WEB-INF/jsp-modules/cart/coi/confirmPurchase.jsp"/>
+    </definition>
+    
+    <!-- END COI Checkout -->
+    
+    
+  <!-- Adjustments App - Begin -->
+    
+    <definition name="adjustmentsMainView" extends=".mainLayout">
+        <put name="pageTitle" value="Adjustments Main"/>  
+        <put name="pageContent" value="/WEB-INF/jsp-modules/adjustment/adjustmentsMain.jsp"/>
+    </definition>
+    
+    <definition name="adjustmentsErrorView" extends=".mainLayout">
+        <put name="pageTitle" value="Adjustments Error"/>  
+        <put name="pageContent" value="/WEB-INF/jsp-modules/adjustment/adjustmentsError.jsp"/>
+    </definition> 
+    
+    <definition name="adjustmentsThankYouView" extends=".mainLayout">
+        <put name="pageTitle" value="Adjustments Thank You"/>  
+        <put name="pageContent" value="/WEB-INF/jsp-modules/adjustment/adjustmentsThankYou.jsp"/>
+    </definition> 
+    
+    <definition name="adjustmentsListView" extends=".mainLayout">
+        <put name="pageTitle" value="Adjustments Liest"/>  
+        <put name="pageContent" value="/WEB-INF/jsp-modules/adjustment/adjustmentsList.jsp"/>
+    </definition> 
+    
+  <!-- Adjustments App - End -->
+  
+  <!-- Review T & C -->
+  <definition name="reviewTermsTilesView" extends=".mainLayout">
+        <put name="pageTitle" value="Review Terms and Conditions"/> 
+        <put name="pageContent" value="/WEB-INF/jsp-modules/cart/reviewTerms.jsp"/>
+  </definition> 
+  
+  <definition name="reviewTermsRLTilesView" extends=".printLayout">
+        <put name="pageTitle" value="Review RightsLink Terms and Conditions"/> 
+        <put name="pageContent" value="/WEB-INF/jsp-modules/cart/coi/reviewTermsRL.jsp"/>
+  </definition>      
+  
+  <definition name="reviewTermsConfirmTilesView" extends=".mainLayout">
+        <put name="pageTitle" value="Print Terms and Conditions"/> 
+        <put name="pageContent" value="/WEB-INF/jsp-modules/cart/reviewTermsOrderHistory.jsp"/>
+  </definition>
+  
+  <definition name="showCitationTilesView" extends=".mainLayout">
+        <put name="pageTitle" value="Citation"/> 
+        <put name="pageContent" value="/WEB-INF/jsp-modules/cart/showCitationOrderHistory.jsp"/>
+  </definition> 
+  
+  <!-- print-friendly pages -->
+  
+  <definition name="printConfirmPurchase" extends=".printLayout">
+        <put name="pageTitle" value="Print Order Confirmation"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/cart/printConfirmPurchase.jsp" />
+  </definition>
+  
+  <definition name="printOrder" extends=".printLayout">
+        <put name="pageTitle" value="Print Order" />
+        <put name="pageContent" value="/WEB-INF/jsp-modules/orderhistory/printOrder.jsp" />
+  </definition>
+  
+  <!-- end print-friendly pages -->
+  
+  <!-- COI Review T & C -->
+  <definition name="reviewCoiTermsTilesView" extends=".mainLayout">
+        <put name="pageTitle" value="Review Terms and Conditions"/> 
+        <put name="pageContent" value="/WEB-INF/jsp-modules/cart/coi/reviewTerms.jsp"/>
+  </definition>        
+  
+  <definition name="reviewCoiTermsConfirmTilesView" extends=".mainLayout">
+        <put name="pageTitle" value="Print Terms and Conditions"/> 
+        <put name="pageContent" value="/WEB-INF/jsp-modules/cart/coi/reviewTermsOrderHistory.jsp"/>
+  </definition>
+  
+  <definition name="showCoiCitationTilesView" extends=".mainLayout">
+        <put name="pageTitle" value="Citation"/> 
+        <put name="pageContent" value="/WEB-INF/jsp-modules/cart/coi/showCitationOrderHistory.jsp"/>
+  </definition> 
+  
+  <!-- COI print-friendly pages -->
+  
+  <definition name="printCoiConfirmPurchase" extends=".printLayout">
+        <put name="pageTitle" value="Print Order Confirmation"/>
+        <put name="pageContent" value="/WEB-INF/jsp-modules/cart/coi/printConfirmPurchase.jsp" />
+  </definition>
+  
+  <definition name="printCoiOrder" extends=".printLayout">
+        <put name="pageTitle" value="Print Order" />
+        <put name="pageContent" value="/WEB-INF/jsp-modules/orderhistory/printOrder.jsp" />
+  </definition>
+  
+  <!-- COI end print-friendly pages -->
+  
+  <definition name="showBookPreviewTilesView" extends=".previewLayout">
+        <put name="pageTitle" value="Google Books Preview"/> 
+        <put name="pageContent" value="/WEB-INF/jsp-modules/search/tiles/googleBookPreview.jsp"/>
+  </definition> 
+
+
+</tiles-definitions>

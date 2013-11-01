@@ -1,0 +1,21 @@
+@media print {
+
+    #wrapper { border-bottom: solid 1px #B2B2B2; border-right: solid 1px #B2B2B2; }
+
+    #menu { display:none; }
+
+    #ecom-nav { display:none; }
+
+    #titlebar { display:none; }
+
+    #titlesearch { display:none; }
+
+    #footer-content { display:none; }
+
+    #bottomcorners { display:none; }
+    
+    #noPrint { display:none; }
+
+}
+
+

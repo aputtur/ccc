@@ -1,0 +1,55 @@
+#This file is used by the JNDI FSContext.
+#Fri May 19 09:43:39 EDT 2006
+jdbc/CCCPooledDS/RefAddr/4/Encoding=String
+jdbc/CCCPooledDS/RefAddr/3/Type=description
+jdbc/CCCPooledDS/RefAddr/0/Type=url
+jdbc/CCCPooledDS/FactoryName=oracle.jdbc.pool.OracleDataSourceFactory
+jdbc/CCCPooledDS/ClassName=oracle.jdbc.pool.OracleDataSource
+jdbc/CCCPooledDS/RefAddr/2/Content=webstah
+jdbc/CCCPooledDS/RefAddr/4/Content=tcp
+jdbc/CCCPooledDS/RefAddr/2/Encoding=String
+jdbc/CCCPooledDS/RefAddr/4/Type=networkProtocol
+jdbc/CCCPooledDS/RefAddr/0/Encoding=String
+jdbc/CCCPooledDS/RefAddr/1/Type=userName
+jdbc/CCCPooledDS/RefAddr/0/Content=jdbc\:oracle\:thin\:@oradb6\:1524\:DEV
+jdbc/CCCPooledDS/RefAddr/3/Encoding=String
+jdbc/CCCPooledDS/RefAddr/3/Content=www_user@dev DS
+jdbc/CCCPooledDS/RefAddr/2/Type=passWord
+jdbc/CCCPooledDS/RefAddr/1/Content=www_user
+jdbc/CCCPooledDS/RefAddr/1/Encoding=String
+#
+jdbc/APPSPooledDS/RefAddr/4/Encoding=String
+jdbc/APPSPooledDS/RefAddr/3/Type=description
+jdbc/APPSPooledDS/RefAddr/0/Type=url
+jdbc/APPSPooledDS/FactoryName=oracle.jdbc.pool.OracleDataSourceFactory
+jdbc/APPSPooledDS/ClassName=oracle.jdbc.pool.OracleDataSource
+jdbc/APPSPooledDS/RefAddr/2/Content=apps
+jdbc/APPSPooledDS/RefAddr/4/Content=tcp
+jdbc/APPSPooledDS/RefAddr/2/Encoding=String
+jdbc/APPSPooledDS/RefAddr/4/Type=networkProtocol
+jdbc/APPSPooledDS/RefAddr/0/Encoding=String
+jdbc/APPSPooledDS/RefAddr/1/Type=userName
+jdbc/APPSPooledDS/RefAddr/0/Content=jdbc\:oracle\:thin\:@oradb6\:1522\:FIND
+jdbc/APPSPooledDS/RefAddr/3/Encoding=String
+jdbc/APPSPooledDS/RefAddr/3/Content=apps@find DS
+jdbc/APPSPooledDS/RefAddr/2/Type=passWord
+jdbc/APPSPooledDS/RefAddr/1/Content=apps
+jdbc/APPSPooledDS/RefAddr/1/Encoding=String
+#
+jdbc/NaplesCoreDS/RefAddr/4/Encoding=String
+jdbc/NaplesCoreDS/RefAddr/3/Type=description
+jdbc/NaplesCoreDS/RefAddr/0/Type=url
+jdbc/NaplesCoreDS/FactoryName=oracle.jdbc.pool.OracleDataSourceFactory
+jdbc/NaplesCoreDS/ClassName=oracle.jdbc.pool.OracleDataSource
+jdbc/NaplesCoreDS/RefAddr/2/Content=naples_user
+jdbc/NaplesCoreDS/RefAddr/4/Content=tcp
+jdbc/NaplesCoreDS/RefAddr/2/Encoding=String
+jdbc/NaplesCoreDS/RefAddr/4/Type=networkProtocol
+jdbc/NaplesCoreDS/RefAddr/0/Encoding=String
+jdbc/NaplesCoreDS/RefAddr/1/Type=userName
+jdbc/NaplesCoreDS/RefAddr/0/Content=jdbc\:oracle\:thin\:@oradb6\:1524\:DEV
+jdbc/NaplesCoreDS/RefAddr/3/Encoding=String
+jdbc/NaplesCoreDS/RefAddr/3/Content=naples_user@devDS
+jdbc/NaplesCoreDS/RefAddr/2/Type=passWord
+jdbc/NaplesCoreDS/RefAddr/1/Content=naples_user
+jdbc/NaplesCoreDS/RefAddr/1/Encoding=String

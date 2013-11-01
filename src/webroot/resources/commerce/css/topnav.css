@@ -1,0 +1,156 @@
+/* CSS Document */
+
+body{
+  margin-top: 0px;
+  font-family:verdana,sans-serif;
+  font-size: 11px;
+}
+
+body.cc2{
+  color: #000000;
+}
+
+.sub-region{
+  padding: 0 0 0 0;
+  overflow: hidden;
+}
+
+#ecom-nav{
+  float: right;
+}
+
+#ecom-nav div{
+  float: left;
+}
+
+
+#dynaNavOptions{
+  padding-top: 14px;
+  padding-left: 2px;
+}
+
+.home #ecom-nav a {
+color: #FFEFAD;
+}
+
+#ecom-nav a {
+padding:  0 7px;
+}
+
+.home #ecom-nav a.icon-cart {
+    background:transparent url(/content/dam/cc3/design/images/en/icon_cart_home.gif) no-repeat scroll left center;
+}
+
+#ecom-nav a.icon-cart {
+    padding-left:20px;
+}
+
+
+#topnav img{
+  border: none;
+}
+
+
+/* Primary Nav */
+
+#topnav{
+  background-image: url(/media/images/navigation_bg.gif);
+  background-repeat: repeat-x;
+  line-height: 0px;
+}
+
+#topnav ul{
+  padding: 0px;
+  margin: 0px;
+  z-index: 10;
+}
+
+#topnav a{
+  line-height: 13px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+
+#topnav a:hover{
+  background-color: #1A3F81;
+  text-decoration: none;
+}
+
+#topnav li{
+margin: 0px 0px 0px 00px;
+padding: 0px;
+}
+
+.parent-link{
+  list-style: none;
+  float: left;
+}
+
+.parent-link a{
+  display: block;
+}
+
+
+.child-menu{
+  display: none;
+  position: absolute;
+  background-color: #1b549a;
+  opacity: 0.95;
+  //filter: alpha(opacity = 95);
+  font-weight: bold;
+
+}
+
+#partners .child-menu{
+  width: 151px;
+}
+
+#products .child-menu{
+  width: 210px;
+}
+
+#aboutUs .child-menu{
+  width: 151px;
+}
+
+#education .child-menu{
+  width: 151px;
+}
+
+#productsAndSolutions .child-menu{
+  width: 210px;
+}
+
+#copyright-central .child-menu{
+  width: 151px;
+  list-style: none;
+}
+
+
+.child-link{
+  list-style: none;
+  border-bottom:1px solid #082D7F;
+  border-top:1px solid #69A2D4;
+}
+
+.child-link a{
+  display: block;
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 10px;
+  padding: 6px 7px;
+}
+
+.child-link a:hover{
+  background-color: #1A3F81;
+}
+
+
+.parent-link:hover .child-menu,
+.parent-link.hover .child-menu{
+  display: block;
+}
+
+
+            

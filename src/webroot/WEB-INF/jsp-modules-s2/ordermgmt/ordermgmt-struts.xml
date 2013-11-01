@@ -1,0 +1,41 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+    
+<struts>
+	
+	<package name="ordermgtlanding" extends="copyrightcom-default" namespace="/om">
+		
+		<action name="orderManagementLanding" class="com.copyright.ccc.web.actions.ordermgmt.OrderManagementLandingAction">
+    		<result>orderManagementLanding</result>
+    		<result name="input">orderManagementLanding</result>
+    		<result name="redirect" type="redirectAction">
+    			<param name="actionName">orderManagementLanding</param>
+    		</result>
+    	</action>
+    
+    </package> 	
+	<package name="ordermgmt" extends="copyrightcom-default" namespace="/om/home">
+		    	
+		<action name="orderManagementHome" class="com.copyright.ccc.web.actions.ordermgmt.OrderManagementHomeAction">
+    		<result>orderManagementHome</result>
+    		<result name="input">orderManagementHome</result>
+    		<result name="redirect" type="redirectAction">
+    			<param name="actionName">orderManagementHome</param>
+    		</result>
+    		<result name="order_search">orderManagementHome</result>
+    		<result name="research_search">orderManagementHome</result>
+    		<result name="adjustment_search">orderManagementHome</result>
+     		<result name="new_order">orderManagementHome</result>
+    		
+    	</action>
+				   		
+	</package>
+	
+	<include file="../jsp-modules-s2/ordermgmt/adjustment/adjustment-struts.xml"/>
+	<include file="../jsp-modules-s2/ordermgmt/orderhistory/orderhistory-struts.xml"/>
+	<include file="../jsp-modules-s2/ordermgmt/research/research-struts.xml"/>
+	<include file="../jsp-modules-s2/ordermgmt/neworder/neworder-struts.xml"/>
+	<include file="../jsp-modules-s2/ordermgmt/remote/remote-struts.xml"/>
+			
+</struts>

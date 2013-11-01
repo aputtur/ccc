@@ -1,0 +1,2707 @@
+    <!DOCTYPE form-validation PUBLIC
+     "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+     "../../dtd/validator_1_1_3.dtd">
+
+<form-validation>
+
+    <formset>
+    
+        <form name="orderHistoryActionForm">
+            <field property="searchText" depends="validateForCondition, required, long">
+                <msg name="required" key="oh.error.num"/>
+                <arg position="0" name="required" key="Confirmation number" resource="false"/>
+                <msg name="long" key="oh.error.num"/>
+                <arg position="0" name="long" key="Confirmation number" resource="false"/>
+
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>1</var-value>
+                </var>
+            </field>
+           
+            
+            <field property="searchText" depends="validateForCondition, required">
+                <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="University/Institution" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>3</var-value>
+                </var>
+            </field>
+            <field property="searchText" depends="validateForCondition, required">
+                <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Course Name" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>4</var-value>
+                </var>
+            </field>
+            <field property="searchText" depends="validateForCondition, required">
+                <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Course Number" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>5</var-value>
+                </var>
+            </field>
+            <field property="searchText" depends="validateForCondition, required">
+                <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Instructor" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>6</var-value>
+                </var>
+            </field>
+            
+            <field property="searchText" depends="validateForCondition, required">
+                <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Your Reference" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>7</var-value>
+                </var>
+            </field>
+            
+            <field property="beginDate" depends="validateForCondition, required, date">
+                 <msg name="required" key="oh.error.invalid.date"/>
+                 <arg position="0" name="required" key="start" resource="false"/>
+                 <arg position="1" name="required" key="Order Date" resource="false"/>
+                 <msg name="date" key="oh.error.invalid.date"/>
+                 <arg position="0" name="date" key="start" resource="false"/>
+                 <arg position="1" name="date" key="Order Date" resource="false"/>
+                 <var>
+                      <var-name>conditionField[0]</var-name>
+                      <var-value>searchOption</var-value>
+                 </var>
+                 <var>
+                      <var-name>conditionFieldTest[0]</var-name>
+                      <var-value>EQUAL</var-value>
+                 </var>
+                 <var>
+                      <var-name>conditionFieldValue[0]</var-name>
+                      <var-value>2</var-value>
+                 </var>
+                 <var>
+                   <var-name>datePattern</var-name>
+                   <var-value>MM/dd/yyyy</var-value>
+                 </var>
+            </field>
+    
+            <field property="endDate" depends="validateForCondition,required,date">
+                 <msg name="required" key="oh.error.invalid.date"/>
+                 <arg position="0" name="required" key="end" resource="false"/>
+                 <arg position="1" name="required" key="Order Date" resource="false"/>
+                 <msg name="date" key="oh.error.invalid.date"/>
+                 <arg position="0" name="date" key="end" resource="false"/>
+                 <arg position="1" name="date" key="Order Date" resource="false"/>
+                 <var>
+                     <var-name>conditionField[0]</var-name>
+                     <var-value>searchOption</var-value>
+                 </var>
+                 <var>
+                     <var-name>conditionFieldTest[0]</var-name>
+                     <var-value>EQUAL</var-value>
+                 </var>
+                 <var>
+                     <var-name>conditionFieldValue[0]</var-name>
+                     <var-value>2</var-value>
+                 </var>
+                 <var>
+                   <var-name>datePattern</var-name>
+                   <var-value>MM/dd/yyyy</var-value>
+                 </var>
+           </field>
+            
+            <field property="beginDate" depends="validateForCondition, required, date">
+                 <msg name="required" key="oh.error.invalid.date"/>
+                 <arg position="0" name="required" key="start" resource="false"/>
+                 <arg position="1" name="required" key="Start of Term" resource="false"/>
+                 <msg name="date" key="oh.error.invalid.date"/>
+                 <arg position="0" name="date" key="start" resource="false"/>
+                 <arg position="1" name="date" key="Start of Term" resource="false"/>
+                 <var>
+                      <var-name>conditionField[0]</var-name>
+                      <var-value>searchOption</var-value>
+                 </var>
+                 <var>
+                      <var-name>conditionFieldTest[0]</var-name>
+                      <var-value>EQUAL</var-value>
+                 </var>
+                 <var>
+                      <var-name>conditionFieldValue[0]</var-name>
+                      <var-value>17</var-value>
+                 </var>
+                 <var>
+                   <var-name>datePattern</var-name>
+                   <var-value>MM/dd/yyyy</var-value>
+                 </var>
+            </field>
+    
+            <field property="endDate" depends="validateForCondition,required,date">
+                 <msg name="required" key="oh.error.invalid.date"/>
+                 <arg position="0" name="required" key="end" resource="false"/>
+                 <arg position="1" name="required" key="Start of Term" resource="false"/>
+                 <msg name="date" key="oh.error.invalid.date"/>
+                 <arg position="0" name="date" key="end" resource="false"/>
+                 <arg position="1" name="date" key="Start of Term" resource="false"/>
+                 <var>
+                     <var-name>conditionField[0]</var-name>
+                     <var-value>searchOption</var-value>
+                 </var>
+                 <var>
+                     <var-name>conditionFieldTest[0]</var-name>
+                     <var-value>EQUAL</var-value>
+                 </var>
+                 <var>
+                     <var-name>conditionFieldValue[0]</var-name>
+                     <var-value>17</var-value>
+                 </var>
+                 <var>
+                   <var-name>datePattern</var-name>
+                   <var-value>MM/dd/yyyy</var-value>
+                 </var>
+            </field>
+            
+            <field property="searchText" depends="validateForCondition, required">
+                <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Your Accounting Reference" resource="false"/>
+                 <var>
+                     <var-name>conditionField[0]</var-name>
+                     <var-value>searchOption</var-value>
+                 </var>
+                 <var>
+                     <var-name>conditionFieldTest[0]</var-name>
+                     <var-value>EQUAL</var-value>
+                 </var>
+                 <var>
+                     <var-name>conditionFieldValue[0]</var-name>
+                     <var-value>18</var-value>
+                 </var>
+            </field>
+             <field property="searchText" depends="validateForCondition, required, long">
+                <msg name="required" key="oh.error.num"/>
+                <arg position="0" name="required" key="Job Ticket Number" resource="false"/>
+                <msg name="long" key="oh.error.num"/>
+                <arg position="0" name="long" key="Job Ticket Number" resource="false"/>
+
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>20</var-value>
+                </var>
+            </field>
+            <field property="searchText" depends="validateForCondition, required, long">
+                <msg name="required" key="oh.error.num"/>
+                <arg position="0" name="required" key="License Number" resource="false"/>
+                <msg name="long" key="oh.error.num"/>
+                <arg position="0" name="long" key="License Number" resource="false"/>
+
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>21</var-value>
+                </var>
+            </field>
+            <field property="searchText" depends="validateForCondition, required, long">
+                <msg name="required" key="oh.error.num"/>
+                <arg position="0" name="required" key="Order Ref. Number" resource="false"/>
+                <msg name="long" key="oh.error.num"/>
+                <arg position="0" name="long" key="Order Ref. Number" resource="false"/>
+
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>22</var-value>
+                </var>
+            </field>
+        </form>
+        
+ 
+
+        <form name="orderDetailActionForm">
+            <field property="searchOption" depends="intRange">
+                <msg name="intRange" key="errors.search.required"/>
+                <var>
+                   <var-name>min</var-name>
+                   <var-value>1</var-value>
+                </var>
+                <var>
+                   <var-name>max</var-name>
+                   <var-value>29</var-value>
+                </var>
+            </field>
+
+            <field property="searchText" depends="validateForCondition, required">
+                <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Your reference" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>7</var-value>
+                </var>
+            </field>
+            
+            <field property="searchText" depends="validateForCondition, required">
+                <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Publication Title" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>8</var-value>
+                </var>
+            </field>
+            
+           <field property="searchText" depends="validateForCondition, required">
+                <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Article Title" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>23</var-value>
+                </var>
+            </field>
+            
+            <field property="searchText" depends="validateForCondition, required">
+                <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Chapter Title" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>28</var-value>
+                </var>
+            </field>
+
+            <field property="searchText" depends="validateForCondition, required, long">
+                <msg name="required" key="oh.error.num"/>
+                <arg position="0" name="required" key="Order Detail ID" resource="false"/>
+                <msg name="long" key="oh.error.num"/>
+                <arg position="0" name="long" key="Order Detail ID" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>9</var-value>
+                </var>
+            </field>
+            
+             <field property="searchText" depends="validateForCondition, required, long">
+                <msg name="required" key="oh.error.num"/>
+                <arg position="0" name="required" key="Job Ticket Number" resource="false"/>
+                <msg name="long" key="oh.error.num"/>
+                <arg position="0" name="long" key="Job Ticket Number" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>25</var-value>
+                </var>
+            </field>
+            
+             <field property="searchText" depends="validateForCondition, required, long">
+                <msg name="required" key="oh.error.num"/>
+                <arg position="0" name="required" key="License Number" resource="false"/>
+                <msg name="long" key="oh.error.num"/>
+                <arg position="0" name="long" key="License Number" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>26</var-value>
+                </var>
+            </field>
+            
+           
+            
+            
+               <field property="searchText" depends="validateForCondition, required">
+                 <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Your Line Item Reference" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>27</var-value>
+                </var>
+            </field>
+
+            
+          <field property="searchText" depends="validateForCondition, required, long">
+                <msg name="required" key="oh.error.num"/>
+                <arg position="0" name="required" key="Confirmation Number" resource="false"/>
+                <msg name="long" key="oh.error.num"/>
+                <arg position="0" name="long" key="Confirmation Number" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>1</var-value>
+                </var>
+            </field>
+
+            <field property="permissionType" depends="validateForCondition, intRange">
+                <msg name="intRange" key="oh.errors.choose"/>
+                <arg position="0" name="intRange" key="Permission Type" resource="false"/>
+                <var>
+                   <var-name>min</var-name>
+                   <var-value>1</var-value>
+                </var>
+                <var>
+                   <var-name>max</var-name>
+                   <var-value>44</var-value>
+                </var>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>10</var-value>
+                </var>
+            </field>
+
+            <field property="permissionStatus" depends="validateForCondition, intRange">
+                <msg name="intRange" key="oh.errors.choose"/>
+                <arg position="0" name="intRange" key="Permission Status" resource="false"/>
+                <var>
+                   <var-name>min</var-name>
+                   <var-value>0</var-value>
+                </var>
+                <var>
+                   <var-name>max</var-name>
+                   <var-value>4</var-value>
+                </var>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>11</var-value>
+                </var>
+            </field>
+
+            <field property="billingStatus" depends="validateForCondition, required">
+                <msg name="required" key="oh.errors.choose"/>
+                <arg position="0" name="required" key="Billing Status" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>12</var-value>
+                </var>
+            </field>
+            
+            <field property="specialOrderUpdate" depends="validateForCondition, required">
+                <msg name="required" key="oh.errors.choose"/>
+                <arg position="0" name="required" key="Special Order Update Status" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>29</var-value>
+                </var>
+            </field>
+
+           
+            
+             <field property="searchText" depends="validateForCondition, required">
+                 <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Invoice Number" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>13</var-value>
+                </var>
+            </field>
+
+            <field property="searchText" depends="validateForCondition, required">
+                <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Republication Title" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>14</var-value>
+                </var>
+            </field>
+
+            <field property="searchText" depends="validateForCondition, required">
+                <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Republication Organization" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>16</var-value>
+                </var>
+            </field>
+            
+            <field property="beginDate" depends="validateForCondition, required, date">
+                 <msg name="required" key="oh.error.invalid.date"/>
+                 <arg position="0" name="required" key="start" resource="false"/>
+                 <arg position="1" name="required" key="Order Date" resource="false"/>
+                 <msg name="date" key="oh.error.invalid.date"/>
+                 <arg position="0" name="date" key="start" resource="false"/>
+                 <arg position="1" name="date" key="Order Date" resource="false"/>
+
+                 <var>
+                      <var-name>conditionField[0]</var-name>
+                      <var-value>searchOption</var-value>
+                 </var>
+                 <var>
+                      <var-name>conditionFieldTest[0]</var-name>
+                      <var-value>EQUAL</var-value>
+                 </var>
+                 <var>
+                      <var-name>conditionFieldValue[0]</var-name>
+                      <var-value>2</var-value>
+                 </var>
+                 <var>
+                   <var-name>datePattern</var-name>
+                   <var-value>MM/dd/yyyy</var-value>
+                 </var>
+            </field>
+    
+            <field property="endDate" depends="validateForCondition,required,date">
+                 <msg name="required" key="oh.error.invalid.date"/>
+                 <arg position="0" name="required" key="end" resource="false"/>
+                 <arg position="1" name="required" key="Order Date" resource="false"/>
+                 <msg name="date" key="oh.error.invalid.date"/>
+                 <arg position="0" name="date" key="end" resource="false"/>
+                 <arg position="1" name="date" key="Order Date" resource="false"/>
+                 
+                 <var>
+                     <var-name>conditionField[0]</var-name>
+                     <var-value>searchOption</var-value>
+                 </var>
+                 <var>
+                     <var-name>conditionFieldTest[0]</var-name>
+                     <var-value>EQUAL</var-value>
+                 </var>
+                 <var>
+                     <var-name>conditionFieldValue[0]</var-name>
+                     <var-value>2</var-value>
+                 </var>
+                 <var>
+                   <var-name>datePattern</var-name>
+                   <var-value>MM/dd/yyyy</var-value>
+                 </var>
+            </field>
+            
+            <field property="beginDate" depends="validateForCondition, required, date">
+                 <msg name="required" key="oh.error.invalid.date"/>
+                 <arg position="0" name="required" key="start" resource="false"/>
+                 <arg position="1" name="required" key="Republication Date" resource="false"/>
+                 <msg name="date" key="oh.error.invalid.date"/>
+                 <arg position="0" name="date" key="start" resource="false"/>
+                 <arg position="1" name="date" key="Republication Date" resource="false"/>
+                 <var>
+                      <var-name>conditionField[0]</var-name>
+                      <var-value>searchOption</var-value>
+                 </var>
+                 <var>
+                      <var-name>conditionFieldTest[0]</var-name>
+                      <var-value>EQUAL</var-value>
+                 </var>
+                 <var>
+                      <var-name>conditionFieldValue[0]</var-name>
+                      <var-value>15</var-value>
+                 </var>
+                 <var>
+                   <var-name>datePattern</var-name>
+                   <var-value>MM/dd/yyyy</var-value>
+                 </var>
+            </field>
+    
+            <field property="endDate" depends="validateForCondition,required,date">
+                 <msg name="required" key="oh.error.invalid.date"/>
+                 <arg position="0" name="required" key="end" resource="false"/>
+                 <arg position="1" name="required" key="Republication Date" resource="false"/>
+                 <msg name="date" key="oh.error.invalid.date"/>
+                 <arg position="0" name="date" key="end" resource="false"/>
+                 <arg position="1" name="date" key="Republication Date" resource="false"/>
+                 <var>
+                     <var-name>conditionField[0]</var-name>
+                     <var-value>searchOption</var-value>
+                 </var>
+                 <var>
+                     <var-name>conditionFieldTest[0]</var-name>
+                     <var-value>EQUAL</var-value>
+                 </var>
+                 <var>
+                     <var-name>conditionFieldValue[0]</var-name>
+                     <var-value>15</var-value>
+                 </var>
+                 <var>
+                   <var-name>datePattern</var-name>
+                   <var-value>MM/dd/yyyy</var-value>
+                 </var>
+            </field>
+        </form>
+
+        <form name="orderViewActionForm">
+            <field property="beginDate" depends="validateForCondition, required, date">
+                 <msg name="required" key="oh.error.invalid.date"/>
+                 <arg position="0" name="required" key="start" resource="false"/>
+                 <arg position="1" name="required" key="Order Date" resource="false"/>
+                 <msg name="date" key="oh.error.invalid.date"/>
+                 <arg position="0" name="date" key="start" resource="false"/>
+                 <arg position="1" name="date" key="Order Date" resource="false"/>
+                 <var>
+                      <var-name>conditionField[0]</var-name>
+                      <var-value>searchOption</var-value>
+                 </var>
+                 <var>
+                      <var-name>conditionFieldTest[0]</var-name>
+                      <var-value>EQUAL</var-value>
+                 </var>
+                 <var>
+                      <var-name>conditionFieldValue[0]</var-name>
+                      <var-value>2</var-value>
+                 </var>
+                 <var>
+                   <var-name>datePattern</var-name>
+                   <var-value>MM/dd/yyyy</var-value>
+                 </var>
+            </field>
+    
+            <field property="endDate" depends="validateForCondition,required,date">
+                 <msg name="required" key="oh.error.invalid.date"/>
+                 <arg position="0" name="required" key="end" resource="false"/>
+                 <arg position="1" name="required" key="Order Date" resource="false"/>
+                 <msg name="date" key="oh.error.invalid.date"/>
+                 <arg position="0" name="date" key="end" resource="false"/>
+                 <arg position="1" name="date" key="Order Date" resource="false"/>
+                 <var>
+                     <var-name>conditionField[0]</var-name>
+                     <var-value>searchOption</var-value>
+                 </var>
+                 <var>
+                     <var-name>conditionFieldTest[0]</var-name>
+                     <var-value>EQUAL</var-value>
+                 </var>
+                 <var>
+                     <var-name>conditionFieldValue[0]</var-name>
+                     <var-value>2</var-value>
+                 </var>
+                 <var>
+                   <var-name>datePattern</var-name>
+                   <var-value>MM/dd/yyyy</var-value>
+                 </var>
+            </field>
+            
+            <field property="beginDate" depends="validateForCondition, required, date">
+                 <msg name="required" key="oh.error.invalid.date"/>
+                 <arg position="0" name="required" key="start" resource="false"/>
+                 <arg position="1" name="required" key="Republication Date" resource="false"/>
+                 <msg name="date" key="oh.error.invalid.date"/>
+                 <arg position="0" name="date" key="start" resource="false"/>
+                 <arg position="1" name="date" key="Republication Date" resource="false"/>
+                 <var>
+                      <var-name>conditionField[0]</var-name>
+                      <var-value>searchOption</var-value>
+                 </var>
+                 <var>
+                      <var-name>conditionFieldTest[0]</var-name>
+                      <var-value>EQUAL</var-value>
+                 </var>
+                 <var>
+                      <var-name>conditionFieldValue[0]</var-name>
+                      <var-value>15</var-value>
+                 </var>
+                 <var>
+                   <var-name>datePattern</var-name>
+                   <var-value>MM/dd/yyyy</var-value>
+                 </var>
+            </field>
+    
+            <field property="endDate" depends="validateForCondition,required,date">
+                 <msg name="required" key="oh.error.invalid.date"/>
+                 <arg position="0" name="required" key="end" resource="false"/>
+                 <arg position="1" name="required" key="Republication Date" resource="false"/>
+                 <msg name="date" key="oh.error.invalid.date"/>
+                 <arg position="0" name="date" key="end" resource="false"/>
+                 <arg position="1" name="date" key="Republication Date" resource="false"/>
+                 <var>
+                     <var-name>conditionField[0]</var-name>
+                     <var-value>searchOption</var-value>
+                 </var>
+                 <var>
+                     <var-name>conditionFieldTest[0]</var-name>
+                     <var-value>EQUAL</var-value>
+                 </var>
+                 <var>
+                     <var-name>conditionFieldValue[0]</var-name>
+                     <var-value>15</var-value>
+                 </var>
+                 <var>
+                   <var-name>datePattern</var-name>
+                   <var-value>MM/dd/yyyy</var-value>
+                 </var>
+            </field>
+      
+            
+           <field property="searchText" depends="validateForCondition, required, long">
+                <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Your Reference Number" resource="false"/>
+                <msg name="long" key="errors.integer"/>
+                <arg position="0" name="long" key="Your Reference Number" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>7</var-value>
+                </var>
+            </field>
+            
+            <field property="searchText" depends="validateForCondition, required">
+                <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Publication Title" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>8</var-value>
+                </var>
+            </field>
+
+            <field property="searchText" depends="validateForCondition, required, long">
+                <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Order Detail ID" resource="false"/>
+                <msg name="long" key="errors.integer"/>
+                <arg position="0" name="long" key="Order Detail ID" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>9</var-value>
+                </var>
+            </field>
+            
+            <field property="permissionType" depends="validateForCondition, intRange">
+                <msg name="intRange" key="oh.errors.required"/>
+                <arg position="0" name="intRange" key="A Permission Type" resource="false"/>
+                <var>
+                   <var-name>min</var-name>
+                   <var-value>0</var-value>
+                </var>
+                <var>
+                   <var-name>max</var-name>
+                   <var-value>44</var-value>
+                </var>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>10</var-value>
+                </var>
+            </field>
+
+            <field property="permissionStatus" depends="validateForCondition, intRange">
+                <msg name="intRange" key="oh.errors.required"/>
+                <arg position="0" name="intRange" key="Permission Status" resource="false"/>
+                <var>
+                   <var-name>min</var-name>
+                   <var-value>0</var-value>
+                </var>
+                <var>
+                   <var-name>max</var-name>
+                   <var-value>4</var-value>
+                </var>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>11</var-value>
+                </var>
+            </field>
+
+            <field property="billingStatus" depends="validateForCondition, required">
+                <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Billing Status" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>12</var-value>
+                </var>
+            </field>
+            
+
+               <field property="searchText" depends="validateForCondition, required">
+                <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Invoice Number" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>13</var-value>
+                </var>
+            </field>
+            
+
+            <field property="searchText" depends="validateForCondition, required">
+                <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Republication Title" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>14</var-value>
+                </var>
+            </field>
+            
+			<field property="searchText" depends="validateForCondition, required">
+                 <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Your Line Item Reference" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>27</var-value>
+                </var>
+            </field>
+
+            <field property="searchText" depends="validateForCondition, required">
+                <msg name="required" key="oh.errors.required"/>
+                <arg position="0" name="required" key="Republication Organization" resource="false"/>
+                <var>
+                   <var-name>conditionField[0]</var-name>
+                   <var-value>searchOption</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldTest[0]</var-name>
+                   <var-value>EQUAL</var-value>
+                </var>
+                <var>
+                   <var-name>conditionFieldValue[0]</var-name>
+                   <var-value>16</var-value>
+                </var>
+            </field>
+        </form>
+
+        <form name="updateAddressForm">
+           <field property="title" depends="intRange">
+                <msg name="intRange" key="errors.required"/>
+                <arg position="0" name="intRange" key="Title" resource="false"/>  
+                <var>
+                   <var-name>min</var-name>
+                   <var-value>0</var-value>
+                </var>
+                <var>
+                   <var-name>max</var-name>
+                   <var-value>5</var-value>
+                </var>
+           </field>
+           <field property="firstName" depends="required">
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="First Name" resource="false"/>           
+           </field>
+           <field property="middle" depends="required">
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="Middle Name/Initial" resource="false"/>           
+           </field>
+           <field property="lastName" depends="required">
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="Last Name" resource="false"/>           
+           </field>
+           <field property="address1" depends="required">
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="Address 1" resource="false"/>           
+           </field>
+           <field property="country" depends="intRange">
+                <msg name="intRange" key="errors.required"/>
+                <arg position="0" name="intRange" key="Country" resource="false"/>  
+                <var>
+                   <var-name>min</var-name>
+                   <var-value>0</var-value>
+                </var>
+                <var>
+                   <var-name>max</var-name>
+                   <var-value>500</var-value>
+                </var>
+           </field>
+           <field property="zipCode" depends="required">
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="Zip Code" resource="false"/>           
+           </field>
+           <field property="city" depends="required">
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="City" resource="false"/>           
+           </field>  
+           <field property="state" depends="intRange">
+                <msg name="intRange" key="errors.required"/>
+                <arg position="0" name="intRange" key="State" resource="false"/>  
+                <var>
+                   <var-name>min</var-name>
+                   <var-value>0</var-value>
+                </var>
+                <var>
+                   <var-name>max</var-name>
+                   <var-value>50</var-value>
+                </var>
+           </field>
+           <field property="phone" depends="required">
+                <msg name="required" key="errors.required"/>
+                <arg position="0" name="required" key="Phone" resource="false"/>           
+           </field>
+           <field property="user" depends="intRange">
+                <msg name="intRange" key="errors.required"/>
+                <arg position="0" name="intRange" key="User Type" resource="false"/>  
+                <var>
+                   <var-name>min</var-name>
+                   <var-value>0</var-value>
+                </var>
+                <var>
+                   <var-name>max</var-name>
+                   <var-value>5</var-value>
+                </var>
+           </field>
+        </form>
+        
+        <form name="viewReportsForm">
+           <field property="invoiceNum" depends="validateForCondition, required">
+               <msg name="required" key="oh.errors.required"/>
+               <arg position="0" name="required" key="Invoice Number" resource="false"/>
+               <var>
+                  <var-name>conditionField[0]</var-name>
+                  <var-value>radio</var-value>
+               </var>
+               <var>
+                  <var-name>conditionFieldTest[0]</var-name>
+                  <var-value>EQUAL</var-value>
+               </var>
+               <var>
+                  <var-name>conditionFieldValue[0]</var-name>
+                  <var-value>invNum</var-value>
+               </var>
+           </field>
+           <field property="beginDate" depends="validateForCondition, required, date">
+               <msg name="required" key="oh.error.invalid.date"/>
+               <arg position="0" name="required" key="start" resource="false"/>
+               <arg position="1" name="required" key="Order Date" resource="false"/>
+               <msg name="date" key="oh.error.invalid.date"/>
+               <arg position="0" name="date" key="start" resource="false"/>
+               <arg position="1" name="date" key="Order Date" resource="false"/>
+               <var>
+                  <var-name>conditionField[0]</var-name>
+                  <var-value>radio</var-value>
+               </var>
+               <var>
+                  <var-name>conditionFieldTest[0]</var-name>
+                  <var-value>EQUAL</var-value>
+               </var>
+               <var>
+                  <var-name>conditionFieldValue[0]</var-name>
+                  <var-value>orderDate</var-value>
+               </var>
+               <var>
+                   <var-name>datePattern</var-name>
+                   <var-value>MM/dd/yyyy</var-value>
+               </var>
+           </field>
+           <field property="endDate" depends="validateForCondition, required, date">
+               <msg name="required" key="oh.error.invalid.date"/>
+               <arg position="0" name="required" key="end" resource="false"/>
+               <arg position="1" name="required" key="Order Date" resource="false"/>
+               <msg name="date" key="oh.error.invalid.date"/>
+               <arg position="0" name="date" key="end" resource="false"/>
+               <arg position="1" name="date" key="Order Date" resource="false"/>
+               <var>
+                  <var-name>conditionField[0]</var-name>
+                  <var-value>radio</var-value>
+               </var>
+               <var>
+                  <var-name>conditionFieldTest[0]</var-name>
+                  <var-value>EQUAL</var-value>
+               </var>
+               <var>
+                  <var-name>conditionFieldValue[0]</var-name>
+                  <var-value>orderDate</var-value>
+               </var>
+               <var>
+                   <var-name>datePattern</var-name>
+                   <var-value>MM/dd/yyyy</var-value>
+               </var>
+           </field>
+           <field property="beginDate" depends="validateForCondition, required, date">
+               <msg name="required" key="oh.error.invalid.date"/>
+               <arg position="0" name="required" key="start" resource="false"/>
+               <arg position="1" name="required" key="Invoice Date" resource="false"/>
+               <msg name="date" key="oh.error.invalid.date"/>
+               <arg position="0" name="date" key="start" resource="false"/>
+               <arg position="1" name="date" key="Invoice Date" resource="false"/>
+               <var>
+                  <var-name>conditionField[0]</var-name>
+                  <var-value>radio</var-value>
+               </var>
+               <var>
+                  <var-name>conditionFieldTest[0]</var-name>
+                  <var-value>EQUAL</var-value>
+               </var>
+               <var>
+                  <var-name>conditionFieldValue[0]</var-name>
+                  <var-value>invDate</var-value>
+               </var>
+               <var>
+                   <var-name>datePattern</var-name>
+                   <var-value>MM/dd/yyyy</var-value>
+               </var>
+           </field>
+           <field property="endDate" depends="validateForCondition, required, date">
+               <msg name="required" key="oh.error.invalid.date"/>
+               <arg position="0" name="required" key="end" resource="false"/>
+               <arg position="1" name="required" key="Invoice Date" resource="false"/>
+               <msg name="date" key="oh.error.invalid.date"/>
+               <arg position="0" name="date" key="end" resource="false"/>
+               <arg position="1" name="date" key="Invoice Date" resource="false"/>
+               <var>
+                  <var-name>conditionField[0]</var-name>
+                  <var-value>radio</var-value>
+               </var>
+               <var>
+                  <var-name>conditionFieldTest[0]</var-name>
+                  <var-value>EQUAL</var-value>
+               </var>
+               <var>
+                  <var-name>conditionFieldValue[0]</var-name>
+                  <var-value>invDate</var-value>
+               </var>
+               <var>
+                   <var-name>datePattern</var-name>
+                   <var-value>MM/dd/yyyy</var-value>
+               </var>
+           </field>
+        </form>
+<form name="articleSearchActionForm">
+            
+            <field property="articleStartYear" depends="integer,intRange">
+                 <msg name="integer" key="errors.invalidYear" />
+                <msg name="intRange" key="errors.invalidYear" />
+                <arg position="0" key="Publication year" resource="false"/>
+                <var><var-name>min</var-name><var-value>1000</var-value></var>
+                <var><var-name>max</var-name><var-value>3000</var-value></var>
+                
+            </field>
+            <field property="articleEndYear" depends="integer,intRange">
+                 <msg name="integer" key="errors.invalidYear" />
+                <msg name="intRange" key="errors.invalidYear" />
+                <arg position="0" key="Publication year" resource="false"/>
+                <var><var-name>min</var-name><var-value>1000</var-value></var>
+                <var><var-name>max</var-name><var-value>3000</var-value></var>
+                
+            </field>
+   </form>
+        <form name="basicTransactionForm_photocopy">
+            
+            <field property="transactionItem.publicationYearOfUse" depends="validateForCondition,required,integer,intRange">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="integer" key="errors.invalidYear" />
+                <msg name="intRange" key="errors.invalidYear" />
+                <arg position="0" key="Publication year of title being used" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>calculatePrice</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[2]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[2]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[2]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[2]</var-name><var-value>placeSpecialOrder</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1000</var-value></var>
+                <var><var-name>max</var-name><var-value>3000</var-value></var>
+                
+            </field>
+            
+            <field property="transactionItem.numberOfPages" depends="validateForCondition,required,long,intRange">
+                
+                <msg name="required" key="errors.required" />
+                <msg name="long" key="errors.invalidNumber" />
+                <msg name="intRange" key="errors.invalidNumber" />
+                <arg position="0" key="Total number of pages" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>calculatePrice</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[2]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[2]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[2]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[2]</var-name><var-value>placeSpecialOrder</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1</var-value></var>
+                <var><var-name>max</var-name><var-value>999999</var-value></var>
+                
+            </field>
+            
+            <field property="transactionItem.numberOfCopies" depends="validateForCondition,required,long,intRange">
+                
+                <msg name="required" key="errors.required" />
+                <msg name="long" key="errors.invalidNumber" />
+                <msg name="intRange" key="errors.invalidNumber" />
+                <arg position="0" key="Number of copies" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>calculatePrice</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[2]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[2]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[2]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[2]</var-name><var-value>placeSpecialOrder</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1</var-value></var>
+                <var><var-name>max</var-name><var-value>999999</var-value></var>
+                
+            </field>
+                   
+        </form>
+        
+        <form name="basicTransactionForm_email">
+        
+            <field property="transactionItem.publicationYearOfUse" depends="validateForCondition,required,integer,intRange">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="integer" key="errors.invalidYear" />
+                <msg name="intRange" key="errors.invalidYear" />
+                <arg position="0" key="Publication year of title being used" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>calculatePrice</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[2]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[2]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[2]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[2]</var-name><var-value>placeSpecialOrder</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1000</var-value></var>
+                <var><var-name>max</var-name><var-value>3000</var-value></var>
+                
+            </field>
+            
+            <field property="transactionItem.dateOfUse" depends="validateForCondition,required,ccDate,sixMonthsPrior">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="ccDate" key="errors.invalidDate" />
+                <msg name="sixMonthsPrior" key="errors.sixMonthsPrior" />
+                <arg position="0" key="Date e-mail will be sent" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>calculatePrice</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[2]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[2]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[2]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[2]</var-name><var-value>placeSpecialOrder</var-value></var>
+                
+                <var><var-name>allowDateType</var-name><var-value>true</var-value></var>
+                <var><var-name>datePattern</var-name><var-value>MM/dd/yyyy</var-value></var>
+                
+            </field>
+            
+            <field property="transactionItem.numberOfRecipients" depends="validateForCondition,required,long,intRange">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="long" key="errors.invalidNumber" />
+                <msg name="intRange" key="errors.invalidNumber" />
+                <arg position="0" key="Number of recipients" resource="false"/>
+            
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>calculatePrice</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[2]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[2]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[2]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[2]</var-name><var-value>placeSpecialOrder</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1</var-value></var>
+                <var><var-name>max</var-name><var-value>999999</var-value></var>
+                
+            </field>
+        
+        </form>
+        
+        <form name="basicTransactionForm_net">
+        
+            <field property="transactionItem.publicationYearOfUse" depends="validateForCondition,required,integer,intRange">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="integer" key="errors.invalidYear" />
+                <msg name="intRange" key="errors.invalidYear" />
+                <arg position="0" key="Publication year of title being used" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>calculatePrice</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[2]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[2]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[2]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[2]</var-name><var-value>placeSpecialOrder</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1000</var-value></var>
+                <var><var-name>max</var-name><var-value>3000</var-value></var>
+                
+            </field>
+            
+            <field property="transactionItem.dateOfUse" depends="validateForCondition,required,ccDate,sixMonthsPrior">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="ccDate" key="errors.invalidDate" />
+                <msg name="sixMonthsPrior" key="errors.sixMonthsPrior" />
+                <arg position="0" key="Date to be posted" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>calculatePrice</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[2]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[2]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[2]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[2]</var-name><var-value>placeSpecialOrder</var-value></var>
+                
+                <var><var-name>allowDateType</var-name><var-value>true</var-value></var>
+                <var><var-name>datePattern</var-name><var-value>MM/dd/yyyy</var-value></var>
+                
+            </field>
+            
+            <field property="transactionItem.duration" depends="validateForCondition,required,integer,intRange">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="integer" key="errors.required" />
+                <msg name="intRange" key="errors.required" />
+                <arg position="0" key="Duration of posting" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>calculatePrice</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[2]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[2]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[2]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[2]</var-name><var-value>placeSpecialOrder</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>0</var-value></var>
+                <var><var-name>max</var-name><var-value>3</var-value></var>
+                
+            </field>
+            
+            
+            <field property="transactionItem.webAddress" depends="validateForCondition,required,mask">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="mask" key="errors.invalidWebAddress" />
+                <arg position="0" key="URL of posting" resource="false"/>
+
+				
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>calculatePrice</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[2]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[2]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[2]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[2]</var-name><var-value>placeSpecialOrder</var-value></var>
+
+                
+                <var><var-name>mask</var-name><var-value>^(http(s?):\/\/|ftp:\/\/){0,1}((\w+\.){1,})\w{2,}</var-value></var>
+                
+            </field>
+        
+        </form>
+        
+        <form name="basicTransactionForm_academic">
+        
+            <field property="transactionItem.publicationYearOfUse" depends="validateForCondition,required,integer,intRange">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="integer" key="errors.invalidYear" />
+                <msg name="intRange" key="errors.invalidYear" />
+                <arg position="0" key="Publication year of title being used" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>calculatePrice</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[2]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[2]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[2]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[2]</var-name><var-value>placeSpecialOrder</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1000</var-value></var>
+                <var><var-name>max</var-name><var-value>3000</var-value></var>
+                
+            </field>
+            
+            <field property="transactionItem.numberOfPages" depends="validateForCondition,required,long,intRange">
+                
+                <msg name="required" key="errors.required" />
+                <msg name="long" key="errors.invalidNumber" />
+                <msg name="intRange" key="errors.invalidNumber" />
+                <arg position="0" key="Total number of pages" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>calculatePrice</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[2]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[2]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[2]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[2]</var-name><var-value>placeSpecialOrder</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1</var-value></var>
+                <var><var-name>max</var-name><var-value>999999</var-value></var>
+                
+            </field>
+            
+            <field property="transactionItem.numberOfStudents" depends="validateForCondition,required,long,intRange">
+                
+                <msg name="required" key="errors.required" />
+                <msg name="long" key="errors.invalidNumber" />
+                <msg name="intRange" key="errors.invalidNumber" />
+                <arg position="0" key="Number of students" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>calculatePrice</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[2]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[2]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[2]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[2]</var-name><var-value>placeSpecialOrder</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1</var-value></var>
+                <var><var-name>max</var-name><var-value>999999</var-value></var>
+                
+            </field>
+            
+            <field property="transactionItem.customAuthor" depends="validateForCondition,required">
+            
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Author/Editor" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+            
+            </field>
+            
+            <field property="transactionItem.pageRange" depends="validateForCondition,required">
+            
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Page range(s)" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+            
+            </field>
+        
+        </form>
+        
+        <form name="basicTransactionForm_republication">
+        
+            <field property="typeOfUseCode" depends="validateForCondition,required,integer,intRange">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="integer" key="errors.required" />
+                <msg name="intRange" key="errors.required" />
+                <arg position="0" key="I plan to republish this content in a(n)" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>calculatePrice</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[2]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[2]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[2]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[2]</var-name><var-value>placeSpecialOrder</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>7</var-value></var>
+                <var><var-name>max</var-name><var-value>19</var-value></var>
+                
+            </field>
+            
+            <field property="transactionItem.circulationDistribution" depends="validateForCondition,required,integer,intRange">
+                
+                <msg name="required" key="errors.required" />
+                <msg name="integer" key="errors.invalidNumber" />
+                <msg name="intRange" key="errors.invalidNumber" />
+                <arg position="0" key="The circulation/distribution" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>calculatePrice</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[2]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[2]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[2]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[2]</var-name><var-value>placeSpecialOrder</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1</var-value></var>
+                <var><var-name>max</var-name><var-value>999999</var-value></var>
+                
+            </field>
+            
+            <field property="transactionItem.typeOfContent" depends="validateForCondition,required">
+                
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Portion to be used" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>calculatePrice</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[2]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[2]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[2]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[2]</var-name><var-value>placeSpecialOrder</var-value></var>
+                
+            </field>
+            
+            <field property="transactionItem.contentsPublicationDate"
+             depends="validateForCondition,required,ccDate,ccPriorDate">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="ccDate" key="errors.invalidDate" />
+                <msg name="ccPriorDate" key="errors.datePrior" />
+                <arg position="0" key="Publication date of the content" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>calculatePrice</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[2]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[2]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[2]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[2]</var-name><var-value>placeSpecialOrder</var-value></var>
+              
+                <var><var-name>allowDateType</var-name><var-value>true</var-value></var>
+                <var><var-name>datePattern</var-name><var-value>M/d/yyyy</var-value></var>
+                
+            </field>
+            
+            <field property="transactionItem.numberOfPages" depends="validateForCondition,required,long,intRange">
+                
+                <msg name="required" key="errors.required" />
+                <msg name="long" key="errors.invalidNumber" />
+                <msg name="intRange" key="errors.invalidNumber" />
+                <arg position="0" key="Number of pages to be used" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>calculatePrice</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[2]</var-name><var-value>OR</var-value></var>
+                <var><var-name>conditionField[2]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[2]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[2]</var-name><var-value>placeSpecialOrder</var-value></var>
+                <var><var-name>conditionJoin[3]</var-name><var-value>AND</var-value></var>
+                <var><var-name>conditionField[3]</var-name><var-value>transactionItem.typeOfContent</var-value></var>
+                <var><var-name>conditionFieldTest[3]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[3]</var-name><var-value>SELECTED_PAGES</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1</var-value></var>
+                <var><var-name>max</var-name><var-value>999999</var-value></var>
+                
+            </field>
+            
+            <field property="transactionItem.republishingOrganization" depends="validateForCondition,required">
+                
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Organization republishing this work" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+            </field>
+            
+            <field property="transactionItem.republicationDate" depends="validateForCondition,required,ccDate,sixMonthsPrior">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="ccDate" key="errors.invalidDate" />
+                <msg name="sixMonthsPrior" key="errors.sixMonthsPrior" />
+                <arg position="0" key="Date this content will be republished" resource="false"/>
+                        
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+               
+                <var><var-name>allowDateType</var-name><var-value>true</var-value></var>
+                <var><var-name>datePattern</var-name><var-value>MM/dd/yyyy</var-value></var>
+                
+            </field>
+            
+            <field property="transactionItem.chapterArticle" depends="validateForCondition,required">
+                
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Title or description of content will be republished" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+            </field>
+            
+            <field property="transactionItem.customAuthor" depends="validateForCondition,required">
+                
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Author or creator of content you intend to use" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+            </field>
+            
+            <field property="transactionItem.pageRange" depends="validateForCondition,required">
+                
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Page range(s) of content that you intend to use" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+            </field>
+        
+        </form>
+        
+        <form name="specialOrderForm_photocopy">
+            
+            
+            <field property="specialOrderItem.publicationTitle" depends="validateForCondition,required">
+            
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Publication name" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>AND</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>specialOrderItem.specialOrderFromScratch</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>true</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.standardNumber" depends="validateForCondition,required">
+            
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="ISBN/ISSN" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>AND</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>specialOrderItem.specialOrderFromScratch</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>true</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.publicationYearOfUse" depends="validateForCondition,required,integer,intRange">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="integer" key="errors.invalidYear" />
+                <msg name="intRange" key="errors.invalidYear" />
+                <arg position="0" key="Publication year of title being used" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1000</var-value></var>
+                <var><var-name>max</var-name><var-value>3000</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.publisher" depends="validateForCondition,required">
+            
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Publisher" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>AND</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>specialOrderItem.specialOrderFromScratch</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>true</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.numberOfPages" depends="validateForCondition,required,long,intRange">
+                
+                <msg name="required" key="errors.required" />
+                <msg name="long" key="errors.invalidNumber" />
+                <msg name="intRange" key="errors.invalidNumber" />
+                <arg position="0" key="Total number of pages" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1</var-value></var>
+                <var><var-name>max</var-name><var-value>999999</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.numberOfCopies" depends="validateForCondition,required,long,intRange">
+                
+                <msg name="required" key="errors.required" />
+                <msg name="long" key="errors.invalidNumber" />
+                <msg name="intRange" key="errors.invalidNumber" />
+                <arg position="0" key="Number of copies" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1</var-value></var>
+                <var><var-name>max</var-name><var-value>999999</var-value></var>
+                
+            </field>
+            
+                   
+        </form>
+        
+        <form name="specialOrderForm_academic">
+        
+            <field property="specialOrderItem.publicationTitle" depends="validateForCondition,required">
+            
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Publication name" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>AND</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>specialOrderItem.specialOrderFromScratch</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>true</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.publicationYearOfUse" depends="validateForCondition,required,integer,intRange">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="integer" key="errors.invalidYear" />
+                <msg name="intRange" key="errors.invalidYear" />
+                <arg position="0" key="Publication year of title being used" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1000</var-value></var>
+                <var><var-name>max</var-name><var-value>3000</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.publisher" depends="validateForCondition,required">
+            
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Publisher" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>AND</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>specialOrderItem.specialOrderFromScratch</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>true</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.numberOfPages" depends="validateForCondition,required,long,intRange">
+                
+                <msg name="required" key="errors.required" />
+                <msg name="long" key="errors.invalidNumber" />
+                <msg name="intRange" key="errors.invalidNumber" />
+                <arg position="0" key="Total number of pages" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1</var-value></var>
+                <var><var-name>max</var-name><var-value>999999</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.numberOfStudents" depends="validateForCondition,required,long,intRange">
+                
+                <msg name="required" key="errors.required" />
+                <msg name="long" key="errors.invalidNumber" />
+                <msg name="intRange" key="errors.invalidNumber" />
+                <arg position="0" key="Number of students" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1</var-value></var>
+                <var><var-name>max</var-name><var-value>999999</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.customAuthor" depends="validateForCondition,required">
+            
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Author/Editor" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+            
+            </field>
+            
+            <field property="specialOrderItem.pageRange" depends="validateForCondition,required">
+            
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Page range(s)" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+            </field>
+        
+        </form>
+        
+        <form name="specialOrderForm_email">
+        
+            <field property="specialOrderItem.publicationTitle" depends="validateForCondition,required">
+            
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Publication name" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>AND</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>specialOrderItem.specialOrderFromScratch</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>true</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.publicationYearOfUse" depends="validateForCondition,required,integer,intRange">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="integer" key="errors.invalidYear" />
+                <msg name="intRange" key="errors.invalidYear" />
+                <arg position="0" key="Publication year of title being used" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1000</var-value></var>
+                <var><var-name>max</var-name><var-value>3000</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.publisher" depends="validateForCondition,required">
+            
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Publisher" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>AND</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>specialOrderItem.specialOrderFromScratch</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>true</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.dateOfUse" depends="validateForCondition,required,ccDate,currentOrFutureYear">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="ccDate" key="errors.invalidDate" />
+                <msg name="currentOrFutureYear" key="errors.invalidDate" />
+                <arg position="0" key="Date e-mail will be sent" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+              
+                <var><var-name>allowDateType</var-name><var-value>true</var-value></var>
+                <var><var-name>datePattern</var-name><var-value>MM/dd/yyyy</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.numberOfRecipients" depends="validateForCondition,required,long,intRange">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="long" key="errors.invalidNumber" />
+                <msg name="intRange" key="errors.invalidNumber" />
+                <arg position="0" key="Number of recipients" resource="false"/>
+            
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+               
+                <var><var-name>min</var-name><var-value>1</var-value></var>
+                <var><var-name>max</var-name><var-value>999999</var-value></var>
+                
+            </field>
+        
+        </form>
+        
+        <form name="specialOrderForm_net">
+         
+            <field property="specialOrderItem.publicationTitle" depends="validateForCondition,required">
+            
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Publication name" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>AND</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>specialOrderItem.specialOrderFromScratch</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>true</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.publicationYearOfUse" depends="validateForCondition,required,integer,intRange">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="integer" key="errors.invalidYear" />
+                <msg name="intRange" key="errors.invalidYear" />
+                <arg position="0" key="Publication year of title being used" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+               
+                <var><var-name>min</var-name><var-value>1000</var-value></var>
+                <var><var-name>max</var-name><var-value>3000</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.publisher" depends="validateForCondition,required">
+            
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Publisher" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>AND</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>specialOrderItem.specialOrderFromScratch</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>true</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.dateOfUse" depends="validateForCondition,required,ccDate,currentOrFutureYear">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="ccDate" key="errors.invalidDate" />
+                <msg name="currentOrFutureYear" key="errors.invalidDate" />
+                <arg position="0" key="Date to be posted" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+               
+                <var><var-name>allowDateType</var-name><var-value>true</var-value></var>
+                <var><var-name>datePattern</var-name><var-value>MM/dd/yyyy</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.duration" depends="validateForCondition,required,integer,intRange">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="integer" key="errors.required" />
+                <msg name="intRange" key="errors.required" />
+                <arg position="0" key="Duration of posting" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+               
+                <var><var-name>min</var-name><var-value>0</var-value></var>
+                <var><var-name>max</var-name><var-value>3</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.webAddress" depends="validateForCondition,required,mask">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="mask" key="errors.invalidWebAddress" />
+                <arg position="0" key="URL of posting" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>AND</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>specialTypeOfUseCode</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>6</var-value></var>
+                
+                <var><var-name>mask</var-name><var-value>^(http(s?):\/\/|ftp:\/\/){0,1}((\w+\.){1,})\w{2,}</var-value></var>
+                
+            </field>
+        
+        </form>
+        
+        <form name="specialOrderForm_republication">
+         
+            <field property="specialOrderItem.publicationTitle" depends="validateForCondition,required">
+            
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Publication name" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>AND</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>specialOrderItem.specialOrderFromScratch</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>true</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.publicationYearOfUse" depends="validateForCondition,required,integer,intRange">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="integer" key="errors.invalidYear" />
+                <msg name="intRange" key="errors.invalidYear" />
+                <arg position="0" key="Publication year of title being used" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+               
+                <var><var-name>min</var-name><var-value>1000</var-value></var>
+                <var><var-name>max</var-name><var-value>3000</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.publisher" depends="validateForCondition,required">
+            
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Publisher" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>AND</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>specialOrderItem.specialOrderFromScratch</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>true</var-value></var>
+                
+            </field>
+            
+            <field property="specialTypeOfUseCode" depends="validateForCondition,required,integer,intRange">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="integer" key="errors.required" />
+                <msg name="intRange" key="errors.required" />
+                <arg position="0" key="I plan to republish this content in a(n)" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>7</var-value></var>
+                <var><var-name>max</var-name><var-value>19</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.circulationDistribution" depends="validateForCondition,required,integer,intRange">
+                
+                <msg name="required" key="errors.required" />
+                <msg name="integer" key="errors.invalidNumber" />
+                <msg name="intRange" key="errors.invalidNumber" />
+                <arg position="0" key="The circulation/distribution" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1</var-value></var>
+                <var><var-name>max</var-name><var-value>999999</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.republishingOrganization" depends="validateForCondition,required">
+                
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Organization republishing this work" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.republicationDate" depends="validateForCondition,required,ccDate">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="ccDate" key="errors.invalidDate" />
+                <arg position="0" key="Date this content will be republished" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+               
+                <var><var-name>allowDateType</var-name><var-value>true</var-value></var>
+                <var><var-name>datePattern</var-name><var-value>MM/dd/yyyy</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.typeOfContent" depends="validateForCondition,required">
+                
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Portion to be used" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.contentsPublicationDate" depends="validateForCondition,required,ccDate">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="ccDate" key="errors.invalidDate" />
+                <arg position="0" key="This content's publication date" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+                <var><var-name>allowDateType</var-name><var-value>true</var-value></var>
+                <var><var-name>datePattern</var-name><var-value>MM/dd/yyyy</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.numberOfPages" depends="validateForCondition,required,long,intRange">
+                
+                <msg name="required" key="errors.required" />
+                <msg name="long" key="errors.invalidNumber" />
+                <msg name="intRange" key="errors.invalidNumber" />
+                <arg position="0" key="The number of pages I intend to use" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                <var><var-name>conditionJoin[1]</var-name><var-value>AND</var-value></var>
+                <var><var-name>conditionField[1]</var-name><var-value>specialOrderItem.typeOfContent</var-value></var>
+                <var><var-name>conditionFieldTest[1]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[1]</var-name><var-value>SELECTED_PAGES</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1</var-value></var>
+                <var><var-name>max</var-name><var-value>999999</var-value></var>
+                
+            </field>
+            
+             <field property="specialOrderItem.chapterArticle" depends="validateForCondition,required">
+                
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Title or description of content will be republished" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.customAuthor" depends="validateForCondition,required">
+                
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Author or creator of content you intend to use" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+            </field>
+            
+            <field property="specialOrderItem.pageRange" depends="validateForCondition,required">
+                
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Page range(s) of content that you intend to use" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+            </field>
+            
+        </form>
+
+        <form name="courseDetailsForm">
+        
+            <field property="courseDetails.numberOfStudents" depends="validateForCondition,required,long,intRange">
+                
+                <msg name="required" key="errors.required" />
+                <msg name="long" key="errors.invalidNumber" />
+                <msg name="intRange" key="errors.invalidNumber" />
+                <arg position="0" key="Number of students" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1</var-value></var>
+                <var><var-name>max</var-name><var-value>999999</var-value></var>
+                
+            </field>
+            
+            <field property="courseDetails.schoolCollege" depends="validateForCondition,required">
+            
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="University/Institution" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+            
+            </field>
+            
+            <field property="courseDetails.startOfTermDate" depends="validateForCondition,required,ccDate,sixMonthsPrior,tenMonthsLater">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="ccDate" key="errors.invalidDate" />
+                <msg name="sixMonthsPrior" key="errors.sixMonthsPrior" />
+                <msg name="tenMonthsLater" key="errors.tenMonthsLater" />
+                <arg position="0" name="sixMonthsPrior" key="Start of term date" resource="false" />
+                <arg position="0" name="tenMonthsLater" key="Start of term date" resource="false" />
+                <arg position="0" key="Start of term" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+                <var><var-name>allowDateType</var-name><var-value>true</var-value></var>
+                <var><var-name>datePattern</var-name><var-value>MM/dd/yyyy</var-value></var>
+                
+            </field>
+            
+            <field property="courseDetails.courseName" depends="validateForCondition,required">
+            
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Course name" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+            
+            </field>
+        
+        </form>
+        
+        <form name="courseDetailsFormCOI">
+        
+            <field property="courseDetails.numberOfStudents" depends="validateForCondition,required,long,intRange">
+                
+                <msg name="required" key="errors.required" />
+                <msg name="long" key="errors.invalidNumber" />
+                <msg name="intRange" key="errors.invalidNumber" />
+                <arg position="0" key="Number of students" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+                <var><var-name>min</var-name><var-value>1</var-value></var>
+                <var><var-name>max</var-name><var-value>999999</var-value></var>
+                
+            </field>
+            
+            <field property="courseDetails.schoolCollege" depends="validateForCondition,required">
+            
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="University/Institution" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+            
+            </field>
+            
+            <field property="courseDetails.startOfTermDate" depends="validateForCondition,required,ccDate,sixMonthsPrior,tenMonthsLater">
+            
+                <msg name="required" key="errors.required" />
+                <msg name="ccDate" key="errors.invalidDate" />
+                <msg name="sixMonthsPrior" key="errors.sixMonthsPrior" />
+                <msg name="tenMonthsLater" key="errors.tenMonthsLater" />
+                <arg position="0" name="sixMonthsPrior" key="Start of term date" resource="false" />
+                <arg position="0" name="tenMonthsLater" key="Start of term date" resource="false" />
+                <arg position="0" key="Start of term" resource="false"/>
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+                
+                <var><var-name>allowDateType</var-name><var-value>true</var-value></var>
+                <var><var-name>datePattern</var-name><var-value>MM/dd/yyyy</var-value></var>
+                
+            </field>
+            
+            <field property="courseDetails.courseName" depends="validateForCondition,required">
+            
+                <msg name="required" key="errors.required" />
+                <arg position="0" key="Course name" resource="false" />
+                
+                <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+                <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+                <var><var-name>conditionFieldValue[0]</var-name><var-value>submit</var-value></var>
+            
+            </field>
+        
+        </form>
+     
+    <form name="RegisterOrganizationForm">
+        <field
+            property="firstName" depends="required">
+            <arg0 key="label.registration.firstName"/>
+
+	    
+        </field>
+        <field
+           property="lastName" depends="required">
+            <arg0 key="label.registration.lastName"/>
+
+	    
+        </field>
+        <field
+           property="company" depends="required">
+            <arg0 key="label.registration.company"/>
+        </field>
+        <field
+           property="userName" depends="required">
+            <arg0 key="label.registration.email"/>
+        </field>
+        <!--
+        <field
+           property="password" depends="required">
+            <arg0 key="label.registration.password"/>
+        </field>
+        <field
+           property="confirmPassword" depends="required">
+            <arg0 key="label.registration.confirmPassword"/>
+        </field>
+        -->
+        <field
+            property="address1" depends="required">
+            <arg0 key="label.registration.address"/>
+        </field>
+        <field
+            property="country" depends="required">
+            <arg0 key="label.registration.country"/>
+        </field>
+        <field
+            property="city" depends="required">
+            <arg0 key="label.registration.city"/>
+        </field>
+        <field
+            property="phone" depends="required">
+            <arg0 key="label.registration.phone"/>
+        </field>
+        <field
+            property="personType" depends="required">
+            <arg0 key="label.registration.personType"/>
+        </field>
+        <field
+            property="billingFirstName" depends="required">
+            <arg0 key="label.registration.billingFirstName"/>
+        </field>
+        <field
+           property="billingLastName" depends="required">
+            <arg0 key="label.registration.billingLastName"/>
+        </field>
+        <field
+            property="billingAddress1" depends="required">
+            <arg0 key="label.registration.billingAddress1"/>
+        </field>
+        <field
+            property="billingCountry" depends="required">
+            <arg0 key="label.registration.billingCountry"/>
+        </field>
+        <field
+            property="billingCity" depends="required">
+            <arg0 key="label.registration.billingCity"/>
+        </field>
+        <field
+            property="billingPhone" depends="required">
+            <arg0 key="label.registration.billingPhone"/>
+        </field>    
+        <field
+            property="industryType" depends="required">
+            <arg0 key="label.registration.industryType"/>
+        </field> 
+         <field
+            property="orgStatus" depends="required">
+            <arg0 key="label.registration.orgStatus"/>
+        </field> 
+      </form>
+      
+      <form name="RegisterIndividualForm">
+        <field
+            property="firstName" depends="required">
+            <arg0 key="label.registration.firstName"/>
+
+	    
+        </field>
+        <field
+           property="lastName" depends="required">
+            <arg0 key="label.registration.lastName"/>
+
+	    
+        </field>
+        <field
+           property="userName" depends="required">
+            <arg0 key="label.registration.email"/>
+        </field>
+        <!--
+        <field
+           property="password" depends="required">
+            <arg0 key="label.registration.password"/>
+        </field>
+        <field
+           property="confirmPassword" depends="required">
+            <arg0 key="label.registration.confirmPassword"/>
+        </field>
+        -->
+        <field
+            property="address1" depends="required">
+            <arg0 key="label.registration.address1"/>
+        </field>
+        <field
+            property="country" depends="required">
+            <arg0 key="label.registration.country"/>
+        </field>
+        <field
+            property="city" depends="required">
+            <arg0 key="label.registration.city"/>
+        </field>
+        <field
+            property="phone" depends="required">
+            <arg0 key="label.registration.phone"/>
+        </field>
+        <field
+            property="personType" depends="required">
+            <arg0 key="label.registration.personType"/>
+        </field>
+      </form>
+      
+      <form name="RegisterAddUserForm">
+        <field
+            property="firstName" depends="required">
+            <arg0 key="label.registration.firstName"/>
+
+	    
+        </field>
+        <field
+           property="lastName" depends="required">
+            <arg0 key="label.registration.lastName"/>
+
+	    
+        </field>
+        <field
+            property="phone" depends="required">
+            <arg0 key="label.registration.phone"/>
+        </field>
+        <field
+           property="userName" depends="required">
+            <arg0 key="label.registration.email"/>
+        </field>
+        <field
+            property="personType" depends="required">
+            <arg0 key="label.registration.personType"/>
+        </field>
+      </form>
+      <form name="RegisterGPOUserForm">
+        <field
+            property="firstName" depends="required">
+            <arg0 key="label.registration.firstName"/>
+
+	    <var>
+
+                <var-name>mask</var-name>
+
+                <var-value>^[a-zA-Z]+[a-zA-Z\s\-\'\(\)\&amp;\.\,]*$</var-value>
+
+            </var>
+
+        </field>
+        <field
+           property="lastName" depends="required">
+            <arg0 key="label.registration.lastName"/>
+
+	    <var>
+
+                <var-name>mask</var-name>
+
+                <var-value>^[a-zA-Z]+[a-zA-Z\s\-\'\(\)\&amp;\.\,]*$</var-value>
+
+            </var>
+
+        </field>
+        <field
+            property="phone" depends="required">
+            <arg0 key="label.registration.phone"/>
+        </field>
+        <field
+           property="userName" depends="required">
+            <arg0 key="label.registration.email"/>
+        </field>
+        <field
+            property="personType" depends="required">
+            <arg0 key="label.registration.personType"/>
+        </field>
+      </form>
+      
+      <form name="notAvailableEmailForm">
+        <field property="requesterEmailAddress" depends="validateForCondition, required">
+          <msg name="required" key="search.error.message.required.field"/>
+          <arg position="0" name="required" key="Your email address" resource="false" />
+          <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+          <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+          <var><var-name>conditionFieldValue[0]</var-name><var-value>sendRequest</var-value></var>  
+        </field>
+        <field property="requesterCompany" depends="validateForCondition, required">
+          <msg name="required" key="search.error.message.required.field"/>
+          <arg position="0" name="required" key="Company" resource="false" />
+          <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+          <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+          <var><var-name>conditionFieldValue[0]</var-name><var-value>sendRequest</var-value></var>  
+        </field>
+        <field property="requesterName" depends="validateForCondition, required">
+          <msg name="required" key="search.error.message.required.field"/>
+          <arg position="0" name="required" key="Your name" resource="false" />
+          <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+          <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+          <var><var-name>conditionFieldValue[0]</var-name><var-value>sendRequest</var-value></var>  
+        </field>
+        <field property="requesterPhoneNumber" depends="validateForCondition, required">
+          <msg name="required" key="search.error.message.required.field"/>
+          <arg position="0" name="required" key="Phone" resource="false" />
+          <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+          <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+          <var><var-name>conditionFieldValue[0]</var-name><var-value>sendRequest</var-value></var>  
+        </field>
+        <field property="requesterCity" depends="validateForCondition, required">
+          <msg name="required" key="search.error.message.required.field"/>
+          <arg position="0" name="required" key="City" resource="false" />
+          <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+          <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+          <var><var-name>conditionFieldValue[0]</var-name><var-value>sendRequest</var-value></var>  
+        </field>
+        <field property="requesterState" depends="validateForCondition, required">
+          <msg name="required" key="search.error.message.required.field"/>
+          <arg position="0" name="required" key="State" resource="false" />
+          <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+          <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+          <var><var-name>conditionFieldValue[0]</var-name><var-value>sendRequest</var-value></var>  
+        </field>
+        <field property="requesterAnnualLicense" depends="validateForCondition, required">
+          <msg name="required" key="search.error.message.required.field"/>
+          <arg position="0" name="required" key="Annual license" resource="false" />
+          <var><var-name>conditionField[0]</var-name><var-value>operation</var-value></var>
+          <var><var-name>conditionFieldTest[0]</var-name><var-value>EQUAL</var-value></var>
+          <var><var-name>conditionFieldValue[0]</var-name><var-value>sendRequest</var-value></var>  
+        </field>
+      </form>
+      <form name="editPublisherActionForm_save">
+        <field property="pubUrl" depends="required, mask">
+          <msg name="required" key="errors.required" />
+          <msg name="mask" key="errors.invalidWebAddress" />
+          <arg position="0" key="Site URL" resource="false" />
+          <var><var-name>mask</var-name><var-value>^(http(s?):\/\/|ftp:\/\/){0,1}((\w+\.){1,})\w{2,}</var-value></var>
+        </field>
+      </form>
+    </formset>
+       
+</form-validation>

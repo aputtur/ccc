@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+
+<taglib>
+    <tlibversion>1.0</tlibversion>
+    <jspversion>1.1</jspversion>
+    <shortname>security</shortname>
+
+    <!-- security -->
+    <tag>
+        <name>ifUserAuthenticated</name>
+        <tagclass>com.copyright.ccc.web.tags.security.IfUserAuthenticatedTag</tagclass>
+        <bodycontent>JSP</bodycontent>
+        <attribute>
+            <name>not</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>ifUserAnonymous</name>
+        <tagclass>com.copyright.ccc.web.tags.security.IfUserAnonymousTag</tagclass>
+        <bodycontent>JSP</bodycontent>
+        <attribute>
+            <name>not</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>ifUserEmulating</name>
+        <tagclass>com.copyright.ccc.web.tags.security.IfUserEmulatingTag</tagclass>
+        <bodycontent>JSP</bodycontent>
+        <attribute>
+            <name>not</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>ifUserHasPrivilege</name>
+        <tagclass>com.copyright.ccc.web.tags.security.IfUserHasPrivilegeTag</tagclass>
+        <bodycontent>JSP</bodycontent>
+        <attribute>
+            <name>not</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>code</name>
+            <required>true</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>ifAdminResourceRequested</name>
+        <tagclass>com.copyright.ccc.web.tags.security.IfAdminResourceRequested</tagclass>
+        <bodycontent>JSP</bodycontent>
+        <attribute>
+            <name>not</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>ifUserIsAdmin</name>
+        <tagclass>com.copyright.ccc.web.tags.security.IfUserIsAdminTag</tagclass>
+        <bodycontent>JSP</bodycontent>
+        <attribute>
+            <name>not</name>
+            <required>false</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+    </tag>
+</taglib>

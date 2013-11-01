@@ -1,0 +1,100 @@
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN" 
+		"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+
+    <field name="searchCriteria.confNumber">
+        <field-validator type="regex">
+    		<param name="expression">
+    			[0-9]*
+    		</param>
+    		<message>Confirmation Number should be numeric</message>
+        </field-validator>
+    </field>
+    
+    <field name="searchCriteria.orderDetailNumber">
+        <field-validator type="regex">
+    		<param name="expression">
+    			[0-9]*
+    		</param>
+    		<message>Order Detail Number should be numeric</message>
+        </field-validator>
+    </field>
+    
+    <field name="searchCriteria.rlJobTicket">
+        <field-validator type="regex">
+    		<param name="expression">
+    			[0-9]*
+    		</param>
+    		<message>RL Job Ticket Number should be numeric</message>
+        </field-validator>
+    </field>
+    
+    <field name="searchCriteria.last4digits_adv">
+        <field-validator type="regex">
+    		<param name="expression">
+    			[0-9][0-9][0-9][0-9]
+    		</param>
+    		<message>Last 4 digits of Credit Card should be 4 numbers</message>
+        </field-validator>
+    </field>
+    
+    <field name="searchCriteria.tfWorkID_adv">
+        <field-validator type="regex">
+    		<param name="expression">
+    			[0-9]*
+    		</param>
+    		<message>TF Work ID should be numeric</message>
+        </field-validator>
+    </field>
+    
+    <field name="searchCriteria.wrWorkID_adv">
+        <field-validator type="regex">
+    		<param name="expression">
+    			[0-9]*
+    		</param>
+    		<message>WR Work ID should be numeric</message>
+        </field-validator>
+    </field>
+    <field name="searchCriteria.rhAccountNumber_adv">
+        <field-validator type="regex">
+    		<param name="expression">
+    			[0-9]*
+    		</param>
+    		<message>RH Acct # should be numeric</message>
+        </field-validator>
+    </field>
+    
+    
+    <field name="searchCriteria.acctNumber">
+        <field-validator type="regex">
+    		<param name="expression">
+    			[0-9]*
+    		</param>
+    		<message>Licensee Acct Number should be numeric</message>
+        </field-validator>
+    </field>
+    <field name="searchCriteria.orderNumber">
+        <field-validator type="regex">
+    		<param name="expression">
+    			[0-9]*
+    		</param>
+    		<message>Order Number should be numeric</message>
+        </field-validator>
+    </field>
+    <field name="searchCriteria.rlLicenseNumber">
+        <field-validator type="regex">
+    		<param name="expression">
+    			[0-9]*
+    		</param>
+    		<message>RL License Number should be numeric</message>
+        </field-validator>
+    </field>
+    
+	 <!--<validator type="expression"> 
+    	<param name="expression">searchCriteria.startDate != null AND searchCriteria.endDate != null AND searchCriteria.dateType == null</param> 
+    	<message>Please select what type of Date Range you picked the dates for</message> 
+	</validator> --> 
+ 
+
+</validators>

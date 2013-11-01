@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<taglib>
+ 
+  <tlibversion>1.0</tlibversion>
+  <jspversion>2.1</jspversion>
+  <shortname>pd</shortname>
+  <uri>http://xmlns.copyright.com/tld/ouextensions.tld</uri>
+  <info>CCC Configuration Display Tags</info>
+
+  <tag>
+    <name>renderDetails</name>
+    <tagclass>com.copyright.ccc.oue.client.tags.RenderDetailsTag</tagclass>
+    <bodycontent>empty</bodycontent>
+  </tag>  
+   
+  <tag>
+	<name>isExtended</name>
+	<tag-class>com.copyright.ccc.oue.client.tags.EvaluateDetailsTag</tag-class>
+	<body-content>scriptless</body-content>
+	<description>This tag is for checking openurl extension is called</description>
+  </tag>
+</taglib>

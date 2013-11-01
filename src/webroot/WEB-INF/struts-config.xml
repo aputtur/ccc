@@ -1,0 +1,2496 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+
+<!DOCTYPE struts-config PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+    "../../dtd/struts-config_1_1.dtd">
+
+<struts-config>
+    <form-beans>
+    
+    	<form-bean
+            name="rlinkSpecialOrderForm"
+            type="com.copyright.ccc.web.forms.coi.RLinkSpecialOrderForm"
+        />
+
+        <form-bean
+            name="developerHomeForm"
+            type="com.copyright.ccc.web.forms.DeveloperHomeForm"
+        />
+
+        <form-bean
+            name="loginForm"
+            type="com.copyright.ccc.web.forms.LoginForm"
+        />
+        
+        <form-bean 
+            name="loginFormDeux" 
+            type="com.copyright.ccc.web.forms.LoginForm" 
+        />
+
+        <form-bean
+            name="basicTransactionForm"
+            type="com.copyright.ccc.web.forms.coi.BasicTransactionForm"
+        />
+                        
+            
+        <form-bean
+            name="courseDetailsForm"
+            type="com.copyright.ccc.web.forms.coi.CourseDetailsForm"
+        />
+        
+       <!--  RL QUICK PRICE -->
+        <form-bean
+            name="rightsLinkQuickPriceActionForm"
+            type="com.copyright.ccc.web.forms.RightsLinkQuickPriceActionForm"
+        />
+        <!--  END RL QUICK PRICE -->
+                        
+	
+        <form-bean name="searchForm" type="com.copyright.ccc.web.forms.SearchForm" />
+        <form-bean name="articleSearchActionForm" type="com.copyright.ccc.web.forms.ArticleSearchActionForm" />
+        <form-bean name="chapterSearchActionForm" type="com.copyright.ccc.web.forms.ChapterSearchActionForm" />
+        <form-bean name="landingForm" type="com.copyright.ccc.web.forms.LandingForm" />
+        <form-bean name="notAvailableEmailForm" type="com.copyright.ccc.web.forms.NotAvailableEmailForm" />
+        <form-bean name="rlOrderHistoryForm" type="com.copyright.ccc.web.forms.RLOrderHistoryForm" />
+        
+        <form-bean 
+            name="orderHistoryActionForm"
+            type="com.copyright.ccc.web.forms.OrderHistoryActionForm"
+        />
+        
+        <form-bean 
+            name="orderDetailActionForm"
+            type="com.copyright.ccc.web.forms.OrderDetailActionForm"
+        />
+        
+        <form-bean 
+            name="orderViewActionForm"
+            type="com.copyright.ccc.web.forms.OrderViewActionForm"
+        />
+        
+        <form-bean
+            name="demoSearchForm"
+            type="com.copyright.ccc.web.forms.DemoSearchForm"
+        />
+
+        <form-bean
+            name="rightsholderContactInfoForm"
+            type="com.copyright.ccc.web.forms.RightsholderContactInfoForm"
+        />
+        
+        <form-bean
+            name="popupTextForm"
+            type="com.copyright.ccc.web.forms.PopupTextActionForm"
+        />
+        
+        <!-- BEGIN Registration related forms -->
+        
+        <form-bean
+            name="RegisterOrganizationForm"
+            type="com.copyright.ccc.web.forms.RegisterOrganizationForm"
+        />
+        
+        <!-- Individual Registration form bean -->
+        <form-bean 
+            name="RegisterIndividualForm" 
+            type="com.copyright.ccc.web.forms.RegisterIndividualForm"
+        />
+        
+        <!-- Add additional User form bean -->
+        <form-bean 
+            name="RegisterAddUserForm" 
+            type="com.copyright.ccc.web.forms.RegisterAddUserForm"
+        />
+        <!-- Add GPO User form bean -->
+        <form-bean 
+            name="RegisterGPOUserForm" 
+            type="com.copyright.ccc.web.forms.RegisterGPOUserForm"
+        />
+
+        <form-bean 
+            name="changePasswordForm" 
+            type="com.copyright.ccc.web.forms.ChangePasswordActionForm"
+        />
+
+        <form-bean 
+            name="updateEmailAddressForm" 
+            type="com.copyright.ccc.web.forms.UpdateEmailAddressActionForm"
+        />
+
+        <!-- END Registration related forms -->
+        
+        <form-bean
+            name="contextualHelpForm"
+            type="com.copyright.ccc.web.forms.ContextualHelpForm"
+        />
+        
+        <form-bean
+            name="adjustmentForm"
+            type="com.copyright.ccc.web.forms.adjustment.AdjustmentActionForm"
+        />
+
+        <form-bean
+            name="manageAccountForm"
+            type="com.copyright.ccc.web.forms.ManageAccountActionForm"
+        />
+
+        <form-bean
+            name="updateAddressBillingForm"
+            type="com.copyright.ccc.web.forms.UpdateAddressBillingActionForm"
+        />
+        
+        <form-bean
+            name="notifiedRedirectForm"
+            type="com.copyright.ccc.web.forms.NotifiedRedirectForm"
+        />
+        
+        <form-bean
+            name="updateAddressForm"
+            type="com.copyright.ccc.web.forms.UpdateAddressActionForm"
+        />
+       
+        <form-bean
+            name="viewReportsForm"
+            type="com.copyright.ccc.web.forms.ViewReportsActionForm"
+        />
+        
+    <form-bean
+            name="viewPaidInvoiceReportForm"
+            type="com.copyright.ccc.web.forms.ViewReportsActionForm"
+        />
+
+    <form-bean
+	    name="publisherMaintenanceForm"
+	    type="com.copyright.ccc.web.forms.admin.PublisherMaintenanceForm"
+        />
+        
+        <form-bean
+	    name="editPublisherActionForm"
+            type="com.copyright.ccc.web.forms.admin.EditPublisherActionForm"
+        />
+
+        <form-bean
+            name="emulationForm"
+            type="com.copyright.ccc.web.forms.admin.EmulationForm"
+        />
+
+        <form-bean
+            name="externalAuthForm"
+            type="com.copyright.ccc.web.forms.ExternalAuthActionForm"
+        />
+
+        <form-bean
+            name="userRolesForm"
+            type="com.copyright.ccc.web.forms.admin.UserRolesForm"
+        />
+
+        <form-bean
+            name="microSiteForm"
+            type="com.copyright.ccc.web.forms.MicroSiteForm"
+        />
+                       
+        <form-bean 
+           name="reviewTermsActionForm"
+           type="com.copyright.ccc.web.forms.ReviewTermsActionForm"
+        />
+        
+        <form-bean
+            name="editCopiedOrderForm"
+            type="com.copyright.ccc.web.forms.coi.EditCopiedOrderForm"
+        />
+        <form-bean name="creditCardListForm" type="com.copyright.ccc.web.forms.CreditCardListForm" />
+        
+        <form-bean
+            name="manageCreditCardsForm"
+            type="com.copyright.ccc.web.forms.ManageCreditCardsForm"
+        />
+        
+        <form-bean name="googleBookPreviewForm" type="com.copyright.ccc.web.forms.GoogleBookPreviewForm" />  
+
+		<form-bean name="userInfoForm" type="com.copyright.ccc.web.forms.UserInfoForm" />
+		<form-bean name="userLookupForm" type="com.copyright.ccc.web.forms.UserLookupForm" />
+		<form-bean name="userAlertForm" type="com.copyright.ccc.web.forms.UserAlertForm" />
+        <form-bean name="unpaidInvoiceForm" type="com.copyright.ccc.web.forms.UnpaidInvoiceForm" />
+        <form-bean name="anonymousUnpaidInvoiceForm" type="com.copyright.ccc.web.forms.AnonymousUnpaidInvoiceForm" />
+        <form-bean name="acceptSpecialOrderPaymentForm" type="com.copyright.ccc.web.forms.AcceptSpecialOrderPaymentForm" />
+        
+            <form-bean 
+            name="licenseDeclineForm"
+            type="com.copyright.ccc.web.forms.LicenseDeclineForm"
+        />
+        <form-bean
+            name="autoDunningForm"
+            type="com.copyright.ccc.web.forms.admin.AutoDunningForm"
+        />
+		
+		<!-- Begin COI Forms -->
+		
+		<form-bean
+            name="basicTransactionFormCOI"
+            type="com.copyright.ccc.web.forms.coi.BasicTransactionForm"
+        />
+        
+        <form-bean
+            name="courseDetailsFormCOI"
+            type="com.copyright.ccc.web.forms.coi.CourseDetailsForm"
+        />
+        
+        <form-bean
+            name="cartFormCOI"
+            type="com.copyright.ccc.web.forms.coi.CartForm"
+        />
+        
+        <form-bean
+            name="selectPaymentActionFormCOI"
+            type="com.copyright.ccc.web.forms.coi.SelectPaymentActionForm"
+        />
+	   <form-bean
+            name="selectCartPaymentActionForm"
+            type="com.copyright.ccc.web.forms.coi.SelectCartPaymentActionForm"
+        />
+		    <form-bean 
+           name="reviewSubmitCartActionFormCOI"
+           type="com.copyright.ccc.web.forms.coi.ReviewSubmitCartActionForm"
+        />
+        
+        <form-bean
+            name="specialOrderFormCOI"
+            type="com.copyright.ccc.web.forms.coi.SpecialOrderForm"
+        />
+        
+        <form-bean
+            name="specialPermissionTypeFormCOI"
+            type="com.copyright.ccc.web.forms.coi.SpecialPermissionTypeForm"
+        />
+        
+        <form-bean 
+           name="reviewTermsActionFormCOI"
+           type="com.copyright.ccc.web.forms.coi.ReviewTermsActionForm"
+        />
+                        
+        <!-- End COI Forms -->
+        
+    </form-beans>
+
+    <global-forwards>
+		<!-- Begin search extras -->
+		<forward name="doSimpleSearch" path="/search.do?operation=simple" />
+		<forward name="doAdvancedSearch" path="/search.do?operation=advanced" />
+        <forward name="doACLSearch" path="/search.do?operation=annual" />
+        <forward name="doShowSimpleSearch" path="/search.do?operation=show" />
+                <!-- End search extras -->
+        <forward name="showIndRegistration" path="/showIndRegistration.do"/>
+        <forward name="accessDenied" path="accessDeniedTile"/>
+        <forward name="notAuthorized" path="notAuthorizedTile"/>
+		<forward name="doUserLookup" path="/admin/userLookup.do?operation=lookup" />
+		<forward name="doUserAlert" path="/admin/userAlert.do?operation=alert" />
+        <forward name="sessionDataNotAvailable" path="/search.do?operation=detail"/>  
+	    <forward name="viewCart" path="/cart.do?operation=defaultOperation"/>
+    </global-forwards>
+
+    <action-mappings>
+        <!-- struts built-in action for linking to other modules. Usage example:
+        http://localhost:8080/toModule.do?prefix=/moduleB&page=/index.do -->
+        <action path="/toModule" type="org.apache.struts.actions.SwitchAction"/>
+
+
+        <action path="/notifiedRedirect"
+            name="notifiedRedirectForm"
+            type="com.copyright.ccc.web.actions.NotifiedRedirectAction"
+            parameter="operation"
+            scope="session"
+        >
+            <forward name="showMain" path="notifiedRedirect"/>
+        </action> 
+        
+        <action path="/developerHome"
+            name="developerHomeForm"
+            type="com.copyright.ccc.web.actions.DeveloperHomeAction"
+            parameter="operation"
+            scope="session"
+        >
+            <forward name="showMain" path="developerHome"/>
+        </action>
+
+        <action path="/timedOut"
+            type="com.copyright.ccc.web.actions.TimeoutAction"
+            scope="request"
+        >
+           <forward name="showTimeoutView" path="timeoutView"/>
+           <forward name="success" redirect="true" path="/home.do"/>
+       </action>
+
+        <action 
+            path="/loginForm" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="login"
+             name="loginForm"
+        />
+        
+        
+        <!-- This special action works in conjunction with
+             web.xml and urlrewrite.xml to assist in switching
+             protocol HTTP to HTTPS for the login page.
+             
+             On normal processing, calls to this action will
+             be rewritten to /loginForm.do, once the protocol
+             is switched to HTTPS. -->
+        <action 
+            path="/loginFormRedirect" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="login"
+        />
+
+        <action path="/login"
+            name="loginForm"
+            type="com.copyright.ccc.web.actions.LoginAction"
+            parameter="operation"
+            scope="session"
+        >
+            
+            <forward name="showMain" path = "/loginFormRedirect.do"/>
+        </action>
+
+        <action path="/loginRetry"
+            name="loginForm"
+            type="com.copyright.ccc.web.actions.LoginAction"
+            parameter="operation"
+            scope="request"
+        >
+            
+            <forward name="showMain" path = "/loginFormRedirect.do"/>
+        </action>
+
+        <action path="/loginFailure"
+            type="com.copyright.ccc.web.actions.LoginFailureAction"
+            parameter="operation"
+        >
+            
+            <forward name="showMain" path="loginFailure"/>
+        </action>
+
+        <action path="/loginBounce"
+            name="loginForm"
+            type="com.copyright.ccc.web.actions.BounceAction"
+            parameter="operation"
+            scope="request"
+        >
+            
+        </action>
+
+        <action path="/logout"
+            name="loginForm"
+            type="com.copyright.ccc.web.actions.LogoutAction"
+            parameter="operation"
+            scope="session"
+        >
+            <forward name="relogin" path="/loginBounce.do" redirect="true" />
+            <forward name="success" path="/home.do" redirect="true" />
+            <forward name="successCempro" path="/search.do?operation=show&amp;page=advanced&amp;isCempro=1" redirect="true" />
+        </action>
+        
+        
+        <action path="/autoLogin"
+            name="loginForm"
+            type="com.copyright.ccc.web.actions.AutoLoginAction"
+            parameter="operation"
+            scope="session"
+        >
+            <forward name="phaseTwo" path="/autoLoginPhaseTwo.do" redirect="true" />
+        </action>
+                
+        <action path="/autoLoginPhaseTwo"
+            name="loginForm"
+            type="com.copyright.ccc.web.actions.AutoLoginAction"
+            parameter="operation"
+            scope="session"
+        >
+        </action>
+
+        <action path="/forgotPassword"
+            name="loginForm"
+            type="com.copyright.ccc.web.actions.ForgotPasswordAction"
+            parameter="operation"
+            scope="session"
+        >
+
+            <forward name="success" path="displayResetView" redirect="true" />
+            <forward name="failure" path="/loginForm.do" />
+            
+        </action>
+        
+        <action path="/resetPassword" 
+                type="com.copyright.ccc.web.actions.ResetPasswordAction" 
+                name="changePasswordForm"
+                parameter="operation"
+                input="changePasswordForm"
+                scope="session" 
+                validate="true">
+           
+           <forward name="prompt" path="resetPasswordView"/>
+           <forward name="retry" path="resetPasswordView"/>
+           <forward name="success" redirect="true" path="/resetPasswordComplete.do"/>
+           <forward name="failure" path="resetPasswordInvalidView"/>
+
+        </action>    
+
+
+        <action path="/resetPasswordComplete" 
+                type="com.copyright.ccc.web.actions.ResetPasswordCompleteAction" 
+                scope="request" 
+                >
+           
+           <forward name="success" path="resetPasswordCompleteView"/>
+           <forward name="UserLoggedInGoHome" redirect="true" path="/home.do"/>
+        </action>    
+
+        <!-- Link Manager paths.  One is in initial caps, the other all lowercase. -->
+        <!-- The initial caps is for "backward compatibility" while the lowercase  -->
+        <!-- version is to just be all lowercase... best direction to move in for  -->
+        <!-- all paths, really.                                                    -->
+        
+        <action path="/LinkManager" 
+                type="com.copyright.ccc.web.actions.OpenURLImageServerAction"
+                parameter="operation" />
+                
+        <action path="/linkmanager" 
+                type="com.copyright.ccc.web.actions.OpenURLImageServerAction"
+                parameter="operation" />
+
+        <action path="/applicationError"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="errorCommon"
+        />
+        
+    	<action path="/jspError"
+    	    type="org.apache.struts.actions.ForwardAction"
+    	    parameter="errorInJSP"
+    	/>
+    
+        <action path="/error400"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="error400"
+        />
+        
+        <action path="/error401"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="error401"
+        />
+        
+        <action path="/error403"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="error403"
+        />
+        
+        <action path="/error404"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="error404"
+        />
+        
+        <action path="/error500"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="error500"
+        />
+        
+        <action path="/home"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="mainWideHome"
+        />
+
+        <action path="/viewPage"
+            type="com.copyright.ccc.web.actions.ViewPageAction"
+        >
+            <forward name="showMain" path="viewPageMain" />
+            <forward name="showPopup" path="viewPagePopup" />
+        </action>
+
+        <action path="/formToEmail" 
+            type="com.copyright.ccc.web.actions.FormToEmailAction"
+            name="microSiteForm"
+         >
+        </action>
+        <action path="/redirect"
+            type="com.copyright.ccc.web.actions.RedirectAction" 
+        >
+            <forward name="redirect" path ="/redirect.jsp" />
+        </action>
+
+      
+           
+        <!--RL QUICK PRICE -->
+           <action path="/rlQuickPrice"
+            name="rightsLinkQuickPriceActionForm"
+            type="com.copyright.ccc.web.actions.RightsLinkQuickPriceAction"
+            parameter="operation"
+            scope="session" validate="false"
+            input="rlQuickPrice"
+        >
+            <forward name="showMain" path="rlQuickPrice" />
+            <forward name="showLoginForRL" path="rlQuickPriceLogin.do"  redirect="true"/>
+            <forward name="showReprice" path="/rlQuickPrice.do?operation=refreshPrice"/>
+            <forward name="error" path="rlQuickPrice" />
+            <forward name="submit" path="/cart.do?operation=defaultOperation&amp;actionType=add"  redirect="true"  />
+        </action>
+        
+     <action path="/rlQuickPriceLogin"
+            name="rightsLinkQuickPriceActionForm"
+            type="com.copyright.ccc.web.actions.RightsLinkLoginAction"
+            parameter="operation"
+            scope="session" validate="false"
+            input="rlQuickPriceLogin" 
+        >
+            <forward name="showMain" path="rlQuickPriceLogin"  />
+            <forward name="showReprice" path="/rlQuickPrice.do?operation=processLogin"  redirect="true"  />
+            
+            
+        </action>
+      
+        
+        <action path="/ppuSearch"
+            name="searchForm"
+            input="searchPayPerUse"
+            type="com.copyright.ccc.web.actions.ComplexSearchAction"
+            parameter="operation"
+            scope="session"
+            validate="false"
+        >
+            <forward name="showMain"      path="searchPayPerUse" />
+            <forward name="simple"        path="searchSimple" />
+            <forward name="failure"       path="searchPayPerUse" />
+            <forward name="noresults"     path="searchSimpleNotFound" />
+            <forward name="success"       path="searchResult" redirect="true" />
+            <forward name="rightslink"    path="/viewPage.do?pageCode=pu4-n"/>
+        </action>       
+              
+        <!-- basic transaction actions COI -->
+        
+        <action path="/basicAddCoiCartItem"
+            name="basicTransactionFormCOI"
+            type="com.copyright.ccc.web.actions.coi.BasicAddCartItemAction"
+            parameter="operation"
+            scope="session"
+            input="basicAddCoiCartItem"
+        >
+            <forward name="showMain" path="basicAddCoiCartItem" />
+            <forward name="submit" path="/cart.do?operation=defaultOperation&amp;actionType=add" redirect="true" />
+            <forward name="courseDetails" path="/addCartCoiCourseDetails.do?operation=defaultOperation" />
+            <forward name="specialOrder" path="/specialAddCoiCartItem.do?operation=defaultOperation"/>
+        </action>
+        
+        <action path="/basicAddCoiOrderItem"
+            name="basicTransactionFormCOI"
+            type="com.copyright.ccc.web.actions.coi.BasicAddOrderItemAction"
+            parameter="operation"
+            scope="session"
+            input="basicAddCoiOrderItem"
+        >
+            <forward name="showMain" path="basicAddCoiOrderItem" />
+            <forward name="submit" path="/orderView.do" redirect="true" />
+            <forward name="courseDetails" path="/addOrderCourseDetails.do?operation=defaultOperation" />
+            <forward name="specialOrder" path="/specialAddCoiOrderItem.do?operation=defaultOperation" />
+            <forward name="viewTerms" path="/reviewCoiTerms.do?operation=showTermsForOrder" />
+        </action>
+        
+        <action path="/addOrderCourseDetails"
+            name="courseDetailsForm"
+            type="com.copyright.ccc.web.actions.coi.AddOrderCourseDetailsAction"
+            parameter="operation"
+            scope="session"
+            input="addOrderCourseDetails"
+        >
+            <forward name="showMain" path="addOrderCourseDetails" />
+            <forward name="submit" path="/basicAddOrderItem.do?operation=submit&amp;actionType=add" redirect="true" />
+            <forward name="cancelBasic" path="/basicAddCartItem.do?operation=defaultOperation" />
+            <forward name="cancelSpecial" path="/specialAddCartItem.do?operation=defaultOperation" />
+            
+        </action>
+        
+        <action path="/basicEditCoiCartItem"
+            name="basicTransactionFormCOI"
+            type="com.copyright.ccc.web.actions.coi.BasicEditCartItemAction"
+            parameter="operation"
+            scope="session"
+            input="basicEditCoiCartItem"
+        >
+            <forward name="showMain" path="basicEditCoiCartItem" />
+            <forward name="submit" path="/cart.do?operation=defaultOperation" redirect="true" />
+            <forward name="specialOrder" path="/specialEditCoiCartItem.do?operation=defaultOperation" />
+        </action>
+        
+        <action path="/basicEditCoiOrderItem"
+            name="basicTransactionFormCOI"
+            type="com.copyright.ccc.web.actions.coi.BasicEditOrderItemAction"
+            parameter="operation"
+            scope="session"
+            input="basicEditCoiOrderItem"
+        >
+            <forward name="showMain" path="basicEditCoiOrderItem" />
+            <forward name="submit" path="/orderView.do" redirect="true" />
+            <forward name="specialOrder" path="/specialEditCoiOrderItem.do?operation=defaultOperation" />
+        </action>
+                        
+        <!-- end basic transaction actions COI -->                     
+        
+        <!-- COI special order actions -->
+        
+        <action path="/specialOrderRLink"
+            name="rlinkSpecialOrderForm"
+            type="com.copyright.ccc.web.actions.coi.RLinkSpecialOrderAction"
+            parameter="operation"
+            scope="session"
+            input="specialOrderRLink"
+        >
+            <forward name="showMain" path="specialOrderRLink" />
+            <forward name="showMainDefault"  path="/specialAddCoiCartItem.do?operation=defaultOperation" />
+            <forward name="submit" path="/specialOrderRLink.do?operation=defaultOperation" redirect="true" />
+            <forward name="specialOrder" path="/search.do?operation=addToCartRlnkSpecial" redirect="true" />
+            <forward name="failure" path="specialOrderRLink" />
+        </action>
+        
+        <action path="/specialAddCoiCartItem"
+            name="specialOrderFormCOI"
+            type="com.copyright.ccc.web.actions.coi.SpecialAddCartItemAction"
+            parameter="operation"
+            scope="session"
+            input="specialAddCartItem"
+        >
+            <forward name="showMain" path="specialAddCoiCartItem" />
+            <forward name="showMainDefault"  path="/specialAddCoiCartItem.do?operation=defaultOperation" />
+            <forward name="submit" path="/cart.do?operation=defaultOperation&amp;actionType=add" redirect="true" />
+            <forward name="courseDetails" path="/addCartCoiCourseDetails.do?operation=defaultOperation" />
+            <forward name="basicTransaction" path="/basicAddCoiCartItem.do?operation=defaultOperation"/>
+        </action>
+        
+        <action path="/specialAddCoiOrderItem"
+            name="specialOrderFormCOI"
+            type="com.copyright.ccc.web.actions.coi.SpecialAddOrderItemAction"
+            parameter="operation"
+            scope="session"
+            input="specialAddCoiOrderItem"
+        >
+            <forward name="showMain" path="specialAddCoiOrderItem" />
+            <forward name="submit" path="/orderView.do" redirect="true" />
+            <forward name="basicTransaction" path="/basicAddCoiOrderItem.do?operation=defaultOperation" />
+            <forward name="viewTerms" path="/reviewTerms.do?operation=showTermsForOrder" />
+        </action>
+        
+        <action path="/specialEditCoiCartItem"
+            name="specialOrderFormCOI"
+            type="com.copyright.ccc.web.actions.coi.SpecialEditCartItemAction"
+            parameter="operation"
+            scope="session"
+            input="specialEditCoiCartItem"
+        >
+            <forward name="showMain" path="specialEditCoiCartItem" />
+            <forward name="submit" path="/cart.do?operation=defaultOperation" redirect="true" />
+            <forward name="basicTransaction" path="/basicEditCoiCartItem.do?operation=defaultOperation" />
+        </action>
+        
+        <action path="/specialEditCoiOrderItem"
+            name="specialOrderFormCOI"
+            type="com.copyright.ccc.web.actions.coi.SpecialEditOrderItemAction"
+            parameter="operation"
+            scope="session"
+            input="specialEditOrderItem"
+        >
+            <forward name="showMain" path="specialEditCoiOrderItem" />
+            <forward name="submit" path="/orderView.do" redirect="true" />
+            <forward name="basicTransaction" path="/basicEditCoiOrderItem.do?operation=defaultOperation" />
+        </action>
+        
+        <action path="/specialPermissionTypeAddCoiCart"
+            name="specialPermissionTypeFormCOI"
+            type="com.copyright.ccc.web.actions.coi.SpecialPermissionTypeAction"
+            parameter="operation"
+            scope="request" >
+            <forward name="showMain" path="specialPermissionTypeAddCoiCart" />
+            <forward name="specialOrder" path="/specialAddCoiCartItem.do?operation=defaultOperation" />
+            <forward name="rlinkSpecialOrder" path="/specialOrderRLink.do?operation=defaultOperation" />
+        </action>
+        
+        <action path="/specialPermissionTypeAddCoiOrder"
+            name="specialPermissionTypeFormCOI"
+            type="com.copyright.ccc.web.actions.coi.SpecialPermissionTypeAction"
+            parameter="operation"
+            scope="session" >
+            <forward name="showMain" path="specialPermissionTypeAddCoiOrder" />
+            <forward name="specialOrder" path="/specialAddCoiOrderItem.do?operation=defaultOperation" />
+        </action>
+        
+        <action path="/specialPermissionTypeEditCoiCart"
+            name="specialPermissionTypeFormCOI"
+            type="com.copyright.ccc.web.actions.coi.SpecialPermissionTypeAction"
+            parameter="operation"
+            scope="request" >
+            <forward name="showMain" path="specialPermissionTypeEditCoiCart" />
+            <forward name="specialOrder" path="/specialEditCoiCartItem.do?operation=defaultOperation" />
+        </action>
+        
+        
+        <!-- end special order actions -->
+        
+        <action path="/demoSearch"
+            name="demoSearchForm"
+            type="com.copyright.ccc.web.actions.DemoSearchAction"
+            parameter="operation"
+            scope="request"
+        >
+            <forward name="showResults" path="demoSearchResults" />
+            <forward name="showMain" path="demoSearchMain"/>
+        </action>
+
+        <!-- course details actions -->
+                    
+		<!-- 
+			 added this action to fix "CC-8 Course Information is saved when "Cancel Changes" is clicked"
+		     The change was made for consistency with the editCartCoiCourseDetails action. 
+		     See /cancel-editCartCoiCourseDetails (in this file) for more details.
+		-->        
+     	<action path="/cancel-copyOrderCourseDetails"
+            type="com.copyright.ccc.web.actions.RedirectingForwardAction"
+            parameter="/cart.do?operation=defaultOperation"
+        />
+        
+        <action path="/cancelEdit"
+            name="cartFormCOI"
+            type="com.copyright.ccc.web.actions.coi.CancelEditAction"
+            parameter="operation"
+            scope="session"
+         >
+            <forward name="cart" path="/cart.do?operation=defaultOperation" redirect="true" />               
+        </action>
+           
+        <action path="/copyOrderCourseDetails"
+            name="courseDetailsForm"
+            type="com.copyright.ccc.web.actions.coi.CopyOrderCourseDetailsAction"
+            parameter="operation"
+            scope="session"
+            input="copyOrderCourseDetails"
+        >
+            <forward name="showMain" path="copyOrderCourseDetails" />
+            <forward name="editOrder" path="/editCopiedOrder.do?operation=defaultOperation" />
+            <forward name="submit" path="/cart.do?operation=defaultOperation&amp;actionType=add" redirect="true" />
+        <!--    <forward name="cancel" path="/cart.do?operation=defaultOperation" redirect="true" /> --> 
+            
+        </action>                
+                      
+        <!-- COI course details actions -->
+		<!-- 
+			 added this action for consistency with the editCartCoiCourseDetails action. 
+		     See /cancel-editCartCoiCourseDetails (in this file) for more details.
+		-->  
+     	<action path="/cancel-addCartCoiCourseDetails"
+            type="com.copyright.ccc.web.actions.RedirectingForwardAction"
+            parameter="/addCartCoiCourseDetails.do?operation=cancel"
+        />       
+        <action path="/addCartCoiCourseDetails"
+            name="courseDetailsForm"
+            type="com.copyright.ccc.web.actions.coi.AddCartCourseDetailsAction"
+            parameter="operation"
+            scope="session"
+            input="addCartCoiCourseDetails"
+        >
+            <forward name="showMain" path="addCartCoiCourseDetails" />
+            <forward name="submit" path="/cart.do?operation=defaultOperation&amp;actionType=add" redirect="true" />
+            <forward name="cancelBasic" path="/basicAddCoiCartItem.do?operation=defaultOperation" />
+            <forward name="cancelSpecial" path="/specialAddCoiCartItem.do?operation=defaultOperation" />
+            
+        </action>
+
+		<!-- 
+			 added this action to fix "CC-8 Course Information is saved when "Cancel Changes" is clicked"
+		     before this change, canceling the editCartCoiCourseDetails form would still update the
+		     values of the form in session. This was displayed to the user and made them think the
+		     values had been updated despite them having hit "cancel".
+		     This new action doesn't accept a form and simply re-directs to the cart page without
+		     changing values in session		     
+		-->
+     	<action path="/cancel-editCartCoiCourseDetails"
+            type="com.copyright.ccc.web.actions.RedirectingForwardAction"
+            parameter="/cart.do?operation=defaultOperation"
+        />        
+       
+        <action path="/editCartCoiCourseDetails"
+            name="courseDetailsForm"
+            type="com.copyright.ccc.web.actions.coi.EditCartCourseDetailsAction"
+            parameter="operation"
+            scope="session"
+            input="editCartCoiCourseDetails"
+        >
+            <forward name="showMain" path="editCartCoiCourseDetails" />
+            <forward name="submit" path="/cart.do?operation=defaultOperation" />
+            <forward name="cancel" path="/cart.do?operation=defaultOperation" redirect="true" />
+            
+        </action>     
+
+             
+        <action path="/editOrderCoiCourseDetails"
+            name="courseDetailsForm"
+            type="com.copyright.ccc.web.actions.coi.EditOrderCourseDetailsAction"
+            parameter="operation"
+            scope="session"
+            input="editOrderCoiCourseDetails"
+        >
+            <forward name="showMain" path="editOrderCoiCourseDetails" />
+            <forward name="submit" path="/orderView.do" redirect="true" />
+            <forward name="cancel" path="/orderView.do" redirect="true" />
+            
+        </action>
+        
+        <action path="/copyOrderCoiCourseDetails"
+            name="courseDetailsForm"
+            type="com.copyright.ccc.web.actions.coi.CopyOrderCourseDetailsAction"
+            parameter="operation"
+            scope="session"
+            input="copyOrderCoiCourseDetails"
+        >
+            <forward name="showMain" path="copyOrderCoiCourseDetails" />
+            <forward name="editOrder" path="/editCopiedOrder.do?operation=defaultOperation" />
+            <forward name="submit" path="/cart.do?operation=defaultOperation&amp;actionType=add" redirect="true" />
+            <forward name="cancel" path="/cart.do?operation=defaultOperation" redirect="true" />
+            
+        </action>
+        
+        <!-- end course details actions COI-->
+        
+        <action path="/editCopiedOrder"
+            name="editCopiedOrderForm"
+            type="com.copyright.ccc.web.actions.coi.EditCopiedOrderAction"
+            parameter="operation"
+            scope="session"
+            input="editCopiedOrder"
+        >
+            <forward name="showMain" path="editCopiedOrder" />
+            <forward name="cartWithErrors" path="/cart.do?operation=defaultOperation" />
+            <forward name="cart" path="/cart.do?operation=defaultOperation" redirect="true" />
+        </action>
+        
+     
+        
+        <action path="/cart"
+            name="cartFormCOI"
+            type="com.copyright.ccc.web.actions.coi.CartAction"
+            parameter="operation"
+            scope="session"
+        >
+            <forward name="showMain" path="cart" />
+            <forward name="showMainRedirect" path="/cart.do?operation=defaultOperation" redirect="true" />
+            <forward name="basicEditCoiCartItem" path="/basicEditCoiCartItem.do?operation=defaultOperation" />
+            <forward name="specialEditCoiCartItem" path="/specialEditCoiCartItem.do?operation=defaultOperation" />
+            <forward name="rightsLinkEditCoiCartItem" path="/rlQuickPrice.do?operation=editCartItem"/>
+            
+        </action>
+ 
+        
+        <action path="/contentsCheckerCoi"
+            type="com.copyright.ccc.web.actions.coi.ContentsCheckerAction"
+            parameter="operation"
+            scope="request"
+        />
+        
+    <!-- BEGIN Registration related actions -->
+    
+        <action path="/cityStatePopulator"
+                type="com.copyright.ccc.web.actions.CityStatePopulatorAction"
+                parameter="operation"
+                scope="request"
+        />
+            
+        <action path="/registerOrganization"
+                type="com.copyright.ccc.web.actions.RegistrationAction"
+                name="RegisterOrganizationForm"
+                input="displayOrgRegistrationTilesView"
+                parameter="RegistrationOrg.jsp"
+                scope="session"
+                validate="true">
+            <forward name="success" path="displaySubmitView"/>
+            <forward name="successRegister" path="displayRegisterView"/>
+            <forward name="redirectToOrgLogin" path="/login"/>
+            <forward name="alreadyRegistered" path="alreadyRegisteredView" />
+			<forward name="successAutoLogin" path="/autoLogin.do" />
+            <forward name="failure" path="/displayOrgRegistration.do"/>
+        </action>
+        
+        <action path="/registerIndividual"
+                type="com.copyright.ccc.web.actions.RegistrationAction"
+                name="RegisterIndividualForm"
+                input="displayIndRegistrationTilesView"
+                parameter="RegistrationInd.jsp"
+                scope="session"
+                validate="true">
+            <forward name="success" path="displaySubmitView"/>
+            <forward name="successRegister" path="displayRegisterView"/>
+            <forward name="redirectToIndLogin" path="/do/login" />
+            <forward name="alreadyRegistered" path="alreadyRegisteredView" />
+			<forward name="successAutoLogin" path="/autoLogin.do" />
+            <forward name="failure" path="/displayIndRegistration.do"/>
+        </action>
+        
+        <action path="/registerAddUser"
+                type="com.copyright.ccc.web.actions.RegistrationAction"
+                name="RegisterAddUserForm"
+                input="displayAddUserRegistrationTilesView"
+                parameter="RegistrationAddUser.jsp"
+                scope="session"
+                validate="true">
+            <forward name="success" path="displaySubmitView"/>
+            <forward name="successRegister" path="displayRegisterView"/>
+            <forward name="redirectToAddUserLogin" path="/login"/>
+            <forward name="alreadyRegistered" path="alreadyRegisteredView" />
+         	<forward name="successAutoLogin" path="/autoLogin.do" />
+            <forward name="failureAddUser" path="displayAddUserRegistrationTilesView"/>
+        </action>
+        
+        <!-- Remove GPO reference
+        <action path="/registerGPOUser"
+                type="com.copyright.ccc.web.actions.RegistrationAction"
+                name="RegisterGPOUserForm"
+                input="displayGPOUserRegistrationTilesView"
+                parameter="RegistrationGPOUser.jsp"
+                scope="session"
+                validate="true">
+            <forward name="success" path="/manageAccount.do"/>
+            <forward name="redirectToGPOUserLogin" path="/login"/>
+            <forward name="alreadyRegistered" path="alreadyRegisteredView" />
+          	<forward name="successAutoLogin" path="/autoLogin.do" />
+            <forward name="failure" path="displayGPOUserRegistrationTilesView"/>
+        </action>
+        -->
+    
+        <action path="/displayOrgRegistration" 
+                type="com.copyright.ccc.web.actions.DisplayRegistrationAction" 
+                name="RegisterOrganizationForm" 
+                scope="session" 
+                validate="false"
+                parameter="RegistrationOrg.jsp"
+                input="showRegistration">
+            <forward name="success" path="displayOrgRegistrationTilesView"/>
+            <forward name="failure" path="/displayOrgRegistration"/>
+        </action>
+        
+        <action path="/displayIndRegistration" 
+                type="com.copyright.ccc.web.actions.DisplayRegistrationAction"  
+                name="RegisterIndividualForm" 
+                scope="session" 
+                validate="false"
+                parameter="RegistrationInd.jsp"
+                input="showRegistration">
+            <forward name="success" path="displayIndRegistrationTilesView"/>
+            <forward name="failure" path="/displayIndRegistration"/>
+        </action>
+        
+        <action path="/displayAddUserRegistration" 
+                type="com.copyright.ccc.web.actions.DisplayRegistrationAction"  
+                name="RegisterAddUserForm" 
+                scope="session" 
+                validate="false"
+                parameter="RegistrationAddUser.jsp"
+                input="displayAddUserRegistrationTilesView">
+            <forward name="success" path="displayAddUserRegistrationTilesView"/>
+            <forward name="failure" path="/displayAddUserRegistration"/>
+        </action>
+                        
+        <action path="/updateEmail"
+                type="com.copyright.ccc.actions.UpdateEmailPasswordAction"
+                name="UpdateEmailPasswordForm"
+                input="updateEmail"
+                scope="session"
+                validate="true">
+            <forward name="success" path="/do/viewPage?pageCode=ma19-n"/>
+            <forward name="failure" path="/updateEmail"/>
+        </action>
+        <action path="/updatePassword"
+                type="com.copyright.ccc.web.actions.UpdateEmailPasswordAction"
+                name="UpdateEmailPasswordForm"
+                input="updatePassword"
+                scope="session"
+                validate="true">
+            <forward name="success" path="/do/viewPage?pageCode=ma19-n"/>
+            <forward name="failure" path="/updatePassword"/>
+        </action>
+        <action path="/redisplayIndRegistration" 
+                type="com.copyright.ccc.web.actions.RedisplayRegistrationAction" 
+                name="RegisterIndividualForm" 
+                scope="session" 
+                validate="false"
+                parameter="RegistrationInd.jsp"
+                input="showRegistration">
+            <forward name="success" path="displayIndRegistrationTilesView"/>
+        </action>
+        <action path="/redisplayOrgRegistration" 
+                type="com.copyright.ccc.web.actions.RedisplayRegistrationAction" 
+                name="RegisterOrganizationForm" 
+                scope="session" 
+                validate="false"
+                parameter="registrationOrg.jsp"
+                input="showRegistration">
+            <forward name="success" path="displayOrgRegistrationTilesView"/>
+        </action>	      
+        <action path="/showRegistration" 
+                type="com.copyright.ccc.web.actions.ShowRegistrationAction" 
+                name="RegisterOrganizationForm"
+                parameter="registrationOrg.jsp"
+                scope="session" 
+                validate="false">
+           <forward name="success" path="displayOrgRegistrationTilesView"/>
+           <forward name="showIndRegistration" path="/showIndRegistration.do" redirect="true"/>
+           <forward name="displayAddUser" path="displayAddUserRegistrationTilesView"/>
+           <forward name="displayGPOUser" path="displayGPOUserRegistrationTilesView"/>
+           <forward name="failure" path="/showRegistration"/>
+        </action>
+        <action path="/showIndRegistration" 
+                type="com.copyright.ccc.web.actions.ShowIndRegistrationAction" 
+                name="RegisterIndividualForm"
+                parameter="registrationInd.jsp"
+                scope="session" 
+                validate="false">
+           <forward name="success" path="displayIndRegistrationTilesView"/>
+        </action>
+
+        <action 
+            path="/changePasswordForm" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="changePassword"
+        />
+
+        <action path="/changePassword" 
+                type="com.copyright.ccc.web.actions.ChangePasswordAction" 
+                name="changePasswordForm"
+                parameter="operation"
+                input="changePasswordForm"
+                scope="session" 
+                validate="true">
+           <forward name="success" path="changedPassword"/>
+           <forward name="failure" path="/changePasswordForm.do"/>
+
+        </action>
+        
+        <action path="/updateEmailAddress" 
+                type="com.copyright.ccc.web.actions.UpdateEmailAddressAction" 
+                name="updateEmailAddressForm"
+                parameter="operation"
+                input="changePasswordForm"
+                scope="session"
+                validate="true">
+           <forward name="success" path="changedEmail"/>
+           <forward name="failure" path="/changePasswordForm.do"/>
+
+        </action>
+        <!-- END Registration related Action -->
+    
+    <!-- END Registration -->
+		
+	<!--     Begin COI Checkout    -->
+	<action path="/selectCoiPaymentType2"
+            name="selectPaymentActionFormCOI" 
+            type="com.copyright.ccc.web.actions.coi.SelectPaymentAction"
+            parameter="operation"
+            scope="session"
+            input="selectCoiPaymentTilesView"
+            validate = "true"
+        >
+          <forward name="selectPayment" path="selectCoiPaymentTilesView"/>
+          <forward name="onHold" path="/cart.do?operation=defaultOperation"/>
+          <!-- <forward name="reviewPayment" path="/reviewSubmitCart.do?operation=defaultOperation"/> -->
+          <forward name="reviewPayment" path="/reviewCoiSubmitCart.do?operation=reviewCartInvoice" />
+          <forward name="reviewRLinkOnly" path="/reviewCoiSubmitCart.do?operation=reviewRLinkOnlyCartInvoice" />
+          <forward name="reviewCart" path="/reviewCoiSubmitCart.do?operation=reviewCart" />
+          <forward name="reviewCartUpdates" path="/cart.do" redirect="true" />
+          
+        </action>
+    	<!--     Begin COI Checkout    -->
+	<action path="/selectCoiPaymentType"
+            name="selectCartPaymentActionForm" 
+            type="com.copyright.ccc.web.actions.coi.SelectCartPaymentAction"
+            parameter="operation"
+            scope="session"
+            input="selectCartPaymentTilesView"
+            validate = "true"
+        >
+          <forward name="selectPayment" path="selectCartPaymentTilesView"/>
+          <forward name="success" path="selectCartPaymentTilesView"/>
+          <forward name="onHold" path="/cart.do?operation=defaultOperation"/>
+          <forward name="reviewPayment" path="/reviewCoiSubmitCart.do?operation=reviewCartInvoice" />
+          <forward name="reviewRLinkOnly" path="/reviewCoiSubmitCart.do?operation=reviewRLinkOnlyCartInvoice" />
+          <forward name="reviewCart" path="/reviewCoiSubmitCart.do?operation=reviewCart" />
+          <forward name="reviewCartUpdates" path="/cart.do" redirect="true" />
+          
+        </action>
+        
+        <action path="/reviewCoiPayment"
+            name="selectCartPaymentActionForm" 
+            type="com.copyright.ccc.web.actions.coi.ReviewPaymentAction"
+            parameter="operation"
+            scope="session"
+            validate="false"
+        >
+           <forward name="reviewPayment" path="selectCartPaymentTilesView"/> 
+          <!-- <forward name="reviewPayment" path="/selectPaymentType.do?operation=selectPayment"/> -->
+        </action> 
+
+	
+	<action path="/reviewCoiSubmitCart"
+            name="reviewSubmitCartActionFormCOI"
+            type="com.copyright.ccc.web.actions.coi.ReviewSubmitCartAction"
+            scope="session"
+            parameter="operation"
+            input="reviewCoiSubmitCartTilesView"
+        >
+          <forward name="reviewCart" path="reviewCoiSubmitCartTilesView"/>
+          <forward name="error" path="selectCartPaymentTilesView?operation=selectPayment"/>
+        </action>
+
+                
+        <action path="/confirmCoiCartPurchase"
+            name="reviewSubmitCartActionFormCOI" 
+            type="com.copyright.ccc.web.actions.coi.ConfirmCartPurchaseAction"
+            scope="session"
+            parameter="operation"
+            validate="false"
+        >
+          <forward name="purchaseOK" path="confirmCoiCartPurchaseTilesView"/>
+          <forward name="error" path="reviewCoiSubmitCartTilesView"/>
+          <forward name="cartEmpty" path="/cart.do?operation=defaultOperation"/>
+          <forward name="editPayment" path="/reviewCoiPayment.do?operation=reviewPayment"/>
+          <forward name="creditCardFailure" path="/selectCoiPaymentType.do?operation=selectPayment"/>
+          <!-- <forward name="creditCardFailure" path="selectPaymentTilesView"/>  -->
+        </action>
+	<!--     END COI Checkout    -->
+        
+        
+        <!-- Begin Search Action Mapping(s) -->
+     
+        <action path="/search"
+            name="searchForm"
+            type="com.copyright.ccc.web.actions.SearchAction"
+            parameter="operation"
+            scope="session"
+            validate="false"
+        >            
+            <forward name="showMain"        path="searchSimple" />
+            <forward name="simple"          path="searchSimple" />
+            <forward name="advanced"        path="searchAdvanced" />
+            <forward name="failure"         path="searchSimple" />
+            <forward name="noresults"       path="searchSimpleNotFound" />
+            <forward name="success"         path="searchResult" redirect="true" />
+            <forward name="simplesuccess"   path="searchResultSimple" redirect="true"/>
+            <forward name="landing"         path="searchTouDetailPage" redirect="true" />
+            <forward name="touDetail"       path="searchTouDetailPage" redirect="true" />
+            <forward name="permOptionsPage" path="permOptionsPage" />
+            <forward name="permOptionsPagePPUOnly" path="permOptionsPagePPUOnly" />
+            <forward name="cartadd"         path="/basicAddCoiCartItem.do?operation=defaultOperation" />
+            <forward name="cartaddcoi"      path="/basicAddCoiCartItem.do?operation=defaultOperation" />
+            <forward name="cartaddspecial"  path="/specialAddCoiCartItem.do?operation=defaultOperation" />
+            <forward name="cartaddspecialcoi"  path="/specialAddCoiCartItem.do?operation=defaultOperation" />
+            <forward name="rlQuickPrice"     path="/rlQuickPrice.do?operation=defaultOperation" />
+            <forward name="cartaddrlnk"     path="/rlQuickPrice.do?operation=defaultOperation"/>
+            <forward name="orderadd"        path="/basicAddCoiOrderItem.do?operation=defaultOperation" />
+            <forward name="orderaddspecial" path="/specialAddCoiOrderItem.do?operation=defaultOperation" />
+            <forward name="cartaddscratch"  path="/specialPermissionTypeAddCoiCart.do?operation=defaultOperation" />
+            <forward name="orderaddscratch" path="/specialPermissionTypeAddCoiOrder.do?operation=defaultOperation" />
+            <forward name="cartaddscratchcoi"  path="/specialPermissionTypeAddCoiCart.do?operation=defaultOperation" />
+            <forward name="orderaddscratchcoi" path="/specialPermissionTypeAddCoiOrder.do?operation=defaultOperation" />
+            <forward name="rightslink"      path="/viewPage.do?pageCode=pu4-n"/>
+            <forward name="rightslink"      path="/viewPage.do?pageCode=pu4-n"/>
+        </action>
+
+        <action path="/basicSearch"
+            name="searchForm"
+            input="searchSimple"
+            type="com.copyright.ccc.web.actions.BasicSearchAction"
+            parameter="operation"
+            scope="session"
+            validate="true"
+        >
+            <forward name="showMain"      path="searchSimple" />
+            <forward name="simple"        path="searchSimple" />
+            <forward name="landing"       path="searchTouDetailPage" />
+            <forward name="touDetail"     path="searchTouDetailPage" />
+            <forward name="failure"       path="searchSimple" />
+            <forward name="noresults"     path="searchSimpleNotFound" />
+            <forward name="simplesuccess" path="searchResultSimple" redirect="true" />
+            <forward name="rightslink"    path="/viewPage.do?pageCode=pu4-n"/>
+        </action>
+        
+        <action path="/advancedSearch"
+            name="searchForm"
+            input="searchAdvanced"
+            type="com.copyright.ccc.web.actions.ComplexSearchAction"
+            parameter="operation"
+            scope="session"
+            validate="true"
+        >
+            <forward name="showMain"      path="searchAdvanced" />
+            <forward name="simple"        path="searchSimple" />
+            <forward name="failure"       path="searchAdvanced" />
+            <forward name="noresults"     path="searchSimpleNotFound" />
+            <forward name="success"       path="searchResult" redirect="true" />
+            <forward name="rightslink"    path="/viewPage.do?pageCode=pu4-n"/>
+        </action>
+        
+        <action path="/clearAdvancedSearch"
+            name="searchForm"
+            input="searchAdvanced"
+            type="com.copyright.ccc.web.actions.ComplexSearchAction"
+            parameter="operation"
+            scope="session"
+            validate="false"
+        >
+        	<forward name="success"       path="searchAdvanced" />
+        </action>
+        
+        <!-- start Rights Link Article Search Add to cart -->
+        <action path="/articleSearch"
+            name="articleSearchActionForm"
+            input="articleSearch"
+            type="com.copyright.ccc.web.actions.ArticleSearchAction"
+            parameter="operation"
+            scope="session"
+            validate="true"
+        >
+        	<forward name="success" path="articleSearch"/>
+        	<forward name="articleSearchResults" path="articleSearch"/>
+        	<forward name="rlQuickPrice"  path="/rlQuickPrice.do?operation=defaultOperation" />
+        	<forward name="failure" path="articleSearch"/>      
+        </action>
+        
+        <action path="/initArticleSearch"
+            name="articleSearchActionForm"
+            input="articleSearch"
+            type="com.copyright.ccc.web.actions.ArticleSearchAction"
+            parameter="operation"
+            scope="session"
+            validate="false"
+        >
+        	<forward name="articleSearchResults" path="articleSearch"/>       
+        </action>
+        <action path="/noValidationArticleSearch"
+            name="articleSearchActionForm"
+            input="articleSearch"
+            type="com.copyright.ccc.web.actions.ArticleSearchAction"
+            parameter="operation"
+            scope="session"
+            validate="false"
+        >
+        	<forward name="success" path="articleSearch"/>
+        	<forward name="articleSearchResults" path="articleSearch"/>
+        	<forward name="rlQuickPrice"  path="/rlQuickPrice.do?operation=defaultOperation" />
+        	<forward name="failure" path="articleSearch"/>        
+        </action>
+        
+        <action path="/autosuggest"
+            type="com.copyright.ccc.web.actions.AutoSuggestAction"
+            parameter="operation"
+            scope="session"
+            validate="false">
+            <!--    This action returns suggested search strings. -->
+        </action>
+        
+        <!-- end Rights Link Article Search Add to cart -->
+        
+          <!-- start Rights Link Chapter Search Add to cart -->
+        <action path="/chapterSearch"
+            name="chapterSearchActionForm"
+            input="chapterSearch"
+            type="com.copyright.ccc.web.actions.ChapterSearchAction"
+            parameter="operation"
+            scope="session"
+            validate="true"
+        >
+        	<forward name="success" path="chapterSearch"/>
+        	<forward name="chapterSearchResults" path="chapterSearch"/>
+        	<forward name="rlQuickPrice"  path="/rlQuickPrice.do?operation=defaultOperation" />
+        	<forward name="failure" path="chapterSearch"/>        
+        </action>
+        
+        <action path="/initChapterSearch"
+            name="chapterSearchActionForm"
+            input="chapterSearch"
+            type="com.copyright.ccc.web.actions.ChapterSearchAction"
+            parameter="operation"
+            scope="session"
+            validate="false"
+        >
+        	<forward name="chapterSearchResults" path="chapterSearch"/>       
+        </action>
+        <action path="/noValidationChapterSearch"
+            name="chapterSearchActionForm"
+            input="chapterSearch"
+            type="com.copyright.ccc.web.actions.ChapterSearchAction"
+            parameter="operation"
+            scope="session"
+            validate="false"
+        >
+        	<forward name="success" path="chapterSearch"/>
+        	<forward name="chapterSearchResults" path="chapterSearch"/>
+        	<forward name="rlQuickPrice"  path="/rlQuickPrice.do?operation=defaultOperation" />
+        	<forward name="failure" path="chapterSearch"/>        
+        </action>
+        
+        <!-- end Rights Link Chapter Search Add to cart -->
+        
+        <action path="/autoSearch"
+            name="searchForm"
+            type="com.copyright.ccc.web.actions.AutoSearchAction"
+            parameter="operation"
+            scope="session"
+            validate="false"
+        >
+            <forward name="showMain"        path="searchSimple" />
+            <forward name="simple"          path="searchSimple" />
+            <forward name="failure"         path="searchSimple" />
+            <forward name="noresults"       path="searchSimpleNotFound" />
+            <forward name="success"         path="searchResult" redirect="true"/>
+            <forward name="simplesuccess"   path="searchResultSimple" redirect="true" />
+            <forward name="landing"         path="searchTouDetailPage" redirect="true" />
+            <forward name="permissionsdirect" path="searchTouDetailPageRedirect" redirect="true" />
+            <forward name="cartadd"         path="/basicAddCoiCartItem.do?operation=defaultOperation" />
+            <forward name="cartaddspecial"  path="/specialAddCoiCartItem.do?operation=defaultOperation" />
+            <forward name="orderadd"        path="/basicAddCoiOrderItem.do?operation=defaultOperation" />
+            <forward name="orderaddspecial" path="/specialAddCoiOrderItem.do?operation=defaultOperation" />
+        </action>
+        
+        <action path="/openurl"
+            name="searchForm"
+            input="searchSimple"
+            type="com.copyright.ccc.web.actions.OpenURLAction"
+            parameter="operation"
+            scope="session"
+            validate="false"
+        >
+            <forward name="showMain"      path="searchSimple" />
+            <forward name="failure"       path="searchSimple" />
+            <forward name="noresults"     path="searchSimpleNotFound" />
+            <forward name="success"       path="/autoSearch.do?operation=go" />
+        </action>
+        
+        <action path="/cccdirect"
+            name="searchForm"
+            input="searchSimple"
+            type="com.copyright.ccc.web.actions.PermissionsDirectAction"
+            parameter="operation"
+            scope="session"
+            validate="false"
+        >
+            <forward name="showMain"      path="searchSimple" />
+            <forward name="failure"       path="searchSimple" />
+            <forward name="noresults"     path="searchSimpleNotFound" />
+            <forward name="advanced"      path="searchAdvanced" />
+            <forward name="success"       path="/autoSearch.do?operation=go" />
+        </action>
+        
+        <action path="/showMakeRequest"
+            name="notAvailableEmailForm"
+            input="notAvailableRequest"
+            type="com.copyright.ccc.web.actions.NotAvailableEmailAction"
+            parameter="operation"
+            scope="session"
+            validate="false"
+        >
+            <forward name="showMain"      path="notAvailableRequest" />
+            <forward name="failure"       path="notAvailableRequestError" />
+            <forward name="sendmail"      path="/makerequest.do?operation=sendRequest" />
+            <forward name="success"       path="notAvailableRequestDone" />
+        </action>
+        
+        <action path="/makerequest"
+            name="notAvailableEmailForm"
+            input="notAvailableRequest"
+            type="com.copyright.ccc.web.actions.NotAvailableEmailAction"
+            parameter="operation"
+            scope="session"
+            validate="true"
+        >
+            <forward name="showMain"      path="notAvailableRequest" />
+            <forward name="failure"       path="notAvailableRequestError" />
+            <forward name="sendmail"      path="/makerequest.do?operation=sendRequest" />
+            <forward name="success"       path="notAvailableRequestDone" />
+        </action>
+
+        <!-- End Search Action Mapping(s) -->
+
+		<!-- Begin User Administration Mapping(s) -->
+		
+		<action path="/admin/userLookup"
+			name="userLookupForm"
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="/userLookup.do"
+		>     
+		</action> 
+                
+		<action path="/userLookup"
+			name="userLookupForm"
+			type="com.copyright.ccc.web.actions.UserAdminAction"
+			parameter="operation"
+			scope="session"
+			validate="false"
+		>
+			<forward name="success" path="/admin/userAdmin.do?operation=edit" />
+			<forward name="failure" path="/admin/userLookupPageView.do" />
+			<forward name="showUserLookup" path="/admin/userLookupPageView.do" />
+		</action>
+		
+        <action path="/admin/userAlert"
+            name="userAlertForm"
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="/userAlert.do"
+		>     
+		</action> 
+                
+		<action path="/userAlert"
+			name="userAlertForm"
+			type="com.copyright.ccc.web.actions.UserAdminAction"
+			parameter="operation"
+			scope="session"
+			validate="false"
+		>
+			<forward name="success" path="/admin/userAlert.do?operation=status" />
+			<forward name="failure" path="/admin/userAlert.do?operation=status" />
+			<forward name="showUserAlert" path="/admin/userAlertPageView.do" />
+			<forward name="showUserLookup" path="/admin/userLookupPageView.do" />
+		</action>
+		
+		<action path="/admin/userAdmin"
+                name="userInfoForm"
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="/userAdmin.do"
+	     >
+		</action> 
+                
+		<action path="/userAdmin"
+			name="userInfoForm"
+			type="com.copyright.ccc.web.actions.UserAdminAction"
+			parameter="operation"
+			scope="session"
+			validate="false"
+                >
+			<forward name="showUserLookup"    path="/admin/userLookupPageView.do" />
+			<forward name="showUserAlert"     path="/admin/userAlertPageView.do" />
+		</action>
+		
+		<action 
+			path="/admin/userLookupPageView" 
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="userLookupPage"
+		/>
+
+		<action 
+			path="/admin/userAlertPageView" 
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="userAlertPage"
+		/>
+		
+		<action 
+			path="/admin/publisherMaintenancePageView" 
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="publisherMaintenancePage"
+		/>
+		
+		<action 
+			path="/admin/editPublisherPageView" 
+			type="org.apache.struts.actions.ForwardAction"
+			parameter="editPublisherPage"
+		/>
+		
+		<!-- End User Administration Mappings(s) -->
+		
+		<action path="/tfOdtStatus"
+                type="com.copyright.ccc.web.actions.TFOdtStatusAction"
+                parameter="operation"
+                scope="request"
+        />
+
+        <action path="/admin/orderHistory"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="/orderHistory.do"
+        >
+        </action> 
+
+        <action path="/orderHistory" 
+            type="com.copyright.ccc.web.actions.OrderHistoryBaseAction"
+            name="orderHistoryActionForm"
+            scope="request"
+            validate="false">
+            <forward name="continue" path="/orderHistoryTileView.do" />
+        </action>
+        
+        <action path="/admin/refreshOrderHistory"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="/refreshOrderHistory.do"
+        />
+        
+        <action path="/refreshOrderHistory" 
+            type="com.copyright.ccc.web.actions.RefreshOrderHistoryAction"
+            name="orderHistoryActionForm"
+            scope="request"
+            validate="false">
+            <forward name="continue" path="/orderHistoryTileView.do"/>
+            <forward name="orderHistory" path="/orderHistory.do"/>
+        </action>
+
+        <action path="/orderHistoryEmpty" 
+            type="com.copyright.ccc.web.actions.OrderHistoryEmptyAction"
+            name="orderHistoryActionForm"
+            scope="request"
+            validate="false">
+            <forward name="continue" path="/orderHistoryTileView.do"/>
+        </action>
+
+        <action path="/admin/processOrderHistory"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="/processOrderHistory.do"
+        /> 
+
+        <action path="/processOrderHistory" 
+            type="com.copyright.ccc.web.actions.ProcessOrderHistoryAction"
+            name="orderHistoryActionForm"
+            scope="request"
+            validate="true"
+            input="/orderHistoryEmpty.do">
+            <forward name="continue" path="/orderHistoryTileView.do"/>
+        </action>
+
+        <action path="/sortOrderHistory" 
+            type="com.copyright.ccc.web.actions.SortOrderHistoryAction"
+            name="orderHistoryActionForm"
+            scope="request"
+            validate="false">
+            <forward name="continue" path="/orderHistoryTileView.do"/>
+        </action>
+
+        <action 
+            path="/orderHistoryTileView" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="orderHistoryTile"
+        />
+
+        
+        <!-- BEGIN RIGHTSLINK ORDER HISTORY -->
+        
+        <action path="/rlOrderHistory" 
+            type="com.copyright.ccc.web.actions.RLOrderHistoryAction"
+            name="rlOrderHistoryForm"
+            scope="session"
+            validate="false"
+        >
+            <forward name="success" path="rightsLinkOrderTile" />
+        </action>
+        
+        <!-- END RIGHTSLINK ORDER HISTORY -->
+
+        <action path="/admin/orderDetail"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="/orderDetail.do"
+        />
+
+        <action path="/orderDetail" 
+            type="com.copyright.ccc.web.actions.OrderDetailAction"
+            name="orderDetailActionForm"
+            scope="request"
+            validate="false">
+            <forward name="continue" path="/orderDetailTileView.do"/>
+        </action>
+
+        <action path="/admin/refreshOrderDetail"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="/refreshOrderDetail.do"
+        />
+
+        <action path="/refreshOrderDetail" 
+            type="com.copyright.ccc.web.actions.RefreshOrderDetailAction"
+            name="orderDetailActionForm"
+            scope="request"
+            validate="false">
+            <forward name="continue" path="/orderDetailTileView.do"/>
+        </action>
+
+        <action path="/admin/processOrderDetail"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="/processOrderDetail.do"
+        />
+
+        <action path="/processOrderDetail" 
+            type="com.copyright.ccc.web.actions.ProcessOrderDetailAction"
+            name="orderDetailActionForm"
+            scope="request"
+            validate="true"
+            input="/orderDetail.do">
+            <forward name="continue" path="/orderDetailTileView.do"/>
+        </action>
+
+        <action path="/admin/sortOrderDetail"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="/sortOrderDetail.do"
+        />
+        
+        <action path="/sortOrderDetail" 
+            type="com.copyright.ccc.web.actions.SortOrderDetailAction"
+            name="orderDetailActionForm"
+            scope="request"
+            validate="false">
+            <forward name="continue" path="/orderDetailTileView.do"/>
+        </action>
+
+        <action 
+            path="/orderDetailTileView" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="orderDetailTile"
+        />
+        
+        <action path="/admin/orderView"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="/orderView.do"
+        />
+        
+        <action path="/orderView" 
+            type="com.copyright.ccc.web.actions.OrderViewAction"
+            name="orderViewActionForm"
+            scope="session"
+            validate="false">
+            <forward name="continue" path="/orderViewTileView.do"/>
+            <forward name="viewAll" path="/orderHistory.do"/>
+        </action>
+        
+        <action path="/admin/processOrderView"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="/processOrderView.do"
+        />
+        
+        <action path="/processOrderView" 
+            type="com.copyright.ccc.web.actions.ProcessOrderViewAction"
+            name="orderViewActionForm"
+            scope="session"
+            validate="true"
+            input="/orderView.do">
+            <forward name="continue" path="/orderViewTileView.do"/>
+            <forward name="viewAll" path="/orderViewTileView.do"/>
+        </action>
+        
+        <action path="/orderCancel" 
+            type="com.copyright.ccc.web.actions.OrderCancelAction"
+            name="orderViewActionForm"
+            scope="session"
+            validate="false">
+            <forward name="continue" 
+                     path="/orderViewTileView.do"/>
+        </action>
+        
+        <action path="/licenseDecline" 
+            type="com.copyright.ccc.web.actions.LicenseDeclineAction"
+            name="licenseDeclineForm"
+            scope="request"
+            validate="false">
+            <forward name="failure" redirect="true" path="/orderDetail.do?filter=custResponseOrders" />
+        </action>
+
+        <action path="/licenseCancel" 
+            type="com.copyright.ccc.web.actions.LicenseCancelAction"
+            name="orderViewActionForm"
+            scope="session"
+            validate="false">
+            <forward name="continue" path="/orderViewTileView.do"/>
+        </action>
+
+        <action path="/licenseUncancel" 
+            type="com.copyright.ccc.web.actions.LicenseUncancelAction"
+            name="orderViewActionForm"
+            scope="session"
+            validate="false">
+            <forward name="continue" path="/orderViewTileView.do"/>
+        </action>
+
+        <action 
+            path="/orderViewTileView" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="orderViewTile"
+        />
+
+        <action path="/copyLicense" 
+            type="com.copyright.ccc.web.actions.coi.CopyLicenseAction"
+            name="orderViewActionForm"
+            scope="session">
+            <forward name="continue" path="/cart.do"/>
+            <forward name="academic" path="/copyOrderCourseDetails.do"/>
+            <forward name="editOrder" path="/editCopiedOrder.do?operation=defaultOperation" />
+            <forward name="error" path="/orderView.do"/>
+        </action>
+
+        <action path="/copyOrder" 
+            type="com.copyright.ccc.web.actions.coi.CopyOrderAction"
+            scope="request">
+            <forward name="continue" path="/cart.do"/>
+            <forward name="editCourse" path="/copyOrderCourseDetails.do"/>
+            <forward name="editOrder" path="/editCopiedOrder.do?operation=defaultOperation" />
+            <!-- TODO: fix the error path for the view page -->
+            <forward name="error" path="/orderHistory.do"/>
+        </action>
+
+        <action path="/copyPurchase" 
+            type="com.copyright.ccc.web.actions.CopyPurchaseAction"
+            scope="request">
+            <forward name="cart" path="/cart.do"/>
+            <forward name="editCourse" path="/copyOrderCourseDetails.do?operation=defaultOperation"/>
+            <forward name="error" path="/orderView.do"/>
+        </action>
+
+        <action path="/deleteOrder" 
+            type="com.copyright.ccc.web.actions.coi.DeletePurchaseAction"
+            scope="request">
+            <forward name="continue" path="/orderHistory.do"/>
+        </action>
+
+        <action path="/editCourseInfo" 
+            type="com.copyright.ccc.web.actions.coi.EditCourseInfoAction"
+            scope="request">
+            <forward name="continue" path="/editOrderCoiCourseDetails.do?operation=defaultOperation"/>
+            <forward name="error" path="/orderView.do"/>
+        </action>
+
+        <action path="/editBasicLicense" 
+            type="com.copyright.ccc.web.actions.coi.EditLicenseAction"
+            scope="request"
+            validate="false">
+            <forward name="continue" 
+                     path="/basicEditCoiOrderItem.do"/>
+            <forward name="error" path="/basicEditCoiOrderItem.do"/>
+            <forward name="onHold" path="/orderHistory.do" />
+        </action>
+
+        <action path="/editSpecialLicense" 
+            type="com.copyright.ccc.web.actions.coi.EditLicenseAction"
+            scope="request"
+            validate="false">
+            <forward name="continue" 
+                     path="/specialEditCoiOrderItem.do"/>
+            <forward name="error" 
+                     path="/specialEditCoiOrderItem.do"/> 
+        </action>
+
+        <action path="/popupText" 
+            type="com.copyright.ccc.web.actions.PopupTextAction"
+            name="popupTextForm"
+            scope="request"
+            validate="false">
+            <forward name="continue" 
+                     path="/WEB-INF/jsp-modules/orderhistory/popupText.jsp"/>
+        </action>
+        
+        <action 
+            path="/popupTextTilesView" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="popupTextTilesView"
+        />
+        
+        <action path="/contextualHelp"
+            name="contextualHelpForm"
+            type="com.copyright.ccc.web.actions.ContextualHelpAction"
+            parameter="operation"
+            scope="request"
+            validate="false"
+        >
+            <forward name="showMain" path="/WEB-INF/jsp-modules/common/contextualHelp.jsp" />
+        </action>
+
+        <action path="/contactInfo"
+            name="rightsholderContactInfoForm"
+            type="com.copyright.ccc.web.actions.RightsholderContactInfoAction"
+            parameter="operation"
+            scope="request"
+            validate="false"
+        >
+            <forward name="contactInfo" path="/WEB-INF/jsp-modules/search/rightsholderContactInfo.jsp" />
+        </action>
+        
+        <!-- Begin Admin Application Action Mapping(s) -->
+        
+        <action path="/admin/home"
+            type="com.copyright.ccc.web.actions.admin.AdminHomeAction"
+            parameter="operation"
+            scope="request"
+            validate="false"
+        >
+            <forward name="showMain" path="adminHome" />
+        </action>
+        
+        <action path="/manageAccount" 
+            type="com.copyright.ccc.web.actions.ManageAccountAction"
+            name="manageAccountForm"
+            parameter="operation"
+            scope="request"
+            validate="false">
+            <forward name="continue" path="/manageAccountTileView.do"/>
+            <forward name="showRegistration" path="/showRegistration.do"/>
+        </action>
+
+<!-- Creditcard List action-->
+ <action path="/listCreditCards"
+            type="com.copyright.ccc.web.actions.CreditCardListAction"
+            name="creditCardListForm"
+            parameter="operation"
+            scope="session"
+            validate="false">
+
+            <forward name="success" path="/WEB-INF/jsp-modules/payment/creditCardList.jsp" />
+            <forward name="failure" path="/WEB-INF/jsp-modules/payment/creditCardList.jsp" />
+        </action>
+
+<!--  Special Order payment thorugh Modal Dialog -->
+ <action path="/checkUserLoggedInAJAX"
+            type="com.copyright.ccc.web.actions.AjaxMethodsAction"
+            parameter="operation"
+            scope="session"
+            validate="false">
+        </action>
+
+        <action path="/viewSpecialOrderPaymentModal"
+            type="com.copyright.ccc.web.actions.AcceptSpecialOrderPaymentAction"
+            name="acceptSpecialOrderPaymentForm"
+            parameter="operation"
+            scope="session"
+            validate="false">
+
+            <forward name="success" path="viewUISpecialOrderPaymentModalTile" />
+            <forward name="failure" path="viewUIActionErrorModalTile" />
+        </action>
+        <action path="/processSpecialOrderPaymentModal"
+            type="com.copyright.ccc.web.actions.AcceptSpecialOrderPaymentAction"
+            input="viewUIModalPaymentTile"
+            name="acceptSpecialOrderPaymentForm"
+            parameter="operation"
+            scope="session"
+            validate="true">
+
+        </action>
+
+
+
+        <!-- ********************************************************* -->
+        <!-- 2010-02-16 MSJ Allow admin user to view and pay invoices. -->
+
+        <action path="/viewUnpaidInvoices"
+            type="com.copyright.ccc.web.actions.ViewUnpaidInvoiceAction"
+            name="unpaidInvoiceForm"
+            parameter="operation"
+            scope="session"
+            validate="false">
+
+            <forward name="success" path="viewUnpaidInvoicesTile" />
+            <forward name="failure" path="/manageAccount.do" />
+        </action>
+        
+        <action path="/editUnpaidInvoices"
+            type="com.copyright.ccc.web.actions.EditUnpaidInvoiceAction"
+            name="unpaidInvoiceForm"
+            parameter="operation"
+            scope="session"
+            validate="false">
+
+            <forward name="success" path="viewUnpaidInvoicesTile" />
+            <forward name="failure" path="/manageAccount.do" />
+        </action>
+
+        <action path="/viewPaymentForm"
+            type="com.copyright.ccc.web.actions.ViewPaymentFormAction"
+            name="unpaidInvoiceForm"
+            parameter="operation"
+            scope="session"
+            validate="false">
+
+            <forward name="success" path="viewUIPaymentTile" />
+            <forward name="failure" path="/viewUnpaidInvoices.do" />
+        </action>
+        
+        <action path="/confirmInvoicePayment"
+            type="com.copyright.ccc.web.actions.ConfirmInvoicePaymentAction"
+            input="viewUIPaymentTile"
+            name="unpaidInvoiceForm"
+            parameter="operation"
+            scope="session"
+            validate="true">
+
+            <forward name="success" path="viewUIPaymentConfirmationTile" />
+            <forward name="failure" path="/viewPaymentForm.do" />
+        </action>
+
+        <action path="/payInvoiceAndNotify"
+            type="com.copyright.ccc.web.actions.PayInvoiceAndNotifyAction"
+            name="unpaidInvoiceForm"
+            parameter="operation"
+            scope="session"
+            validate="false">
+
+            <forward name="success" path="viewUIPaymentComplete" />
+            <forward name="failure" path="/viewPaymentForm.do" />
+        </action>
+
+        <!-- Anonymous Invoice Payment Flow -->
+        <!-- 
+            2012-11-16 MSJ
+            1a. get email address, 1b. get invoice # and amount, 
+            2. display invoice selection form, 3. display credit card form,
+            4. display confirmation/checkout, 5. display "receipt".
+        -->
+        <action path="/anonymousInvoicePaymentStepOne"
+            type="com.copyright.ccc.web.actions.AnonymousInvoicePaymentStepOne"
+            name="anonymousUnpaidInvoiceForm"
+            parameter="operation"
+            scope="session"
+            validate="false">
+
+            <forward name="success" path="anonymousInvoicePaymentStepOneTile" />
+            <forward name="failure" path="/manageAccount.do" />
+        </action>
+        <!-- Select Invoices -->
+        <action path="/anonymousInvoicePaymentStepTwo"
+            type="com.copyright.ccc.web.actions.AnonymousInvoicePaymentStepTwo"
+            name="anonymousUnpaidInvoiceForm"
+            parameter="operation"
+            scope="session"
+            validate="false">
+
+            <forward name="success" path="anonymousInvoicePaymentStepTwoTile" />
+            <forward name="failure" path="/anonymousInvoicePaymentStepOne.do" />
+        </action>
+        <!-- Credit Card -->
+        <action path="/anonymousInvoicePaymentStepThree"
+            type="com.copyright.ccc.web.actions.AnonymousInvoicePaymentStepThree"
+            name="anonymousUnpaidInvoiceForm"
+            parameter="operation"
+            scope="session"
+            validate="false">
+
+            <forward name="success" path="anonymousInvoicePaymentStepThreeTile" />
+            <forward name="failure" path="/anonymousInvoicePaymentStepTwo.do" />
+        </action>
+        <!-- Confirm -->
+        <action path="/anonymousInvoicePaymentStepFour"
+            type="com.copyright.ccc.web.actions.AnonymousInvoicePaymentStepFour"
+            input="viewUIPaymentTile"
+            name="anonymousUnpaidInvoiceForm"
+            parameter="operation"
+            scope="session"
+            validate="false">
+
+            <forward name="success" path="anonymousInvoicePaymentStepFourTile" />
+            <forward name="failure" path="/anonymousInvoicePaymentStepThree.do" />
+        </action>
+        <!-- Done! -->
+        <action path="/anonymousInvoicePaymentStepFive"
+            type="com.copyright.ccc.web.actions.AnonymousInvoicePaymentStepFive"
+            name="anonymousUnpaidInvoiceForm"
+            parameter="operation"
+            scope="session"
+            validate="false">
+
+            <forward name="success" path="anonymousInvoicePaymentStepFiveTile" />
+            <forward name="failure" path="/anonymousInvoicePaymentStepThree.do" />
+        </action>
+        
+        <!-- ********************************************************* -->
+        <!-- 2011-06-02 MSJ Allow admin user to manage credit card     -->
+        <!--                card information.                          -->
+
+        <action path="/manageCreditCards"
+            type="com.copyright.ccc.web.actions.ManageCreditCardsAction"
+            name="manageCreditCardsForm"
+            parameter="operation"
+            scope="session"
+            validate="false">
+
+            <forward name="success" path="manageCreditCardsTile" />
+            <forward name="failure" path="/manageAccount.do" />
+        </action>
+
+        <!-- ********************************************************* -->
+
+        <action path="/updateAddressBilling" 
+            type="com.copyright.ccc.web.actions.UpdateAddressBillingAction"
+            name="updateAddressBillingForm"
+            parameter="operation"
+            scope="request"
+            validate="false">
+            <forward name="continue" path="/manageAccountTileView.do"/>
+            <forward name="down" path="/manageAccount.do"/>
+            <forward name="showRegistration" path="/showRegistration.do"/>
+        </action>
+        
+        <action 
+            path="/manageAccountTileView" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="manageAccountTile"
+        />
+
+        <action path="/updateAddress" 
+            type="com.copyright.ccc.web.actions.UpdateAddressAction"
+            name="updateAddressForm"
+            scope="request"
+            validate="false">
+            <forward name="continue" path="/updateAddressTileView.do"/>
+        </action>
+        
+        <action path="/processAddress" 
+            type="com.copyright.ccc.web.actions.UpdateAddressAction"
+            name="updateAddressForm"
+            scope="request"
+            validate="true"
+            input="/updateAddress.do">
+            <forward name="continue" path="/updateAddressTileView.do"/>
+        </action>
+
+        <action 
+            path="/updateAddressTileView" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="updateAddressTile"
+        />
+
+        <action 
+            path="/admin/viewReports" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="/viewReports.do"
+        />
+        
+        <action path="/viewReports" 
+            type="com.copyright.ccc.web.actions.ViewReportsAction"
+            name="viewReportsForm"
+            scope="request"
+            validate="false" >
+            <forward name="continue" path="/admin/viewReportTileView.do"/>
+            <forward name="down" path="/manageAccount.do"/>
+        </action>
+        
+        <action 
+            path="/admin/viewReportTileView" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="viewReportTile"
+        />
+        
+        <action
+            path="/admin/viewPaidInvoiceReports"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="/viewPaidInvoiceReports.do"
+        />
+
+        <action path="/viewPaidInvoiceReports"
+            type="com.copyright.ccc.web.actions.ViewPaidInvoiceReportAction"
+            name="viewPaidInvoiceReportForm"
+            scope="request"
+            validate="false" >
+            <forward name="continue" path="/admin/viewPaidInvoiceReportView.do"/>
+            <forward name="down" path="/manageAccount.do"/>
+        </action>
+
+        <action
+            path="/admin/viewPaidInvoiceReportView"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="viewPaidInvoiceReport"
+        />
+
+        <action path="/admin/autoDunning"
+            name="autoDunningForm"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="/autoDunning.do"
+        />
+
+        <action path="/autoDunning"
+            name="autoDunningForm"
+            type="com.copyright.ccc.web.actions.admin.AutoDunningAction"
+            parameter="operation"
+            scope="request"
+            validate="true">
+            <forward name="showAutoDunning" path="/admin/showAutoDunning.do" />
+        </action>
+
+        <action
+            path="/admin/showAutoDunning"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="viewAutoDunning"
+        />
+
+        <action path="/admin/processReports" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="processReports"
+        />
+
+        <action path="/processReports" 
+            type="com.copyright.ccc.web.actions.ProcessReportsAction"
+            scope="request"
+            validate="false">
+            <forward name="number" path="/saveReportsByInvoiceNumber.do"/>
+            <forward name="orderDate" path="/saveReportsByOrderDate.do"/>
+            <forward name="invoiceDate" path="/saveReportsByInvoiceDate.do"/>
+            <forward name="sotDate" path="/saveReportsByStartOfTermDate.do"/>
+            <forward name="paidInvoice" path="/saveReportsByPaidInvoiceDate.do"/>
+            <!-- <forward name="paidInvoice" path="/saveReportsByPaidInvoiceDate.do"/> -->
+        </action>
+
+		<action path="/admin/saveReportsByPaidInvoiceDate"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="saveReportsByPaidInvoiceDate"
+         />
+
+        <action path="/saveReportsByPaidInvoiceDate"
+            type="com.copyright.ccc.web.actions.SavePaidInvoiceReportAction"
+            scope="request"
+            validate="true" 
+            name = "viewPaidInvoiceReportForm"
+            >
+            
+        </action>
+ 
+         <action path="/admin/saveReportsByInvoiceNumber" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="saveReportsByInvoiceNumber"
+         />
+
+        <action path="/saveReportsByInvoiceNumber" 
+            type="com.copyright.ccc.web.actions.SaveInvoiceNumReportAction"
+            name="viewReportsForm"
+            scope="request"
+            validate="true"
+            input="/WEB-INF/jsp-modules/admin/showReport.jsp">
+            <forward name="continue" path="/admin/viewReportTileView.do"/>
+        </action>
+        
+        <action path="/admin/saveReportsByInvoiceDate" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="saveReportsByInvoiceDate"
+        />
+        
+        <action path="/saveReportsByInvoiceDate" 
+            type="com.copyright.ccc.web.actions.SaveInvoiceDateReportAction"
+            name="viewReportsForm"
+            scope="request"
+            validate="true"
+            input="/WEB-INF/jsp-modules/admin/showReport.jsp">
+            <forward name="continue" path="/admin/viewReportTileView.do"/>
+        </action>
+        
+        <action path="/admin/saveReportsByOrderDate" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="saveReportsByOrderDate"
+        />
+        
+        <action path="/saveReportsByOrderDate" 
+            type="com.copyright.ccc.web.actions.SaveOrderDateReportAction"
+            name="viewReportsForm"
+            scope="request"
+            validate="true"
+            input="/WEB-INF/jsp-modules/admin/showReport.jsp">
+            <forward name="continue" path="/admin/viewReportTileView.do"/>
+        </action>
+        
+        <action path="/admin/saveReportsByStartOfTermDate" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="saveReportsByStartOfTermDate"
+        />
+        
+        <action path="/saveReportsByStartOfTermDate" 
+            type="com.copyright.ccc.web.actions.SaveStartofTermDateReportAction"
+            name="viewReportsForm"
+            scope="request"
+            validate="true"
+            input="/WEB-INF/jsp-modules/admin/showReport.jsp">
+            <forward name="continue" path="/admin/viewReportTileView.do"/>
+        </action>
+
+        <action path="/admin/showReport" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="showReport"
+        />
+
+        <action path="/showReport" 
+            type="com.copyright.ccc.web.actions.ShowReportAction"
+            name="viewReportsForm"
+            scope="request"
+            validate="true"
+            input="/WEB-INF/jsp-modules/admin/showReport.jsp">
+            <!-- TODO: Fix up with a tile when the layout is known -->
+            <forward name="continue" path="/WEB-INF/jsp-modules/admin/showReport.jsp"/>
+        </action>
+        
+        <action path="/admin/showPaidInvoiceReport"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="showPaidInvoiceReport"
+        />
+
+        <action path="/showPaidInvoiceReport"
+            type="com.copyright.ccc.web.actions.ShowPaidInvoiceReportAction"
+            name="viewPaidInvoiceReportForm"
+            scope="request"
+            validate="true"
+            input="/WEB-INF/jsp-modules/admin/showReport.jsp">
+            <!-- TODO: Fix up with a tile when the layout is known -->
+            <forward name="continue" path="/WEB-INF/jsp-modules/admin/showReport.jsp"/>
+        </action>
+
+        <!-- Begin Admin Application Action Mapping(s) -->
+
+        <action path="/admin/startEmulationForm"
+            name="emulationForm"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="startEmulationForm"
+        />
+
+        <action path="/admin/emulation"
+            name="emulationForm"
+            type="com.copyright.ccc.web.actions.admin.EmulationAction"
+            parameter="operation"
+            input="/admin/startEmulationForm.do"
+            scope="request"
+        >
+            <forward name="success" redirect="true" path="/home.do" />
+            <forward name="failure" path="/admin/startEmulationForm.do" />
+            <forward name="stop" path="/admin/home.do" />
+        </action>
+
+        <action path="/admin/userRolesForm"
+            name="userRolesForm"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="userRolesForm"
+        />
+
+        <action path="/admin/userRoles"
+            name="userRolesForm"
+            type="com.copyright.ccc.web.actions.admin.UserRolesAction"
+            parameter="operation"
+            input="/admin/userRolesForm.do"
+            scope="request"
+            validate="true"
+        >
+            <forward name="showMain" path="/admin/userRolesForm.do" />
+        </action>
+        
+        <action path="/admin/publisherMaintenance"
+	        name="publisherMaintenanceForm"
+		type="org.apache.struts.actions.ForwardAction"
+		parameter="/publisherMaintenance.do"
+	    /> 
+        
+        <action path ="/publisherMaintenance"
+            name="publisherMaintenanceForm"
+            type="com.copyright.ccc.web.actions.admin.PublisherMaintenanceAction"
+            parameter="operation"
+            input="/publisherMaintenance.do"
+            scope="session"
+         >
+           <forward name="success" path="/publisherMaintenance.do?operation=findPublishers"/>
+           <forward name="showMain" path="/admin/publisherMaintenancePageView.do" />
+           <forward name="newPublisher" path="/admin/editPublisher.do?operation=newPublisher" redirect="true"/>
+           <forward name="editPublisher" path="/admin/editPublisher.do?operation=editPublisher" redirect="true"/>
+         
+         </action>
+         
+         <action path="/admin/editPublisher"
+	 	        name="editPublisherActionForm"
+	 		type="org.apache.struts.actions.ForwardAction"
+	 		parameter="/editPublisher.do"
+                        scope="session"
+                        validate="false"
+	 	>
+	</action>
+         
+         <action path ="/editPublisher"
+	    name="editPublisherActionForm"
+            type="com.copyright.ccc.web.actions.admin.EditPublisherAction"
+	    parameter="operation"
+	    input="/admin/editPublisher.do"
+	    scope="session"
+	 >
+	 	<forward name="showMain" path="/admin/editPublisherPageView.do"/>
+	 	<forward name="success" path="/admin/publisherMaintenance.do?operation=findPublishers"/>   
+         </action>
+        
+        <action path="/admin/addPublisherSubaccount"
+                    name="editPublisherActionForm"
+                    type="org.apache.struts.actions.ForwardAction"
+                    parameter="/addPublisherSubaccount.do"
+        >
+	</action>
+        <action path="/addPublisherSubaccount"
+             name="editPublisherActionForm"
+             type="com.copyright.ccc.web.actions.admin.AddPublisherSubaccountAction"
+             parameter="operation"
+             input="/WEB-INF/jsp-modules/admin/addPublisherSubAccount.jsp"
+             scope="session"
+             >
+             <forward name="showMain" path="/WEB-INF/jsp-modules/admin/addPublisherSubaccount.jsp"/>
+             <forward name="success" path="/admin/editPublisher.do?operation=editPublisher"/>
+        </action>
+
+         <!-- End Admin Application Action Mapping(s) -->
+        
+        <!-- Begin Adjustments Application Action Mapping(s) -->
+        
+        <action path="/admin/adjustment/adjustment"
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="/adjustment/adjustment.do"
+        >
+        </action> 
+        
+        <action path="/adjustment/adjustment"
+            name="adjustmentForm"
+            type="com.copyright.ccc.web.actions.adjustment.AdjustmentAction"
+            parameter="operation"
+            scope="session"
+            validate="true"
+            input="/WEB-INF/jsp-modules/adjustment/adjustmentsMain.jsp"
+        >
+            <forward name="showMain" path="adjustmentsMainView" />
+            <forward name="showThankYou" path="adjustmentsThankYouView" />
+            <forward name="showList" path="adjustmentsListView" />
+            <forward name="showError" path="adjustmentsErrorView" />
+            <forward name="showOrderHistory" path="/admin/orderHistory.do" />
+        </action>
+         <!-- End Adjustments Application Action Mapping(s) -->
+         
+         <!-- Review COI RH Terms & Conditions -->
+         
+         <action path="/reviewTermsRL"
+            type="com.copyright.ccc.web.actions.coi.ReviewTermsRLAction"
+            name="rightsLinkQuickPriceActionForm" 
+            scope="request"
+            parameter="operation"
+            validate="false"
+        >
+          <forward name="forward" path="/reviewTermsRLTilesView.do"/>
+        </action>
+
+        <action 
+            path="/reviewTermsRLTilesView" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="reviewTermsRLTilesView"
+        />
+        
+         <action path="/reviewCoiTerms"
+            type="com.copyright.ccc.web.actions.coi.ReviewTermsAction"
+            name="reviewTermsActionFormCOI" 
+            scope="request"
+            parameter="operation"
+            validate="false"
+        >
+          <forward name="forward" path="/reviewCoiTermsTilesView.do"/>
+        </action>
+
+        <action 
+            path="/reviewCoiTermsTilesView" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="reviewCoiTermsTilesView"
+        />
+        
+        <action path="/reviewCoiTermsConfirm"
+            type="com.copyright.ccc.web.actions.coi.ReviewTermsConfirmAction"
+            name="reviewTermsActionFormCOI"
+            scope="request"
+            parameter="operation"
+            validate="false"
+        >
+          <forward name="forward" path="/reviewCoiTermsConfirmTilesView.do"/>
+        </action>
+        
+        <action 
+            path="/reviewCoiTermsConfirmTilesView" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="reviewCoiTermsConfirmTilesView"
+        />
+        
+        <action path="/showCoiCitation"
+            type="com.copyright.ccc.web.actions.coi.ReviewTermsConfirmAction"
+            name="reviewTermsActionFormCOI"
+            scope="request"
+            parameter="operation"
+            validate="false"
+        >
+          <forward name="showCitation" path="/showCoiCitationTilesView.do"/>
+        </action>
+        
+        <action 
+            path="/showCoiCitationTilesView" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="showCoiCitationTilesView"
+        />
+        
+        <!-- COI print friendly pages -->
+        
+        <action path="/printCoiConfirmPurchase"
+            name="reviewSubmitCartActionFormCOI" 
+            type="com.copyright.ccc.web.actions.coi.PrintConfirmPurchaseAction"
+            scope="session"
+            parameter="operation"
+            validate="true"
+        >
+            <forward name="showMain" path="printCoiConfirmPurchase" />
+        </action>
+    
+        <action path="/printOrder" 
+            type="com.copyright.ccc.web.actions.OrderViewAction"
+            name="orderViewActionForm"
+            scope="request"
+            validate="false">
+            <forward name="continue" path="printOrder"/>
+        </action>
+        
+        <!--COI end print friendly pages -->                  
+        
+        <action path="/googleBookPreview"
+            type="com.copyright.ccc.web.actions.GoogleBookPreviewAction"
+            name="googleBookPreviewForm"
+            scope="request"
+            parameter="operation"
+            validate="false"
+        >
+          <forward name="showBookPreview" path="/showBookPreviewTilesView.do"/>
+        </action>
+        
+        <action 
+            path="/showBookPreviewTilesView" 
+            type="org.apache.struts.actions.ForwardAction"
+            parameter="showBookPreviewTilesView"
+        />
+        
+        <!--  Update Cart -->
+        <action
+            path="/updateCart"
+            type="com.copyright.ccc.web.actions.UpdateCartAction"
+        >
+          <forward name="showCart" path = "/cart.do"/>
+        </action>
+        
+        <!-- Send Email to Emulated User -->
+        <action
+            path="/emulatedUserSendEmail"
+            type="com.copyright.ccc.web.actions.EmulatedUserEmailSendAction"
+            name="cartForm" scope="request"
+        >
+          <forward name="success" path="displaySubmitView"/>
+        </action>
+
+  </action-mappings>
+  
+  <controller
+		debug="3"
+		locale="true"
+		nocache="true"
+        pagePattern="$P"
+        processorClass="com.copyright.ccc.web.CC2RequestProcessor"
+    />
+
+    <message-resources parameter="ApplicationResources" />
+    <message-resources parameter="ContextualHelp" key="contextualHelp" />
+    <message-resources parameter="SearchInfo" key="searchInfo" />
+    
+    <message-resources key="adjustment" parameter="com.copyright.ccc.business.services.adjustment.AdjustmentResources" null="false" />
+    
+    <plug-in className="org.apache.struts.tiles.TilesPlugin">
+        <set-property property="definitions-config" value="/WEB-INF/tiles-config.xml" />
+        <!-- <set-property property="moduleAware" value="true"/> -->
+    </plug-in>
+  
+  <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property 
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml, /WEB-INF/validation.xml"/>
+        <set-property property="stopOnFirstError" value="false"/>
+  </plug-in>
+ 
+
+</struts-config>

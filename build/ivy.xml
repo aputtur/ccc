@@ -1,0 +1,9 @@
+<ivy-module version="2.0">
+    <info organisation="org.apache" module="svc-rightsResolver"/>
+    <dependencies>
+        <dependency name="svc-rlOrder" rev="2.0-001-03" org="com.copyright.ccc.rightslink" />
+        <dependency name="svc-rlUser" rev="2.0-001-03" org="com.copyright.ccc.rightslink" />
+        <dependency name="HtmlGenerator" rev="13.2-03" org="com.copyright.ccc.rightslink" />
+        <dependency name="RightslinkUiBase" rev="13.2-03" org="com.copyright.ccc.rightslink" />
+    </dependencies>
+</ivy-module>

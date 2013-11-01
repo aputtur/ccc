@@ -1,0 +1,646 @@
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+<!--
+  $Id: validator-rules.xml 108400 2013-02-19 20:02:34Z mjessop $
+
+   This file contains the default Struts Validator pluggable validator
+   definitions.  It should be placed somewhere under /WEB-INF and
+   referenced in the struts-config.xml under the plug-in element
+   for the ValidatorPlugIn.
+
+      <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property property="pathnames" value="/WEB-INF/validator-rules.xml,
+                                                  /WEB-INF/validation.xml"/>
+      </plug-in>
+
+   These are the default error messages associated with
+   each validator defined in this file.  They should be
+   added to your projects ApplicationResources.properties
+   file or you can associate new ones by modifying the
+   pluggable validators msg attributes in this file.
+
+   # Struts Validator Error Messages
+   errors.required={0} is required.
+   errors.minlength={0} can not be less than {1} characters.
+   errors.maxlength={0} can not be greater than {1} characters.
+   errors.invalid={0} is invalid.
+
+   errors.byte={0} must be a byte.
+   errors.short={0} must be a short.
+   errors.integer={0} must be an integer.
+   errors.long={0} must be a long.
+   errors.float={0} must be a float.
+   errors.double={0} must be a double.
+
+   errors.date={0} is not a date.
+   errors.range={0} is not in the range {1} through {2}.
+   errors.creditcard={0} is an invalid credit card number.
+   errors.email={0} is an invalid e-mail address.
+
+   Note: Starting in Struts 1.2.0 the default javascript definitions have
+         been consolidated to commons-validator. The default can be overridden
+         by supplying a <javascript> element with a CDATA section, just as
+         in struts 1.1.
+
+-->
+
+<form-validation>
+
+   <global>
+
+      <validator name="required"
+            classname="org.apache.struts.validator.FieldChecks"
+               method="validateRequired"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+                  msg="errors.required">
+            <javascript>
+                <![CDATA[
+                    function validateRequired(form, validationFormName) 
+                    { 
+                        return cccValidateRequired(form, validationFormName);
+                    }
+                ]]>
+            </javascript>
+      </validator>
+
+      <validator name="requiredif"
+                 classname="org.apache.struts.validator.FieldChecks"
+                 method="validateRequiredIf"
+                 methodParams="java.lang.Object,
+                               org.apache.commons.validator.ValidatorAction,
+                               org.apache.commons.validator.Field,
+                               org.apache.struts.action.ActionMessages,
+                               org.apache.commons.validator.Validator,
+                               javax.servlet.http.HttpServletRequest"
+                 msg="errors.required">
+            <javascript>
+                <![CDATA[
+                    function validateRequiredIf(form, validationFormName) 
+                    { 
+                        return true;
+                    }
+                ]]>
+            </javascript>
+      </validator>
+
+      <validator name="validwhen"
+          msg="errors.required"
+                 classname="org.apache.struts.validator.validwhen.ValidWhen"
+                 method="validateValidWhen"
+                 methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest">
+            <javascript>
+                <![CDATA[
+                    function validateValidWhen(form, validationFormName) 
+                    { 
+                        return true;
+                    }
+                ]]>
+            </javascript>
+      </validator>
+
+
+      <validator name="minlength"
+            classname="org.apache.struts.validator.FieldChecks"
+               method="validateMinLength"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends=""
+                  msg="errors.minlength">
+            <javascript>
+                <![CDATA[
+                    function validateMinLength(form, validationFormName) 
+                    { 
+                        return true;
+                    }
+                ]]>
+            </javascript>
+      </validator>
+
+
+      <validator name="maxlength"
+            classname="org.apache.struts.validator.FieldChecks"
+               method="validateMaxLength"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends=""
+                  msg="errors.maxlength">
+            <javascript>
+                <![CDATA[
+                    function validateMaxLength(form, validationFormName) 
+                    { 
+                        return true;
+                    }
+                ]]>
+            </javascript>
+      </validator>
+
+
+
+      <validator name="mask"
+            classname="org.apache.struts.validator.FieldChecks"
+               method="validateMask"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends=""
+                  msg="errors.invalid">
+            <javascript>
+                <![CDATA[
+                    function validateMask(form, validationFormName) 
+                    { 
+                        return cccValidateMask(form, validationFormName);
+                    }
+                ]]>
+            </javascript>
+      </validator>
+
+
+      <validator name="byte"
+            classname="org.apache.struts.validator.FieldChecks"
+               method="validateByte"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends=""
+                  msg="errors.byte">
+                <javascript>
+                <![CDATA[
+                    function validateByte(form, validationFormName) 
+                    { 
+                        return true;
+                    }
+                ]]>
+            </javascript>
+      </validator>
+
+
+      <validator name="short"
+            classname="org.apache.struts.validator.FieldChecks"
+               method="validateShort"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends=""
+                  msg="errors.short">
+                <javascript>
+                <![CDATA[
+                    function validateShort(form, validationFormName) 
+                    { 
+                        return true;
+                    }
+                ]]>
+            </javascript>
+      </validator>
+
+
+      <validator name="integer"
+            classname="org.apache.struts.validator.FieldChecks"
+               method="validateInteger"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends=""
+                  msg="errors.integer">
+            <javascript>
+                <![CDATA[
+                    function validateInteger(form, validationFormName) 
+                    { 
+                        return cccValidateInteger(form, validationFormName);
+                    }
+                ]]>
+            </javascript>
+       </validator>
+
+
+
+      <validator name="long"
+            classname="org.apache.struts.validator.FieldChecks"
+               method="validateLong"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends=""
+                  msg="errors.long">
+            <javascript>
+                <![CDATA[
+                    function validateLong(form, validationFormName) 
+                    { 
+                        return cccValidateLong(form, validationFormName);
+                    }
+                ]]>
+            </javascript>
+      </validator>
+
+
+      <validator name="float"
+            classname="org.apache.struts.validator.FieldChecks"
+               method="validateFloat"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends=""
+                  msg="errors.float">
+            <javascript>
+                <![CDATA[
+                    function validateFloat(form, validationFormName) 
+                    { 
+                        return true;
+                    }
+                ]]>
+            </javascript>
+      </validator>
+
+      <validator name="double"
+            classname="org.apache.struts.validator.FieldChecks"
+               method="validateDouble"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends=""
+                  msg="errors.double">
+            <javascript>
+                <![CDATA[
+                    function validateDouble(form, validationFormName) 
+                    { 
+                        return true;
+                    }
+                ]]>
+            </javascript>
+      </validator>
+
+
+      <validator name="date"
+            classname="org.apache.struts.validator.FieldChecks"
+               method="validateDate"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends=""
+                  msg="errors.date">
+            <javascript>
+                <![CDATA[
+                    function validateDate(form, validationFormName) 
+                    { 
+                        return cccValidateDate(form, validationFormName, '_date');
+                    }
+                ]]>
+            </javascript>
+      </validator>
+
+
+      <validator name="intRange"
+            classname="org.apache.struts.validator.FieldChecks"
+               method="validateIntRange"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends="integer"
+                  msg="errors.range">
+            <javascript>
+                <![CDATA[
+                    function validateIntRange(form, validationFormName) 
+                    { 
+                        return cccValidateIntRange(form, validationFormName);
+                    }
+                ]]>
+            </javascript>
+      </validator>
+
+
+      <validator name="floatRange"
+            classname="org.apache.struts.validator.FieldChecks"
+               method="validateFloatRange"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends="float"
+                  msg="errors.range">
+            <javascript>
+                <![CDATA[
+                    function validateFloatRange(form, validationFormName) 
+                    { 
+                        return true;
+                    }
+                ]]>
+            </javascript>
+      </validator>
+
+      <validator name="doubleRange"
+            classname="org.apache.struts.validator.FieldChecks"
+               method="validateDoubleRange"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends="double"
+                  msg="errors.range">
+            <javascript>
+                <![CDATA[
+                    function validateDoubleRange(form, validationFormName) 
+                    { 
+                        return true;
+                    }
+                ]]>
+            </javascript>
+      </validator>
+
+
+      <validator name="creditCard"
+            classname="org.apache.struts.validator.FieldChecks"
+               method="validateCreditCard"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends=""
+                  msg="errors.creditcard">
+            <javascript>
+                <![CDATA[
+                    function validateCreditCard(form, validationFormName) 
+                    { 
+                        return true;
+                    }
+                ]]>
+            </javascript>
+      </validator>
+
+
+      <validator name="email"
+            classname="org.apache.struts.validator.FieldChecks"
+               method="validateEmail"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends=""
+                  msg="errors.email">
+            <javascript>
+                <![CDATA[
+                    function validateEmail(form, validationFormName) 
+                    { 
+                        return true;
+                    }
+                ]]>
+            </javascript>
+      </validator>
+
+      <validator name="url"
+            classname="org.apache.struts.validator.FieldChecks"
+               method="validateUrl"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends=""
+                  msg="errors.url">
+            <javascript>
+                <![CDATA[
+                    function validateUrl(form, validationFormName) 
+                    { 
+                        return true;
+                    }
+                ]]>
+            </javascript>
+      </validator>
+
+     <!--
+       This simply allows struts to include the validateUtilities into a page, it should
+       not be used as a validation rule.
+     -->
+     <validator name="includeJavaScriptUtilities"
+            classname=""
+               method=""
+         methodParams=""
+              depends=""
+                  msg=""
+           jsFunction="org.apache.commons.validator.javascript.validateUtilities"/>
+
+    
+    <validator name="validateForCondition"
+                 classname="com.copyright.ccc.web.CCFieldChecks"
+                 method="validateForCondition"
+                 msg=""
+                 methodParams="java.lang.Object,
+                               org.apache.commons.validator.ValidatorAction,
+                               org.apache.commons.validator.Field,
+                               org.apache.commons.validator.Validator,
+                               javax.servlet.http.HttpServletRequest">
+        <javascript>
+            <![CDATA[
+                function validateForCondition(form, validationFormName) 
+                { 
+                    return cccValidateForCondition(form, validationFormName);
+                }
+            ]]>
+        </javascript>
+
+    </validator>
+    
+     <validator name="ccDate"
+            classname="com.copyright.ccc.web.CCFieldChecks"
+               method="validateCCDate"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends=""
+                  msg="errors.date">
+            <javascript>
+                <![CDATA[
+                    function validateCCDate(form, validationFormName) 
+                    { 
+                        return cccValidateCCDate(form, validationFormName);
+                    }
+                ]]>
+            </javascript>
+      </validator>
+      
+     <validator name="ccPriorDate"
+            classname="com.copyright.ccc.web.CCFieldChecks"
+               method="validateCCPriorDate"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends=""
+                  msg="errors.date">
+            <javascript>
+                <![CDATA[
+                    function validateCCPriorDate(form, validationFormName) 
+                    { 
+                        return cccValidateCCPriorDate(form, validationFormName);
+                    }
+                ]]>
+            </javascript>
+      </validator>
+      
+      <validator name="currentOrFutureYear"
+            classname="com.copyright.ccc.web.CCFieldChecks"
+               method="validateCurrentOrFutureYear"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends=""
+                  msg="errors.date">
+            <javascript>
+                <![CDATA[
+                    function validateCurrentOrFutureYear(form, validationFormName) 
+                    { 
+                        return cccValidateCurrentOrFutureYear(form, validationFormName);
+                    }
+                ]]>
+            </javascript>
+      </validator>
+      
+      <validator name="sixMonthsPrior"
+            classname="com.copyright.ccc.web.CCFieldChecks"
+               method="validateSixMonthsPrior"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends=""
+                  msg="errors.date">
+            <javascript>
+                <![CDATA[
+                    function validateSixMonthsPrior(form, validationFormName) 
+                    { 
+                        return cccValidateSixMonthsPrior(form, validationFormName);
+                    }
+                ]]>
+            </javascript>
+      </validator>
+
+      <validator name="tenMonthsLater"
+            classname="com.copyright.ccc.web.CCFieldChecks"
+               method="validateTenMonthsLater"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends=""
+                  msg="errors.date">
+            <javascript>
+                <![CDATA[
+                    function validateTenMonthsLater(form, validationFormName) 
+                    { 
+                        return cccValidateTenMonthsLater(form, validationFormName);
+                    }
+                ]]>
+            </javascript>
+      </validator>
+      
+      <validator name="standardNumber"
+            classname="com.copyright.ccc.web.CCFieldChecks"
+               method="validateStandardNumber"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends=""
+                  msg="errors.date">
+            <javascript>
+                <![CDATA[
+                    function validateStandardNumber(form, validationFormName) 
+                    { 
+                        return cccValidateStandardNumber(form, validationFormName);
+                    }
+                ]]>
+            </javascript>
+      </validator>
+      
+      <validator name="creditCardForType"
+            classname="com.copyright.ccc.web.CCFieldChecks"
+               method="validateCreditCardForType"
+         methodParams="java.lang.Object,
+                       org.apache.commons.validator.ValidatorAction,
+                       org.apache.commons.validator.Field,
+                       org.apache.struts.action.ActionMessages,
+                       org.apache.commons.validator.Validator,
+                       javax.servlet.http.HttpServletRequest"
+              depends=""
+                  msg="errors.date">
+            <javascript>
+                <![CDATA[
+                    function validateCreditCard(form, validationFormName) 
+                    { 
+                        return true;
+                    }
+                ]]>
+            </javascript>
+      </validator>
+        
+    
+   </global>
+
+</form-validation>

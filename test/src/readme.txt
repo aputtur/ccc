@@ -1,0 +1,1 @@
+All test code for CC2 should go here.

@@ -1,0 +1,4 @@
+CUSTOMER_NUMBER,CUSTOMER_NAME,EMAIL_RECIPIENT,EMAIL_ADDRESS,TOTAL_AMT_OVERDUE
+<#list overdueInvoiceSummary as invoice>
+<#if invoice.customerNumber?exists>${invoice.customerNumber?c}</#if>,<#if invoice.customerName?exists>"${invoice.customerName?string}"</#if>,<#if invoice.adminName?exists>"${invoice.adminName?string}"<#elseif invoice.billToName?exists>"${invoice.billToName?string}"<#else> </#if>,<#if invoice.adminAddress?exists>"${invoice.adminAddress?string}"<#elseif invoice.billToAddress?exists>"${invoice.billToAddress?string}"<#else>""</#if>,<#if invoice.totalInvoiceAmount?exists>${invoice.totalInvoiceAmount?c}</#if>
+</#list>

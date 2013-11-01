@@ -1,0 +1,20 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+    
+<struts>
+ 	
+	<package name="adjustment" extends="copyrightcom-default" namespace="/om/adjust">
+		
+	<action name="adjustmentHome" class="com.copyright.ccc.web.actions.ordermgmt.AdjustmentHomeAction">
+    		<result>adjustmentHome</result>
+    		<result name="input">adjustmentHome</result>
+    		<result name="redirect" type="redirectAction">
+    			<param name="actionName">adjustmentHome</param>
+    		</result>
+    	</action>
+    	
+    	   					   		
+	</package>
+				
+</struts>

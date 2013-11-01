@@ -1,0 +1,132 @@
+/* Popup */
+#popup_pane {
+    border: 0px;
+    width:412px;
+    margin: 0px;
+    padding:0px;
+}
+
+#popup_wrapper {
+    background: url(/media/images/popup-shadow-repeat.GIF) repeat-y 401px 0px;
+    width:412px;
+    float:left;
+    border:0px;
+    margin:0px;
+    padding-left:1px;
+    padding-right:10px;
+}
+
+#popup_inner {
+    border-left: solid 1px #B2B2B2;
+    border-right: solid 1px #B2B2B2;
+    border-top: solid 4px #92183B;
+    width: 401px;
+    text-align:left;
+    margin:0px;
+    padding:0px;
+    float:left;
+}
+
+#popup_inner h1 {
+    width: 391px;
+    background: #f4f1e8;
+    color: #666;
+    padding: 5px;
+    border-bottom: 3px solid #666666 ;
+    float:left;
+    margin:0px;
+}
+
+#popup-body {
+    background: #edf0f4;
+    float:left;
+    width:391px;
+    padding:0px 5px 10px 5px;
+    margin:0px;
+}
+
+
+#popup-body td{
+    font-size: 11px;
+    font-weight: bold;
+}
+
+#popup-close {
+    width:401px;
+    background: #edf0f4;
+    text-align: center;    
+}
+
+#popup {
+    width:401px;
+    margin:0px;
+    padding:0px;
+}
+
+#popup-body h2 {
+    color: #316DB7;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: -18px;
+}
+
+#popup-body li {
+    font-size: 11px;
+}
+
+#popup-body p {
+    font-size: 11px;
+    padding:0px;
+    margin:0px;
+    line-height:18px;
+}
+#popup-body p.larger {
+    font-size: 12px;
+}
+
+
+#popup_bottomcorners {
+    background: url(/media/images/pop-up-drop-shadow.gif) no-repeat 0px 0px;
+    height: 18px;
+    width:412px;
+    margin:0px;
+    padding:0px;
+    float:left;
+    border:0px;
+}
+
+#footer_popup {
+    text-align: right;
+    padding: 5px 10px 0px 0px;
+}
+
+#popup ul {
+    list-style-type: none;
+}
+
+#popup ul li
+{
+    background: url(/media/images/bullet_red.gif);
+    background-repeat: no-repeat;
+    background-position: 0 0.4em;
+    margin-left:-1.5em;
+    padding-left: 1em;
+    color: black;
+}
+
+.add_cart {
+
+	padding: 17px 8px 18px 8px;
+
+	text-align:right;
+
+	background-color: #E8EBEF;
+
+	border: 1px solid #666666;
+
+	font-size: 11px;
+
+	font-weight:bold;
+
+	}
+

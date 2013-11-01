@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?> 
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd"> 
+
+<tiles-definitions>
+    
+    <!-- adjustment page layouts -->
+	    	
+	<definition  name="adjustmentHome"  extends=".adjustmentContent"  >
+		<put-attribute name="pageTitle" value="Order Management - Adjustments"></put-attribute>
+		<put-attribute name="pageContent" value="/WEB-INF/jsp-modules-s2/ordermgmt/adjustment/adjustmentHome.jsp"></put-attribute>
+	</definition>
+	
+	<definition  name="searchAdjustments"  extends=".adjustmentContent"  >
+		<put-attribute name="pageTitle" value="Adjustments"></put-attribute>
+		<put-attribute name="pageContent" value="/WEB-INF/jsp-modules-s2/ordermgmt/adjustment/searchAdjustments.jsp"></put-attribute>
+	</definition>
+	
+
+	<definition name=".ajaxWindowContent" template="/WEB-INF/jsp-modules-s2/ordermgmt/ajaxLayout.jsp">
+		<put-attribute name="pageContent" value="REPLACE_THIS"></put-attribute>
+	</definition>
+	
+	        	
+	<definition  name="adjustmentMgmt"  extends=".orderHistoryContent"  >
+		<put-attribute name="pageTitle" value="Order Management - Adjustments"></put-attribute>
+		<put-attribute name="pageContent" value="/WEB-INF/jsp-modules-s2/ordermgmt/adjustment/adjustmentMgmt.jsp"></put-attribute>
+	</definition>
+
+	<definition  name="adjViewExpandedDetail"  extends=".ajaxWindowContent"  >
+		<put-attribute name="pageContent" value="/WEB-INF/jsp-modules-s2/ordermgmt/adjustment/include/adjViewOneDetailLong.jsp"></put-attribute>
+	</definition>
+</tiles-definitions>

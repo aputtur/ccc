@@ -1,0 +1,150 @@
+/*Adjustments App - CSS artifacts*/
+
+fieldset{
+  border: 1px solid;
+	border-color: #c0c0c0;
+  padding: 0px;
+}
+
+legend { 
+  font-weight: bold;
+  font-size: 11pt;
+  color: #4B7097;
+  padding: 5px;
+}
+
+input, select{ font-family: Verdana;
+  font-size: 8pt;
+}
+
+td{ 
+    white-space : nowrap;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+td.summaryCell{
+  background-color: #e7eff4;
+}
+
+td.notAdjustableCell{
+  text-align: left;
+  padding-left: 15px; 
+  color: #00207A; 
+  background-color: /*#FFF0BF  #f6dc92*/ #FFF0BF;
+}
+
+td.summaryTotalsCell{
+  border-top: solid gray 1.5px;
+  font-weight: bold;
+  background-color: #4B7097; 
+  color: #FFFFFF;
+}
+
+th{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #4B7097;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+h1{
+  font-size: 12pt;
+  text-transform: none;
+  color: #00207A;
+}
+
+a{
+  color: #990000;
+  text-decoration: none;
+}
+
+a:visited{
+  color: #990000;
+  text-decoration: none;
+}
+
+a:hover{
+  color: inherit;
+  text-decoration: underline;
+}
+
+.container { 
+  padding: 10px;
+}
+
+.origAdjustCell{
+  border-bottom: solid #ABADA3 1.5px;
+  font-weight: bold;
+  /*background-color: #ABADA3;*/
+}
+
+.prevAdjustCell{
+ /* background-color: #C5C6BC;*/
+}
+
+.currentAdjustmentRow{
+  background-color: #e7eff4;
+}
+
+.prevAdjustTotalCell{
+  border-top: solid #C5C6BC 0.5px;
+  border-bottom: solid #ABADA3 1.5px;
+  /*background-color: #C5C6BC;*/
+}
+
+.currAdjustCell{
+ /* background-color: #C1C69D;*/
+}
+
+.totalsCell{
+  border-top: solid gray 1.5px;
+  font-weight: bold;
+  background-color: #4B7097; 
+  color: /*#FFFFFF #dddd77 #ffffcc*/  #f6dc92;
+}
+
+.adjustmentInput{ 
+  width: 50px;
+  text-align: center;
+}
+
+.rowEven{
+  background-color: #FFFFFF;
+}
+
+.rowOdd{
+   background-color: #FFFFFF;
+}
+
+/* Admin mode - Begin */
+
+span#cart_manageaccount_help_links{
+}
+
+div#titlebar{
+  display: none;
+}
+
+div#navigation{
+  visibility: hidden;
+  height: 0px;
+}
+
+div#wrapper{
+  width: 880px;
+  border-bottom:  solid 1px #B2B2B2;
+}
+
+div#bottomcorners{
+  display: none;
+}
+
+span.distributed{
+  color:red; 
+  font-weight: bold;
+}
+
+/* Admin mode - End */

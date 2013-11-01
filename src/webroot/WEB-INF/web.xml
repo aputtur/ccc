@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:j2ee="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.5"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                       http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+                       
+    <display-name>CC2</display-name>
+    <description>Deployment descriptor for the CC3 (copyright.com 3.0) web application</description>
+
+
+    <listener>
+      	<listener-class>com.copyright.ccc.config.WWWServletContextListener</listener-class>
+    </listener>
+	<listener>
+	  	<listener-class>com.copyright.ccc.business.security.CCSessionListener</listener-class>
+	</listener>
+
+
+	<filter>
+		<filter-name>CCFilter</filter-name>
+		<filter-class>com.copyright.ccc.business.security.UserSessionFilter</filter-class>
+	</filter>
+
+	<filter>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<filter-class>com.copyright.ccc.web.urlrewrite.ClasspathConfURLRewriteFilter</filter-class>
+		<init-param>
+            <param-name>confReloadCheckInterval</param-name>
+            <param-value>-1</param-value>  <!-- do not reload  -->
+        </init-param>
+        <init-param>
+            <param-name>confPath</param-name>
+            <param-value>ccc-urlrewrite.xml</param-value> <!-- this file will be on classpath -->
+        </init-param>
+	</filter>
+	
+ 	<filter>
+  		<filter-name>struts2</filter-name>
+  		<filter-class>org.apache.struts2.dispatcher.FilterDispatcher</filter-class>
+ 	</filter>
+	
+	<filter> 
+		<filter-name>action2-cleanup</filter-name> 
+		<filter-class>org.apache.struts2.dispatcher.ActionContextCleanUp</filter-class> 
+	</filter> 
+	
+	<filter>
+            <filter-name>OUEFilter</filter-name>
+            <filter-class>com.copyright.ccc.oue.client.web.OpenUrlExtensionFilter</filter-class>
+    </filter>
+      
+    <filter-mapping>
+            <filter-name>OUEFilter</filter-name>
+            <url-pattern>/*</url-pattern>
+    </filter-mapping>
+	
+ 	<listener>
+  		<listener-class>org.apache.struts2.tiles.StrutsTilesListener</listener-class>
+ 	</listener>
+ 	
+ 	<context-param>
+		<param-name>org.apache.tiles.impl.BasicTilesContainer.DEFINITIONS_CONFIG</param-name>
+		<param-value>
+			/WEB-INF/jsp-modules-s2/ordermgmt/ordermgmt-tiles.xml,
+			/WEB-INF/jsp-modules-s2/ordermgmt/adjustment/adjustment-tiles.xml,
+			/WEB-INF/jsp-modules-s2/ordermgmt/orderhistory/orderhistory-tiles.xml,
+			/WEB-INF/jsp-modules-s2/ordermgmt/research/research-tiles.xml,
+			/WEB-INF/jsp-modules-s2/ordermgmt/neworder/neworder-tiles.xml,
+			/WEB-INF/jsp-modules-s2/ordermgmt/remote/remote-tiles.xml,
+		</param-value>
+	</context-param>
+
+	<filter-mapping>
+		<filter-name>CCFilter</filter-name>
+		<url-pattern>/home.do</url-pattern>
+		
+		<!-- 
+		     This special action only will allow
+		     the FORWARD dispatcher; needed because
+		     of home page URL rewrite.
+		 -->
+		 
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>CCFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+  		<url-pattern>*.action</url-pattern>
+	</filter-mapping>
+
+ 	<filter-mapping>
+  		<filter-name>struts2</filter-name>
+  		<url-pattern>*.action</url-pattern>
+ 	</filter-mapping>
+
+	<filter-mapping> 
+		<filter-name>action2-cleanup</filter-name> 
+		<url-pattern>*.action</url-pattern> 
+	</filter-mapping>
+
+	<filter-mapping>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<url-pattern>/loginFormRedirect.do</url-pattern>
+		
+		<!-- 
+		     This special action only will allow
+		     the FORWARD dispatcher.  See note below.
+		 -->
+		
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+
+
+
+	<filter-mapping>
+		<filter-name>UrlRewriteFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		
+		<!-- 
+		     Note: the standard example from tuckey.org
+		     calls for both a FORWARD and REQUEST dispatcher.
+		     
+		     Because of the design of the home page URL
+		     rewrite rules, using a FORWARD dispatcher
+		     will cause an infinite loop, so we will not
+		     use that dispatcher here.
+		     
+		     tmckinney 2009.08.20
+		 -->
+		
+	</filter-mapping>
+
+
+    
+    <servlet>
+        <servlet-name>dispatcher</servlet-name>
+        <servlet-class>com.copyright.ccc.web.CCDispatcher</servlet-class>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>action</servlet-name>
+        <servlet-class>com.copyright.ccc.web.CCActionServlet</servlet-class>
+        <init-param>
+            <param-name>config</param-name>
+            <param-value>/WEB-INF/struts-config.xml</param-value>
+        </init-param>
+    </servlet>
+    
+    <servlet>
+        <servlet-name>QuartzInitializer</servlet-name>
+        <servlet-class>org.quartz.ee.servlet.QuartzInitializerServlet</servlet-class>
+        <init-param>
+            <param-name>shutdown-on-unload</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <init-param>
+            <param-name>start-scheduler-on-load</param-name>
+            <param-value>true</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <!--  
+    	AutoDunning servlet. The initialization of this servlet 
+    	is dependent on the QuartzInitializer having already been initialized. 
+    	As a result, this servlets load-on-startup value must be
+     	numerically greater than that of the QuartzInitializerServlet. 
+   	-->
+    <servlet>
+        <servlet-name>AutoDunningJobSubmitterServlet</servlet-name>
+        <servlet-class>com.copyright.ccc.quartz.services.AutoDunningJobSubmitterServlet</servlet-class>
+        <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>RequestTitleJobSubmitterServlet</servlet-name>
+        <servlet-class>com.copyright.ccc.quartz.services.RequestTitleJobSubmitterServlet</servlet-class>
+        <load-on-startup>3</load-on-startup>
+    </servlet>    
+    
+    <servlet-mapping>
+        <servlet-name>action</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>dispatcher</servlet-name>
+        <url-pattern>/dispatcher</url-pattern>
+    </servlet-mapping>
+    
+    <!-- session timeout of 45 min.  See CC2 functional specs: User Timeout.doc  -->
+    <session-config>
+        <session-timeout>45</session-timeout>
+    </session-config>
+    <mime-mapping>
+        <extension>html</extension>
+        <mime-type>text/html</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>txt</extension>
+        <mime-type>text/plain</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>pdf</extension>
+        <mime-type>application/pdf</mime-type>
+    </mime-mapping>
+    
+
+    <error-page>
+        <error-code>400</error-code>
+        <location>/error400.do</location>
+    </error-page>
+    <error-page>
+        <error-code>401</error-code>
+        <location>/error401.do</location>
+    </error-page>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/error403.do</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error404.do</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error500.do</location>
+    </error-page>
+
+  
+    <security-constraint>
+        <web-resource-collection>
+
+            <web-resource-name>Authentication Needed</web-resource-name>
+            
+            <!-- Rightslink actions -->
+            <url-pattern>/rlQuickPriceLogin.do</url-pattern>
+            
+            <!-- checkout actions -->
+            <url-pattern>/selectPaymentType.do</url-pattern>
+            <url-pattern>/reviewSubmitCart.do</url-pattern>
+            <url-pattern>/printConfirmPurchase.do</url-pattern>
+            
+            <url-pattern>/selectCoiPaymentType.do</url-pattern>
+            <url-pattern>/reviewCoiSubmitCart.do</url-pattern>
+            <url-pattern>/printCoiConfirmPurchase.do</url-pattern>
+            
+            <!-- order history actions -->
+            <url-pattern>/orderHistory.do</url-pattern>
+            <url-pattern>/orderDetail.do</url-pattern>
+            <url-pattern>/orderView.do</url-pattern>
+            <url-pattern>/processOrderHistory.do</url-pattern>
+            <url-pattern>/processOrderDetail.do</url-pattern>
+            <url-pattern>/processOrderView.do</url-pattern>
+            <url-pattern>/orderCandel.do</url-pattern>
+            <url-pattern>/licenseCancel.do</url-pattern>
+            <url-pattern>/copyLicense.do</url-pattern>
+            <url-pattern>/copyOrder.do</url-pattern>
+            <url-pattern>/copyPurchase.do</url-pattern>
+            <url-pattern>/deleteOrder.do</url-pattern>
+            <url-pattern>/editCourseInfo.do</url-pattern>
+            <url-pattern>/editSpecialLicense.do</url-pattern>
+            <url-pattern>/printOrder.do</url-pattern>
+
+            <!-- activity report actions - Many now under /admin/* section -->
+            <url-pattern>/saveReportByInvoiceNumber.do</url-pattern>
+            <url-pattern>/viewReports.do</url-pattern>
+            
+
+            <!-- login related actions -->
+            <url-pattern>/loginBounce.do</url-pattern>
+	    <url-pattern>/displayRegisterView</url-pattern>
+	    <url-pattern>/autoLoginPhaseTwo.do</url-pattern>
+
+            <!-- CC administration actions -->
+            <url-pattern>/admin/*</url-pattern>
+            <url-pattern>/adjustment/*</url-pattern>
+          
+            <url-pattern>/om/*</url-pattern>
+
+            <!-- Manage Account Update Billing Address -->
+            <url-pattern>/showRegistration.do</url-pattern>
+            <url-pattern>/showIndRegistration.do</url-pattern>
+
+            <url-pattern>/changePasswordForm.do</url-pattern>
+            <url-pattern>/changePassword.do</url-pattern>
+
+            <url-pattern>/updateAddressBilling.do</url-pattern>
+            <url-pattern>/updateEmailAddress.do</url-pattern>
+
+            <!-- Manage Account Unpaid Invoices -->
+            <url-pattern>/viewUnpaidInvoices.do</url-pattern>
+            <url-pattern>/viewPaymentForm.do</url-pattern>
+            <url-pattern>/confirmInvoicePayment.do</url-pattern>
+            <url-pattern>/payInvoiceAndNotify.do</url-pattern>
+            <url-pattern>/manageCreditCards.do</url-pattern>
+            
+            <!--  Pay Special order by credit card -->
+            <url-pattern>/viewSpecialOrderPaymentModal.do</url-pattern>
+            <url-pattern>/listCreditCards.do</url-pattern>
+            <!-- Update Cart -->
+            <url-pattern>/updateCart.do</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>ccc_ccc</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/login.do</form-login-page>
+            <form-error-page>/loginRetry.do</form-error-page>
+        </form-login-config>
+    </login-config>
+
+	<!-- Using presently configured JBoss login-config.xml, 
+	     this role name is equal to the LDAP group name.
+	     
+	     login-config.xml maps this role to LDAP
+	     Groups node. -->
+    <security-role>
+        <role-name>ccc_ccc</role-name>
+    </security-role>
+</web-app>

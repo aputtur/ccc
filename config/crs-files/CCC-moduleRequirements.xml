@@ -1,0 +1,25 @@
+<moduleRequirements>
+  <module name="CCC" version="@version.number@"/>
+  <resources>
+    <resourceDescriptor name="svc-rest-openUrlExtensions" version="1.0"/>
+    <resourceDescriptor name="svcArTransaction.transaction" version="2.0"/>
+    <resourceDescriptor name="svcCentralQueue.cq" version="2.6"/>
+    <resourceDescriptor name="svcExtEmail.send" version="1.6"/>
+    <resourceDescriptor name="svcLdapUser.ldap" version="3.1"/>
+    <resourceDescriptor name="svcOrder.cart" version="2.5"/>
+    <resourceDescriptor name="svcOrder.order" version="2.5"/>
+    <resourceDescriptor name="svcRLOrders.order" version="2.0"/>
+    <resourceDescriptor name="svcRights.rights" version="1.6"/>
+    <resourceDescriptor name="svcRightsResolver.rp" version="1.11"/>
+    <resourceDescriptor name="svcRightsResolver.rr" version="1.11"/>
+    <resourceDescriptor name="svcRlUser.user" version="2.0"/>
+    <resourceDescriptor name="svcSearchRetrieval.searchRetrieve" version="1.4"/>
+    <resourceDescriptor name="svcTelesales.telesales" version="2.9"/>
+    <resourceDescriptor name="svcTelesales.telesalesComposite" version="2.9"/>
+    <resourceDescriptor name="svcTelesales.telesalesRightsholder" version="2.9"/>
+    <resourceDescriptor name="svcTf.tf" version="2.7"/>
+    <resourceDescriptor name="svcUserInfo.accessControl" version="1.5"/>
+    <resourceDescriptor name="svcUserInfo.cyberSource" version="1.5"/>
+    <resourceDescriptor name="svcWorksRemote.search" version="1.6"/>
+  </resources>
+</moduleRequirements>

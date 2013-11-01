@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?> 
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd"> 
+
+<tiles-definitions>
+    
+    <!-- order history page layouts -->
+    <definition name=".ohEditViewLayout" template="/WEB-INF/jsp-modules-s2/ordermgmt/omLayout.jsp">
+        <put-attribute name="pageTitle" value="REPLACE_THIS" type="string" />
+        <put-attribute name="topMenu" value="/WEB-INF/jsp-modules-s2/ordermgmt/orderhistory/viewOrderTopMenu.jsp"/>
+        <put-attribute name="pageContent" value="REPLACE_THIS" />
+        <put-attribute name="footer" value="/WEB-INF/jsp-modules-s2/ordermgmt/omFooter.jsp"/>
+    </definition>
+    
+	<definition  name="orderHistoryHome"  extends=".ohEditViewLayout"  >
+		<put-attribute name="pageTitle" value="Order Management - History"></put-attribute>
+		<put-attribute name="pageContent" value="/WEB-INF/jsp-modules-s2/ordermgmt/orderhistory/orderHistoryHome.jsp"></put-attribute>
+	</definition>
+        	
+	<definition  name="viewOrderHistory"  extends=".orderHistoryContent"  >
+		<put-attribute name="pageTitle" value="Order Management - View Order History"></put-attribute>
+		<put-attribute name="pageContent" value="/WEB-INF/jsp-modules-s2/ordermgmt/orderhistory/viewOrderHistory.jsp"></put-attribute>
+	</definition>
+	
+	<definition  name="viewInvoicedOrderHistory"  extends=".orderHistoryContent"  >
+		<put-attribute name="pageTitle" value="Order Management - View Invoiced Order History"></put-attribute>
+		<put-attribute name="pageContent" value="/WEB-INF/jsp-modules-s2/ordermgmt/orderhistory/viewInvoicedOrderHistory.jsp"></put-attribute>
+	</definition>
+		
+	<definition  name="searchOrder"  extends=".orderHistoryContent"  >
+		<put-attribute name="pageTitle" value="Order Data"></put-attribute>
+		<put-attribute name="pageContent" value="/WEB-INF/jsp-modules-s2/ordermgmt/orderhistory/searchOrder.jsp"></put-attribute>
+	</definition>
+	
+	<definition  name="searchOrdersForAdjustments"  extends=".orderHistoryContent"  >
+		<put-attribute name="pageTitle" value="Order Adjustment"></put-attribute>
+		<put-attribute name="pageContent" value="/WEB-INF/jsp-modules-s2/ordermgmt/orderhistory/searchOrdersForAdjustments.jsp"></put-attribute>
+	</definition>
+	
+	<definition name=".ajaxWindowContent" template="/WEB-INF/jsp-modules-s2/ordermgmt/ajaxLayout.jsp">
+		<put-attribute name="pageContent" value="REPLACE_THIS"></put-attribute>
+	</definition>
+	
+	<definition  name="viewExpandedDetail"  extends=".ajaxWindowContent"  >
+		<put-attribute name="pageContent" value="/WEB-INF/jsp-modules-s2/ordermgmt/orderhistory/include/viewOneDetailLong.jsp"></put-attribute>
+	</definition>
+	
+	<definition  name="viewDetailAuditHistory" extends=".omLayoutNoLink">
+		<put-attribute name="topMenu" value=""/>
+		<put-attribute name="pageTitle" value="Detail History"></put-attribute>
+		<put-attribute name="pageContent" value="/WEB-INF/jsp-modules-s2/ordermgmt/orderhistory/include/storedInTf/viewDetailAuditHistory.jsp"></put-attribute>
+		<put-attribute name="footer" value=""/>
+        
+	</definition>
+	
+	<definition  name="viewBundleAuditHistory" extends=".omLayoutNoLink">
+		<put-attribute name="topMenu" value=""/>
+		<put-attribute name="pageTitle" value="Project History"></put-attribute>
+		<put-attribute name="pageContent" value="/WEB-INF/jsp-modules-s2/ordermgmt/orderhistory/include/storedInTf/viewBundleAuditHistory.jsp"></put-attribute>
+		<put-attribute name="footer" value=""/>
+        
+	</definition>
+
+</tiles-definitions>

@@ -1,0 +1,110 @@
+
+.item-details td {
+
+        padding: 10px 10px 10px 0px;
+        
+}
+
+.callout-specialorder td {
+
+    background-color: #CCC;
+
+}
+
+
+.item-details td.ohmiddle {
+
+	padding-right: 0px;
+
+}
+
+.item-details td.ohleft
+{
+    padding-left:15px;
+}
+
+.item-details td.order_total {
+
+	padding: 17px 8px 18px 8px;
+
+	text-align:right;
+
+	background-color: #BBC4D0;
+
+	border: 1px solid #666666;
+
+	font-size: 14px;
+
+	font-weight:bold;
+
+	}
+
+.billing_status{
+
+	border: 1px solid #666666;
+
+	background-color: #E8EBEF;
+
+	padding: 5px;
+
+	text-align:center;
+
+}
+
+td.ohorder_total_print_cell 
+{
+    padding: 0px;
+}
+
+.ohorder_total_print {
+
+	text-align:right;
+        
+	font-size: 14px;
+
+	font-weight:bold;
+
+	padding: 0px 8px 0px 8px;
+
+	}
+
+
+
+.ohorder_total_print span {
+
+	color: #02387A;
+        
+        text-align:right;
+
+	}
+
+
+
+.ohorder_total_print span.smtypeblack {
+
+	color: black;
+
+	font-size: 9px;
+
+	font-weight: normal;
+        
+        text-align:right;
+
+	}
+
+.search-result-basic td{
+
+	border-top: solid 1px #CCC;
+
+}
+
+@media print {
+
+    .noPrint { display:none; }
+
+}
+
+
+
+
+

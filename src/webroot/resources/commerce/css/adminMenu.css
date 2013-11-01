@@ -1,0 +1,81 @@
+
+.menuBody{
+	position:absolute;
+	visibility: hidden;
+	border:1px solid #FFFFFF;
+	border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-left-width: 0px;
+	font:normal 11px Verdana;
+	line-height: 18px;
+	z-index: 10000000000000000;
+	background-color: #EEEECC;
+	width: 200px;
+  overflow: hidden;
+}
+
+.menuBody a{
+  
+	width: 100%;
+  
+	display: block;
+	text-indent: 3px;
+	border-bottom: 1px solid #FFFFFF;
+	padding: 3px;
+	text-decoration: none;
+	color: #000000;
+	text-indent: 5px;
+	
+}
+
+
+.menuBody a:hover{ /*hover background color*/
+	background-color:#DDDD77;
+	font-weight: normal;
+    color: black;
+    text-decoration: none;
+}
+
+.menuComponentTable{
+  border-width: 0px;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.menuCellActive{
+  font-family: verdana, geneva, arial;
+  text-decoration: none;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #DDDD77; 
+}
+
+.menuCellActive a{
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menuCellInactive{
+  font-family: verdana, geneva, arial;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  background-color: #EEEECC;
+  color: black;
+}
+
+.menuCellInactive a{
+  text-decoration: none;
+  font-weight: bold;
+  color: #000000;
+}

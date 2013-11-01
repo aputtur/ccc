@@ -1,0 +1,9 @@
+alter table CCC_USER add (
+    AUTO_ACCEPT_SPORDER CHAR(1 BYTE) DEFAULT 'N' NOT NULL
+);
+
+
+ Update CCC_USER SET AUTO_ACCEPT_SPORDER='Y' Where User_ID in
+ (Select User_ID  from CCC_USER_REQUEST_CLIENT where AUTO_ACCEPT_SPORDER='Y');
+ 
+ COMMIT;

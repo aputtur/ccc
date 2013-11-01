@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 3.2//EN"
+        "http://www.tuckey.org/res/dtds/urlrewrite3.2.dtd">
+
+<!--
+
+    Configuration file for UrlRewriteFilter
+    http://tuckey.org/urlrewrite/
+
+-->
+<urlrewrite use-query-string="true">
+
+    <rule>
+      <note>
+        Strips legacy context root /ccc from incoming request,
+        thereby allowing old bookmarks containing /ccc to
+        continue to function.
+      </note>
+      <from>^/ccc/(.*)</from>
+      <to type="permanent-redirect" last="true">/$1</to>
+    </rule>
+
+    <rule>
+      <note>
+        WT.mc_id to utm_source...
+      </note>
+      <from>^(.*)WT.mc_id(.*)$</from>
+      <to>$1utm_source$2&amp;utm_campaign=PD&amp;utm_medium=WEB</to>
+    </rule>
+    
+    <rule>
+      <note>
+        Redirects explicit requests for /home.do
+        to the root app context, so that /home.do
+        cannot be bookmarked or affect search
+        rankings.
+      </note>
+      <from>^/home.do</from>
+      <to type="permanent-redirect" last="true">/</to>
+    </rule>
+    
+    <rule>
+      <note>
+        Requests to the root app context shall
+        implicitly serve up /home.do without
+        changing the URL in the location bar.
+      </note>
+      <from>^/$</from>
+      <to>/home.do</to>
+    </rule>
+
+
+    <rule>
+      <note>
+        If a request for the home page comes
+        on HTTPS protocol, force to HTTP protocol.
+      </note>
+      <from>^/home.do</from>
+      <run class="com.copyright.ccc.web.urlrewrite.ProtocolSwitcher" method="switchToHTTP" />
+      <to>/home.do</to>    
+    </rule>
+
+
+    <rule>
+      <note>
+        If a request for one of these actions comes
+        on HTTPS protocol, force to HTTP protocol.
+      </note>
+      <from>^/(viewPage|search|openurl).do(.*)</from>
+      <run class="com.copyright.ccc.web.urlrewrite.ProtocolSwitcher" method="switchToHTTP" />
+      <to>-</to>    
+    </rule>
+
+    <rule>
+      <name>Login redirect</name>
+      <note>
+        If a request for one of these actions comes
+        on HTTP protocol, force to HTTPS protocol.
+      </note>
+      <from>^/loginFormRedirect.do(.*)</from>
+      <run class="com.copyright.ccc.web.urlrewrite.ProtocolSwitcher" method="switchToHTTPS" />
+      <to>/loginForm.do$1</to>    
+    </rule>
+
+    <rule>
+      <name>Login actions</name>
+      <note>
+        If a request for one of these actions comes
+        on HTTP protocol, force to HTTPS protocol.
+      </note>
+      <from>^/(forgotPassword|resetPassword|resetPasswordComplete).do(.*)</from>
+      <run class="com.copyright.ccc.web.urlrewrite.ProtocolSwitcher" method="switchToHTTPS" />
+      <to>-</to>    
+    </rule>
+
+    <rule>
+      <name>Registration actions</name>
+      <note>
+        If a request for one of these actions comes
+        on HTTP protocol, force to HTTPS protocol.
+      </note>
+      <from>^/(registerOrganization|registerIndividual|registerAddUser|displayOrgRegistration|displayIndRegistration|displayAddUserRegistration).do(.*)</from>
+      <run class="com.copyright.ccc.web.urlrewrite.ProtocolSwitcher" method="switchToHTTPS" />
+      <to>-</to>    
+    </rule>
+
+    <rule>
+      <name>Update registration actions</name>
+      <note>
+        If a request for one of these actions comes
+        on HTTP protocol, force to HTTPS protocol.
+      </note>
+      <from>^/(updateEmail|updatePassword|redisplayIndRegistration|redisplayOrgRegistration|showRegistration|showIndRegistration|updateAddressBilling|changePasswordForm|changePassword|updateEmailAddress).do(.*)</from>
+      <run class="com.copyright.ccc.web.urlrewrite.ProtocolSwitcher" method="switchToHTTPS" />
+      <to>-</to>    
+    </rule>
+
+    <rule>
+      <name>Cart actions</name>
+      <note>
+        If a request for one of these actions comes
+        on HTTP protocol, force to HTTPS protocol.
+      </note>
+      <from>^/(selectPaymentType|reviewPayment|reviewSubmitCart|confirmCartPurchase|updateCart).do(.*)</from>
+      <run class="com.copyright.ccc.web.urlrewrite.ProtocolSwitcher" method="switchToHTTPS" />
+      <to>-</to>    
+    </rule>
+
+    <rule>
+      <name>Cart actions (COI)</name>
+      <note>
+        If a request for one of these actions comes
+        on HTTP protocol, force to HTTPS protocol.
+      </note>
+      <from>^/(selectCoiPaymentType|reviewCoiPayment|reviewCoiSubmitCart|confirmCoiCartPurchase|updateCoiCart).do(.*)</from>
+      <run class="com.copyright.ccc.web.urlrewrite.ProtocolSwitcher" method="switchToHTTPS" />
+      <to>-</to>    
+    </rule>
+
+    <rule>
+      <name>User administration actions</name>
+      <note>
+        If a request for one of these actions comes
+        on HTTP protocol, force to HTTPS protocol.
+      </note>
+      <from>^/(userLookup|userAlert|userAdmin|admin/userLookupPageView|admin/userAlertPageView|admin/userInfoPageView|admin/userEditAddressPageView|admin/accountUsersPageView|admin/publisherMaintenancePageView|admin/editPublisherPageView).do(.*)</from>
+      <run class="com.copyright.ccc.web.urlrewrite.ProtocolSwitcher" method="switchToHTTPS" />
+      <to>-</to>    
+    </rule>
+
+    <rule>
+      <name>Order history actions</name>
+      <note>
+        If a request for one of these actions comes
+        on HTTP protocol, force to HTTPS protocol.
+      </note>
+      <from>^/(orderHistory|refreshOrderHistory|processOrderHistory|sortOrderHistory|orderHistoryTileView|rlOrderHistory).do(.*)</from>
+      <run class="com.copyright.ccc.web.urlrewrite.ProtocolSwitcher" method="switchToHTTPS" />
+      <to>-</to>    
+    </rule>
+
+    <rule>
+      <name>Order detail actions</name>
+      <note>
+        If a request for one of these actions comes
+        on HTTP protocol, force to HTTPS protocol.
+      </note>
+      <from>^/(orderDetail|refreshOrderDetail|processOrderDetail|sortOrderDetail|orderDetailTileView).do(.*)</from>
+      <run class="com.copyright.ccc.web.urlrewrite.ProtocolSwitcher" method="switchToHTTPS" />
+      <to>-</to>    
+    </rule>
+
+    <rule>
+      <name>Order management actions</name>
+      <note>
+        If a request for one of these actions comes
+        on HTTP protocol, force to HTTPS protocol.
+      </note>
+      <from>^/(orderView|processOrderView|orderCancel|licenseCancel|orderViewTileView|copyLicense|copyOrder|copyPurchase|deleteOrder|editCourseInfo|editBasicLicense|editSpecialLicense|viewUnpaidInvoices|viewPaymentForm|confirmInvoicePayment|editUnpaidInvoices|payInvoiceAndNotify).do(.*)</from>
+      <run class="com.copyright.ccc.web.urlrewrite.ProtocolSwitcher" method="switchToHTTPS" />
+      <to>-</to>    
+    </rule>
+    <rule>
+      <name>Special Order Payment actions</name>
+      <note>
+        If a request for one of these actions comes
+        on HTTP protocol, force to HTTPS protocol.
+      </note>
+      <from>^/(viewSpecialOrderPaymentModal|processSpecialOrderPaymentModal).do(.*)</from>
+      <run class="com.copyright.ccc.web.urlrewrite.ProtocolSwitcher" method="switchToHTTPS" />
+      <to>-</to>    
+    </rule>
+<rule>
+      <name>List CreditCard actions</name>
+      <note>
+        If a request for one of these actions comes
+        on HTTP protocol, force to HTTPS protocol.
+      </note>
+      <from>^/(listCreditCards).do(.*)</from>
+      <run class="com.copyright.ccc.web.urlrewrite.ProtocolSwitcher" method="switchToHTTPS" />
+      <to>-</to>    
+    </rule>
+
+
+    <rule>
+      <name>Admin application actions</name>
+      <note>
+        If a request for one of these actions comes
+        on HTTP protocol, force to HTTPS protocol.
+      </note>
+      <from>^/(updateAddress|processAddress|updateAddressTileView|viewReports|admin/viewReportTileView|processReports|saveReportsByInvoiceNumber|saveReportsByInvoiceDate|saveReportsByOrderDate|saveReportsByStartOfTermDate|showReport).do(.*)</from>
+      <run class="com.copyright.ccc.web.urlrewrite.ProtocolSwitcher" method="switchToHTTPS" />
+      <to>-</to>    
+    </rule>
+
+    <rule>
+      <name>Print friendly page actions</name>
+      <note>
+        If a request for one of these actions comes
+        on HTTP protocol, force to HTTPS protocol.
+      </note>
+      <from>^/(printConfirmPurchase|printOrder).do(.*)</from>
+      <run class="com.copyright.ccc.web.urlrewrite.ProtocolSwitcher" method="switchToHTTPS" />
+      <to>-</to>    
+    </rule>
+
+    <rule>
+      <name>Print friendly page actions (COI)</name>
+      <note>
+        If a request for one of these actions comes
+        on HTTP protocol, force to HTTPS protocol.
+      </note>
+      <from>^/(printCoiConfirmPurchase|printCoiOrder).do(.*)</from>
+      <run class="com.copyright.ccc.web.urlrewrite.ProtocolSwitcher" method="switchToHTTPS" />
+      <to>-</to>    
+    </rule>
+
+
+
+</urlrewrite>
+

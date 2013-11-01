@@ -1,0 +1,78 @@
+/*
+	root element for the scrollable.
+	when scrolling occurs this element stays still.
+*/
+div.scrollable {
+
+	/* required settings */
+	position:relative;
+	overflow:hidden;
+	width: 470px;
+	height:275px;
+}
+
+/*
+	root element for scrollable items. Must be absolutely positioned
+	and it should have a super large width to accomodate scrollable items.
+	it's enough that you set width and height for the root element and
+	not for this element.
+*/
+div.scrollable div.items {
+	/* this cannot be too large */
+	width:20000em;
+	position:absolute;
+	clear:both;
+}
+
+/* single scrollable item */
+div.scrollable div.items div {
+	float:left;
+    padding-right: 10px;
+}
+
+/* active item */
+div.scrollable div.items div.active {
+
+}
+
+div.scrollable img{
+  border: none;
+}
+
+.sub-navi{
+  float: left;
+  clear: left;
+  background-image: url(../images/sub-navi-bg.gif);
+  background-repeat: no-repeat;
+  height: 76px;
+  width: 130px;
+  padding-left: 23px;
+  padding-right: 7px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.sub-navi ul{
+  padding-left: 0px;
+  margin: 0px;
+}
+
+.sub-navi li{
+  list-style-image: url(../images/arrow-bullet.gif);
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+
+.navi{
+  background-color: white;
+  float: left;
+  margin-right: 10px;
+}
+
+.navi a{
+  display: block;
+  height: 29px;
+  width: 160px;
+  background-repeat: no-repeat;
+  padding-bottom: 1px;
+}

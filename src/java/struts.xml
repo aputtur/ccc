@@ -1,0 +1,36 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+    
+<struts>
+	<!-- COPYRIGHT.COM -->
+     
+	<package name="copyrightcom-default" abstract="true" extends="struts-default">
+
+		<result-types>
+  			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" default="true" />
+  		</result-types>
+				
+		<global-results>
+			<result name="uncaughtException">uncaughtException</result>
+			<result name="sessionExpiredExceptionOnPopUp">sessionExpiredExceptionOnPopUp</result>
+			<result name="sessionExpiredException">sessionExpiredException</result>
+			<result name="loginBounce" type="redirect">
+				<param name="location">/login-bounce.jsp?loginRedirectPath=${loginRedirectPath}</param>
+			</result>
+			<result name="home" type="dispatcher">/home-redirect.jsp</result>
+			<result name="notAuthorized">notAuthorized</result>
+		</global-results>
+		
+      	<global-exception-mappings>
+			<exception-mapping result="uncaughtException" exception="java.lang.Exception"></exception-mapping>
+			<exception-mapping result="sessionExpiredExceptionOnPopUp" exception="com.copyright.ccc.web.actions.ordermgmt.util.SessionExpiredExceptionOnPopUp"></exception-mapping>
+			<exception-mapping result="sessionExpiredException" exception="com.copyright.ccc.web.actions.ordermgmt.util.SessionExpiredException"></exception-mapping>
+	  	</global-exception-mappings>	
+
+	</package>
+
+	<include file="../jsp-modules-s2/ordermgmt/ordermgmt-struts.xml"/>
+	
+				
+</struts>

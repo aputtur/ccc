@@ -1,0 +1,99 @@
+.clearer { clear:both; }
+.manage {
+	border-left: solid 1px #666;
+	background: #E8EBEF url(/media/images/paysum-shadow-repeat.gif) center right 
+repeat-y;
+	padding-right: 9px;
+        width: 524px;
+}
+
+
+.manage-btm {
+	background: url(/media/images/manage-shadow-btm.gif) no-repeat;
+        padding-right:9px;
+        height: 9px;
+}
+
+.manage-top {
+	background: url(/media/images/manage-top-line.gif) no-repeat;
+	height: 1px;
+}
+
+.manage-line {
+	padding: 5px 7px 0px 7px;
+}
+#cartWrapper {
+	border-left: solid 1px #B2B2B2;
+	border-right: solid 1px #B2B2B2;
+	border-top: solid 4px #92183B;
+	width: 749px;
+	text-align: left;
+	margin: auto;
+}
+
+#ecom-content-wrapper {
+	background: url(/media/images/news-column-bg.gif) repeat-y; 
+        margin: 0px;
+        padding-bottom: 1px;
+        padding-top: 10px;
+        width: 100%;
+       //width: 729px;
+        height: 345px;
+}
+#two-column-main {
+	float: left;
+	width: 539px;
+        margin: 0px;
+	padding: 0px 0px 5px 10px;
+        //width: 529px;
+}
+#two-column-sidebar {
+	float: right;
+	width: 170px;
+        margin: 0px;
+	padding: 0px 8px 10px 0px;
+        //width: 162px;
+	//padding: 0px 0px 10px 0px;
+        //margin-right: -3px;
+}
+
+#two-column-main h2 {
+	color: #316DB7;
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-bottom: 0px;
+}
+
+#two-column-main h3, .head3 {
+	font-size: 10px;
+	font-family: Verdana;
+	text-transform: uppercase;
+	letter-spacing: .5px;
+	font-weight: bold;
+	padding-top: 0; margin-top:0; /* lisa edited */
+}
+
+#two-column-sidebar #quick-links {
+	background: #D7DDE4 url(/media/images/landingright-topcorner.gif) no-repeat top;
+	width: 164px;
+	margin: 3px 0px 10px 0px;
+	padding-top: 13px;
+}
+
+#two-column-sidebar #quick-links span {
+	background: url(/media/images/dots-bluebg.gif) repeat-x bottom;
+	display: block;
+	padding: 4px;
+	margin: 0px 8px;
+}
+
+
+#bottomcorners {
+	background: url(/media/images/border_btm_news.gif) no-repeat bottom center;
+	height: 21px;
+	margin-right: 1px;
+        // margin-right: 2px;
+        margin-top: -5px;
+        }
+
+

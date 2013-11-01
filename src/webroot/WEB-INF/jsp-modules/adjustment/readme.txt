@@ -1,0 +1,1 @@
+This folder contains the UI artifacts (e.g. JSPs) for the Adjustments application.

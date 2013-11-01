@@ -1,0 +1,187 @@
+# Properties for www.copyright.com
+
+not.authorized.access.url=error403.do
+
+# Data source
+# NOTE: The JNDI bindings do affect how connections are retrieved.
+#	"location" is not pooled, "ejb-location" is pooled, and "pooled-location" is pooled but does not
+#	work with the current OPI framework without first addressing a class cast exception that occurs.
+#	Therefore, the app uses "ejb-location" for an emulated data source, as recommended by Oracle docs below
+#		* http://download-east.oracle.com/docs/cd/B12314_01/web.904/b10326/datasrcs.htm#1018580
+#		* http://www.oracle.com/technology/products/ias/daily/oct02.html
+#	To validate pooling, add these two system properties: -Ddatasource.verbose=true -Djdbc.connection.debug=true
+#	If jndi names are the same, they appear to be resolved in this order: ejb-location, pool-location, and then location
+db.datasource.jndi=jdbc/CCDS
+
+# Schema owner
+db.schema.owner=@db.schema.owner@
+
+# Cookie expiration in days
+cookie.auid.expiration.days=60
+
+# Range of internal CCC IP addresses.  Used to determine whether or not a client
+# is allowed to see otherwise unprotected pages (e.g. developer home).
+ip.internal.range=10.0-255.0-255.0-255
+
+# static content
+static.content.root=@static.content.root@
+static.content.not.found.message.fmt=There was a problem finding static web content: {0}
+
+# GPO
+gpo.URL=@gpo.url@
+gpo.LOG=@gpo.log@
+
+# help website
+help.url.EXT=@help.url.EXT@
+help.url.INT=@help.url.INT@
+
+# Email addresses for various forms - used by FormToEmailAction
+email.form.guide.to=@email.form.guide.to@
+email.form.resume.to=@email.form.resume.to@
+email.form.poster.to=@email.form.poster.to@
+email.form.feedback.to=@email.form.feedback.to@
+email.form.ha.to=@email.form.ha.to@
+email.form.images.to=@email.form.images.to@
+
+# Email addresses for Request Title Coverage - used in NotAvailableEmailAction
+email.notavailable.recipient=@email.notavailable.recipient@
+email.notavailable.from=catalog@copyright.com
+email.notavailable.subject=Currently Not Available
+
+# Email and other stuff for online invoice payments.
+email.invpmt.to_finance=@email.invpmt.to_finance@
+email.invpmt.subj=@email.invpmt.subj@
+
+# OPENURL LINKMANAGER PROPERTIES (OpenURLImageServerAction)
+resolver.image.available=available.gif
+resolver.image.unavailable=unavailable.gif
+resolver.criteria.default=1
+resolver.criteria.inst=0:1:2:4
+resolver.criteria.abrv=always:exists:rights:grants
+resolver.product.inst=0:1:2:3:7:20:31:48
+resolver.product.abrv=coursepack:ecoursepack:photocopy:AAS:digital:republication:AACL:DRA
+resolver.product.default.inst=0:1:2:7:20
+resolver.product.default.abrv=all
+resolver.product.academic.inst=0:1:2
+resolver.product.academic.abrv=academic
+resolver.product.business.inst=1:7:20
+resolver.product.business.abrv=business
+resolver.network.protocol=http
+resolver.host.url.EXT=@resolver.host.url.EXT@
+resolver.host.url.INT=@resolver.host.url.INT@
+resolver.image.mimetype=image/gif
+resolver.path.separator=@resolver.path.separator@
+resolver.image.dir=@resolver.image.dir@
+
+# Protocol switching properties
+protocol.switching.enabled=true
+protocol.switching.http.port=7782
+protocol.switching.https.port=7790
+protocol.switching.http.url.EXT=@protocol.switching.http.url.EXT@
+protocol.switching.http.url.INT=@protocol.switching.http.url.INT@
+protocol.switching.https.url.EXT=@protocol.switching.https.url.EXT@
+protocol.switching.https.url.INT=@protocol.switching.https.url.INT@
+
+#quartz schedule for auto-dunning batch run
+autodunning.quartz.email.schedule=@autodunning.quartz.email.schedule@
+autodunning.quartz.scheduler.enable=@autodunning.quartz.scheduler.enable@
+
+#default parameters for auto-dunning
+autodunning.overdue.invoice.email.sender=@autodunning.overdue.invoice.email.sender@
+autodunning.overdue.invoice.days.past.due=@autodunning.overdue.invoice.days.past.due@
+autodunning.status.log.receiver=@autodunning.status.log.receiver@
+autodunning.status.log.location=@autodunning.status.log.location@
+
+#freemarker templates location
+autodunning.overdue.invoice.email.template=@autodunning.overdue.invoice.email.template@
+autodunning.freemarker.template.location=@autodunning.freemarker.template.location@
+
+#properties for QA testing for adhoc auto-dunning
+autodunning.test.mode.auto.dunning.enable=@autodunning.test.mode.auto.dunning.enable@
+autodunning.test.default.email.recipient=@autodunning.test.default.email.recipient@
+autodunning.test.default.total.number.email.sent=@autodunning.test.default.total.number.email.sent@
+
+#requested title report
+reqtitle.email.subject=Request Title Report
+reqtitle.email.from=catalog@copyright.com
+reqtitle.email.body=Attached is the daily Request Title report.
+reqtitle.email.to=@reqtitle.email.to@
+reqtitle.tmp.dir=/tmp
+reqtitle.attachment.name=req-title-report.xls
+reqtitle.quartz.schedule=0 0 18 * * ?
+reqtitle.job.enabled=true
+
+
+# email verification
+email.verification.enabled=@email.verification.enabled@
+email.verification.intranet.check.enabled=@email.verification.intranet.check.enabled@
+email.verification.timeout=30
+email.verification.username=monitor_licenses@copyright.com
+email.verification.password=right$l1nkr0cks
+email.verification.service_endpoint=http://ws.strikeiron.com/StrikeIron/EmailVerify5/EmailVerification
+email.verification.service_operaton=VerifyEmail
+
+# simulation
+simluate.rightslink.down=false
+
+# authentication
+rightslink.authentication.token=@rightslink.authentication.token@
+
+# prefetch RL links, on or off
+rightslink.link.prefetch=false
+
+# how many times to re-execute runRightResponse
+rightslink.request.max-retries=8
+
+# how many milliseconds to sleep between each try
+rightslink.request.retry.sleep.millis=2000
+
+# Cybersource down simulation
+simulate.cybersource.site.down=false
+# 5 seconds timeout for checks. If set to 0, no checking will be performed.
+cybersource.site.timeout.millis=5000
+# Number of retries for Cybersource transactions. If 0, no retrying.
+cybersource.retries.count=3
+# Delay between retries, in milliseconds.
+cybersource.retries.delay.millis=1000
+# Simulate a failed ar transaction update requiring a credit card refund.
+simulate.cybersource.rollback=false
+
+#
+#Cempro Content URL's
+#
+cempro.main.menu.url=@cempro.main.menu.url@
+cempro.header.url=@cempro.header.url@
+cempro.right.url=@cempro.right.url@
+cempro.footer.url=@cempro.footer.url@
+
+#Main drop down menu
+main.dropdown.menu.url=@main.dropdown.menu.url@
+#footer links
+main.footer.links.url=@main.footer.links.url@
+
+
+# Advanced search stop-word list (for performing secondary search before
+# giving up and going to "search instead").
+
+search.manual.stopwords=news,newswire,newswires,newspaper,newsletter,week,weekly,review,worldwide,today,update,magazine,limited,com,org,gov,net,edu,biz,br,ca,fr,jp,ru,eu,uk,us,de,au,cn,mobi,gb,il,journal,service,daily,online,press,website,monthly,report,publishing,research,quarterly,wire,blog,newsweekly,issn,isbn,herald,annual,archives,manual
+
+# Autosuggest is not a standard service and is not something
+# to be maintained within CRS.
+autosuggest.svc_endpoint=@autosuggest.svc_endpoint@
+
+# number of autosuggest items to obtain from the service (if available)
+autosuggest.items=5
+searchinstead.items=10
+
+# when pulling titles from autosuggest, only take titles which were searched 
+# "autosuggest_count" times or more
+autosuggest.count=3
+searchinstead.count=3
+
+# OMS ADJUSTMENT ACCESS (does not affect TF credit card adjustments)
+adjustments.oms.disable=true
+# NRLS user fee value
+nrls.user.fee=3.50
+# RLink Special Order from scratch Idno.
+rlink.specialOrder.idno=111-1-256-29810-6

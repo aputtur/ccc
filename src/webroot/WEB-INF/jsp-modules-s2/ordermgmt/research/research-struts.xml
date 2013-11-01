@@ -1,0 +1,28 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+    
+<struts>
+ 	
+	<package name="research" extends="copyrightcom-default" namespace="/om/research">
+		
+		<action name="researchHome" class="com.copyright.ccc.web.actions.ordermgmt.ResearchHomeAction">
+    		<result>researchHome</result>
+    		<result name="input">researchHome</result>
+    		<result name="redirect" type="redirectAction">
+    			<param name="actionName">researchHome</param>
+    		</result>
+    	</action>
+    	
+    	<action name="searchSpecialOrders" class="com.copyright.ccc.web.actions.ordermgmt.SearchSpecialOrdersAction">
+    		<result>searchSpecialOrders</result>
+    		<result name="input">searchSpecialOrders</result>
+    		<result name="redirect" type="redirectAction">
+    			<param name="actionName">searchSpecialOrders</param>
+    		</result>
+    		<result name="special_orders_search">searchSpecialOrders</result>
+    	</action>
+				   		
+	</package>
+				
+</struts>

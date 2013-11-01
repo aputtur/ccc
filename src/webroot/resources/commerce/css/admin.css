@@ -1,0 +1,123 @@
+.adminBanner {
+    width:100%;
+    background-color: #DD7;
+    border-bottom: 1px solid #990;
+}
+
+.adminBannerTitle {
+    text-align: center;
+    margin-bottom: 3px;
+    padding-top: 3px;
+    font-weight: bold;
+}
+
+#emulationArea {
+    vertical-align: middle;
+    width: 100%;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.emulationUser {
+    font-weight: normal;
+    font-style: italic;
+    color: #600;
+}
+
+.stopEmulationLink {
+    padding-left: 2em;
+    text-align: right;
+}
+
+#adminNavigation {
+	clear: both;
+}
+
+.adminMenuBarItemOver,
+.adminMenuover {
+    cursor: pointer;
+    vertical-align: middle;
+    font-size: 11px;
+
+    padding-left: 1em;
+    padding-right: 5em;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    
+    margin: 0;
+    
+    white-space: nowrap;
+    font-weight: bold;
+
+    color: #000;
+    background-color: #EEC;
+    
+    border-bottom: 1px solid #777;
+    border-top: 1px solid #AA4;
+}
+
+.adminMenuBarItemOver {
+    background-color: #AA4;
+    
+}
+
+.adminMenuBar {
+    border-collapse: collapse;
+    padding-top: 2px;
+    width: 100%;
+}
+
+.adminMenuBarTable {
+    width:100%;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.adminMenu {
+    background-color: #FFD;
+    border-left: 1px solid #777;
+    border-bottom: 2px solid #777;
+    border-right: 2px solid #777;
+    /*border-top: 1px solid #777; */
+    padding: 2px;
+    width: 150px;
+    position: absolute;
+    z-index: 100000;
+}
+
+.adminMenuItemOver,
+.adminMenuItem {
+    cursor: pointer;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 4px;
+    z-index: 100000;
+}
+
+.adminMenuItemOver {
+    background-color: #AA4;
+}
+
+.adminMenuItemText {
+    color: black;
+}
+
+.adminTitle {
+    font-size: 3em;
+    color: #000077;
+}
+
+.adminNavSection {
+    padding: 14px;
+    background-color: #EEE;
+    border: 1px solid #888833;
+}
+
+.adminNav {
+    margin-bottom: 1em;
+    background-color: #EEEEAA;
+    padding: 4px;
+    border: 1px dotted #BBBB77;
+}

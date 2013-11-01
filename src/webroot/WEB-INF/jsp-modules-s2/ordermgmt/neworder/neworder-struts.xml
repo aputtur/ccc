@@ -1,0 +1,29 @@
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+    
+<struts>
+ 	 	
+	<package name="neworder" extends="copyrightcom-default" namespace="/om/neworder">
+		
+    	
+		<action name="newOrder" class="com.copyright.ccc.web.actions.ordermgmt.NewOrderAction">
+    		<result>newOrder</result>
+    		<result name="input">newOrder</result>
+    		<result name="redirect" type="redirectAction">
+    			<param name="actionName">newOrder</param>
+    		</result>
+    	</action>
+    	
+    	<action name="addDetail" class="com.copyright.ccc.web.actions.ordermgmt.AddDetailAction">
+    		<result>addDetail</result>
+    		<result name="input">addDetail</result>
+    		<result name="error">addDetail</result>
+    		<result name="redirect" type="redirectAction">
+    			<param name="actionName">addDetail</param>
+    		</result>
+    	</action>
+				   		
+	</package>
+				
+</struts>
